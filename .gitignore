@@ -1,0 +1,10 @@
+.gradle/
+.gradle-local/
+.store-manager-cache/
+build/
+app/build/
+local.properties
+*.iml
+.DS_Store
+tools/__pycache__/
+*.pyc

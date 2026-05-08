@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Torah Reader",
+    "packageName": "com.example.torahreader",
+    "versionCode": 14,
+    "versionName": "1.4.0",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1ExampleTorahReaderApk",
+    "iconUrl": "https://raw.githubusercontent.com/your-org/private-app-store/main/icons/com.example.torahreader.png",
+    "description": "קורא טקסטים תורניים עם סימניות, חיפוש מהיר ומצב לילה.",
+    "category": "לימוד",
+    "size": "28 MB",
+    "checksum": "0b9818d9a54d13a1a6cf3a145c4b1b846651dfbe3bcb8cc6ff2f1f30f289f7d1",
+    "checksumType": "SHA256"
+  },
+  {
+    "name": "Kosher News",
+    "packageName": "com.example.koshernews",
+    "versionCode": 31,
+    "versionName": "3.1.0",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1ExampleKosherNewsApk",
+    "iconUrl": "https://raw.githubusercontent.com/your-org/private-app-store/main/icons/com.example.koshernews.png",
+    "description": "חדשות מסוננות עם התראות מותאמות וחוויית קריאה נקייה.",
+    "category": "חדשות",
+    "size": "19 MB",
+    "checksum": "8f4d4b2eaf83dd5f68f3cb3b3f0ee8984d8f1fcd4cb7d8dc26c55d6bcb1bca65",
+    "checksumType": "SHA256"
+  },
+  {
+    "name": "Family Tasks",
+    "packageName": "com.example.familytasks",
+    "versionCode": 22,
+    "versionName": "2.2.0",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1ExampleFamilyTasksApk",
+    "iconUrl": "https://raw.githubusercontent.com/your-org/private-app-store/main/icons/com.example.familytasks.png",
+    "description": "ניהול משימות ביתי עם תזכורות שקטות, לוחות שבועיים ושיתוף משפחתי.",
+    "category": "פרודוקטיביות",
+    "size": "24 MB",
+    "checksum": "f2ad9d7ed87f0d6bc8e9493d2f2b47d6f19e254df36283ed9f4c19330dff13f9",
+    "checksumType": "SHA256"
+  }
+]
