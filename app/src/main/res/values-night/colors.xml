@@ -1,0 +1,4 @@
+<resources>
+    <color name="bg_store_gradient_start">#172520</color>
+    <color name="bg_store_gradient_end">#111512</color>
+</resources>
