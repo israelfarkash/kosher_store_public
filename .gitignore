@@ -1,10 +1,14 @@
-.gradle/
-.gradle-local/
-.store-manager-cache/
-build/
-app/build/
-local.properties
-*.iml
-.DS_Store
+# Ignore everything
+/*
+
+# Except these files and folders
+!/apps.json
+!/icons/
+!/tools/
+!/Run_Manager.command
+!/.gitignore
+
+# Ignore pycache inside tools
 tools/__pycache__/
 *.pyc
+.DS_Store
