@@ -162,5 +162,36 @@
       "https://play-lh.googleusercontent.com/aIRH5E41KH1pNSsWfHgU7i02_UHDFYSG621aS9Rc-OBjLStfeTEyRJIzOQp6Ncojbz8",
       "https://play-lh.googleusercontent.com/rJrkcEsdQa7_AozmzGpy9CPTy-GKKFENfBRdUQwXLdI0tSbYSMsng0C19CdzYmQM-Q"
     ]
+  },
+  {
+    "name": "Waze",
+    "packageName": "com.waze",
+    "versionCode": 1030440,
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1lOcdlqSiIFGLDqzURj1463NNm9HvUGjz?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/com.waze.png",
+    "description": "Waze היא אפליקציית ניווט מבוססת-קהילה, שעוזרת למיליוני משתמשים להגיע ליעדם בעזרת התראות מהדרך בזמן אמת ומפה עדכנית לאותו רגע. בזכות רשת הנהגים שלנו, אפליקציית Waze חוסכת לכם זמן באמצעות התראות מיידיות על עומסי תנועה, עבודות בדרך, תאונות, משטרה ועוד. משינויי מסלול ועדכוני בטיחות בזמן אמת ועד התראות על מחיר דלק נמוך, Waze היא קהילה של נהגים שעוזרים לנהגים אחרים. \r\n\r\nעם Waze אתם יכולים…\r\nלהגיע מהר יותר ליעד: המלולים הטובים ביותר עם הכי פחות תנועה \r\nלהימנע מדוחות: האפליקציה מתריעה על המיקום של ניידות משטרה, מצלמות מהירות ומצלמות רמזור\r\nלקבל זמני הגעה משוערים מדויקים יותר: על סמך נתונים בזמן אמת על עומסי תנועה, עבודות בדרך, תנאי מזג אוויר ועוד\r\nלקבל ניווט מבוסס-קהילה: עדכונים בזמן אמת מנהגים אחרים\r\nלחסוך כסף: מאתרים את תחנת הדלק הזולה ביותר לאורך המסלול\r\nלהימנע מאגרות: אפשר לראות את מחירי האגרות כשבוחרים מסלול\r\nלהשתמש ב-Android Auto: מסנכרנים את Waze עם המסך המובנה ברכב\r\nלהיעזר במד מהירות בזמן אמת: מקבלים התראות כשעוברים את המהירות המותרת ונמענים מדוחות יקרים\r\nלהתאים אישית את הנסיעה: מקבלים הנחיות נסיעה מהדמויות והידוענים האהובים עליכם\r\nלהימנע ממעברים בין אפליקציות: משתמשים באפליקציות האודיו המועדפות עליכם ישירות מ-Waze\r\n\r\nכשנוהגים עם Waze, אין הפתעות בדרך!\r\nאפשר לנהל את הגדרות הפרטיות באפליקציית Waze בכל שלב. מידע נוסף על מדיניות הפרטיות של Waze זמין כאן: www.waze.com/legal/privacy.\r\nהמסלולים ב-Waze לא מיועדים לכלי רכב גדולים או לרכבי חירום.",
+    "category": "תחבורה",
+    "size": "84.8 MB",
+    "checksum": "75ddcca64e0b64e3c87fae51e541a321",
+    "checksumType": "MD5",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/sHEANK7Y5D867vr7GTVEkO-rASqhaGxUi-4b76ThLT76nWkHZtUYPS9QsW1BSvqx5GM",
+      "https://play-lh.googleusercontent.com/TI51fBk04dmefMhPEfqlWDJUUEl6KP-fDnAmKGRSWR811DuB1odyiDrqu3BgpaUWSkb0",
+      "https://play-lh.googleusercontent.com/uxWatt0iAQAX0U3-x5WfZoskMPh2faK0cBb0aPf7pNf5kEIj11BMrr_asw1ci3g2aQ",
+      "https://play-lh.googleusercontent.com/brMlWj9zvckVB6SHhF4B49ektHj-Nbzju12xV5Di4LZAP1PNNY_EZvzY98Y6Z1PIhOk",
+      "https://play-lh.googleusercontent.com/3Z7yDFwoCUG_H6hnC9QJpP-bJslLMscNx1ZAmMvriweFNEq_DP4EGLdj-Qurk30SH7k"
+    ]
+  },
+  {
+    "name": "WhatsApp מסונן",
+    "packageName": "com.whatsapp.kosher",
+    "versionCode": 261707300,
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1LNH0ehoi3JRQSZx5OrMo198_pfGCkhrY?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/com.whatsapp.kosher.png",
+    "description": "",
+    "category": "כללי",
+    "size": "141.6 MB",
+    "checksum": "f7b07bf9c2c4eab1ab8bd19b5f50e09f",
+    "checksumType": "MD5"
   }
 ]
