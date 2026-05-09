@@ -10,7 +10,14 @@
     "category": "כללי",
     "size": "150.2 MB",
     "checksum": "8a9e80bf99a29f25a4daa8de1d049ce8",
-    "checksumType": "MD5"
+    "checksumType": "MD5",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/R0bGaLZX1HGw5ODiUw_ZkCk6k4guwdrRNdKAhpik7NUBZznrWn1JmkuYkWSuIOhl7g",
+      "https://play-lh.googleusercontent.com/IxTV-tDnW9ePjLFC44uwzi6u3GpHIjOSzgMt-TaGrRTyriztDtPYk5UPOjXinEA1zA",
+      "https://play-lh.googleusercontent.com/CcNFUfI7KWl2fjHlxr_mRC4wEA52cheRhXCd7KsLE6Xx4_K3gHsqcCTxW2Fj_R2XkQ",
+      "https://play-lh.googleusercontent.com/lmWdk5ve-KgjMUeqBNP3O-GwHPrhDGKidBB6c0J3Z0QzpeX71c_F8stLkiZ1BXcOdXc",
+      "https://play-lh.googleusercontent.com/rDrFSmvmS-DQlWszvRUB07XAf0zmv8RxirVR3kt5JvGePSM4aaDAZpA9osOlGYDWkbE"
+    ]
   },
   {
     "name": "egg",
@@ -23,6 +30,13 @@
     "category": "כללי",
     "size": "30.6 MB",
     "checksum": "702441edf7219c563895c50ff000aa95",
-    "checksumType": "MD5"
+    "checksumType": "MD5",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/63WiX8gc3ImRIEmQ5b_9AmqLI2eudAwL-XbZ2kPpLiqD6wgEMhkvbVHC0RFlYW9uFOWpzuhYHiceUY-P0dUT200",
+      "https://play-lh.googleusercontent.com/UaXp0LKUgM-AVmDK6GZ2hmxpqZuOEp_aL4qj5X5moqPsVYVeR7dzXXdOdjrAcn7Oud0QG8BHWs25MbgcW8bV",
+      "https://play-lh.googleusercontent.com/UI5s0EVeruV2IKiAPQ6stahw9CExdN-v0VpABOKPMi0ZnPa9s7t7AitnTurfRmZ_IFUG3kTFEwcCdaFSDj5GKw",
+      "https://play-lh.googleusercontent.com/abgBTdq3ReBvNx_m9_2QVwq25KuAHMBbEvSelMlE9IOcHcu54Qs4lnBh7gpc8xt4Ap26RfKJv1mlzqR6cKqcMA",
+      "https://play-lh.googleusercontent.com/sw71MD1G_8Jt7uzcefIQuRHf8T8ZTbvQMoVi0-4sz-uf4ePg8aC81tXBHcxPWmbBAzaUt1LgcSAfXjRagO0pOA"
+    ]
   }
 ]
