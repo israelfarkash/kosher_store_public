@@ -184,14 +184,40 @@
   },
   {
     "name": "WhatsApp מסונן",
-    "packageName": "com.whatsapp.kosher",
+    "packageName": "com.whatsapp",
     "versionCode": 261707300,
     "apkUrl": "https://www.googleapis.com/drive/v3/files/1LNH0ehoi3JRQSZx5OrMo198_pfGCkhrY?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
-    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/com.whatsapp.kosher.png",
-    "description": "",
-    "category": "כללי",
+    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/com.whatsapp.png",
+    "description": "‏WhatsApp from Meta היא אפליקציה חינמית להתכתבות ולשיחות וידאו, עם יותר מ-2 מיליארד משתמשים ביותר מ-180 מדינות. היא פשוטה, אמינה ופרטית, כך שאפשר לשמור בקלות על קשר עם המשפחה והחברים. ל-‏WhatsApp יש גרסאות לנייד ולשולחן עבודה והיא פועלת גם כשהחיבור לאינטרנט איטי, ואין דמי מינוי*.\r\n    \r\n \r\n  התכתבות פרטית בכל העולם\r\n \r\n  ההודעות האישיות והשיחות שלך עם המשפחה והחברים תמיד מוגנות באמצעות הצפנה מקצה לקצה. לאף אחד מחוץ לצ'אטים, אפילו לא ל-WhatsApp, אין אפשרות לקרוא אותן ולהאזין להן.\r\n \r\n \r\n  יצירת קשר באופן מאובטח, מהיר ומיידי \r\n כל מה שצריך זה מספר טלפון, בלי שם משתמש ובלי להתחבר – אפשר לראות במהירות אילו אנשי קשר משתמשים ב-WhatsApp ולהתחיל להתכתב איתם. \r\n \r\n שיחות קוליות ושיחות וידאו באיכות גבוהה \r\n אפשר לבצע שיחות וידאו ושיחות קוליות מאובטחות עם עד 32 אנשים במקביל, בחינם* – יש תמיכה בשיחות במכשירים ניידים שונים דרך שירות האינטרנט של הטלפון – גם כשהחיבור איטי. \r\n \r\n שמירה על קשר עם צ'אטים קבוצתיים \r\n חשוב לשמור על קשר עם המשפחה והחברים, ובצ'אטים קבוצתיים שמוצפנים מקצה לקצה אפשר לשתף הודעות, תמונות, סרטונים ומסמכים בגרסאות לנייד ולשולחן עבודה. \r\n \r\n שמירה על קשר בזמן אמת \r\n אפשר לשתף את המיקום שלך רק עם המשתתפים בצ'אט הפרטי או הקבוצתי ולהפסיק את השיתוף מתי שרוצים, ואפשר גם להקליט הודעה קולית כדי להעביר מסר במהירות.\r\n \r\n \r\n שיתוף רגעים יומיומיים בסטטוס \r\n בסטטוס אפשר לשתף עדכון טקסט, תמונות, סרטונים ו-GIF – שייעלמו אחרי 24 שעות. אפשר לבחור לשתף סטטוס עם כל אנשי הקשר, או רק עם אנשים ספציפיים. \r\n \r\n ב-WhatsApp בשעון Wear OS אפשר להמשיך לשוחח, להגיב להודעות ולענות לשיחות – ישירות מפרק היד. דרך האריחים והתצוגות אפשר להיכנס בקלות לצ'אטים ולשלוח הודעות קוליות.   \r\n \r\n* באזורים מסוימים, WhatsApp משתמשת באימות בהודעות טקסט כדי לאמת את מספר הטלפון שלך ולאבטח את העסקאות.\r\n * יכול להיות שיחולו חיובים על שימוש בנתונים – למידע נוסף צריך לפנות לספק הסלולר.     \r\n______________________________________________________________  \r\n יש לך שאלות או משוב? אפשר ליצור קשר מתוך WhatsApp דרך 'הגדרות > עזרה > יצירת קשר'.\r\n  \r\n תנאי השירות: https://www.whatsapp.com/legal/terms-of-service  \r\n מידע נוסף על התכתבות פרטית: https://www.whatsapp.com/privacy  \r\n מידע נוסף על בטיחות ב-WhatsApp:‏ ‏https://www.whatsapp.com/security",
+    "category": "מסרים",
     "size": "141.6 MB",
     "checksum": "f7b07bf9c2c4eab1ab8bd19b5f50e09f",
-    "checksumType": "MD5"
+    "checksumType": "MD5",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/tZxjcV6wbrGqbJ5VCOxqxxkGwapXZ1bdMgsbKKqOsuQEytfCQQ3WOul9IMZqyY0CjNw",
+      "https://play-lh.googleusercontent.com/3EZcF-ZEhz9VNqFazxXu2lquTmvCZHMSPODsXZmRWqWEEgUH4CbGRt5_7uarvNlHG6vo",
+      "https://play-lh.googleusercontent.com/jQqzT7lQrHMkwf81eheGCM-AeZlMStkrWFXTMfVgcyyuTP5BlE3D1M2mXZc1U3BAOzw",
+      "https://play-lh.googleusercontent.com/nIi9KeTEM9KJkCRV-YGjvkHcuOXLd2ChgXq8v8oAbFM-y5Q1y87au5pIAneKwGhtZ7Q",
+      "https://play-lh.googleusercontent.com/BaTSgExQp7cusp-C6m3ykdXDse7Xpf-bPVMYgYMCQmJF4YHb8KNce8XThM10_OxfYuLV"
+    ]
+  },
+  {
+    "name": "WhatsApp מסונן",
+    "packageName": "com.whatsapp",
+    "versionCode": 261707300,
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1LNH0ehoi3JRQSZx5OrMo198_pfGCkhrY?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/com.whatsapp.png",
+    "description": "‏WhatsApp from Meta היא אפליקציה חינמית להתכתבות ולשיחות וידאו, עם יותר מ-2 מיליארד משתמשים ביותר מ-180 מדינות. היא פשוטה, אמינה ופרטית, כך שאפשר לשמור בקלות על קשר עם המשפחה והחברים. ל-‏WhatsApp יש גרסאות לנייד ולשולחן עבודה והיא פועלת גם כשהחיבור לאינטרנט איטי, ואין דמי מינוי*.\r\n    \r\n \r\n  התכתבות פרטית בכל העולם\r\n \r\n  ההודעות האישיות והשיחות שלך עם המשפחה והחברים תמיד מוגנות באמצעות הצפנה מקצה לקצה. לאף אחד מחוץ לצ'אטים, אפילו לא ל-WhatsApp, אין אפשרות לקרוא אותן ולהאזין להן.\r\n \r\n \r\n  יצירת קשר באופן מאובטח, מהיר ומיידי \r\n כל מה שצריך זה מספר טלפון, בלי שם משתמש ובלי להתחבר – אפשר לראות במהירות אילו אנשי קשר משתמשים ב-WhatsApp ולהתחיל להתכתב איתם. \r\n \r\n שיחות קוליות ושיחות וידאו באיכות גבוהה \r\n אפשר לבצע שיחות וידאו ושיחות קוליות מאובטחות עם עד 32 אנשים במקביל, בחינם* – יש תמיכה בשיחות במכשירים ניידים שונים דרך שירות האינטרנט של הטלפון – גם כשהחיבור איטי. \r\n \r\n שמירה על קשר עם צ'אטים קבוצתיים \r\n חשוב לשמור על קשר עם המשפחה והחברים, ובצ'אטים קבוצתיים שמוצפנים מקצה לקצה אפשר לשתף הודעות, תמונות, סרטונים ומסמכים בגרסאות לנייד ולשולחן עבודה. \r\n \r\n שמירה על קשר בזמן אמת \r\n אפשר לשתף את המיקום שלך רק עם המשתתפים בצ'אט הפרטי או הקבוצתי ולהפסיק את השיתוף מתי שרוצים, ואפשר גם להקליט הודעה קולית כדי להעביר מסר במהירות.\r\n \r\n \r\n שיתוף רגעים יומיומיים בסטטוס \r\n בסטטוס אפשר לשתף עדכון טקסט, תמונות, סרטונים ו-GIF – שייעלמו אחרי 24 שעות. אפשר לבחור לשתף סטטוס עם כל אנשי הקשר, או רק עם אנשים ספציפיים. \r\n \r\n ב-WhatsApp בשעון Wear OS אפשר להמשיך לשוחח, להגיב להודעות ולענות לשיחות – ישירות מפרק היד. דרך האריחים והתצוגות אפשר להיכנס בקלות לצ'אטים ולשלוח הודעות קוליות.   \r\n \r\n* באזורים מסוימים, WhatsApp משתמשת באימות בהודעות טקסט כדי לאמת את מספר הטלפון שלך ולאבטח את העסקאות.\r\n * יכול להיות שיחולו חיובים על שימוש בנתונים – למידע נוסף צריך לפנות לספק הסלולר.     \r\n______________________________________________________________  \r\n יש לך שאלות או משוב? אפשר ליצור קשר מתוך WhatsApp דרך 'הגדרות > עזרה > יצירת קשר'.\r\n  \r\n תנאי השירות: https://www.whatsapp.com/legal/terms-of-service  \r\n מידע נוסף על התכתבות פרטית: https://www.whatsapp.com/privacy  \r\n מידע נוסף על בטיחות ב-WhatsApp:‏ ‏https://www.whatsapp.com/security",
+    "category": "מסרים",
+    "size": "141.6 MB",
+    "checksum": "f7b07bf9c2c4eab1ab8bd19b5f50e09f",
+    "checksumType": "MD5",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/tZxjcV6wbrGqbJ5VCOxqxxkGwapXZ1bdMgsbKKqOsuQEytfCQQ3WOul9IMZqyY0CjNw",
+      "https://play-lh.googleusercontent.com/3EZcF-ZEhz9VNqFazxXu2lquTmvCZHMSPODsXZmRWqWEEgUH4CbGRt5_7uarvNlHG6vo",
+      "https://play-lh.googleusercontent.com/jQqzT7lQrHMkwf81eheGCM-AeZlMStkrWFXTMfVgcyyuTP5BlE3D1M2mXZc1U3BAOzw",
+      "https://play-lh.googleusercontent.com/nIi9KeTEM9KJkCRV-YGjvkHcuOXLd2ChgXq8v8oAbFM-y5Q1y87au5pIAneKwGhtZ7Q",
+      "https://play-lh.googleusercontent.com/BaTSgExQp7cusp-C6m3ykdXDse7Xpf-bPVMYgYMCQmJF4YHb8KNce8XThM10_OxfYuLV"
+    ]
   }
 ]
