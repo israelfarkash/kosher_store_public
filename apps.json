@@ -183,7 +183,7 @@
     ]
   },
   {
-    "name": "WhatsApp מסונן",
+    "name": "WhatsApp",
     "packageName": "com.whatsapp",
     "versionCode": 261707300,
     "apkUrl": "https://www.googleapis.com/drive/v3/files/1LNH0ehoi3JRQSZx5OrMo198_pfGCkhrY?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
@@ -192,14 +192,7 @@
     "category": "מסרים",
     "size": "141.6 MB",
     "checksum": "f7b07bf9c2c4eab1ab8bd19b5f50e09f",
-    "checksumType": "MD5",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/tZxjcV6wbrGqbJ5VCOxqxxkGwapXZ1bdMgsbKKqOsuQEytfCQQ3WOul9IMZqyY0CjNw",
-      "https://play-lh.googleusercontent.com/3EZcF-ZEhz9VNqFazxXu2lquTmvCZHMSPODsXZmRWqWEEgUH4CbGRt5_7uarvNlHG6vo",
-      "https://play-lh.googleusercontent.com/jQqzT7lQrHMkwf81eheGCM-AeZlMStkrWFXTMfVgcyyuTP5BlE3D1M2mXZc1U3BAOzw",
-      "https://play-lh.googleusercontent.com/nIi9KeTEM9KJkCRV-YGjvkHcuOXLd2ChgXq8v8oAbFM-y5Q1y87au5pIAneKwGhtZ7Q",
-      "https://play-lh.googleusercontent.com/BaTSgExQp7cusp-C6m3ykdXDse7Xpf-bPVMYgYMCQmJF4YHb8KNce8XThM10_OxfYuLV"
-    ]
+    "checksumType": "MD5"
   },
   {
     "name": "WhatsApp מסונן",
