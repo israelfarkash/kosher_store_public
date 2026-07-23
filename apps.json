@@ -140,7 +140,7 @@
     "size": "39.7 MB",
     "checksum": "adf3f6fc8a0296630f69bfad7fc676c0",
     "checksumType": "MD5",
-    "category": "כללי",
+    "category": "אפליקציות גוגל",
     "description": "עם Google Wallet, נהנים מגישה מהירה ומאובטחת לכל מה שצריך באופן יומיומי. לא משנה לאן תלכו – הכול נשמר במקום אחד בטלפון הנייד.\r\n\r\nכרטיסים, שוברים ועוד – תמיד איתכם\r\n+ משלמים ללא מגע עם Google Pay, עולים למטוס/רכבת, הולכים לסרט/הופעה או צוברים נקודות בכרטיסי מועדון עם ארנק דיגיטלי שיש בו יותר מקום.\r\n\r\nגש Wallet Google משעון Wear OS שלך\r\n+ קבל גישה מיידית לארנק בלוח השעון הראשי של Wear OS עם סיבוכים.\r\n\r\nמוצאים מהר את מה שצריכים\r\n+ שלוש דרכים מהירות לגשת לכל מה שצריך באופן יומיומי: שימוש בהגדרות של הטלפון לגישה מהירה, פתיחה של אפליקציית Wallet ממסך הבית או שימוש ב-Google Assistant כשהידיים תפוסות.\r\n\r\nכל מה שצריך, בדיוק בזמן הנכון\r\n+ אפליקציית Wallet יכולה להציע לכם דברים שאתם צריכים, בדיוק ברגע הנכון. למשל, הודעה עם עותק של כרטיס העלייה למטוס ביום הנסיעה, כך שלא תצטרכו עותק מודפס.\r\n\r\nמעקב אחרי קבלות\r\n+ קל למצוא את פרטי העסקאות ב-Wallet, כולל פרטים חכמים כמו המיקום שהתקבל ממפות Google.\r\n\r\nשילוב השירותים השונים של Google\r\n+ מסנכרנים את Wallet כדי לעדכן את היומן ואת Assistant בכל המידע, כמו עדכוני טיסות והתראות לגבי אירועים.\r\n+ קונים בצורה חכמה יותר – יתרת הנקודות וההטבות של מועדוני הלקוחות שלכם מוצגות במפות, בשופינג ובאפליקציות נוספות.\r\n\r\nהכול מוכן לשימוש ברגע\r\n+ תהליך ההגדרה פשוט – אפשר לייבא כרטיסים לתחבורה הציבורית, כרטיסי מועדון לקוחות וכרטיסים נוספים ששמרתם ב-Gmail.\r\n\r\nמתעדכנים תוך כדי תנועה\r\n+ עולים למטוס בלי להסתבך – כל המידע העדכני מתקבל מחיפוש Google ומקבלים עדכונים ב-Google Wallet לגבי שינויים בשערים או עיכובים לא צפויים בטיסות.\r\n\r\nדרך מאובטחת לשמור את כל מה שצריך בהישג יד\r\n+ האבטחה והפרטיות הן חלק בלתי נפרד מ-Google Wallet, כך שכל הנתונים החשובים שלכם מוגנים.\r\n\r\nאבטחה של Android שאפשר לסמוך עליה\r\n+ כל המידע והנתונים שלכם מוגנים באמצעות פיצ'רים מתקדמים של אבטחה ב-Android, כמו אימות דו-שלבי, 'איפה הטלפון שלי' ומחיקת נתונים מרחוק.\r\n\r\nהכרטיס שלכם מאובטח כשאתם משלמים ללא מגע\r\nALT: + כשמשלמים ללא מגע עם טלפון Android, מערכת Google Pay לא משתפת את מספר כרטיס האשראי האמיתי עם העסק, כך שפרטי התשלום שלכם בטוחים.\r\n\r\nשליטה בנתונים האישיים\r\n+ אמצעי הבקרה על הפרטיות קלים לשימוש, ומאפשרים לכם לבחור לשתף פרטים בין מוצרים שונים של Google ולקבל חוויית שימוש מותאמת אישית.\r\n\r\nשירות Google Wallet זמין בכל הטלפונים עם Android ובכל מכשירי Wear OS‏ (Lollipop 5.0+‎).\r\nשאלות? support.google.com/wallet",
     "apkUrl": "https://drive.usercontent.google.com/download?id=16ttW0GFjx3_MJs-qwHeRvDmCweUPtBse&confirm=t&export=download",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.walletnfcrel.png",
@@ -170,6 +170,26 @@
       "https://play-lh.googleusercontent.com/_qPq9OOKXpVSmIKoWkzkmtD6ENSHpQHwBQ4rY-S4fDZGqexpEBskK40a2xuxL7_U4Jh8f9shDWo4blP1P_GJAw",
       "https://play-lh.googleusercontent.com/tM6BZ9oVH-sHqFx8Dii312-BYhRPAXDwpN-ZOli5icpjpJxwrsirdsrB-5sKQQIDaxa8tsCqYUYpBkQGUXLAceU",
       "https://play-lh.googleusercontent.com/tutv2vpmvmvQj98T3tZgQMhlYjRRZUsU-ahPyCYGm2OGT0gwAehOE54Q3mCKkDX6HDO_1hnRU6BUtq8-6qB2Pg"
+    ]
+  },
+  {
+    "name": "Meet",
+    "packageName": "com.google.android.apps.tachyon",
+    "versionCode": 7418467,
+    "versionName": "368.0.946858068.duo.android_20260713.01_p0",
+    "size": "65.7 MB",
+    "checksum": "fefedee3a9f5a16de126ba23dc710230",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "Google Meet מציע שיחות וידאו מאובטחות ואיכותיות לכולם. בין אם אתה מתעדכן עם משפחה וחברים או משתף פעולה עם הצוות שלך, אתה יכול לסמוך על תכונות כמו כוונון אור אוטומטי, ביטול רעשים וכתוביות בזמן אמת כדי להבטיח שכולם ייראו וישמעו. הביעו את עצמכם עם אפקטים מהנים, פילטרים, תגובות ורקעים. תכונות פרימיום, כמו רישום הערות המופעל על ידי AI ותרגום דיבור לדיבור בזמן אמת, יכולות לעזור לכולם להתמקד בשיחה ולגשר על מחסומי שפה.\r\n\r\nלמידע נוסף על Google Meet: https://workspace.google.com/products/meet/\r\n\r\n• כמה תכונות כמו רישום הערות המופעל על ידי בינה מלאכותית, תרגום דיבור, הקלטת פגישות וביטול רעשים זמינות כתכונות פרימיום. ראה https://workspace.google.com/pricing.html לפרטים נוספים.\r\n• כיתובים חיים אינם זמינים בכל שפה. ראה https://support.google.com/meet/answer/15077804 לפרטים נוספים.\r\n• תרגום דיבור אינו זמין בכל שפה. ראה https://support.google.com/meet/answer/16221730 לפרטים נוספים.\r\n• זמינות התכונות הספציפיות עשויה להשתנות בהתאם למפרטי המכשיר.\r\n\r\nעקבו אחרינו לעוד:\r\nX: https://x.com/googleworkspace\r\nLinkedin: https://www.linkedin.com/showcase/googleworkspace\r\nפייסבוק: https://www.facebook.com/googleworkspace/",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1q7kWAmv_cyxq5PVXkDsLneup7txsgr7L&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.tachyon.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/v3xU30Z_flTS_PaGHq2by8FCk0Nn_FwycGjgr2apUJbFxgYls43zR2WT5eGCp4nECPGOfEqx3QwF_FX6o2AR5w",
+      "https://play-lh.googleusercontent.com/jIu-8LzIBuBplC3mjaF_cEdmNYWrrJPDuOtL6sxHXpr8rT9G6jREPJ9HPkvtgCrLcuDaas0ES5qVxQqpMjpBOA",
+      "https://play-lh.googleusercontent.com/bkG-27X9zfG2vzxuqnsnageIySzL8BLIKgWfU5TjnlX8FrsKtG0SnMA7EJ8jYLPP-dmXrVizmP1lesbTNDOebw",
+      "https://play-lh.googleusercontent.com/svie8_dVeU9-6y4zQTZQCgKWYfPnUunZLkqVVnsEZ_DxZnxHqZgMb_9bxNoVdR_rXwwlRnu5PzPfGiPvpxJP9IY",
+      "https://play-lh.googleusercontent.com/XfbtFH1TlAs4xu9CAIMHmtUlMaZiIicBth6typhcrKPuUGvLOxs9po79BSygKpVlJ77DO44TviZXh0mIIUq1"
     ]
   },
   {
@@ -329,26 +349,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "Meet",
-    "packageName": "com.google.android.apps.tachyon",
-    "versionCode": 7418467,
-    "versionName": "368.0.946858068.duo.android_20260713.01_p0",
-    "size": "65.7 MB",
-    "checksum": "fefedee3a9f5a16de126ba23dc710230",
-    "checksumType": "MD5",
-    "category": "אפליקציות גוגל",
-    "description": "Google Meet מציע שיחות וידאו מאובטחות ואיכותיות לכולם. בין אם אתה מתעדכן עם משפחה וחברים או משתף פעולה עם הצוות שלך, אתה יכול לסמוך על תכונות כמו כוונון אור אוטומטי, ביטול רעשים וכתוביות בזמן אמת כדי להבטיח שכולם ייראו וישמעו. הביעו את עצמכם עם אפקטים מהנים, פילטרים, תגובות ורקעים. תכונות פרימיום, כמו רישום הערות המופעל על ידי AI ותרגום דיבור לדיבור בזמן אמת, יכולות לעזור לכולם להתמקד בשיחה ולגשר על מחסומי שפה.\r\n\r\nלמידע נוסף על Google Meet: https://workspace.google.com/products/meet/\r\n\r\n• כמה תכונות כמו רישום הערות המופעל על ידי בינה מלאכותית, תרגום דיבור, הקלטת פגישות וביטול רעשים זמינות כתכונות פרימיום. ראה https://workspace.google.com/pricing.html לפרטים נוספים.\r\n• כיתובים חיים אינם זמינים בכל שפה. ראה https://support.google.com/meet/answer/15077804 לפרטים נוספים.\r\n• תרגום דיבור אינו זמין בכל שפה. ראה https://support.google.com/meet/answer/16221730 לפרטים נוספים.\r\n• זמינות התכונות הספציפיות עשויה להשתנות בהתאם למפרטי המכשיר.\r\n\r\nעקבו אחרינו לעוד:\r\nX: https://x.com/googleworkspace\r\nLinkedin: https://www.linkedin.com/showcase/googleworkspace\r\nפייסבוק: https://www.facebook.com/googleworkspace/",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1q7kWAmv_cyxq5PVXkDsLneup7txsgr7L&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.tachyon.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/v3xU30Z_flTS_PaGHq2by8FCk0Nn_FwycGjgr2apUJbFxgYls43zR2WT5eGCp4nECPGOfEqx3QwF_FX6o2AR5w",
-      "https://play-lh.googleusercontent.com/jIu-8LzIBuBplC3mjaF_cEdmNYWrrJPDuOtL6sxHXpr8rT9G6jREPJ9HPkvtgCrLcuDaas0ES5qVxQqpMjpBOA",
-      "https://play-lh.googleusercontent.com/bkG-27X9zfG2vzxuqnsnageIySzL8BLIKgWfU5TjnlX8FrsKtG0SnMA7EJ8jYLPP-dmXrVizmP1lesbTNDOebw",
-      "https://play-lh.googleusercontent.com/svie8_dVeU9-6y4zQTZQCgKWYfPnUunZLkqVVnsEZ_DxZnxHqZgMb_9bxNoVdR_rXwwlRnu5PzPfGiPvpxJP9IY",
-      "https://play-lh.googleusercontent.com/XfbtFH1TlAs4xu9CAIMHmtUlMaZiIicBth6typhcrKPuUGvLOxs9po79BSygKpVlJ77DO44TviZXh0mIIUq1"
     ]
   }
 ]
