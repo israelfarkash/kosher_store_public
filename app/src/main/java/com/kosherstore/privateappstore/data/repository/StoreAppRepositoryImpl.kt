@@ -97,27 +97,12 @@ class StoreAppRepositoryImpl @Inject constructor(
 
     override suspend fun refreshApps(forceRemote: Boolean) {
         syncState.value = syncState.value.copy(
-            isLoading = syncState.value.isLoading,
             isRefreshing = true,
             message = null
         )
 
-        val cached = appDao.getAll()
-        if (!forceRemote && cached.isNotEmpty()) {
-            syncState.value = RepositorySyncState(
-                isLoading = false,
-                isRefreshing = false,
-                source = SyncSource.CACHE
-            )
-            return
-        }
-
         runCatching {
-            val url = if (forceRemote) {
-                "${BuildConfig.APPS_JSON_URL}?v=${System.currentTimeMillis()}"
-            } else {
-                BuildConfig.APPS_JSON_URL
-            }
+            val url = "${BuildConfig.APPS_JSON_URL}?v=${System.currentTimeMillis()}"
             val remote = appsApiService.fetchApps(url)
             appDao.replaceAll(remote.map { it.toEntity() })
             syncState.value = RepositorySyncState(
@@ -126,6 +111,7 @@ class StoreAppRepositoryImpl @Inject constructor(
                 source = SyncSource.NETWORK
             )
         }.recoverCatching {
+            val cached = appDao.getAll()
             if (cached.isNotEmpty()) {
                 syncState.value = RepositorySyncState(
                     isLoading = false,
