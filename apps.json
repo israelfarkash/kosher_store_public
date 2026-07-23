@@ -237,5 +237,18 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "AdGuard",
+    "packageName": "com.adguard.android",
+    "versionCode": 42218003,
+    "versionName": "4.14.0",
+    "size": "65.3 MB",
+    "checksum": "47bef867d78a4b6aa240a975cb2d3c3c",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "חוסם פרסומות הטוב ביותר בעולם!\nועכשיו בגירסת פרימיום!",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1XU44KfuminWth9G0PfkJbyJVq9Z7wntJ&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.adguard.android.png"
   }
 ]
