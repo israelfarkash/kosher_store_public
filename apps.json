@@ -410,5 +410,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "בנק דיסקונט",
+    "packageName": "com.ideomobile.discount",
+    "versionCode": 717,
+    "versionName": "17.0.1",
+    "size": "51.3 MB",
+    "checksum": "d3b62e1632f4ffd68d7df74dff0d614b",
+    "checksumType": "MD5",
+    "category": "פיננסים",
+    "description": "האפליקציה של בנק דיסקונט, הרבה יותר ממה שהיית מצפה מאפליקציה בנקאית!\n\nיש בה את כל מה שיש לאחרים - ההזדהות קלה ונוחה, העברת מזומן למי ואיך שבוחרים (גם לאנשי קשר, גם באופן קבוע וגם במועד עתידי), המרות והעברות מט\"ח, הפקדת שיקים, הלוואה מיידית, הפקדה לפיקדון, פעולות בכרטיס אשראי, מידע על המשכנתא, פעילות בניירות ערך ועוד\n\nאבל גם עוד הרבה יותר....\n·         דידי - נציגה דיגיטלית שזמינה 24/7 כדי לעזור לנווט באפליקציה, לקבל מידע ולבצע פעולות\n·         תובנות מעניינות על מה קורה בחשבון, כמו חיוב כפול לבית עסק, ניתוח הוצאות והכנסות חודשי, סיכום ההוצאות בחו\"ל והתראות על שינוי בהרגלי ההוצאה\n·         ביצוע מגוון פעולות באמצעות Siri\n·         קביעת פגישה והתכתבות עם בנקאי\n·         ועוד ועוד\n\nרגע רגע... עדיין אין לך חשבון?\nזה הזמן לפתוח חשבון בקלות דרך האפליקציה!\nפשוט מורידים את האפליקציה, לוחצים על \"לפתיחת חשבון בנק בדיסקונט\" ופותחים חשבון בכמה דקות בצורה מאובטחת.",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1sQQcrAbPLa_XSWOXmqbgP_7z07S3QWPe&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.ideomobile.discount.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/_T1nzbw8mqDGt90f6jMNC4KADJ2o_4nPkPD7cxX3rJP0PQhRaDm0HsE0T26syne4ppB7shDwFRUro5T-O87hxA",
+      "https://play-lh.googleusercontent.com/4zhmwQVNTeVTPB1c-PwDULcxVZjTCRGng8yBeZrVbtpYACEyAHQ6LPpZN4yxX705FPVmmszyTbY2cku_XG5vOA",
+      "https://play-lh.googleusercontent.com/OcX_S6BNd5kP8Md7Yi03SzB2OCI8wZw5LeY3sQesexF2rxUTmht1I203x2ZiC2QP0zUHGWDTv_IQBOKZoFmrEg",
+      "https://play-lh.googleusercontent.com/R8Lubr7JSC-2WVN9xtbbvw1O031gVjtVWYFs3wj-m5UzE3H4ngwxAJEj3pgQLEByPT5iKQS9WtSOfAyaTYod",
+      "https://play-lh.googleusercontent.com/qM06lWJ29xUKhMdGiGAqT-T3500dyEderI32lMlDzWeLzBh5sALHIT0B6aCeTfBZnkElOoo-uNXKqy0M_cNhFg"
+    ]
   }
 ]
