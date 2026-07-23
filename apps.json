@@ -64,5 +64,25 @@
     "description": "",
     "apkUrl": "https://drive.usercontent.google.com/download?id=1Uot0ZAX_OawF6STnPbShPr0NoufMGQQM&confirm=t&export=download",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.whatsapp.kosher.png"
+  },
+  {
+    "name": "בנק יהב",
+    "packageName": "il.co.yahav.mobbanking",
+    "versionCode": 10180,
+    "versionName": "1.0.180",
+    "size": "52.9 MB",
+    "checksum": "07d797c6329452b92965bf4ab717b70d",
+    "checksumType": "MD5",
+    "category": "פיננסים",
+    "description": "האפליקציה החדשה של הבנק מאפשרת לנהל את החשבון בצורה נוחה ומהירה, ומציעה חוויה בנקאית דיגיטלית מתקדמת, מבלי להגיע לסניף.\r\n\r\nהאפליקציה מתאימה למגוון רחב של מכשירים מתקדמים ומאפשרת קבלת מידע מקיף על החשבון, בכל נקודת זמן ומכל מקום, וביצוע מגוון פעולות בנקאיות, כגון:\r\nהפקדת שיקים.\r\nמגוון הוראות העברות כספים.\r\nהזמנות פנקסי שקים.\r\nמגוון פעולות בפיקדונות.\r\n\r\nניתן לצפות באפליקציה במידע מעודכן בזמן אמת באמצעות ניווט קל ונוח במגוון רחב נושאים, כגון: \r\nעובר ושב – פעולות בחשבון וריכוז יתרות. \r\nכרטיסי אשראי – מידע מפורט על חיובים קרובים וקודמים בכרטיסים.\r\nפיקדונות וחסכונות.\r\nמטבע חוץ.\r\nהלוואות.\r\nניירות ערך.\r\nועוד מגוון רחב של אפשרויות נוספות.\r\n\r\nמעכשיו אין צורך להגיע לסניף – בנק יהב הכי משתלם גם בדיגיטל.\r\nהכניסה לחשבון באפליקציה מתבצעת באמצעות פרטי הזיהוי המשמשים לכניסה לאתר \"בנק יהב\" באינטרנט.\r\nמידע מפורט וביצוע פעולות בשוק ההון באמצעות אפליקציית \"בנק יהב-שוק ההון\".",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1TcizGiXl2g0Hf5iLks0iugu9TeVmVFjZ&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/il.co.yahav.mobbanking.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/9dVt9yYuxZ-n2DM9MOf8FZB1gboJRCFFUkeX5fmmFIIN1TDwN_JReJeeQaiEFLMMwR7I67FSyP2vGBNf0TF6",
+      "https://play-lh.googleusercontent.com/6aJx3G70hYhrTlnxEQ5bdMvM4MIMF25mjJnEEQG5tUKz6wVGV7dSLaHJj925bFBkt_YFrw5yQkPUJpy7uNUa",
+      "https://play-lh.googleusercontent.com/6t5zCrTGcoUsLG3kG2BmFj81p3Zy1mZH58tSQPpAuRW0_jeP7lw3POGK2ndnEivQq-9DLsfr6KlRrnhLXgah",
+      "https://play-lh.googleusercontent.com/5G8uBjACWWzWB8-CrM6qvH_TBfIBYDPcCcJA95wNyeOLO7AmdZ8bYr96SsIkunYrkz6LEpYD-qpKIMscpIskWtw",
+      "https://play-lh.googleusercontent.com/nj9QXHDLOie97-1RoJSNsz_qKgSQVXA7AfVIxVGjIAkT9AbRnCvNn6fO9hckCIrXrj4SyjdBUONPgBmweapbs30"
+    ]
   }
 ]
