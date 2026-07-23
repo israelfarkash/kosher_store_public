@@ -38,5 +38,18 @@
       "https://play-lh.googleusercontent.com/abgBTdq3ReBvNx_m9_2QVwq25KuAHMBbEvSelMlE9IOcHcu54Qs4lnBh7gpc8xt4Ap26RfKJv1mlzqR6cKqcMA",
       "https://play-lh.googleusercontent.com/sw71MD1G_8Jt7uzcefIQuRHf8T8ZTbvQMoVi0-4sz-uf4ePg8aC81tXBHcxPWmbBAzaUt1LgcSAfXjRagO0pOA"
     ]
+  },
+  {
+    "name": "Safegram",
+    "packageName": "org.telegram.messenger.web",
+    "versionCode": 609,
+    "versionName": "1.0.6",
+    "size": "80.4 MB",
+    "checksum": "a91aea426d423731b03a801f0e51d9de",
+    "checksumType": "MD5",
+    "category": "מסרים",
+    "description": "",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=17vxMy2E45Te84EfFMDE1UIHI-QACfyGu&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/org.telegram.messenger.web.png"
   }
 ]
