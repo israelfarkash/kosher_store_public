@@ -60,6 +60,26 @@
     ]
   },
   {
+    "name": "Gmail",
+    "packageName": "com.google.android.gm",
+    "versionCode": 65873708,
+    "versionName": "2026.07.06.950914807.Release",
+    "size": "115.8 MB",
+    "checksum": "a29cddc12a60110d7d062f75f6d5e07e",
+    "checksumType": "MD5",
+    "category": "מסרים",
+    "description": "‏האפליקציה הרשמית של‏האפליקציה הרשמית של Gmail בטלפון או בטאבלט עם Android מספקת את המיטב של Gmail, עם אבטחה מתקדמת, התראות בזמן אמת, תמיכה בחשבונות מרובים וחיפוש בכל האימייל שלך.  אפליקציית Gmail זמינה גם ב-Wear OS כדי לעזור בשמירה על פרודוקטיביות ובניהול אימיילים ישירות מפרק כף היד.\r\n\r\nבאפליקציית Gmail‏ אפשר:\r\n• לחסום אוטומטית יותר מ-99.9 אחוז מהספאם, הפישינג, התוכנות הזדוניות והקישורים המסוכנים, ולמנוע את ההגעה שלהם לתיבת הדואר הנכנס.\r\n• לבטל שליחה שנעשתה בטעות כדי למנוע מצבים מביכים.\r\n• להפעיל את Google Chat כדי לתקשר, ליצור ולשתף פעולה עם אחרים.\r\n• לעשות יותר כקבוצה במרחבים – מקום ייעודי לארגון אנשים, נושאים ופרויקטים.\r\n• ליהנות משיחות וידאו באיכות גבוהה באמצעות Google Meet.\r\n• להשיב במהירות להודעות אימייל באמצעות הצעות לתשובה מהירה.\r\n• לעבור בין מספר חשבונות.\r\n• לצרף ולשתף קבצים בקלות.\r\n• לקבל במהירות התראות על אימיילים חדשים, עם אפשרויות לגבי מרכז ההתראות, תגים ומסך הנעילה.\r\n• לחפש מהר יותר באימייל עם תוצאות מיידיות, חיזויים בזמן ההקלדה והצעות לאיות.\r\n• לארגן את האימיילים בעזרת תוויות, סימון בכוכב, מחיקה ודיווח על ספאם.\r\n• להחליק כדי למחוק אימיילים או להעביר אותם לארכיון, ולפנות במהירות את תיבת הדואר הנכנס.\r\n• לקרוא אימיילים עם שיחות משורשרות.\r\n• להשלים אוטומטית שמות של אנשי קשר בזמן ההקלדה – מאנשי הקשר מחשבון Google או מהטלפון.\r\n• להשיב ישירות מהאפליקציה להזמנות מיומן Google.\r\n• להוסיף משבצת ותכונה נוספת של Gmail לשעון Wear OS כדי לקבל סקירה כללית של האימיילים\r\n\r\n‏מאחר ש-Gmail הוא חלק מ-Google Workspace, הוא מאפשר לך ולצוות שלך לשוחח, ליצור ולעבוד יחד בקלות. אפשר:\r\n• ליצור קשר עם קולגות דרך Google Meet או Google Chat, לשלוח הזמנות ביומן Google, להוסיף פעולות לרשימת המשימות שלך ועוד, מבלי לצאת מ-Gmail.\r\n• להשתמש בהצעות לפעולות – כמו 'תשובה מהירה', 'כתיבה מהירה', בדיקת דקדוק ונדנודים – שעוזרות לך להתמקד בדברים החשובים ולטפל במשימות פשוטות, כדי לנצל את הזמן ביעילות רבה יותר.\r\n• לשמור על הבטיחות. המודלים של הלמידה החישובית ב-Gmail חוסמים יותר מ-99.9% מהספאם, הפישינג והתוכנות הזדוניות ומונעות את הגעתם למשתמשים שלנו.\r\n\r\nמידע נוסף על Google Workspace‏: https://workspace.google.com/products/gmail/\r\n\r\nכדאי לעקוב אחרינו ברשתות החברתיות:\r\nTwitter‏: https://twitter.com/googleworkspace\r\nLinkedin‏: https://www.linkedin.com/showcase/googleworkspace\r\nFacebook‏: https://www.facebook.com/googleworkspace/",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1sqD4mZTz2GN9qcZlPBocC2YbWoKbtJAl&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.gm.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/r4M0DxMFNhQdiGbESrXA2Zf9eS1vkP_V-tAaIFnFCX4_l1l4ZvCfGfwQAruLPwhxYnFEdq5SgoWtFAScnPYUXQ",
+      "https://play-lh.googleusercontent.com/1pyy4P9-omvtF5qXUBOtjl-u6FAv7Dzp1_0yCJqcwfEqGB625YSyTKv_R3mnqSighzpl2sdiCwZfVMnBaz688g",
+      "https://play-lh.googleusercontent.com/Tt0DWmpGb4MkEmT6L6WE-4PCLxLPcFaWdVGIkuJlq5SQY-thuKDsJpcpAwxx9D23g8X6OlsgoqmzgoX4nO_qgA",
+      "https://play-lh.googleusercontent.com/zOtzmFuMzh9d_uvtNhAjWqg-gPXBH0tG3jkR737vZCj0IhwJYFqMxIAl14jYMdmYgLzXXqEACn3CrYWrO7PizA",
+      "https://play-lh.googleusercontent.com/T5C2GUPTFLxvNdBG9ZOR8SWlwbU50bmXGN29mB_PXbVwKJYVi4WkYLZ6X7AZryTTEpNXblYg-JSuDkFp_iQucCQ"
+    ]
+  },
+  {
     "name": "Safegram",
     "packageName": "org.telegram.messenger.web",
     "versionCode": 609,
@@ -159,23 +179,23 @@
     ]
   },
   {
-    "name": "Gmail",
-    "packageName": "com.google.android.gm",
-    "versionCode": 65873708,
-    "versionName": "2026.07.06.950914807.Release",
-    "size": "115.8 MB",
-    "checksum": "a29cddc12a60110d7d062f75f6d5e07e",
+    "name": "WhatsApp Business",
+    "packageName": "com.whatsapp.w4b",
+    "versionCode": 262807512,
+    "versionName": "2.26.28.75",
+    "size": "96.3 MB",
+    "checksum": "8ab275e85f42fc6e86f59cd8f5b764a4",
     "checksumType": "MD5",
-    "category": "מסרים",
-    "description": "‏האפליקציה הרשמית של‏האפליקציה הרשמית של Gmail בטלפון או בטאבלט עם Android מספקת את המיטב של Gmail, עם אבטחה מתקדמת, התראות בזמן אמת, תמיכה בחשבונות מרובים וחיפוש בכל האימייל שלך.  אפליקציית Gmail זמינה גם ב-Wear OS כדי לעזור בשמירה על פרודוקטיביות ובניהול אימיילים ישירות מפרק כף היד.\r\n\r\nבאפליקציית Gmail‏ אפשר:\r\n• לחסום אוטומטית יותר מ-99.9 אחוז מהספאם, הפישינג, התוכנות הזדוניות והקישורים המסוכנים, ולמנוע את ההגעה שלהם לתיבת הדואר הנכנס.\r\n• לבטל שליחה שנעשתה בטעות כדי למנוע מצבים מביכים.\r\n• להפעיל את Google Chat כדי לתקשר, ליצור ולשתף פעולה עם אחרים.\r\n• לעשות יותר כקבוצה במרחבים – מקום ייעודי לארגון אנשים, נושאים ופרויקטים.\r\n• ליהנות משיחות וידאו באיכות גבוהה באמצעות Google Meet.\r\n• להשיב במהירות להודעות אימייל באמצעות הצעות לתשובה מהירה.\r\n• לעבור בין מספר חשבונות.\r\n• לצרף ולשתף קבצים בקלות.\r\n• לקבל במהירות התראות על אימיילים חדשים, עם אפשרויות לגבי מרכז ההתראות, תגים ומסך הנעילה.\r\n• לחפש מהר יותר באימייל עם תוצאות מיידיות, חיזויים בזמן ההקלדה והצעות לאיות.\r\n• לארגן את האימיילים בעזרת תוויות, סימון בכוכב, מחיקה ודיווח על ספאם.\r\n• להחליק כדי למחוק אימיילים או להעביר אותם לארכיון, ולפנות במהירות את תיבת הדואר הנכנס.\r\n• לקרוא אימיילים עם שיחות משורשרות.\r\n• להשלים אוטומטית שמות של אנשי קשר בזמן ההקלדה – מאנשי הקשר מחשבון Google או מהטלפון.\r\n• להשיב ישירות מהאפליקציה להזמנות מיומן Google.\r\n• להוסיף משבצת ותכונה נוספת של Gmail לשעון Wear OS כדי לקבל סקירה כללית של האימיילים\r\n\r\n‏מאחר ש-Gmail הוא חלק מ-Google Workspace, הוא מאפשר לך ולצוות שלך לשוחח, ליצור ולעבוד יחד בקלות. אפשר:\r\n• ליצור קשר עם קולגות דרך Google Meet או Google Chat, לשלוח הזמנות ביומן Google, להוסיף פעולות לרשימת המשימות שלך ועוד, מבלי לצאת מ-Gmail.\r\n• להשתמש בהצעות לפעולות – כמו 'תשובה מהירה', 'כתיבה מהירה', בדיקת דקדוק ונדנודים – שעוזרות לך להתמקד בדברים החשובים ולטפל במשימות פשוטות, כדי לנצל את הזמן ביעילות רבה יותר.\r\n• לשמור על הבטיחות. המודלים של הלמידה החישובית ב-Gmail חוסמים יותר מ-99.9% מהספאם, הפישינג והתוכנות הזדוניות ומונעות את הגעתם למשתמשים שלנו.\r\n\r\nמידע נוסף על Google Workspace‏: https://workspace.google.com/products/gmail/\r\n\r\nכדאי לעקוב אחרינו ברשתות החברתיות:\r\nTwitter‏: https://twitter.com/googleworkspace\r\nLinkedin‏: https://www.linkedin.com/showcase/googleworkspace\r\nFacebook‏: https://www.facebook.com/googleworkspace/",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1sqD4mZTz2GN9qcZlPBocC2YbWoKbtJAl&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.gm.png",
+    "category": "כללי",
+    "description": "אודות האפליקציה\r\n\r\nכל מה שאתם אוהבים ב-WhatsApp בתוספת של כלים מובנים לעסקים\r\nאפליקציית WhatsApp Business זמינה להורדה בחינם' והיא כוללת כלים מובנים שיעזרו לכם לעבוד בצורה חכמה יותר, לבנות אמון ולהגדיל את העסק. \r\n\r\nתוכלו להתקשר בחינם*, לשלוח הודעות בינלאומיות בחינם*, ולקבל פיצ'רים עסקיים שיעזרו לכם להפיק יותר תועלת מהשיחות.\r\n\r\nהורידו את האפליקציה כדי ליהנות מיתרונות עסקיים כמו אלה:\r\n\r\nעבודה חכמה יותר. תנו לאפליקציה לעבוד בשבילכם כדי לחסוך זמן! שלחו ללקוחות תגובות מהירות אוטומטיות והודעות \"העסק סגור כרגע\" כדי לא להחמיץ אף הזדמנות. השתמשו בתוויות כדי לסדר, לסנן ולמצוא במהירות שיחות חשובות. צרו סטטוס כדי לשתף הצעה או עדכונים, ואפילו תיהנו מאפשרות לקחת הזמנות ולגבות תשלומים** בתוך האפליקציה כדי ליצור חוויית משתמש מצוינת. \r\nבניית מערכות יחסים ואמון. באמצעות פרופיל עסקי מקצועי בפלטפורמה מאובטחת, תוכלו לבסס אמינות ולבנות אמון בקרב לקוחות. השתמשו באפליקציה כדי להציע שירות תמיכה תגובתי יותר ולבסס נאמנות לטווח הארוך. הירשמו לשירות 'באימות Meta'*** כדי לחזק את האותנטיות.\r\nהגדלה של נפח המכירות והפעילות העסקית. עזרו לאנשים למצוא אתכם, פרסמו וצרו קשרים משמעותיים יותר עם לקוחות. הגדילו את נפח המכירות באמצעות שליחה של הצעות ממוקדות ללקוחות, צרו מודעות שמפנות ל-WhatsApp באמצעות לחיצה, הציגו את קטלוג המוצרים שלכם, והציעו ללקוחות חוויה נוחה של ביצוע הזמנות ותשלומים בתוך האפליקציה.**\r\n\r\nשאלות נפוצות\r\nהאם כל הפיצ'רים ניתנים בחינם?\r\nהאפליקציה זמינה להורדה ולשימוש בחינם, וכוללת שילוב של פיצ'רים בחינם ובתשלום.\r\n\r\nהאם עדיין תהיה לי אפשרות להשתמש בחשבון ה-WhatsApp האישי שלי?\r\nכן! כל עוד יש לכם שני מספרי טלפון שונים, החשבון העסקי והחשבון האישי יכולים להתקיים יחד באותו המכשיר.  \r\n\r\nהאם אוכל להעביר את היסטוריית הצ‘אטים שלי?\r\nכן. כשמגדירים את אפליקציית WhatsApp Business, ניתן לשחזר גיבוי מחשבון WhatsApp כדי להעביר את ההודעות, המדיה ואנשי הקשר לחשבון העסקי.\r\n\r\nכמה מכשירים אפשר לחבר?\r\nניתן לחבר לחשבון בסך הכול חמישה מכשירים או טלפונים ניידים מבוססי-רשת (עד עשרה מכשירים אם נרשמים לשירות 'באימות Meta'***). \r\n\r\n*ייתכנו חיובים בגין שימוש בנתונים. למידע נוסף, צרו קשר עם ספק הסלולר שלכם.\r\n**השירות זמין רק בחלק מהשווקים\r\n***בקרוב השירות יהיה זמין ברחבי העולם",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1tzhWHlHXApuZiDX_N2yrxcYrzQPtIsOq&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.whatsapp.w4b.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/r4M0DxMFNhQdiGbESrXA2Zf9eS1vkP_V-tAaIFnFCX4_l1l4ZvCfGfwQAruLPwhxYnFEdq5SgoWtFAScnPYUXQ",
-      "https://play-lh.googleusercontent.com/1pyy4P9-omvtF5qXUBOtjl-u6FAv7Dzp1_0yCJqcwfEqGB625YSyTKv_R3mnqSighzpl2sdiCwZfVMnBaz688g",
-      "https://play-lh.googleusercontent.com/Tt0DWmpGb4MkEmT6L6WE-4PCLxLPcFaWdVGIkuJlq5SQY-thuKDsJpcpAwxx9D23g8X6OlsgoqmzgoX4nO_qgA",
-      "https://play-lh.googleusercontent.com/zOtzmFuMzh9d_uvtNhAjWqg-gPXBH0tG3jkR737vZCj0IhwJYFqMxIAl14jYMdmYgLzXXqEACn3CrYWrO7PizA",
-      "https://play-lh.googleusercontent.com/T5C2GUPTFLxvNdBG9ZOR8SWlwbU50bmXGN29mB_PXbVwKJYVi4WkYLZ6X7AZryTTEpNXblYg-JSuDkFp_iQucCQ"
+      "https://play-lh.googleusercontent.com/QeLI154fFveHbWgpl_MomkOsWLG0-RdXz5UFVjeq6Ya7ffxmdCPp0nKn7zx7y3wuNaet5fO5la5QEjUkp95U",
+      "https://play-lh.googleusercontent.com/5Gk6IyfTPLSSQqgYk7qycdnuKEt-tm9YoV9mD0Y525myoVoHFCrRrAIzMsz45g8U1RCSeZmE4QitJ3syAbOArw",
+      "https://play-lh.googleusercontent.com/iBYudri7wl2N5EOzG8kLFsWXU1rKbQ7mkM_GjLjBH6wtqGQ3bIU-BZw2TUdU8RNy98dyTwKobsPnDOq-oLjJ",
+      "https://play-lh.googleusercontent.com/WDPgOOgIc6KXbpLpbxboBxAjd19OJzAmnDJ6bcNO3vkWJtSG5LBYI8sjIMHNajSv1XouoT7htD_EPifYMETxrdA",
+      "https://play-lh.googleusercontent.com/GPV58aWX-FvVsXNBsNzjJf_8QpTvP93H6oVZJLIK6hBYkdpAtcTlHM8h-Oh9kMhU-E04edBa-DEFFhTdA5OjLvU"
     ]
   }
 ]
