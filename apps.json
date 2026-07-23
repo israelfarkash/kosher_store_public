@@ -67,7 +67,7 @@
     "size": "115.8 MB",
     "checksum": "a29cddc12a60110d7d062f75f6d5e07e",
     "checksumType": "MD5",
-    "category": "מסרים",
+    "category": "אפליקציות גוגל",
     "description": "‏האפליקציה הרשמית של‏האפליקציה הרשמית של Gmail בטלפון או בטאבלט עם Android מספקת את המיטב של Gmail, עם אבטחה מתקדמת, התראות בזמן אמת, תמיכה בחשבונות מרובים וחיפוש בכל האימייל שלך.  אפליקציית Gmail זמינה גם ב-Wear OS כדי לעזור בשמירה על פרודוקטיביות ובניהול אימיילים ישירות מפרק כף היד.\r\n\r\nבאפליקציית Gmail‏ אפשר:\r\n• לחסום אוטומטית יותר מ-99.9 אחוז מהספאם, הפישינג, התוכנות הזדוניות והקישורים המסוכנים, ולמנוע את ההגעה שלהם לתיבת הדואר הנכנס.\r\n• לבטל שליחה שנעשתה בטעות כדי למנוע מצבים מביכים.\r\n• להפעיל את Google Chat כדי לתקשר, ליצור ולשתף פעולה עם אחרים.\r\n• לעשות יותר כקבוצה במרחבים – מקום ייעודי לארגון אנשים, נושאים ופרויקטים.\r\n• ליהנות משיחות וידאו באיכות גבוהה באמצעות Google Meet.\r\n• להשיב במהירות להודעות אימייל באמצעות הצעות לתשובה מהירה.\r\n• לעבור בין מספר חשבונות.\r\n• לצרף ולשתף קבצים בקלות.\r\n• לקבל במהירות התראות על אימיילים חדשים, עם אפשרויות לגבי מרכז ההתראות, תגים ומסך הנעילה.\r\n• לחפש מהר יותר באימייל עם תוצאות מיידיות, חיזויים בזמן ההקלדה והצעות לאיות.\r\n• לארגן את האימיילים בעזרת תוויות, סימון בכוכב, מחיקה ודיווח על ספאם.\r\n• להחליק כדי למחוק אימיילים או להעביר אותם לארכיון, ולפנות במהירות את תיבת הדואר הנכנס.\r\n• לקרוא אימיילים עם שיחות משורשרות.\r\n• להשלים אוטומטית שמות של אנשי קשר בזמן ההקלדה – מאנשי הקשר מחשבון Google או מהטלפון.\r\n• להשיב ישירות מהאפליקציה להזמנות מיומן Google.\r\n• להוסיף משבצת ותכונה נוספת של Gmail לשעון Wear OS כדי לקבל סקירה כללית של האימיילים\r\n\r\n‏מאחר ש-Gmail הוא חלק מ-Google Workspace, הוא מאפשר לך ולצוות שלך לשוחח, ליצור ולעבוד יחד בקלות. אפשר:\r\n• ליצור קשר עם קולגות דרך Google Meet או Google Chat, לשלוח הזמנות ביומן Google, להוסיף פעולות לרשימת המשימות שלך ועוד, מבלי לצאת מ-Gmail.\r\n• להשתמש בהצעות לפעולות – כמו 'תשובה מהירה', 'כתיבה מהירה', בדיקת דקדוק ונדנודים – שעוזרות לך להתמקד בדברים החשובים ולטפל במשימות פשוטות, כדי לנצל את הזמן ביעילות רבה יותר.\r\n• לשמור על הבטיחות. המודלים של הלמידה החישובית ב-Gmail חוסמים יותר מ-99.9% מהספאם, הפישינג והתוכנות הזדוניות ומונעות את הגעתם למשתמשים שלנו.\r\n\r\nמידע נוסף על Google Workspace‏: https://workspace.google.com/products/gmail/\r\n\r\nכדאי לעקוב אחרינו ברשתות החברתיות:\r\nTwitter‏: https://twitter.com/googleworkspace\r\nLinkedin‏: https://www.linkedin.com/showcase/googleworkspace\r\nFacebook‏: https://www.facebook.com/googleworkspace/",
     "apkUrl": "https://drive.usercontent.google.com/download?id=1sqD4mZTz2GN9qcZlPBocC2YbWoKbtJAl&confirm=t&export=download",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.gm.png",
@@ -77,6 +77,26 @@
       "https://play-lh.googleusercontent.com/Tt0DWmpGb4MkEmT6L6WE-4PCLxLPcFaWdVGIkuJlq5SQY-thuKDsJpcpAwxx9D23g8X6OlsgoqmzgoX4nO_qgA",
       "https://play-lh.googleusercontent.com/zOtzmFuMzh9d_uvtNhAjWqg-gPXBH0tG3jkR737vZCj0IhwJYFqMxIAl14jYMdmYgLzXXqEACn3CrYWrO7PizA",
       "https://play-lh.googleusercontent.com/T5C2GUPTFLxvNdBG9ZOR8SWlwbU50bmXGN29mB_PXbVwKJYVi4WkYLZ6X7AZryTTEpNXblYg-JSuDkFp_iQucCQ"
+    ]
+  },
+  {
+    "name": "Messages",
+    "packageName": "com.google.android.apps.messaging",
+    "versionCode": 316337063,
+    "versionName": "messages.android_20260707_00_RC05.phone_dynamic",
+    "size": "116.9 MB",
+    "checksum": "a4009018deb98f722a078307e1542f02",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "Google Messages היא האפליקציה הרשמית של Google להעברת הודעות. Google Messages שינתה את הדרך שבה מיליארדי משתמשים מתקשרים באמצעות שירותי תקשורת מגוונים (RCS) – פרוטוקול התקשורת המקובל בתחום לשליחת הודעות טקסט, שהחליף את SMS ו-MMS. באמצעות RCS אפשר לשתף תמונות וסרטונים ברזולוציה גבוהה, ליהנות מצ'אטים קבוצתיים דינמיים ולתקשר עם החברים בצורה חלקה, כולל אנשים עם אייפון שמשתמשים ב-RCS.\r\n\r\n • תקשורת מגוונת ועשירה: אפשר לשתף תמונות וסרטונים ברזולוציה גבוהה, לדעת מתי החברים כותבים וליהנות מצ'אטים קבוצתיים דינמיים בצורה חלקה, כולל עם משתמשי אייפון.\r\n • טאץ' אישי: בזכות תכונות כמו בחירת צבעים לבועות הצ'אט ו-GIF סלפי, חוויית השיחה יכולה להיות אישית וייחודית לך.\r\n • הפרטיות בידיים שלך: הצ'אטים הפרטיים שלך עם אנשים אחרים מוגנים ומוצפנים מקצה לקצה, כך שאף אחד (כולל Google או אף צד שלישי) לא יכול לקרוא או לראות את ההודעות והקבצים שנשלחו, חוץ ממי שמתכתב איתך. בנוסף, ישנה הגנה מתקדמת מפני ספאם. \r\n • העברת הודעות מבוססת-AI: בעזרת ההצעות של ניסוח בקסם והפיצ'רים החדישים שלנו שמבוססים על AI קל לנסח את ההודעה המושלמת.\r\n • מעבר חלק בין מכשירים: אפשר להתחיל את הצ'אט בטלפון ולהמשיך אותו בקלות בטאבלט או במחשב. האפליקציה זמינה גם ב-Wear OS.\r\n\r\nGoogle Messages היא לא עוד אפליקציה להעברת הודעות אלא ה-אפליקציה – עם דרך עשירה, בטוחה ויצירתית יותר לתקשר.\r\n\r\nהאפליקציה זמינה גם ב-Wear OS. הזמינות של RCS משתנה בהתאם לאזור ולספק הסלולר. יכול להיות שיהיה צריך חבילת גלישה. הזמינות של התכונות משתנה בהתאם לשוק ולמכשיר. יכול להיות שיהיה צריך להירשם לבדיקת בטא",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1U4GV1zNe5yX7DuMyXWrtxWAR6uPi9RSD&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.messaging.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/dJC3zlDZiX3gIEhOxE59Zu52g-qonUqnQJOfjrDYdjwpqQc4tLREUrW7YaLIhEjg6uh8YUDNZqK1N133tZkaw4M",
+      "https://play-lh.googleusercontent.com/XDlJOCEG_R_xQpjzRmCLrAALnhH9jyI7OHNYAvy5RiH94V_Nzt93c3flMhUiWXfibcDR64FxfLM6zNJjQVt34w",
+      "https://play-lh.googleusercontent.com/Gi0iuQzdg5cTpAyoWGL1JI0os4pypLp1Ifad-OoiS0I7LvnQar3TsBIwR8s2XAUhspb3WlMTBEGDN-kY3tYp",
+      "https://play-lh.googleusercontent.com/novmdUQroD2yKI2-3B5914l7PQvGqz0Y9QRnAU5y7zKSAETI4wlaPzRusjNgOi3FI_oe6K-1ByIntdeQI83w6w",
+      "https://play-lh.googleusercontent.com/lrBDJTXNyjGL1_Ak5RaOTgVumFsQFsSqK3cLdm8Z3bpOhZhX639tKkcV96gXvzwBxhvnj_F_WTpelqyeAeYv"
     ]
   },
   {
@@ -196,26 +216,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "Messages",
-    "packageName": "com.google.android.apps.messaging",
-    "versionCode": 316337063,
-    "versionName": "messages.android_20260707_00_RC05.phone_dynamic",
-    "size": "116.9 MB",
-    "checksum": "a4009018deb98f722a078307e1542f02",
-    "checksumType": "MD5",
-    "category": "אפליקציות גוגל",
-    "description": "Google Messages היא האפליקציה הרשמית של Google להעברת הודעות. Google Messages שינתה את הדרך שבה מיליארדי משתמשים מתקשרים באמצעות שירותי תקשורת מגוונים (RCS) – פרוטוקול התקשורת המקובל בתחום לשליחת הודעות טקסט, שהחליף את SMS ו-MMS. באמצעות RCS אפשר לשתף תמונות וסרטונים ברזולוציה גבוהה, ליהנות מצ'אטים קבוצתיים דינמיים ולתקשר עם החברים בצורה חלקה, כולל אנשים עם אייפון שמשתמשים ב-RCS.\r\n\r\n • תקשורת מגוונת ועשירה: אפשר לשתף תמונות וסרטונים ברזולוציה גבוהה, לדעת מתי החברים כותבים וליהנות מצ'אטים קבוצתיים דינמיים בצורה חלקה, כולל עם משתמשי אייפון.\r\n • טאץ' אישי: בזכות תכונות כמו בחירת צבעים לבועות הצ'אט ו-GIF סלפי, חוויית השיחה יכולה להיות אישית וייחודית לך.\r\n • הפרטיות בידיים שלך: הצ'אטים הפרטיים שלך עם אנשים אחרים מוגנים ומוצפנים מקצה לקצה, כך שאף אחד (כולל Google או אף צד שלישי) לא יכול לקרוא או לראות את ההודעות והקבצים שנשלחו, חוץ ממי שמתכתב איתך. בנוסף, ישנה הגנה מתקדמת מפני ספאם. \r\n • העברת הודעות מבוססת-AI: בעזרת ההצעות של ניסוח בקסם והפיצ'רים החדישים שלנו שמבוססים על AI קל לנסח את ההודעה המושלמת.\r\n • מעבר חלק בין מכשירים: אפשר להתחיל את הצ'אט בטלפון ולהמשיך אותו בקלות בטאבלט או במחשב. האפליקציה זמינה גם ב-Wear OS.\r\n\r\nGoogle Messages היא לא עוד אפליקציה להעברת הודעות אלא ה-אפליקציה – עם דרך עשירה, בטוחה ויצירתית יותר לתקשר.\r\n\r\nהאפליקציה זמינה גם ב-Wear OS. הזמינות של RCS משתנה בהתאם לאזור ולספק הסלולר. יכול להיות שיהיה צריך חבילת גלישה. הזמינות של התכונות משתנה בהתאם לשוק ולמכשיר. יכול להיות שיהיה צריך להירשם לבדיקת בטא",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1U4GV1zNe5yX7DuMyXWrtxWAR6uPi9RSD&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.messaging.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/dJC3zlDZiX3gIEhOxE59Zu52g-qonUqnQJOfjrDYdjwpqQc4tLREUrW7YaLIhEjg6uh8YUDNZqK1N133tZkaw4M",
-      "https://play-lh.googleusercontent.com/XDlJOCEG_R_xQpjzRmCLrAALnhH9jyI7OHNYAvy5RiH94V_Nzt93c3flMhUiWXfibcDR64FxfLM6zNJjQVt34w",
-      "https://play-lh.googleusercontent.com/Gi0iuQzdg5cTpAyoWGL1JI0os4pypLp1Ifad-OoiS0I7LvnQar3TsBIwR8s2XAUhspb3WlMTBEGDN-kY3tYp",
-      "https://play-lh.googleusercontent.com/novmdUQroD2yKI2-3B5914l7PQvGqz0Y9QRnAU5y7zKSAETI4wlaPzRusjNgOi3FI_oe6K-1ByIntdeQI83w6w",
-      "https://play-lh.googleusercontent.com/lrBDJTXNyjGL1_Ak5RaOTgVumFsQFsSqK3cLdm8Z3bpOhZhX639tKkcV96gXvzwBxhvnj_F_WTpelqyeAeYv"
     ]
   }
 ]
