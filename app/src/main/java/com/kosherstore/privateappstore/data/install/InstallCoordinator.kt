@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.net.Uri
 import android.os.Build
+import android.os.Environment
 import android.provider.Settings
 import com.kosherstore.privateappstore.data.local.ManagedInstallEntity
 import com.kosherstore.privateappstore.data.local.dao.ManagedInstallDao
@@ -208,16 +209,46 @@ class InstallCoordinator @Inject constructor(
             val sessionId = packageInstaller.createSession(sessionParams)
             packageInstaller.openSession(sessionId).use { session ->
                 if (XapkUtils.isXapk(apkFile)) {
-                    java.util.zip.ZipFile(apkFile).use { zip ->
-                        zip.entries().asSequence().filter { it.name.endsWith(".apk") }.forEach { entry ->
-                            zip.getInputStream(entry).use { input ->
-                                val name = entry.name.replace("/", "_")
-                                session.openWrite(name, 0, entry.size).use { output ->
+                    val tempDir = File(context.cacheDir, "xapk_${System.currentTimeMillis()}").apply { mkdirs() }
+                    try {
+                        val apkFiles = mutableListOf<File>()
+                        java.util.zip.ZipFile(apkFile).use { zip ->
+                            zip.entries().asSequence().forEach { entry ->
+                                val entryName = entry.name
+                                if (entryName.endsWith(".apk", ignoreCase = true)) {
+                                    val outFile = File(tempDir, entryName.replace("/", "_"))
+                                    zip.getInputStream(entry).use { input ->
+                                        outFile.outputStream().use { output -> input.copyTo(output) }
+                                    }
+                                    apkFiles.add(outFile)
+                                } else if (entryName.contains("obb/", ignoreCase = true) && entryName.endsWith(".obb", ignoreCase = true)) {
+                                    try {
+                                        val obbDir = File(Environment.getExternalStorageDirectory(), "Android/obb/${app.packageName}").apply { mkdirs() }
+                                        val obbFile = File(obbDir, entryName.substringAfterLast("/"))
+                                        zip.getInputStream(entry).use { input ->
+                                            obbFile.outputStream().use { output -> input.copyTo(output) }
+                                        }
+                                    } catch (_: Exception) {}
+                                }
+                            }
+                        }
+
+                        // Ensure base.apk or main package is written first as "base.apk"
+                        apkFiles.sortByDescending { 
+                            it.name.contains("base", ignoreCase = true) || it.name.contains(app.packageName, ignoreCase = true)
+                        }
+
+                        apkFiles.forEachIndexed { index, file ->
+                            val streamName = if (index == 0) "base.apk" else "split_$index.apk"
+                            file.inputStream().use { input ->
+                                session.openWrite(streamName, 0, file.length()).use { output ->
                                     input.copyTo(output)
                                     session.fsync(output)
                                 }
                             }
                         }
+                    } finally {
+                        tempDir.deleteRecursively()
                     }
                 } else {
                     apkFile.inputStream().use { input ->
