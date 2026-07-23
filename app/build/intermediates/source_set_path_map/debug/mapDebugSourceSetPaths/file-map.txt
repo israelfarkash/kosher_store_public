@@ -1,0 +1,66 @@
+com.kosherstore.privateappstore.app-jetified-window-1.0.0-0 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-runtime-ktx-release-1 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/06b1a04051862f29a32f9adcd653ae05/transformed/jetified-lifecycle-runtime-ktx-release/res
+com.kosherstore.privateappstore.app-jetified-savedstate-1.2.1-2 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0aedd2d0ed3d908a1f3e1423ec7aa31e/transformed/jetified-savedstate-1.2.1/res
+com.kosherstore.privateappstore.app-jetified-annotation-experimental-1.4.1-3 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d32782ea7fbc3076f6ec83b65e0fca5/transformed/jetified-annotation-experimental-1.4.1/res
+com.kosherstore.privateappstore.app-jetified-profileinstaller-1.4.0-4 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/res
+com.kosherstore.privateappstore.app-cardview-1.0.0-5 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0f320cc614a4acf5e5ec8e473e44a3e5/transformed/cardview-1.0.0/res
+com.kosherstore.privateappstore.app-jetified-fragment-ktx-1.8.6-6 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/21d40dfb473415a59d54f032a2ba8ceb/transformed/jetified-fragment-ktx-1.8.6/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-process-2.8.7-7 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/22f4068f0a35d5688bcf51229e05f8bb/transformed/jetified-lifecycle-process-2.8.7/res
+com.kosherstore.privateappstore.app-jetified-preference-ktx-1.2.1-8 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/230a4b5c0d13096316e8fd8be63eb1e7/transformed/jetified-preference-ktx-1.2.1/res
+com.kosherstore.privateappstore.app-coordinatorlayout-1.1.0-9 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/2629b83b7316d0c695f77b3c6f529648/transformed/coordinatorlayout-1.1.0/res
+com.kosherstore.privateappstore.app-work-runtime-ktx-2.10.0-10 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/262c035f42d515fa2e1bfe6019dd9fed/transformed/work-runtime-ktx-2.10.0/res
+com.kosherstore.privateappstore.app-navigation-fragment-2.8.9-11 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/32d6c03752fa9d6b23a595bca26e202b/transformed/navigation-fragment-2.8.9/res
+com.kosherstore.privateappstore.app-jetified-core-ktx-1.15.0-12 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/36847e8562720728aada8d6a2eab267c/transformed/jetified-core-ktx-1.15.0/res
+com.kosherstore.privateappstore.app-jetified-appcompat-resources-1.7.0-13 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/3bc7484c923b104848b374c3b1812556/transformed/jetified-appcompat-resources-1.7.0/res
+com.kosherstore.privateappstore.app-slidingpanelayout-1.2.0-14 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/3d4c6fef46e0af8b0c8a343a2e1a48ad/transformed/slidingpanelayout-1.2.0/res
+com.kosherstore.privateappstore.app-swiperefreshlayout-1.1.0-15 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/3e69e0adf4699df9efd936e893f5aae0/transformed/swiperefreshlayout-1.1.0/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-viewmodel-release-16 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/45fa5e26802a461ac6dd7a3a43f52dae/transformed/jetified-lifecycle-viewmodel-release/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-livedata-core-ktx-2.8.7-17 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/4f00f743f920acabcff7fb837d681500/transformed/jetified-lifecycle-livedata-core-ktx-2.8.7/res
+com.kosherstore.privateappstore.app-drawerlayout-1.1.1-18 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/531973a8d8795b167cb51049398016a7/transformed/drawerlayout-1.1.1/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-viewmodel-savedstate-2.8.7-19 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/5360c81c7d969ecbb4c627f73f55f700/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.7/res
+com.kosherstore.privateappstore.app-jetified-room-ktx-2.6.1-20 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/5767579f759553b62f8d696b3af05ffe/transformed/jetified-room-ktx-2.6.1/res
+com.kosherstore.privateappstore.app-jetified-savedstate-ktx-1.2.1-21 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/5dfb35f2cedb40cbed81f2ca1d19a54c/transformed/jetified-savedstate-ktx-1.2.1/res
+com.kosherstore.privateappstore.app-jetified-core-viewtree-1.0.0-22 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/650cfeb211123d602914fd49fac36160/transformed/jetified-core-viewtree-1.0.0/res
+com.kosherstore.privateappstore.app-navigation-common-2.8.9-23 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/65901409cd7e8bc3dd1eea6549ed06b9/transformed/navigation-common-2.8.9/res
+com.kosherstore.privateappstore.app-jetified-emoji2-views-helper-1.3.0-24 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/67a72e66cddaa7754309a78265479659/transformed/jetified-emoji2-views-helper-1.3.0/res
+com.kosherstore.privateappstore.app-jetified-customview-poolingcontainer-1.0.0-25 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/69b89f5bdbcac34cbf01ff4b9f1ad161/transformed/jetified-customview-poolingcontainer-1.0.0/res
+com.kosherstore.privateappstore.app-jetified-tracing-ktx-1.2.0-26 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/6d1f5ef80edecbb97af151d21acd7674/transformed/jetified-tracing-ktx-1.2.0/res
+com.kosherstore.privateappstore.app-sqlite-2.4.0-27 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/6e209996eb35a9aa661cc214496a42fe/transformed/sqlite-2.4.0/res
+com.kosherstore.privateappstore.app-work-runtime-2.10.0-28 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/res
+com.kosherstore.privateappstore.app-lifecycle-livedata-core-2.8.7-29 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/7e39b70d3ef75a04f8d2c8af28646db5/transformed/lifecycle-livedata-core-2.8.7/res
+com.kosherstore.privateappstore.app-navigation-runtime-ktx-2.8.9-30 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/7fe7f0b276492f7375fe748eb4bb6376/transformed/navigation-runtime-ktx-2.8.9/res
+com.kosherstore.privateappstore.app-jetified-activity-ktx-1.10.1-31 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/852b824a16dbbe0474abcc1375c05b56/transformed/jetified-activity-ktx-1.10.1/res
+com.kosherstore.privateappstore.app-appcompat-1.7.0-32 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/86ccfd8a7a75887fd9d1bd9d585a42ad/transformed/appcompat-1.7.0/res
+com.kosherstore.privateappstore.app-jetified-tracing-1.2.0-33 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/89a05650c31ac3d0166bf43439ed757c/transformed/jetified-tracing-1.2.0/res
+com.kosherstore.privateappstore.app-fragment-1.8.6-34 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/8b2547783c20e1f3b2aa55ec5d0278b7/transformed/fragment-1.8.6/res
+com.kosherstore.privateappstore.app-jetified-shimmer-0.5.0-35 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/8c4a653e914c8b8ed1eb1c754d1e6f3d/transformed/jetified-shimmer-0.5.0/res
+com.kosherstore.privateappstore.app-jetified-startup-runtime-1.1.1-36 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/8f6a85c039186d35c174f018169d2c70/transformed/jetified-startup-runtime-1.1.1/res
+com.kosherstore.privateappstore.app-core-1.15.0-37 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/res
+com.kosherstore.privateappstore.app-constraintlayout-2.2.1-38 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/9defbcc263fd08917e7c0e5d1a05f828/transformed/constraintlayout-2.2.1/res
+com.kosherstore.privateappstore.app-preference-1.2.1-39 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/9f4f2eb50e5d44c8c4168428ef09e096/transformed/preference-1.2.1/res
+com.kosherstore.privateappstore.app-jetified-activity-1.10.1-40 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/a0c8ac305ffbf5bf87a28253c86930cc/transformed/jetified-activity-1.10.1/res
+com.kosherstore.privateappstore.app-jetified-viewpager2-1.1.0-41 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/a70d462aa695192623ee6e6573dd1306/transformed/jetified-viewpager2-1.1.0/res
+com.kosherstore.privateappstore.app-material-1.12.0-42 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/a87a65c560c50e40aaf9e234ef8b28ea/transformed/material-1.12.0/res
+com.kosherstore.privateappstore.app-room-runtime-2.6.1-43 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aa0876c170b2093dface17d75c33ac22/transformed/room-runtime-2.6.1/res
+com.kosherstore.privateappstore.app-navigation-common-ktx-2.8.9-44 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aae5abeb427e03f74c65e8a70519d3f7/transformed/navigation-common-ktx-2.8.9/res
+com.kosherstore.privateappstore.app-jetified-hilt-work-1.2.0-45 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/af2879c9f6b17dfc0f65bff60c2526cb/transformed/jetified-hilt-work-1.2.0/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-service-2.8.7-46 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/b74f29b02ec44eae532fa3f4cde0b975/transformed/jetified-lifecycle-service-2.8.7/res
+com.kosherstore.privateappstore.app-navigation-runtime-2.8.9-47 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/b843928132fc88277e05b9d396b78413/transformed/navigation-runtime-2.8.9/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-viewmodel-ktx-2.8.7-48 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/be4191159c1fe6813ab86f351e549c88/transformed/jetified-lifecycle-viewmodel-ktx-2.8.7/res
+com.kosherstore.privateappstore.app-navigation-fragment-ktx-2.8.9-49 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/c33ec7eed3e7fa60a660529c0c94ac5f/transformed/navigation-fragment-ktx-2.8.9/res
+com.kosherstore.privateappstore.app-sqlite-framework-2.4.0-50 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/c8695b3996589676f24fe2b005c49d26/transformed/sqlite-framework-2.4.0/res
+com.kosherstore.privateappstore.app-recyclerview-1.4.0-51 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cdfaea51dbdf6424ffd56240a89faab3/transformed/recyclerview-1.4.0/res
+com.kosherstore.privateappstore.app-jetified-emoji2-1.3.0-52 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cedb865239039392e3fd9d635ee04446/transformed/jetified-emoji2-1.3.0/res
+com.kosherstore.privateappstore.app-transition-1.5.0-53 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cfe852d6856a7334d655ef4d7888aca3/transformed/transition-1.5.0/res
+com.kosherstore.privateappstore.app-jetified-lifecycle-runtime-release-54 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/d2ea7c42c5965a8fea777b91952d4345/transformed/jetified-lifecycle-runtime-release/res
+com.kosherstore.privateappstore.app-navigation-ui-ktx-2.8.9-55 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/d6f45d0aa68fea2ec921d0ac219ba3c5/transformed/navigation-ui-ktx-2.8.9/res
+com.kosherstore.privateappstore.app-lifecycle-livedata-2.8.7-56 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/e6efe96738b16422ab42af2bcce9fd7d/transformed/lifecycle-livedata-2.8.7/res
+com.kosherstore.privateappstore.app-jetified-coil-base-2.7.0-57 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/e74aef954c1c59c301ecf9e89454d8ff/transformed/jetified-coil-base-2.7.0/res
+com.kosherstore.privateappstore.app-core-runtime-2.2.0-58 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/ed6b6132d9c49d0798defa8b618fe898/transformed/core-runtime-2.2.0/res
+com.kosherstore.privateappstore.app-navigation-ui-2.8.9-59 /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/fb45b0d589a17c7d513912520a191d55/transformed/navigation-ui-2.8.9/res
+com.kosherstore.privateappstore.app-resValues-60 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/generated/res/resValues/debug
+com.kosherstore.privateappstore.app-packageDebugResources-61 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.kosherstore.privateappstore.app-packageDebugResources-62 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.kosherstore.privateappstore.app-debug-63 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.kosherstore.privateappstore.app-debug-64 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/debug/res
+com.kosherstore.privateappstore.app-main-65 /Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/res

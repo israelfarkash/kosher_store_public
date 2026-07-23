@@ -1,0 +1,16 @@
+<resources>
+    <!-- Dark Theme Palette -->
+    <color name="md_theme_dark_error">#F2B8B5</color>
+    <color name="md_theme_dark_onError">#601410</color>
+
+    <color name="md_theme_dark_surface">#1A1C1E</color>
+    <color name="md_theme_dark_onSurface">#E2E2E6</color>
+    <color name="md_theme_dark_surfaceVariant">#44474E</color>
+
+    <color name="brand_error">@color/md_theme_dark_error</color>
+    <color name="brand_dark_surface">@color/md_theme_dark_surface</color>
+    <color name="brand_dark_surface_variant">@color/md_theme_dark_surfaceVariant</color>
+
+    <color name="bg_store_gradient_start">#172520</color>
+    <color name="bg_store_gradient_end">#111512</color>
+</resources>

@@ -1,0 +1,510 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kosherstore.privateappstore.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0.0-debug" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:6:5-79
+12-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+13-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:7:5-83
+13-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:7:22-80
+14    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+14-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:8:5-82
+14-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:8:22-79
+15    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+15-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:9:5-77
+15-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:10:5-77
+16-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:10:22-74
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+17-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:11:5-87
+17-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:11:22-84
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:12:5-68
+18-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:12:22-65
+19    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+19-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:13:5-95
+19-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:13:22-92
+20    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+20-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:14:5-16:53
+20-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:15:9-61
+21
+22    <queries>
+22-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:18:5-27:15
+23        <intent>
+23-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:19:9-22:18
+24            <action android:name="android.intent.action.MAIN" />
+24-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:20:13-65
+24-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:20:21-62
+25
+26            <category android:name="android.intent.category.LAUNCHER" />
+26-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:21:13-73
+26-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:21:23-70
+27        </intent>
+28        <intent>
+28-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:23:9-26:18
+29            <action android:name="android.intent.action.INSTALL_PACKAGE" />
+29-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:24:13-76
+29-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:24:21-73
+30
+31            <data android:mimeType="application/vnd.android.package-archive" />
+31-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:25:13-80
+31-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:25:19-77
+32        </intent>
+33    </queries>
+34
+35    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+35-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:5-81
+35-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:25:22-78
+36
+37    <permission
+37-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+38        android:name="com.kosherstore.privateappstore.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+40
+41    <uses-permission android:name="com.kosherstore.privateappstore.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:29:5-121:19
+44        android:name="com.kosherstore.privateappstore.PrivateStoreApp"
+44-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:30:9-40
+45        android:allowBackup="true"
+45-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:31:9-35
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+47        android:dataExtractionRules="@xml/data_extraction_rules"
+47-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:32:9-65
+48        android:debuggable="true"
+49        android:extractNativeLibs="false"
+50        android:fullBackupContent="@xml/backup_rules"
+50-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:33:9-54
+51        android:icon="@mipmap/ic_launcher"
+51-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:34:9-43
+52        android:label="@string/app_name"
+52-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:35:9-41
+53        android:roundIcon="@mipmap/ic_launcher_round"
+53-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:36:9-54
+54        android:supportsRtl="true"
+54-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:37:9-35
+55        android:theme="@style/Theme.PrivateStore" >
+55-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:38:9-50
+56        <activity
+56-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:40:9-47:20
+57            android:name="com.kosherstore.privateappstore.ui.MainActivity"
+57-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:41:13-44
+58            android:exported="true" >
+58-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:42:13-36
+59            <intent-filter>
+59-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:43:13-46:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:20:13-65
+60-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:20:21-62
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:21:13-73
+62-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:21:23-70
+63            </intent-filter>
+64        </activity>
+65        <activity
+65-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:49:9-53:62
+66            android:name="com.kosherstore.privateappstore.ui.imageviewer.ImageViewerActivity"
+66-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:50:13-63
+67            android:configChanges="orientation|screenSize"
+67-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:53:13-59
+68            android:exported="false"
+68-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:51:13-37
+69            android:theme="@style/Theme.PrivateStore.ImageViewer" />
+69-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:52:13-66
+70
+71        <receiver
+71-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:55:9-62:20
+72            android:name="com.kosherstore.privateappstore.data.download.DownloadBroadcastReceiver"
+72-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:56:13-68
+73            android:enabled="true"
+73-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:57:13-35
+74            android:exported="false" >
+74-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:58:13-37
+75            <intent-filter>
+75-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:59:13-61:29
+76                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+76-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:60:17-82
+76-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:60:25-79
+77            </intent-filter>
+78        </receiver>
+79        <receiver
+79-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:64:9-67:40
+80            android:name="com.kosherstore.privateappstore.data.install.InstallStatusReceiver"
+80-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:65:13-63
+81            android:enabled="true"
+81-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:66:13-35
+82            android:exported="false" />
+82-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:67:13-37
+83        <receiver
+83-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:69:9-81:20
+84            android:name="com.kosherstore.privateappstore.receiver.AdminReceiver"
+84-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:70:13-51
+85            android:description="@string/app_name"
+85-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:71:13-51
+86            android:exported="true"
+86-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:74:13-36
+87            android:label="@string/app_name"
+87-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:72:13-45
+88            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+88-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:73:13-70
+89            <meta-data
+89-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:75:13-77:56
+90                android:name="android.app.device_admin"
+90-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:76:17-56
+91                android:resource="@xml/device_admin" />
+91-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:77:17-53
+92
+93            <intent-filter>
+93-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:78:13-80:29
+94                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+94-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:79:17-82
+94-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:79:25-79
+95            </intent-filter>
+96        </receiver>
+97        <receiver
+97-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:83:9-93:20
+98            android:name="com.kosherstore.privateappstore.data.install.PackageChangeReceiver"
+98-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:84:13-63
+99            android:enabled="true"
+99-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:85:13-35
+100            android:exported="false" >
+100-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:86:13-37
+101            <intent-filter>
+101-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:87:13-92:29
+102                <action android:name="android.intent.action.PACKAGE_ADDED" />
+102-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:88:17-78
+102-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:88:25-75
+103                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+103-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:89:17-81
+103-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:89:25-78
+104                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+104-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:90:17-80
+104-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:90:25-77
+105
+106                <data android:scheme="package" />
+106-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:25:13-80
+106-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:91:23-47
+107            </intent-filter>
+108        </receiver>
+109
+110        <provider
+111            android:name="androidx.core.content.FileProvider"
+111-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:96:13-62
+112            android:authorities="com.kosherstore.privateappstore.debug.fileprovider"
+112-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:97:13-64
+113            android:exported="false"
+113-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:98:13-37
+114            android:grantUriPermissions="true" >
+114-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:99:13-47
+115            <meta-data
+115-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:100:13-102:54
+116                android:name="android.support.FILE_PROVIDER_PATHS"
+116-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:101:17-67
+117                android:resource="@xml/file_paths" />
+117-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:102:17-51
+118        </provider>
+119
+120        <service
+120-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:105:9-109:56
+121            android:name="com.kosherstore.privateappstore.data.download.DownloadService"
+121-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:106:13-58
+122            android:enabled="true"
+122-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:107:13-35
+123            android:exported="false"
+123-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:108:13-37
+124            android:foregroundServiceType="dataSync" />
+124-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:109:13-53
+125
+126        <provider
+127            android:name="androidx.startup.InitializationProvider"
+127-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:112:13-67
+128            android:authorities="com.kosherstore.privateappstore.debug.androidx-startup"
+128-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:113:13-68
+129            android:exported="false" >
+129-->/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/src/main/AndroidManifest.xml:114:13-37
+130            <meta-data
+130-->[androidx.emoji2:emoji2:1.3.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cedb865239039392e3fd9d635ee04446/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+131-->[androidx.emoji2:emoji2:1.3.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cedb865239039392e3fd9d635ee04446/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+132                android:value="androidx.startup" />
+132-->[androidx.emoji2:emoji2:1.3.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/cedb865239039392e3fd9d635ee04446/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+133            <meta-data
+133-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:34:13-36:52
+134                android:name="androidx.work.WorkManagerInitializer"
+134-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:35:17-68
+135                android:value="androidx.startup" />
+135-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:36:17-49
+136            <meta-data
+136-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/22f4068f0a35d5688bcf51229e05f8bb/transformed/jetified-lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+137                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+137-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/22f4068f0a35d5688bcf51229e05f8bb/transformed/jetified-lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+138                android:value="androidx.startup" />
+138-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/22f4068f0a35d5688bcf51229e05f8bb/transformed/jetified-lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+139            <meta-data
+139-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+140                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+140-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+141                android:value="androidx.startup" />
+141-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+142        </provider>
+143
+144        <service
+144-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:39:9-45:35
+145            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+145-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:40:13-88
+146            android:directBootAware="false"
+146-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:41:13-44
+147            android:enabled="@bool/enable_system_alarm_service_default"
+147-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:42:13-72
+148            android:exported="false" />
+148-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:43:13-37
+149        <service
+149-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:46:9-52:35
+150            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+150-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:47:13-84
+151            android:directBootAware="false"
+151-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:48:13-44
+152            android:enabled="@bool/enable_system_job_service_default"
+152-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:49:13-70
+153            android:exported="true"
+153-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:50:13-36
+154            android:permission="android.permission.BIND_JOB_SERVICE" />
+154-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:51:13-69
+155        <service
+155-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:53:9-59:35
+156            android:name="androidx.work.impl.foreground.SystemForegroundService"
+156-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:54:13-81
+157            android:directBootAware="false"
+157-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:55:13-44
+158            android:enabled="@bool/enable_system_foreground_service_default"
+158-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:56:13-77
+159            android:exported="false" />
+159-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:57:13-37
+160
+161        <receiver
+161-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:61:9-66:35
+162            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+162-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:62:13-88
+163            android:directBootAware="false"
+163-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:63:13-44
+164            android:enabled="true"
+164-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:64:13-35
+165            android:exported="false" />
+165-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:65:13-37
+166        <receiver
+166-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:67:9-77:20
+167            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+167-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:68:13-106
+168            android:directBootAware="false"
+168-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:69:13-44
+169            android:enabled="false"
+169-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:70:13-36
+170            android:exported="false" >
+170-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:71:13-37
+171            <intent-filter>
+171-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:73:13-76:29
+172                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+172-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:17-87
+172-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:74:25-84
+173                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+173-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:17-90
+173-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:75:25-87
+174            </intent-filter>
+175        </receiver>
+176        <receiver
+176-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:78:9-88:20
+177            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+177-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:79:13-104
+178            android:directBootAware="false"
+178-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:80:13-44
+179            android:enabled="false"
+179-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:81:13-36
+180            android:exported="false" >
+180-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:82:13-37
+181            <intent-filter>
+181-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:84:13-87:29
+182                <action android:name="android.intent.action.BATTERY_OKAY" />
+182-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:17-77
+182-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:85:25-74
+183                <action android:name="android.intent.action.BATTERY_LOW" />
+183-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:17-76
+183-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:86:25-73
+184            </intent-filter>
+185        </receiver>
+186        <receiver
+186-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:89:9-99:20
+187            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+187-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:90:13-104
+188            android:directBootAware="false"
+188-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:91:13-44
+189            android:enabled="false"
+189-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:92:13-36
+190            android:exported="false" >
+190-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:93:13-37
+191            <intent-filter>
+191-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:95:13-98:29
+192                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+192-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:17-83
+192-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:96:25-80
+193                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+193-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:17-82
+193-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:97:25-79
+194            </intent-filter>
+195        </receiver>
+196        <receiver
+196-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:100:9-109:20
+197            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+197-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:101:13-103
+198            android:directBootAware="false"
+198-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:102:13-44
+199            android:enabled="false"
+199-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:103:13-36
+200            android:exported="false" >
+200-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:104:13-37
+201            <intent-filter>
+201-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:106:13-108:29
+202                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+202-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:17-79
+202-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:107:25-76
+203            </intent-filter>
+204        </receiver>
+205        <receiver
+205-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:110:9-121:20
+206            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+206-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:111:13-88
+207            android:directBootAware="false"
+207-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:112:13-44
+208            android:enabled="false"
+208-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:113:13-36
+209            android:exported="false" >
+209-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:114:13-37
+210            <intent-filter>
+210-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:116:13-120:29
+211                <action android:name="android.intent.action.BOOT_COMPLETED" />
+211-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:117:17-79
+211-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:117:25-76
+212                <action android:name="android.intent.action.TIME_SET" />
+212-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:17-73
+212-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:118:25-70
+213                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+213-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:17-81
+213-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:119:25-78
+214            </intent-filter>
+215        </receiver>
+216        <receiver
+216-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:122:9-131:20
+217            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+217-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:123:13-99
+218            android:directBootAware="false"
+218-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:124:13-44
+219            android:enabled="@bool/enable_system_alarm_service_default"
+219-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:125:13-72
+220            android:exported="false" >
+220-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:126:13-37
+221            <intent-filter>
+221-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:128:13-130:29
+222                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+222-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:17-98
+222-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:129:25-95
+223            </intent-filter>
+224        </receiver>
+225        <receiver
+225-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:132:9-142:20
+226            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+226-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:133:13-78
+227            android:directBootAware="false"
+227-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:134:13-44
+228            android:enabled="true"
+228-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:135:13-35
+229            android:exported="true"
+229-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:136:13-36
+230            android:permission="android.permission.DUMP" >
+230-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:137:13-57
+231            <intent-filter>
+231-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:139:13-141:29
+232                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+232-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:17-88
+232-->[androidx.work:work-runtime:2.10.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/77d1be78deaac186ec45e4ad8d5e814f/transformed/work-runtime-2.10.0/AndroidManifest.xml:140:25-85
+233            </intent-filter>
+234        </receiver>
+235
+236        <uses-library
+236-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+237            android:name="androidx.window.extensions"
+237-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+238            android:required="false" />
+238-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+239        <uses-library
+239-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+240            android:name="androidx.window.sidecar"
+240-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+241            android:required="false" />
+241-->[androidx.window:window:1.0.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0452991356502d2e49dab0080e82c1ec/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+242
+243        <service
+243-->[androidx.room:room-runtime:2.6.1] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aa0876c170b2093dface17d75c33ac22/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+244            android:name="androidx.room.MultiInstanceInvalidationService"
+244-->[androidx.room:room-runtime:2.6.1] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aa0876c170b2093dface17d75c33ac22/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+245            android:directBootAware="true"
+245-->[androidx.room:room-runtime:2.6.1] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aa0876c170b2093dface17d75c33ac22/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+246            android:exported="false" />
+246-->[androidx.room:room-runtime:2.6.1] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/aa0876c170b2093dface17d75c33ac22/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+247
+248        <receiver
+248-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+249            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+249-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+250            android:directBootAware="false"
+250-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+251            android:enabled="true"
+251-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+252            android:exported="true"
+252-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+253            android:permission="android.permission.DUMP" >
+253-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+254            <intent-filter>
+254-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+255                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+255-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+255-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+256            </intent-filter>
+257            <intent-filter>
+257-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+258                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+258-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+258-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+259            </intent-filter>
+260            <intent-filter>
+260-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+261                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+261-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+261-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+262            </intent-filter>
+263            <intent-filter>
+263-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+264                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+264-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+264-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/0d42e144ff551fb8f4103cf476f67ab6/transformed/jetified-profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+265            </intent-filter>
+266        </receiver>
+267    </application>
+268
+269</manifest>

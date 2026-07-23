@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="bg_store_gradient_end">#111512</color>
+    <color name="bg_store_gradient_start">#172520</color>
+    <color name="brand_dark_surface">@color/md_theme_dark_surface</color>
+    <color name="brand_dark_surface_variant">@color/md_theme_dark_surfaceVariant</color>
+    <color name="brand_error">@color/md_theme_dark_error</color>
+    <color name="md_theme_dark_error">#F2B8B5</color>
+    <color name="md_theme_dark_onError">#601410</color>
+    <color name="md_theme_dark_onSurface">#E2E2E6</color>
+    <color name="md_theme_dark_surface">#1A1C1E</color>
+    <color name="md_theme_dark_surfaceVariant">#44474E</color>
+    <style name="Theme.PrivateStore" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_secondary</item>
+        <item name="colorOnPrimary">@color/brand_text</item>
+        <item name="colorSecondary">@color/brand_primary</item>
+        <item name="colorSurface">@color/brand_dark_surface</item>
+        <item name="colorSurfaceContainer">@color/brand_dark_surface_variant</item>
+        <item name="android:windowBackground">@drawable/bg_store_gradient</item>
+        <item name="android:statusBarColor" ns1:targetApi="l">@android:color/transparent</item>
+        <item name="android:navigationBarColor" ns1:targetApi="o_mr1">@color/bg_store_gradient_end</item>
+        <item name="android:navigationBarDividerColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="m">false</item>
+    </style>
+</resources>

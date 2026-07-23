@@ -1,0 +1,870 @@
+package com.kosherstore.privateappstore;
+
+import android.app.Activity;
+import android.app.DownloadManager;
+import android.app.Service;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.view.View;
+import androidx.fragment.app.Fragment;
+import androidx.hilt.work.HiltWorkerFactory;
+import androidx.hilt.work.WorkerAssistedFactory;
+import androidx.hilt.work.WorkerFactoryModule_ProvideFactoryFactory;
+import androidx.lifecycle.SavedStateHandle;
+import androidx.lifecycle.ViewModel;
+import androidx.work.ListenableWorker;
+import androidx.work.WorkerParameters;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.google.gson.Gson;
+import com.kosherstore.privateappstore.data.download.DownloadBroadcastReceiver;
+import com.kosherstore.privateappstore.data.download.DownloadBroadcastReceiver_MembersInjector;
+import com.kosherstore.privateappstore.data.download.DownloadCoordinator;
+import com.kosherstore.privateappstore.data.download.DownloadService;
+import com.kosherstore.privateappstore.data.download.DownloadService_MembersInjector;
+import com.kosherstore.privateappstore.data.install.InstallCoordinator;
+import com.kosherstore.privateappstore.data.install.InstallStatusReceiver;
+import com.kosherstore.privateappstore.data.install.InstallStatusReceiver_MembersInjector;
+import com.kosherstore.privateappstore.data.install.PackageChangeNotifier;
+import com.kosherstore.privateappstore.data.install.PackageChangeReceiver;
+import com.kosherstore.privateappstore.data.install.PackageChangeReceiver_MembersInjector;
+import com.kosherstore.privateappstore.data.local.AppDatabase;
+import com.kosherstore.privateappstore.data.local.dao.AppDao;
+import com.kosherstore.privateappstore.data.local.dao.ManagedInstallDao;
+import com.kosherstore.privateappstore.data.remote.AppsApiService;
+import com.kosherstore.privateappstore.data.repository.StoreAppRepositoryImpl;
+import com.kosherstore.privateappstore.data.worker.UpdateCheckWorker;
+import com.kosherstore.privateappstore.data.worker.UpdateCheckWorker_AssistedFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideAppDaoFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideAppsApiServiceFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideDatabaseFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideDownloadManagerFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideGsonFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideIoDispatcherFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideManagedInstallDaoFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideOkHttpClientFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideRetrofitFactory;
+import com.kosherstore.privateappstore.di.AppModule_ProvideSharedPreferencesFactory;
+import com.kosherstore.privateappstore.ui.MainActivity;
+import com.kosherstore.privateappstore.ui.MainActivity_MembersInjector;
+import com.kosherstore.privateappstore.ui.detail.AppDetailFragment;
+import com.kosherstore.privateappstore.ui.detail.AppDetailViewModel;
+import com.kosherstore.privateappstore.ui.detail.AppDetailViewModel_HiltModules;
+import com.kosherstore.privateappstore.ui.imageviewer.ImageViewerActivity;
+import com.kosherstore.privateappstore.ui.main.MainFragment;
+import com.kosherstore.privateappstore.ui.main.MainViewModel;
+import com.kosherstore.privateappstore.ui.main.MainViewModel_HiltModules;
+import com.kosherstore.privateappstore.ui.management.ManagementFragment;
+import com.kosherstore.privateappstore.ui.management.ManagementViewModel;
+import com.kosherstore.privateappstore.ui.management.ManagementViewModel_HiltModules;
+import com.kosherstore.privateappstore.ui.settings.SettingsFragment;
+import com.kosherstore.privateappstore.ui.settings.SettingsFragment_MembersInjector;
+import com.kosherstore.privateappstore.util.StoreStatsStore;
+import dagger.hilt.android.ActivityRetainedLifecycle;
+import dagger.hilt.android.ViewModelLifecycle;
+import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
+import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
+import dagger.hilt.android.internal.builders.FragmentComponentBuilder;
+import dagger.hilt.android.internal.builders.ServiceComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewModelComponentBuilder;
+import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
+import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_InternalFactoryFactory_Factory;
+import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory;
+import dagger.hilt.android.internal.managers.SavedStateHandleHolder;
+import dagger.hilt.android.internal.modules.ApplicationContextModule;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
+import dagger.internal.DaggerGenerated;
+import dagger.internal.DoubleCheck;
+import dagger.internal.IdentifierNameString;
+import dagger.internal.KeepFieldType;
+import dagger.internal.LazyClassKeyMap;
+import dagger.internal.MapBuilder;
+import dagger.internal.Preconditions;
+import dagger.internal.Provider;
+import dagger.internal.SingleCheck;
+import java.util.Collections;
+import java.util.Map;
+import java.util.Set;
+import javax.annotation.processing.Generated;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+
+@DaggerGenerated
+@Generated(
+    value = "dagger.internal.codegen.ComponentProcessor",
+    comments = "https://dagger.dev"
+)
+@SuppressWarnings({
+    "unchecked",
+    "rawtypes",
+    "KotlinInternal",
+    "KotlinInternalInJava",
+    "cast",
+    "deprecation"
+})
+public final class DaggerPrivateStoreApp_HiltComponents_SingletonC {
+  private DaggerPrivateStoreApp_HiltComponents_SingletonC() {
+  }
+
+  public static Builder builder() {
+    return new Builder();
+  }
+
+  public static final class Builder {
+    private ApplicationContextModule applicationContextModule;
+
+    private Builder() {
+    }
+
+    public Builder applicationContextModule(ApplicationContextModule applicationContextModule) {
+      this.applicationContextModule = Preconditions.checkNotNull(applicationContextModule);
+      return this;
+    }
+
+    public PrivateStoreApp_HiltComponents.SingletonC build() {
+      Preconditions.checkBuilderRequirement(applicationContextModule, ApplicationContextModule.class);
+      return new SingletonCImpl(applicationContextModule);
+    }
+  }
+
+  private static final class ActivityRetainedCBuilder implements PrivateStoreApp_HiltComponents.ActivityRetainedC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private SavedStateHandleHolder savedStateHandleHolder;
+
+    private ActivityRetainedCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public ActivityRetainedCBuilder savedStateHandleHolder(
+        SavedStateHandleHolder savedStateHandleHolder) {
+      this.savedStateHandleHolder = Preconditions.checkNotNull(savedStateHandleHolder);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ActivityRetainedC build() {
+      Preconditions.checkBuilderRequirement(savedStateHandleHolder, SavedStateHandleHolder.class);
+      return new ActivityRetainedCImpl(singletonCImpl, savedStateHandleHolder);
+    }
+  }
+
+  private static final class ActivityCBuilder implements PrivateStoreApp_HiltComponents.ActivityC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private Activity activity;
+
+    private ActivityCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ActivityCBuilder activity(Activity activity) {
+      this.activity = Preconditions.checkNotNull(activity);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ActivityC build() {
+      Preconditions.checkBuilderRequirement(activity, Activity.class);
+      return new ActivityCImpl(singletonCImpl, activityRetainedCImpl, activity);
+    }
+  }
+
+  private static final class FragmentCBuilder implements PrivateStoreApp_HiltComponents.FragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private Fragment fragment;
+
+    private FragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public FragmentCBuilder fragment(Fragment fragment) {
+      this.fragment = Preconditions.checkNotNull(fragment);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.FragmentC build() {
+      Preconditions.checkBuilderRequirement(fragment, Fragment.class);
+      return new FragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragment);
+    }
+  }
+
+  private static final class ViewWithFragmentCBuilder implements PrivateStoreApp_HiltComponents.ViewWithFragmentC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private View view;
+
+    private ViewWithFragmentCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+    }
+
+    @Override
+    public ViewWithFragmentCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ViewWithFragmentC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewWithFragmentCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl, view);
+    }
+  }
+
+  private static final class ViewCBuilder implements PrivateStoreApp_HiltComponents.ViewC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private View view;
+
+    private ViewCBuilder(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+    }
+
+    @Override
+    public ViewCBuilder view(View view) {
+      this.view = Preconditions.checkNotNull(view);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ViewC build() {
+      Preconditions.checkBuilderRequirement(view, View.class);
+      return new ViewCImpl(singletonCImpl, activityRetainedCImpl, activityCImpl, view);
+    }
+  }
+
+  private static final class ViewModelCBuilder implements PrivateStoreApp_HiltComponents.ViewModelC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private SavedStateHandle savedStateHandle;
+
+    private ViewModelLifecycle viewModelLifecycle;
+
+    private ViewModelCBuilder(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+    }
+
+    @Override
+    public ViewModelCBuilder savedStateHandle(SavedStateHandle handle) {
+      this.savedStateHandle = Preconditions.checkNotNull(handle);
+      return this;
+    }
+
+    @Override
+    public ViewModelCBuilder viewModelLifecycle(ViewModelLifecycle viewModelLifecycle) {
+      this.viewModelLifecycle = Preconditions.checkNotNull(viewModelLifecycle);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ViewModelC build() {
+      Preconditions.checkBuilderRequirement(savedStateHandle, SavedStateHandle.class);
+      Preconditions.checkBuilderRequirement(viewModelLifecycle, ViewModelLifecycle.class);
+      return new ViewModelCImpl(singletonCImpl, activityRetainedCImpl, savedStateHandle, viewModelLifecycle);
+    }
+  }
+
+  private static final class ServiceCBuilder implements PrivateStoreApp_HiltComponents.ServiceC.Builder {
+    private final SingletonCImpl singletonCImpl;
+
+    private Service service;
+
+    private ServiceCBuilder(SingletonCImpl singletonCImpl) {
+      this.singletonCImpl = singletonCImpl;
+    }
+
+    @Override
+    public ServiceCBuilder service(Service service) {
+      this.service = Preconditions.checkNotNull(service);
+      return this;
+    }
+
+    @Override
+    public PrivateStoreApp_HiltComponents.ServiceC build() {
+      Preconditions.checkBuilderRequirement(service, Service.class);
+      return new ServiceCImpl(singletonCImpl, service);
+    }
+  }
+
+  private static final class ViewWithFragmentCImpl extends PrivateStoreApp_HiltComponents.ViewWithFragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl;
+
+    private final ViewWithFragmentCImpl viewWithFragmentCImpl = this;
+
+    private ViewWithFragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        FragmentCImpl fragmentCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+      this.fragmentCImpl = fragmentCImpl;
+
+
+    }
+  }
+
+  private static final class FragmentCImpl extends PrivateStoreApp_HiltComponents.FragmentC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final FragmentCImpl fragmentCImpl = this;
+
+    private FragmentCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
+        Fragment fragmentParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+
+    @Override
+    public void injectAppDetailFragment(AppDetailFragment appDetailFragment) {
+    }
+
+    @Override
+    public void injectMainFragment(MainFragment mainFragment) {
+    }
+
+    @Override
+    public void injectManagementFragment(ManagementFragment managementFragment) {
+    }
+
+    @Override
+    public void injectSettingsFragment(SettingsFragment settingsFragment) {
+      injectSettingsFragment2(settingsFragment);
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return activityCImpl.getHiltInternalFactoryFactory();
+    }
+
+    @Override
+    public ViewWithFragmentComponentBuilder viewWithFragmentComponentBuilder() {
+      return new ViewWithFragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private SettingsFragment injectSettingsFragment2(SettingsFragment instance) {
+      SettingsFragment_MembersInjector.injectSharedPreferences(instance, singletonCImpl.provideSharedPreferencesProvider.get());
+      return instance;
+    }
+  }
+
+  private static final class ViewCImpl extends PrivateStoreApp_HiltComponents.ViewC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl;
+
+    private final ViewCImpl viewCImpl = this;
+
+    private ViewCImpl(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+        ActivityCImpl activityCImpl, View viewParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.activityCImpl = activityCImpl;
+
+
+    }
+  }
+
+  private static final class ActivityCImpl extends PrivateStoreApp_HiltComponents.ActivityC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ActivityCImpl activityCImpl = this;
+
+    private ActivityCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, Activity activityParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+
+
+    }
+
+    @Override
+    public void injectMainActivity(MainActivity mainActivity) {
+      injectMainActivity2(mainActivity);
+    }
+
+    @Override
+    public void injectImageViewerActivity(ImageViewerActivity imageViewerActivity) {
+    }
+
+    @Override
+    public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
+      return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(getViewModelKeys(), new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl));
+    }
+
+    @Override
+    public Map<Class<?>, Boolean> getViewModelKeys() {
+      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(3).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_detail_AppDetailViewModel, AppDetailViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_main_MainViewModel, MainViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_management_ManagementViewModel, ManagementViewModel_HiltModules.KeyModule.provide()).build());
+    }
+
+    @Override
+    public ViewModelComponentBuilder getViewModelComponentBuilder() {
+      return new ViewModelCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public FragmentComponentBuilder fragmentComponentBuilder() {
+      return new FragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+
+    @Override
+    public ViewComponentBuilder viewComponentBuilder() {
+      return new ViewCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private MainActivity injectMainActivity2(MainActivity instance) {
+      MainActivity_MembersInjector.injectInstallCoordinator(instance, singletonCImpl.installCoordinatorProvider.get());
+      return instance;
+    }
+
+    @IdentifierNameString
+    private static final class LazyClassKeyProvider {
+      static String com_kosherstore_privateappstore_ui_detail_AppDetailViewModel = "com.kosherstore.privateappstore.ui.detail.AppDetailViewModel";
+
+      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
+
+      static String com_kosherstore_privateappstore_ui_management_ManagementViewModel = "com.kosherstore.privateappstore.ui.management.ManagementViewModel";
+
+      @KeepFieldType
+      AppDetailViewModel com_kosherstore_privateappstore_ui_detail_AppDetailViewModel2;
+
+      @KeepFieldType
+      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
+
+      @KeepFieldType
+      ManagementViewModel com_kosherstore_privateappstore_ui_management_ManagementViewModel2;
+    }
+  }
+
+  private static final class ViewModelCImpl extends PrivateStoreApp_HiltComponents.ViewModelC {
+    private final SavedStateHandle savedStateHandle;
+
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl;
+
+    private final ViewModelCImpl viewModelCImpl = this;
+
+    private Provider<AppDetailViewModel> appDetailViewModelProvider;
+
+    private Provider<MainViewModel> mainViewModelProvider;
+
+    private Provider<ManagementViewModel> managementViewModelProvider;
+
+    private ViewModelCImpl(SingletonCImpl singletonCImpl,
+        ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
+        ViewModelLifecycle viewModelLifecycleParam) {
+      this.singletonCImpl = singletonCImpl;
+      this.activityRetainedCImpl = activityRetainedCImpl;
+      this.savedStateHandle = savedStateHandleParam;
+      initialize(savedStateHandleParam, viewModelLifecycleParam);
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandle savedStateHandleParam,
+        final ViewModelLifecycle viewModelLifecycleParam) {
+      this.appDetailViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.managementViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+    }
+
+    @Override
+    public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(3).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_detail_AppDetailViewModel, ((Provider) appDetailViewModelProvider)).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_main_MainViewModel, ((Provider) mainViewModelProvider)).put(LazyClassKeyProvider.com_kosherstore_privateappstore_ui_management_ManagementViewModel, ((Provider) managementViewModelProvider)).build());
+    }
+
+    @Override
+    public Map<Class<?>, Object> getHiltViewModelAssistedMap() {
+      return Collections.<Class<?>, Object>emptyMap();
+    }
+
+    @IdentifierNameString
+    private static final class LazyClassKeyProvider {
+      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
+
+      static String com_kosherstore_privateappstore_ui_management_ManagementViewModel = "com.kosherstore.privateappstore.ui.management.ManagementViewModel";
+
+      static String com_kosherstore_privateappstore_ui_detail_AppDetailViewModel = "com.kosherstore.privateappstore.ui.detail.AppDetailViewModel";
+
+      @KeepFieldType
+      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
+
+      @KeepFieldType
+      ManagementViewModel com_kosherstore_privateappstore_ui_management_ManagementViewModel2;
+
+      @KeepFieldType
+      AppDetailViewModel com_kosherstore_privateappstore_ui_detail_AppDetailViewModel2;
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final ViewModelCImpl viewModelCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          ViewModelCImpl viewModelCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.viewModelCImpl = viewModelCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.kosherstore.privateappstore.ui.detail.AppDetailViewModel 
+          return (T) new AppDetailViewModel(viewModelCImpl.savedStateHandle, singletonCImpl.storeAppRepositoryImplProvider.get());
+
+          case 1: // com.kosherstore.privateappstore.ui.main.MainViewModel 
+          return (T) new MainViewModel(singletonCImpl.storeAppRepositoryImplProvider.get());
+
+          case 2: // com.kosherstore.privateappstore.ui.management.ManagementViewModel 
+          return (T) new ManagementViewModel(singletonCImpl.storeAppRepositoryImplProvider.get());
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ActivityRetainedCImpl extends PrivateStoreApp_HiltComponents.ActivityRetainedC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ActivityRetainedCImpl activityRetainedCImpl = this;
+
+    private Provider<ActivityRetainedLifecycle> provideActivityRetainedLifecycleProvider;
+
+    private ActivityRetainedCImpl(SingletonCImpl singletonCImpl,
+        SavedStateHandleHolder savedStateHandleHolderParam) {
+      this.singletonCImpl = singletonCImpl;
+
+      initialize(savedStateHandleHolderParam);
+
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandleHolder savedStateHandleHolderParam) {
+      this.provideActivityRetainedLifecycleProvider = DoubleCheck.provider(new SwitchingProvider<ActivityRetainedLifecycle>(singletonCImpl, activityRetainedCImpl, 0));
+    }
+
+    @Override
+    public ActivityComponentBuilder activityComponentBuilder() {
+      return new ActivityCBuilder(singletonCImpl, activityRetainedCImpl);
+    }
+
+    @Override
+    public ActivityRetainedLifecycle getActivityRetainedLifecycle() {
+      return provideActivityRetainedLifecycleProvider.get();
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, ActivityRetainedCImpl activityRetainedCImpl,
+          int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // dagger.hilt.android.ActivityRetainedLifecycle 
+          return (T) ActivityRetainedComponentManager_LifecycleModule_ProvideActivityRetainedLifecycleFactory.provideActivityRetainedLifecycle();
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+
+  private static final class ServiceCImpl extends PrivateStoreApp_HiltComponents.ServiceC {
+    private final SingletonCImpl singletonCImpl;
+
+    private final ServiceCImpl serviceCImpl = this;
+
+    private ServiceCImpl(SingletonCImpl singletonCImpl, Service serviceParam) {
+      this.singletonCImpl = singletonCImpl;
+
+
+    }
+
+    @Override
+    public void injectDownloadService(DownloadService downloadService) {
+      injectDownloadService2(downloadService);
+    }
+
+    @CanIgnoreReturnValue
+    private DownloadService injectDownloadService2(DownloadService instance) {
+      DownloadService_MembersInjector.injectDownloadCoordinator(instance, singletonCImpl.downloadCoordinatorProvider.get());
+      return instance;
+    }
+  }
+
+  private static final class SingletonCImpl extends PrivateStoreApp_HiltComponents.SingletonC {
+    private final ApplicationContextModule applicationContextModule;
+
+    private final SingletonCImpl singletonCImpl = this;
+
+    private Provider<AppDatabase> provideDatabaseProvider;
+
+    private Provider<OkHttpClient> provideOkHttpClientProvider;
+
+    private Provider<Gson> provideGsonProvider;
+
+    private Provider<Retrofit> provideRetrofitProvider;
+
+    private Provider<AppsApiService> provideAppsApiServiceProvider;
+
+    private Provider<DownloadManager> provideDownloadManagerProvider;
+
+    private Provider<PackageChangeNotifier> packageChangeNotifierProvider;
+
+    private Provider<StoreStatsStore> storeStatsStoreProvider;
+
+    private Provider<InstallCoordinator> installCoordinatorProvider;
+
+    private Provider<DownloadCoordinator> downloadCoordinatorProvider;
+
+    private Provider<StoreAppRepositoryImpl> storeAppRepositoryImplProvider;
+
+    private Provider<UpdateCheckWorker_AssistedFactory> updateCheckWorker_AssistedFactoryProvider;
+
+    private Provider<SharedPreferences> provideSharedPreferencesProvider;
+
+    private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
+      this.applicationContextModule = applicationContextModuleParam;
+      initialize(applicationContextModuleParam);
+
+    }
+
+    private AppDao appDao() {
+      return AppModule_ProvideAppDaoFactory.provideAppDao(provideDatabaseProvider.get());
+    }
+
+    private ManagedInstallDao managedInstallDao() {
+      return AppModule_ProvideManagedInstallDaoFactory.provideManagedInstallDao(provideDatabaseProvider.get());
+    }
+
+    private Map<String, javax.inject.Provider<WorkerAssistedFactory<? extends ListenableWorker>>> mapOfStringAndProviderOfWorkerAssistedFactoryOf(
+        ) {
+      return Collections.<String, javax.inject.Provider<WorkerAssistedFactory<? extends ListenableWorker>>>singletonMap("com.kosherstore.privateappstore.data.worker.UpdateCheckWorker", ((Provider) updateCheckWorker_AssistedFactoryProvider));
+    }
+
+    private HiltWorkerFactory hiltWorkerFactory() {
+      return WorkerFactoryModule_ProvideFactoryFactory.provideFactory(mapOfStringAndProviderOfWorkerAssistedFactoryOf());
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final ApplicationContextModule applicationContextModuleParam) {
+      this.provideDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<AppDatabase>(singletonCImpl, 2));
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 5));
+      this.provideGsonProvider = DoubleCheck.provider(new SwitchingProvider<Gson>(singletonCImpl, 6));
+      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 4));
+      this.provideAppsApiServiceProvider = DoubleCheck.provider(new SwitchingProvider<AppsApiService>(singletonCImpl, 3));
+      this.provideDownloadManagerProvider = DoubleCheck.provider(new SwitchingProvider<DownloadManager>(singletonCImpl, 8));
+      this.packageChangeNotifierProvider = DoubleCheck.provider(new SwitchingProvider<PackageChangeNotifier>(singletonCImpl, 10));
+      this.storeStatsStoreProvider = DoubleCheck.provider(new SwitchingProvider<StoreStatsStore>(singletonCImpl, 11));
+      this.installCoordinatorProvider = DoubleCheck.provider(new SwitchingProvider<InstallCoordinator>(singletonCImpl, 9));
+      this.downloadCoordinatorProvider = DoubleCheck.provider(new SwitchingProvider<DownloadCoordinator>(singletonCImpl, 7));
+      this.storeAppRepositoryImplProvider = DoubleCheck.provider(new SwitchingProvider<StoreAppRepositoryImpl>(singletonCImpl, 1));
+      this.updateCheckWorker_AssistedFactoryProvider = SingleCheck.provider(new SwitchingProvider<UpdateCheckWorker_AssistedFactory>(singletonCImpl, 0));
+      this.provideSharedPreferencesProvider = DoubleCheck.provider(new SwitchingProvider<SharedPreferences>(singletonCImpl, 12));
+    }
+
+    @Override
+    public void injectPrivateStoreApp(PrivateStoreApp privateStoreApp) {
+      injectPrivateStoreApp2(privateStoreApp);
+    }
+
+    @Override
+    public void injectDownloadBroadcastReceiver(
+        DownloadBroadcastReceiver downloadBroadcastReceiver) {
+      injectDownloadBroadcastReceiver2(downloadBroadcastReceiver);
+    }
+
+    @Override
+    public void injectInstallStatusReceiver(InstallStatusReceiver installStatusReceiver) {
+      injectInstallStatusReceiver2(installStatusReceiver);
+    }
+
+    @Override
+    public void injectPackageChangeReceiver(PackageChangeReceiver packageChangeReceiver) {
+      injectPackageChangeReceiver2(packageChangeReceiver);
+    }
+
+    @Override
+    public Set<Boolean> getDisableFragmentGetContextFix() {
+      return Collections.<Boolean>emptySet();
+    }
+
+    @Override
+    public ActivityRetainedComponentBuilder retainedComponentBuilder() {
+      return new ActivityRetainedCBuilder(singletonCImpl);
+    }
+
+    @Override
+    public ServiceComponentBuilder serviceComponentBuilder() {
+      return new ServiceCBuilder(singletonCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private PrivateStoreApp injectPrivateStoreApp2(PrivateStoreApp instance) {
+      PrivateStoreApp_MembersInjector.injectWorkerFactory(instance, hiltWorkerFactory());
+      return instance;
+    }
+
+    @CanIgnoreReturnValue
+    private DownloadBroadcastReceiver injectDownloadBroadcastReceiver2(
+        DownloadBroadcastReceiver instance2) {
+      DownloadBroadcastReceiver_MembersInjector.injectDownloadCoordinator(instance2, downloadCoordinatorProvider.get());
+      return instance2;
+    }
+
+    @CanIgnoreReturnValue
+    private InstallStatusReceiver injectInstallStatusReceiver2(InstallStatusReceiver instance3) {
+      InstallStatusReceiver_MembersInjector.injectInstallCoordinator(instance3, installCoordinatorProvider.get());
+      return instance3;
+    }
+
+    @CanIgnoreReturnValue
+    private PackageChangeReceiver injectPackageChangeReceiver2(PackageChangeReceiver instance4) {
+      PackageChangeReceiver_MembersInjector.injectInstallCoordinator(instance4, installCoordinatorProvider.get());
+      PackageChangeReceiver_MembersInjector.injectDownloadCoordinator(instance4, downloadCoordinatorProvider.get());
+      return instance4;
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final SingletonCImpl singletonCImpl;
+
+      private final int id;
+
+      SwitchingProvider(SingletonCImpl singletonCImpl, int id) {
+        this.singletonCImpl = singletonCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // com.kosherstore.privateappstore.data.worker.UpdateCheckWorker_AssistedFactory 
+          return (T) new UpdateCheckWorker_AssistedFactory() {
+            @Override
+            public UpdateCheckWorker create(Context appContext, WorkerParameters workerParams) {
+              return new UpdateCheckWorker(appContext, workerParams, singletonCImpl.storeAppRepositoryImplProvider.get());
+            }
+          };
+
+          case 1: // com.kosherstore.privateappstore.data.repository.StoreAppRepositoryImpl 
+          return (T) new StoreAppRepositoryImpl(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.appDao(), singletonCImpl.managedInstallDao(), singletonCImpl.provideAppsApiServiceProvider.get(), singletonCImpl.provideGsonProvider.get(), singletonCImpl.downloadCoordinatorProvider.get(), singletonCImpl.installCoordinatorProvider.get(), singletonCImpl.packageChangeNotifierProvider.get(), singletonCImpl.storeStatsStoreProvider.get(), AppModule_ProvideIoDispatcherFactory.provideIoDispatcher());
+
+          case 2: // com.kosherstore.privateappstore.data.local.AppDatabase 
+          return (T) AppModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 3: // com.kosherstore.privateappstore.data.remote.AppsApiService 
+          return (T) AppModule_ProvideAppsApiServiceFactory.provideAppsApiService(singletonCImpl.provideRetrofitProvider.get());
+
+          case 4: // retrofit2.Retrofit 
+          return (T) AppModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get(), singletonCImpl.provideGsonProvider.get());
+
+          case 5: // okhttp3.OkHttpClient 
+          return (T) AppModule_ProvideOkHttpClientFactory.provideOkHttpClient();
+
+          case 6: // com.google.gson.Gson 
+          return (T) AppModule_ProvideGsonFactory.provideGson();
+
+          case 7: // com.kosherstore.privateappstore.data.download.DownloadCoordinator 
+          return (T) new DownloadCoordinator(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.provideDownloadManagerProvider.get(), singletonCImpl.installCoordinatorProvider.get(), AppModule_ProvideIoDispatcherFactory.provideIoDispatcher());
+
+          case 8: // android.app.DownloadManager 
+          return (T) AppModule_ProvideDownloadManagerFactory.provideDownloadManager(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 9: // com.kosherstore.privateappstore.data.install.InstallCoordinator 
+          return (T) new InstallCoordinator(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule), singletonCImpl.managedInstallDao(), singletonCImpl.packageChangeNotifierProvider.get(), singletonCImpl.storeStatsStoreProvider.get(), AppModule_ProvideIoDispatcherFactory.provideIoDispatcher());
+
+          case 10: // com.kosherstore.privateappstore.data.install.PackageChangeNotifier 
+          return (T) new PackageChangeNotifier();
+
+          case 11: // com.kosherstore.privateappstore.util.StoreStatsStore 
+          return (T) new StoreStatsStore(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 12: // android.content.SharedPreferences 
+          return (T) AppModule_ProvideSharedPreferencesFactory.provideSharedPreferences(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          default: throw new AssertionError(id);
+        }
+      }
+    }
+  }
+}

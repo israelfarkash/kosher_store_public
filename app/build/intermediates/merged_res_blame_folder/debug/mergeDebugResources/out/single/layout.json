@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/item_screenshot.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/item_screenshot.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/item_app_card.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/item_app_card.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/fragment_main.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/fragment_management.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/fragment_management.xml"
+    },
+    {
+        "merged": "com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/fragment_main.xml",
+        "source": "com.kosherstore.privateappstore.app-main-66:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/activity_image_viewer.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/activity_image_viewer.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/fragment_app_detail.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/fragment_app_detail.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/activity_main.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/layout_shimmer_card.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/layout_shimmer_card.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/item_fullscreen_zoom_page.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/item_fullscreen_zoom_page.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/fragment_settings.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-mergeDebugResources-63:/layout/item_category_square.xml",
+        "source": "/Users/israelfarkash/.gradle/daemon/9.0-milestone-1/com.kosherstore.privateappstore.app-main-66:/layout/item_category_square.xml"
+    }
+]

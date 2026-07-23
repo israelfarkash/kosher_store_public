@@ -1,0 +1,1 @@
+{"className":"com.kosherstore.privateappstore.data.install.Hilt_InstallStatusReceiver","classAnnotations":["dagger.hilt.android.internal.OnReceiveBytecodeInjectionMarker"],"interfaces":[],"superClasses":["android.content.BroadcastReceiver","java.lang.Object"]}
