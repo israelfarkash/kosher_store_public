@@ -1,55 +1,50 @@
 #!/usr/bin/env python3
 """
-כלי מאוחד לניהול חנות אפליקציות פרטית.
-כולל עריכת אפליקציות קיימות, טעינת APK חדש, וסנכרון מגוגל פליי.
+מנהל החנות הפרטית - גרסת פרימיום (CustomTkinter)
+אוטומציה מלאה ועיצוב מודרני.
 """
 
-from __future__ import annotations
-import hashlib
 import json
+import os
 import shutil
-import tkinter as tk
+import subprocess
+import threading
+import time
 import urllib.parse
 import zipfile
-import time
-import threading
-import os
-from dataclasses import dataclass
+import hashlib
 from pathlib import Path
-from tkinter import filedialog, messagebox, ttk
+import re
 
+import customtkinter as ctk
+from tkinter import filedialog, messagebox
 from pyaxmlparser import APK
-
-try:
-    from PIL import Image
-except ImportError:
-    Image = None
+from PIL import Image
 
 try:
     from google_play_scraper import app as play_scraper
 except ImportError:
     play_scraper = None
 
-# --- הגדרות נתיבים ---
+# --- Configuration ---
 ROOT_DIR = Path(__file__).resolve().parents[1]
 APPS_JSON_PATH = ROOT_DIR / "apps.json"
 ICONS_DIR = ROOT_DIR / "icons"
 
-GITHUB_USER = "ASDFG0537701349"
-GITHUB_REPO = "kosher-app-apks-public"
+GITHUB_USER = "israelfarkash"
+GITHUB_REPO = "kosher_store_public"
 DEFAULT_GITHUB_BASE = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/refs/heads/main"
 
-CATEGORIES = ["פיננסים", "תחבורה", "אפליקציות גוגל", "מסרים", "כלים", "מדיה ובידור", "קניות", "לימוד וחינוך", "כללי"]
+CATEGORIES = [
+    "פיננסים", "תחבורה", "אפליקציות גוגל", "מסרים",
+    "כלים", "מדיה ובידור", "קניות", "לימוד וחינוך", "כללי",
+]
 
-@dataclass
-class ApkMetadata:
-    apk_path: Path
-    name: str
-    package_name: str
-    version_code: int
-    size: str
-    checksum: str
-    icon_path_in_apk: str | None
+# Theme configuration
+ctk.set_appearance_mode("Dark")
+ctk.set_default_color_theme("blue")
+
+# --- Helper Functions ---
 
 def file_size_mb(path: Path) -> str:
     size_mb = path.stat().st_size / (1024 * 1024)
@@ -64,288 +59,466 @@ def md5_checksum(path: Path) -> str:
 
 def normalize_drive_url(value: str) -> str:
     value = value.strip()
-    if "drive.google.com" not in value: return value
+    if not value:
+        return value
+    if "drive.google.com" not in value and "googleapis.com" not in value:
+        return value
     parsed = urllib.parse.urlparse(value)
     file_id = None
     if "/file/d/" in parsed.path:
         file_id = parsed.path.split("/file/d/", 1)[1].split("/", 1)[0]
+    elif "/files/" in parsed.path:
+        file_id = parsed.path.split("/files/", 1)[1].split("?", 1)[0]
     else:
         file_id = urllib.parse.parse_qs(parsed.query).get("id", [None])[0]
-    return f"https://drive.google.com/uc?export=download&id={file_id}" if file_id else value
-
-def load_apk_metadata(apk_path: Path) -> ApkMetadata:
-    apk = APK(str(apk_path))
-    package_name = apk.get_package()
-    if not package_name: raise RuntimeError("לא הצלחתי לחלץ Package Name.")
-    version_code = int(apk.get_androidversion_code() or 0)
-    app_name = apk.get_app_name() or package_name
-    icon_path = None
-    try: icon_path = apk.get_app_icon()
-    except: pass
-    return ApkMetadata(
-        apk_path=apk_path, name=app_name, package_name=package_name,
-        version_code=version_code, size=file_size_mb(apk_path),
-        checksum=md5_checksum(apk_path), icon_path_in_apk=icon_path
-    )
-
-def fetch_play_icon_url(package_name: str) -> str | None:
-    if not play_scraper: return None
-    try: return play_scraper(package_name, lang='iw', country='il').get('icon')
-    except: return None
-
-def extract_icon(metadata: ApkMetadata) -> Path:
-    ICONS_DIR.mkdir(exist_ok=True)
-    output_path = ICONS_DIR / f"{metadata.package_name}.png"
-    play_url = fetch_play_icon_url(metadata.package_name)
-    if play_url:
-        try:
-            import urllib.request
-            with urllib.request.urlopen(play_url) as res:
-                with open(output_path, 'wb') as f: f.write(res.read())
-            return output_path
-        except: pass
-    # Fallback to APK
-    try:
-        with zipfile.ZipFile(metadata.apk_path) as archive:
-            if metadata.icon_path_in_apk and metadata.icon_path_in_apk in archive.namelist():
-                with archive.open(metadata.icon_path_in_apk) as icon_file:
-                    with open(output_path, 'wb') as f: shutil.copyfileobj(icon_file, f)
-                return output_path
-    except: pass
-    return output_path
+    if not file_id:
+        return value
+    return f"https://drive.google.com/uc?export=download&id={file_id}"
 
 def load_apps_json() -> list[dict]:
-    if not APPS_JSON_PATH.exists(): return []
-    with APPS_JSON_PATH.open("r", encoding="utf-8") as f: return json.load(f)
+    if not APPS_JSON_PATH.exists():
+        return []
+    try:
+        with APPS_JSON_PATH.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
 
 def save_apps_json(apps: list[dict]) -> None:
     with APPS_JSON_PATH.open("w", encoding="utf-8") as f:
         json.dump(apps, f, ensure_ascii=False, indent=2)
 
-def upsert_app(app_entry: dict) -> None:
-    apps = load_apps_json()
-    pkg = app_entry["packageName"]
-    for i, existing in enumerate(apps):
-        if existing.get("packageName") == pkg:
-            apps[i] = app_entry
-            break
-    else: apps.append(app_entry)
-    apps.sort(key=lambda x: x.get("name", "").lower())
-    save_apps_json(apps)
-
-def run_auto_sync(log_callback=None):
-    if not play_scraper: return
-    apps = load_apps_json()
-    for i, app in enumerate(apps, 1):
-        pkg = app.get('packageName')
-        if not pkg: continue
-        if log_callback: log_callback(f"[{i}/{len(apps)}] מסנכרן {pkg}...")
+def extract_apk_info(apk_path: Path) -> dict:
+    pkg, vcode, vname, name, icon = None, 0, "", None, None
+    if apk_path.suffix.lower() == ".xapk":
         try:
-            res = play_scraper(pkg, lang='iw', country='il')
-            app['description'] = res.get('description', app.get('description', ''))
-            app['screenshots'] = res.get('screenshots', [])[:5]
-        except: pass
-        time.sleep(1)
-    save_apps_json(apps)
+            with zipfile.ZipFile(apk_path) as archive:
+                if "manifest.json" in archive.namelist():
+                    with archive.open("manifest.json") as f:
+                        data = json.load(f)
+                        pkg = data.get("package_name", "")
+                        vcode = int(data.get("version_code", 0))
+                        vname = data.get("version_name", "")
+                        name = data.get("name", "")
+                        for ext in [".png", ".webp"]:
+                            if f"icon{ext}" in archive.namelist():
+                                icon = f"icon{ext}"
+                                break
+        except Exception: pass
 
-class StoreManagerApp(tk.Tk):
-    def __init__(self) -> None:
+    if not pkg:
+        try:
+            apk = APK(str(apk_path))
+            pkg = apk.get_package()
+            vcode = int(apk.get_androidversion_code() or 0)
+            vname = str(apk.get_androidversion_name() or vcode)
+            name = apk.get_app_name() or pkg
+            icon = apk.get_app_icon()
+        except Exception as e:
+            raise RuntimeError(f"שגיאה בקריאת APK: {e}")
+
+    return {
+        "apk_path": apk_path,
+        "name": name or pkg,
+        "package_name": pkg,
+        "version_code": vcode,
+        "version_name": vname or str(vcode),
+        "size": file_size_mb(apk_path),
+        "checksum": md5_checksum(apk_path),
+        "icon_path_in_apk": icon
+    }
+
+# --- Main Application UI ---
+
+class ModernStoreManager(ctk.CTk):
+    def __init__(self):
         super().__init__()
-        self.title("Private Store Manager - Unified")
-        self.geometry("1000x750")
+        self.title("מנהל החנות - פרימיום")
+        self.geometry("1050x700")
+        self.minsize(900, 600)
         
-        self.metadata = None
-        self.apk_url_var = tk.StringVar()
-        self.category_var = tk.StringVar(value="כללי")
-        self.status_var = tk.StringVar(value="בחר אפליקציה מהרשימה או טען APK חדש.")
-        self.name_var = tk.StringVar()
-        self.package_var = tk.StringVar()
-        self.version_code_var = tk.StringVar()
-        self.size_var = tk.StringVar()
-        self.checksum_var = tk.StringVar()
-
-        self._build_ui()
-
-    def _build_ui(self):
-        style = ttk.Style()
-        style.configure("Action.TButton", padding=6, font=('Helvetica', 10, 'bold'))
-
-        paned = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
-        paned.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-
-        # Sidebar
-        side = ttk.LabelFrame(paned, text=" אפליקציות קיימות ", padding=10)
-        paned.add(side, weight=1)
-        self.apps_listbox = tk.Listbox(side, font=("Segoe UI", 10))
-        self.apps_listbox.pack(fill=tk.BOTH, expand=True)
-        self.apps_listbox.bind("<<ListboxSelect>>", self.on_app_selected)
-        ttk.Button(side, text="🔄 רענן רשימה", command=self.refresh_apps_list).pack(fill=tk.X, pady=(5,0))
-
-        # Main
-        main = ttk.Frame(paned, padding=10)
-        paned.add(main, weight=3)
-
-        form = ttk.LabelFrame(main, text=" פרטי אפליקציה ", padding=15)
-        form.pack(fill=tk.X, pady=(0,10))
+        # Data state
+        self.apps_data = load_apps_json()
+        self.current_app_data = {}
+        self.is_new_app = True
         
-        grid = ttk.Frame(form)
-        grid.pack(fill=tk.X)
-        grid.columnconfigure(1, weight=1)
-
-        self.add_field(grid, 0, "שם האפליקציה:", self.name_var)
-        self.add_field(grid, 1, "Package Name:", self.package_var, show_copy=True)
-        self.add_field(grid, 2, "Version Code:", self.version_code_var)
-        self.add_field(grid, 3, "קישור APK:", self.apk_url_var, show_copy=True)
-        self.add_field(grid, 4, "קטגוריה:", self.category_var, is_combo=True)
-        self.add_field(grid, 5, "גודל:", self.size_var)
-        self.add_field(grid, 6, "Checksum:", self.checksum_var, show_copy=True)
-
-        ttk.Label(form, text="תיאור:").pack(anchor="w", pady=(10,0))
-        self.description_text = tk.Text(form, height=5, font=("Segoe UI", 10), wrap=tk.WORD)
-        self.description_text.pack(fill=tk.X, pady=5)
-
-        btns = ttk.Frame(main)
-        btns.pack(fill=tk.X, pady=(0,10))
-        ttk.Button(btns, text="💾 שמור שינויים", style="Action.TButton", command=self.update_json).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btns, text="📂 טען APK מהמחשב", command=self.load_apk).pack(side=tk.LEFT, padx=5)
-
-        tools = ttk.LabelFrame(main, text=" כלים ואוטומציה ", padding=15)
-        tools.pack(fill=tk.BOTH, expand=True)
-        t_btns = ttk.Frame(tools)
-        t_btns.pack(fill=tk.X, pady=(0,10))
-        ttk.Button(t_btns, text="🔄 סנכרן מ-Google Play", command=self.start_sync).pack(side=tk.LEFT, padx=5)
-        ttk.Button(t_btns, text="🖼️ עדכן אייקונים", command=self.start_icon_sync).pack(side=tk.LEFT, padx=5)
-        ttk.Button(t_btns, text="🚀 פרסם (Push)", command=self.start_git_push).pack(side=tk.LEFT, padx=5)
+        # macOS clipboard shortcuts fix for customtkinter
+        self.bind("<Command-c>", lambda e: self.event_generate("<<Copy>>"))
+        self.bind("<Command-v>", lambda e: self.event_generate("<<Paste>>"))
+        self.bind("<Command-x>", lambda e: self.event_generate("<<Cut>>"))
+        self.bind("<Command-a>", lambda e: self.event_generate("<<SelectAll>>"))
         
-        self.log_text = tk.Text(tools, height=8, bg="#F8F8F8", state="disabled", font=("Consolas", 9))
-        self.log_text.pack(fill=tk.BOTH, expand=True, pady=5)
-        ttk.Label(main, textvariable=self.status_var, font=('Helvetica', 9, 'italic')).pack(anchor="w")
+        self.setup_ui()
+        self.refresh_app_list()
+        
+    def setup_ui(self):
+        # Configure grid layout (1 row, 2 columns)
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        
+        # --- Left Sidebar (App List) ---
+        self.sidebar = ctk.CTkFrame(self, width=280, corner_radius=0)
+        self.sidebar.grid(row=0, column=0, sticky="nsew")
+        self.sidebar.grid_rowconfigure(3, weight=1)
+        
+        self.title_label = ctk.CTkLabel(self.sidebar, text="📱 החנות שלי", font=ctk.CTkFont(size=24, weight="bold"))
+        self.title_label.grid(row=0, column=0, padx=20, pady=(30, 20))
+        
+        self.btn_load_apk = ctk.CTkButton(self.sidebar, text="הוסף אפליקציה חדשה (APK)", 
+                                          command=self.load_new_apk,
+                                          font=ctk.CTkFont(size=14, weight="bold"),
+                                          height=40, fg_color="#2FA572", hover_color="#107C41")
+        self.btn_load_apk.grid(row=1, column=0, padx=20, pady=10, sticky="ew")
+        
+        self.search_entry = ctk.CTkEntry(self.sidebar, placeholder_text="חיפוש...", height=35)
+        self.search_entry.grid(row=2, column=0, padx=20, pady=10, sticky="ew")
+        self.search_entry.bind("<KeyRelease>", self.filter_app_list)
+        
+        self.app_list_frame = ctk.CTkScrollableFrame(self.sidebar, fg_color="transparent")
+        self.app_list_frame.grid(row=3, column=0, padx=10, pady=10, sticky="nsew")
+        self.app_buttons = []
+        
+        # --- Right Main Content (Editor) ---
+        self.main_content = ctk.CTkFrame(self, fg_color="transparent")
+        self.main_content.grid(row=0, column=1, sticky="nsew", padx=20, pady=20)
+        self.main_content.grid_columnconfigure(0, weight=1)
+        self.main_content.grid_rowconfigure(2, weight=1)
+        
+        # Header Info Card
+        self.info_card = ctk.CTkFrame(self.main_content, corner_radius=15)
+        self.info_card.grid(row=0, column=0, sticky="ew", pady=(0, 20))
+        self.info_card.grid_columnconfigure(1, weight=1)
+        
+        self.icon_label = ctk.CTkLabel(self.info_card, text="", width=80, height=80, corner_radius=15, fg_color="#333333")
+        self.icon_label.grid(row=0, column=0, rowspan=3, padx=20, pady=20)
+        
+        self.lbl_app_name = ctk.CTkLabel(self.info_card, text="בחר או הוסף אפליקציה", font=ctk.CTkFont(size=22, weight="bold"))
+        self.lbl_app_name.grid(row=0, column=1, sticky="w", padx=10, pady=(20, 0))
+        
+        self.lbl_app_pkg = ctk.CTkLabel(self.info_card, text="package.name", text_color="gray")
+        self.lbl_app_pkg.grid(row=1, column=1, sticky="nw", padx=10)
+        
+        self.lbl_app_meta = ctk.CTkLabel(self.info_card, text="גרסה: -- | גודל: --", font=ctk.CTkFont(size=12))
+        self.lbl_app_meta.grid(row=2, column=1, sticky="nw", padx=10, pady=(0, 20))
+        
+        self.btn_delete = ctk.CTkButton(self.info_card, text="מחק", width=60, fg_color="#D9534F", hover_color="#C9302C", command=self.delete_current_app)
+        self.btn_delete.grid(row=0, column=2, padx=20, pady=20, sticky="ne")
+        self.btn_delete.configure(state="disabled")
+        
+        # Forms Card (Scrollable)
+        self.form_frame = ctk.CTkScrollableFrame(self.main_content, fg_color="transparent")
+        self.form_frame.grid(row=1, column=0, sticky="nsew")
+        self.form_frame.grid_columnconfigure(0, weight=1)
+        
+        # --- Form Fields ---
+        def create_field(parent, label_text, placeholder="", has_paste=False):
+            frame = ctk.CTkFrame(parent, fg_color="transparent")
+            frame.pack(fill="x", pady=8)
+            frame.grid_columnconfigure(0, weight=1)
+            lbl = ctk.CTkLabel(frame, text=label_text, font=ctk.CTkFont(weight="bold"))
+            lbl.grid(row=0, column=0, sticky="w", pady=(0, 2))
+            
+            entry_frame = ctk.CTkFrame(frame, fg_color="transparent")
+            entry_frame.grid(row=1, column=0, sticky="ew")
+            entry_frame.grid_columnconfigure(0, weight=1)
+            
+            entry = ctk.CTkEntry(entry_frame, placeholder_text=placeholder, height=38)
+            entry.grid(row=0, column=0, sticky="ew")
+            
+            if has_paste:
+                def paste_cmd():
+                    try:
+                        entry.delete(0, 'end')
+                        entry.insert(0, self.clipboard_get())
+                    except Exception:
+                        pass
+                btn_paste = ctk.CTkButton(entry_frame, text="הדבק 📥", width=60, height=38, command=paste_cmd, fg_color="#333333", hover_color="#444444")
+                btn_paste.grid(row=0, column=1, padx=(10, 0))
+                
+            return entry
 
-        self.refresh_apps_list()
+        self.entry_name = create_field(self.form_frame, "שם האפליקציה")
+        self.entry_drive = create_field(self.form_frame, "🔗 קישור להורדה (Google Drive)", has_paste=True)
+        
+        # Category Dropdown
+        cat_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
+        cat_frame.pack(fill="x", pady=8)
+        cat_frame.grid_columnconfigure(0, weight=1)
+        ctk.CTkLabel(cat_frame, text="קטגוריה", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w")
+        self.combo_category = ctk.CTkComboBox(cat_frame, values=CATEGORIES, height=38)
+        self.combo_category.grid(row=1, column=0, sticky="ew")
+        
+        # Description
+        desc_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
+        desc_frame.pack(fill="x", pady=8)
+        desc_frame.grid_columnconfigure(0, weight=1)
+        ctk.CTkLabel(desc_frame, text="תיאור (מתמלא אוטומטית)", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w")
+        self.text_desc = ctk.CTkTextbox(desc_frame, height=120)
+        self.text_desc.grid(row=1, column=0, sticky="ew")
+        
+        # Bottom Action Bar
+        self.action_bar = ctk.CTkFrame(self.main_content, fg_color="transparent")
+        self.action_bar.grid(row=3, column=0, sticky="ew", pady=(20, 0))
+        self.action_bar.grid_columnconfigure(0, weight=1)
+        self.action_bar.grid_columnconfigure(1, weight=1)
+        
+        self.status_label = ctk.CTkLabel(self.action_bar, text="מוכן לעבודה", text_color="gray")
+        self.status_label.grid(row=0, column=0, sticky="w")
+        
+        self.btn_save_publish = ctk.CTkButton(self.action_bar, text="💾 שמור ופרסם", 
+                                              command=self.save_and_publish,
+                                              font=ctk.CTkFont(size=16, weight="bold"),
+                                              height=50, fg_color="#1F6AA5", hover_color="#144870")
+        self.btn_save_publish.grid(row=0, column=1, sticky="e")
+        self.btn_save_publish.configure(state="disabled")
 
-    def add_field(self, parent, row, label, var, is_combo=False, show_copy=False):
-        ttk.Label(parent, text=label).grid(row=row, column=0, sticky="w", padx=(0,10), pady=5)
-        if is_combo:
-            ttk.Combobox(parent, textvariable=var, values=CATEGORIES, state="readonly").grid(row=row, column=1, sticky="ew")
-        elif show_copy:
-            f = ttk.Frame(parent)
-            f.grid(row=row, column=1, sticky="ew")
-            f.columnconfigure(0, weight=1)
-            ttk.Entry(f, textvariable=var).grid(row=0, column=0, sticky="ew")
-            ttk.Button(f, text="📋", width=3, command=lambda: self.copy(var.get())).grid(row=0, column=1, padx=2)
-            ttk.Button(f, text="📥", width=3, command=lambda: self.paste(var)).grid(row=0, column=2, padx=2)
-        else:
-            ttk.Entry(parent, textvariable=var).grid(row=row, column=1, sticky="ew")
-
-    def copy(self, txt):
-        self.clipboard_clear()
-        self.clipboard_append(txt)
-        self.status_var.set("✅ הועתק.")
-
-    def paste(self, var):
-        try: var.set(self.clipboard_get().strip())
-        except: pass
-
-    def refresh_apps_list(self):
-        self.apps_listbox.delete(0, tk.END)
-        self.current_apps = load_apps_json()
-        for app in self.current_apps: self.apps_listbox.insert(tk.END, app.get("name", "Unknown"))
-
-    def on_app_selected(self, event):
-        sel = self.apps_listbox.curselection()
-        if not sel: return
-        app = self.current_apps[sel[0]]
-        self.metadata = None
-        self.name_var.set(app.get("name", ""))
-        self.package_var.set(app.get("packageName", ""))
-        self.version_code_var.set(str(app.get("versionCode", "")))
-        self.apk_url_var.set(app.get("apkUrl", ""))
-        self.category_var.set(app.get("category", "כללי"))
-        self.size_var.set(app.get("size", ""))
-        self.checksum_var.set(app.get("checksum", ""))
-        self.description_text.delete("1.0", tk.END)
-        self.description_text.insert("1.0", app.get("description", ""))
-
-    def load_apk(self):
-        p = filedialog.askopenfilename(filetypes=[("APK", "*.apk")])
-        if not p: return
-        try:
-            self.metadata = load_apk_metadata(Path(p))
-            self.name_var.set(self.metadata.name)
-            self.package_var.set(self.metadata.package_name)
-            self.version_code_var.set(str(self.metadata.version_code))
-            self.size_var.set(self.metadata.size)
-            self.checksum_var.set(self.metadata.checksum)
-            self.status_var.set(f"✅ נטען: {self.metadata.name}")
-        except Exception as e: messagebox.showerror("שגיאה", str(e))
-
-    def update_json(self):
-        url = normalize_drive_url(self.apk_url_var.get())
-        if not url: return messagebox.showwarning("חסר קישור", "הזן קישור הורדה")
-        try:
-            if self.metadata: extract_icon(self.metadata)
-            pkg = self.package_var.get().strip()
-            upsert_app({
-                "name": self.name_var.get().strip(),
-                "packageName": pkg,
-                "versionCode": int(self.version_code_var.get().strip()),
-                "apkUrl": url,
-                "iconUrl": f"{DEFAULT_GITHUB_BASE}/icons/{pkg}.png",
-                "description": self.description_text.get("1.0", tk.END).strip(),
-                "category": self.category_var.get().strip(),
-                "size": self.size_var.get().strip(),
-                "checksum": self.checksum_var.get().strip(),
-                "checksumType": "MD5"
-            })
-            self.refresh_apps_list()
-            messagebox.showinfo("הצלחה", "נשמר בהצלחה!")
-        except Exception as e: messagebox.showerror("שגיאה", str(e))
-
-    def log(self, msg):
-        self.log_text.config(state="normal")
-        self.log_text.insert(tk.END, f"{msg}\n")
-        self.log_text.see(tk.END)
-        self.log_text.config(state="disabled")
+    def show_status(self, msg, is_error=False, is_success=False):
+        color = "gray"
+        if is_error: color = "#D9534F"
+        elif is_success: color = "#2FA572"
+        self.status_label.configure(text=msg, text_color=color)
         self.update_idletasks()
 
-    def start_icon_sync(self):
-        def run():
-            self.log("🚀 מעדכן אייקונים...")
-            apps = load_apps_json()
-            import urllib.request
-            for i, app in enumerate(apps, 1):
-                pkg = app.get('packageName')
-                if not pkg: continue
-                self.log(f"[{i}/{len(apps)}] {pkg}...")
-                u = fetch_play_icon_url(pkg)
-                if u:
-                    try:
-                        with urllib.request.urlopen(u) as r:
-                            with open(ICONS_DIR / f"{pkg}.png", 'wb') as f: f.write(r.read())
-                    except: pass
-                time.sleep(0.5)
-            self.log("✅ אייקונים עודכנו.")
-        threading.Thread(target=run, daemon=True).start()
+    def filter_app_list(self, event=None):
+        query = self.search_entry.get().lower()
+        for btn, app in self.app_buttons:
+            if query in app.get("name", "").lower() or query in app.get("packageName", "").lower():
+                btn.pack(fill="x", pady=2)
+            else:
+                btn.pack_forget()
 
-    def start_git_push(self):
-        def run():
-            import subprocess
-            self.log("🚀 מפרסם ל-GitHub...")
+    def refresh_app_list(self):
+        for btn, _ in self.app_buttons:
+            btn.destroy()
+        self.app_buttons.clear()
+        
+        self.apps_data.sort(key=lambda x: x.get("name", "").lower())
+        for app in self.apps_data:
+            btn = ctk.CTkButton(self.app_list_frame, text=app.get("name", "Unknown"),
+                                fg_color="transparent", text_color=("gray10", "gray90"),
+                                hover_color=("gray70", "gray30"), anchor="w",
+                                command=lambda a=app: self.load_app_to_form(a))
+            btn.pack(fill="x", pady=2)
+            self.app_buttons.append((btn, app))
+        self.filter_app_list()
+
+    def set_icon_image(self, image_path):
+        try:
+            if image_path and os.path.exists(image_path):
+                img = Image.open(image_path)
+                ctk_img = ctk.CTkImage(light_image=img, dark_image=img, size=(80, 80))
+                self.icon_label.configure(image=ctk_img, text="")
+            else:
+                self.icon_label.configure(image=None, text="📦")
+        except Exception:
+            self.icon_label.configure(image=None, text="📦")
+
+    def load_app_to_form(self, app):
+        self.is_new_app = False
+        self.current_app_data = app.copy()
+        
+        self.lbl_app_name.configure(text=app.get("name", ""))
+        self.lbl_app_pkg.configure(text=app.get("packageName", ""))
+        self.lbl_app_meta.configure(text=f"גרסה: {app.get('versionName', '')} | גודל: {app.get('size', '')}")
+        self.set_icon_image(ICONS_DIR / f"{app.get('packageName')}.png")
+        
+        self.entry_name.delete(0, 'end')
+        self.entry_name.insert(0, app.get("name", ""))
+        
+        self.entry_drive.delete(0, 'end')
+        self.entry_drive.insert(0, app.get("apkUrl", ""))
+        
+        self.combo_category.set(app.get("category", "כללי"))
+        
+        self.text_desc.delete("1.0", "end")
+        self.text_desc.insert("1.0", app.get("description", ""))
+        
+        self.btn_delete.configure(state="normal")
+        self.btn_save_publish.configure(state="normal")
+        self.show_status("אפליקציה נטענה בהצלחה.")
+
+    def load_new_apk(self):
+        apk_path = filedialog.askopenfilename(title="בחר קובץ APK", filetypes=[("APK Files", "*.apk *.xapk")])
+        if not apk_path: return
+        
+        self.show_status("⏳ מעבד APK ושואב נתונים אוטומטית...", is_success=True)
+        self.btn_save_publish.configure(state="disabled")
+        
+        def process():
             try:
-                subprocess.run(["git", "add", "apps.json", "icons/"], cwd=ROOT_DIR, check=True)
-                subprocess.run(["git", "commit", "-m", "Update store data"], cwd=ROOT_DIR, capture_output=True)
-                subprocess.run(["git", "push", "origin", "main"], cwd=ROOT_DIR, check=True)
-                self.log("✅ פורסם בהצלחה!")
-            except Exception as e: self.log(f"❌ שגיאה: {e}")
-        threading.Thread(target=run, daemon=True).start()
+                # 1. Parse APK
+                meta = extract_apk_info(Path(apk_path))
+                pkg = meta["package_name"]
+                
+                # Setup default data
+                app_data = {
+                    "name": meta["name"],
+                    "packageName": pkg,
+                    "versionCode": meta["version_code"],
+                    "versionName": meta["version_name"],
+                    "size": meta["size"],
+                    "checksum": meta["checksum"],
+                    "checksumType": "MD5",
+                    "category": "כללי",
+                    "description": "",
+                    "apkUrl": "",
+                    "iconUrl": f"{DEFAULT_GITHUB_BASE}/icons/{pkg}.png"
+                }
+                
+                # 2. Try to fetch from Play Store automatically
+                play_data = None
+                if play_scraper:
+                    try:
+                        play_data = play_scraper(pkg, lang="iw", country="il")
+                    except Exception:
+                        pass
+                
+                # 3. Handle Icon
+                ICONS_DIR.mkdir(exist_ok=True)
+                icon_out_path = ICONS_DIR / f"{pkg}.png"
+                icon_saved = False
+                
+                if play_data and play_data.get("icon"):
+                    try:
+                        import urllib.request
+                        with urllib.request.urlopen(play_data["icon"]) as res:
+                            with open(icon_out_path, "wb") as f:
+                                f.write(res.read())
+                        icon_saved = True
+                    except Exception: pass
+                
+                if not icon_saved and meta["icon_path_in_apk"]:
+                    try:
+                        with zipfile.ZipFile(apk_path) as archive:
+                            with archive.open(meta["icon_path_in_apk"]) as icon_file:
+                                with open(icon_out_path, "wb") as f:
+                                    shutil.copyfileobj(icon_file, f)
+                    except Exception: pass
 
-    def start_sync(self):
-        def run():
-            self.log("🚀 מסנכרן נתונים...")
-            run_auto_sync(self.log)
-            self.refresh_apps_list()
-            self.log("✅ סנכרון הסתיים.")
-        threading.Thread(target=run, daemon=True).start()
+                # 4. Handle Description
+                if play_data and play_data.get("description"):
+                    app_data["description"] = play_data["description"]
+                if play_data and play_data.get("screenshots"):
+                    app_data["screenshots"] = play_data["screenshots"][:5]
+                
+                # Update UI
+                def update_ui():
+                    self.is_new_app = True
+                    self.current_app_data = app_data
+                    
+                    self.lbl_app_name.configure(text=app_data["name"])
+                    self.lbl_app_pkg.configure(text=app_data["packageName"])
+                    self.lbl_app_meta.configure(text=f"גרסה: {app_data['versionName']} | גודל: {app_data['size']}")
+                    self.set_icon_image(icon_out_path)
+                    
+                    self.entry_name.delete(0, 'end')
+                    self.entry_name.insert(0, app_data["name"])
+                    
+                    self.entry_drive.delete(0, 'end')
+                    
+                    self.combo_category.set("כללי")
+                    
+                    self.text_desc.delete("1.0", "end")
+                    self.text_desc.insert("1.0", app_data["description"])
+                    
+                    self.btn_delete.configure(state="disabled")
+                    self.btn_save_publish.configure(state="normal")
+                    self.show_status("✅ הנתונים נשאבו! הדבק קישור לדרייב ולחץ על 'שמור ופרסם'.", is_success=True)
+                
+                self.after(0, update_ui)
+                
+            except Exception as e:
+                self.after(0, lambda: self.show_status(f"❌ שגיאה: {e}", is_error=True))
+                
+        threading.Thread(target=process, daemon=True).start()
+
+    def delete_current_app(self):
+        pkg = self.current_app_data.get("packageName")
+        if not pkg: return
+        
+        # Custom confirmation dialog
+        dialog = ctk.CTkToplevel(self)
+        dialog.title("אישור מחיקה")
+        dialog.geometry("300x150")
+        dialog.transient(self)
+        dialog.grab_set()
+        
+        ctk.CTkLabel(dialog, text=f"האם אתה בטוח שברצונך למחוק את\n{self.current_app_data.get('name')}?").pack(pady=20)
+        
+        btn_frame = ctk.CTkFrame(dialog, fg_color="transparent")
+        btn_frame.pack(fill="x", padx=20)
+        
+        def confirm():
+            self.apps_data = [a for a in self.apps_data if a.get("packageName") != pkg]
+            save_apps_json(self.apps_data)
+            icon_file = ICONS_DIR / f"{pkg}.png"
+            if icon_file.exists(): icon_file.unlink()
+            
+            self.refresh_app_list()
+            self.show_status("🗑️ האפליקציה נמחקה.", is_error=True)
+            self.btn_save_publish.configure(state="disabled")
+            self.btn_delete.configure(state="disabled")
+            self.lbl_app_name.configure(text="בחר או הוסף אפליקציה")
+            self.set_icon_image(None)
+            dialog.destroy()
+            
+        def cancel(): dialog.destroy()
+        
+        ctk.CTkButton(btn_frame, text="כן, מחק", fg_color="#D9534F", hover_color="#C9302C", command=confirm).pack(side="left", padx=5)
+        ctk.CTkButton(btn_frame, text="ביטול", fg_color="gray", command=cancel).pack(side="right", padx=5)
+
+    def save_and_publish(self):
+        url = normalize_drive_url(self.entry_drive.get())
+        name = self.entry_name.get().strip()
+        
+        if not url:
+            self.show_status("❌ שגיאה: חובה להזין קישור להורדה (Google Drive).", is_error=True)
+            return
+        if not name:
+            self.show_status("❌ שגיאה: חובה להזין שם אפליקציה.", is_error=True)
+            return
+            
+        self.show_status("⏳ שומר ומפרסם אוטומטית ברקע...", is_success=True)
+        self.btn_save_publish.configure(state="disabled")
+        
+        def process():
+            try:
+                # 1. Update data
+                self.current_app_data["name"] = name
+                self.current_app_data["apkUrl"] = url
+                self.current_app_data["category"] = self.combo_category.get()
+                self.current_app_data["description"] = self.text_desc.get("1.0", "end").strip()
+                
+                pkg = self.current_app_data["packageName"]
+                
+                # Upsert to list
+                found = False
+                for i, app in enumerate(self.apps_data):
+                    if app.get("packageName") == pkg:
+                        self.apps_data[i] = self.current_app_data
+                        found = True
+                        break
+                if not found:
+                    self.apps_data.append(self.current_app_data)
+                    
+                save_apps_json(self.apps_data)
+                
+                # 2. Git Push
+                subprocess.run(["git", "add", "apps.json", "icons/"], cwd=ROOT_DIR, check=True)
+                res = subprocess.run(["git", "commit", "-m", f"Automated update for {name}"], cwd=ROOT_DIR, capture_output=True, text=True)
+                if "nothing to commit" not in res.stdout + res.stderr:
+                    subprocess.run(["git", "push", "origin", "main"], cwd=ROOT_DIR, check=True)
+                
+                self.after(0, lambda: self.refresh_app_list())
+                self.after(0, lambda: self.show_status(f"🎉 הושלם! '{name}' באוויר.", is_success=True))
+                self.after(0, lambda: self.btn_save_publish.configure(state="normal"))
+                
+            except Exception as e:
+                self.after(0, lambda: self.show_status(f"❌ שגיאה בשמירה/פרסום: {e}", is_error=True))
+                self.after(0, lambda: self.btn_save_publish.configure(state="normal"))
+                
+        threading.Thread(target=process, daemon=True).start()
 
 if __name__ == "__main__":
-    StoreManagerApp().mainloop()
+    app = ModernStoreManager()
+    app.mainloop()
