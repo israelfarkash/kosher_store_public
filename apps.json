@@ -13,6 +13,26 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.adguard.android.png"
   },
   {
+    "name": "Authenticator",
+    "packageName": "com.google.android.apps.authenticator2",
+    "versionCode": 7002011,
+    "versionName": "7.2",
+    "size": "7.5 MB",
+    "checksum": "1fcd234cb283aaf62a7f4dcf81307791",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "עם מאמת החשבונות של Google מקבלים שכבת אבטחה נוספת לחשבונות באינטרנט, בזכות הוספת שלב שני לאימות בכניסה לחשבון. כלומר, בנוסף לסיסמה צריך להזין גם קוד שנוצר על ידי אפליקציית מאמת החשבונות של Google שמותקנת בטלפון.  לאפליקציית מאמת החשבונות של Google יש אפשרות ליצור את קוד האימות בטלפון גם אם אין חיבור לרשת סלולרית או לאינטרנט.  \r\n* סנכרון הקודים ממאמת החשבונות בחשבון Google ובכל המכשירים. כך תמיד תהיה גישה אליהם, גם אם הטלפון יאבד. \r\n* הגדרת החשבונות במאמת החשבונות באופן אוטומטי באמצעות קוד QR. זו דרך קלה ומהירה לוודא שהקודים יוגדרו בצורה מדויקת. \r\n* תמיכה במספר חשבונות. אפליקציית מאמת החשבונות מאפשרת לנהל כמה חשבונות, לכן אין צורך לעבור בין אפליקציות בכל כניסה לחשבון. \r\n* תמיכה ביצירת קודים חד-פעמיים או מוגבלים בזמן. יש לך אפשרות לבחור את שיטת יצירת הקודים שהכי מתאימה לצרכים שלך. \r\n* העברת חשבונות בין מכשירים באמצעות קוד QR. זו דרך נוחה להעביר את החשבונות למכשיר חדש. \r\n* כדי להיכנס לחשבון Google באמצעות מאמת החשבונות של Google, צריך להפעיל אימות דו-שלבי בחשבון. אפשר להתחיל את ההגדרה בכתובת http://www.google.com/2step  מידע על הרשאות: גישה למצלמה: נדרשת להוספת חשבונות באמצעות קודי QR",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1aHwKTNYWM4RmlbLruRro4KhcZuIwUIOU&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.authenticator2.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/K0v7YVrTI4T1rHkjrYzuPbRyB6VG2SuuNHyKoAIKbUnpi2n_G7HOtPFR__vT9Gnk229Pr0Kj17yO6-hRQj2Lgq0",
+      "https://play-lh.googleusercontent.com/d8SmgK0c50lqQlBY4YB3cSmqCTg5-UnvL424zh1m_s8lEzqQW4Uzbnl-LAy0TibpSjKXbrdcX9lVMudDX994rg",
+      "https://play-lh.googleusercontent.com/L1rjVN3V0Hu9o-6zY5Rp_FWCtWd2XmIXcvNJy2P1x0rhWcdzCBSfqkZZNk6fXotvP9KS8Kd9I9iKyjVwImgvUg",
+      "https://play-lh.googleusercontent.com/CLA_X-VOeSLHlm1QY3_daAGCn3kL2hsGBPZOVcVQdKuepE6SBj41-uCE3bbXuswkxSD2H7TI--Ewi3-Vr3zucw",
+      "https://play-lh.googleusercontent.com/pXzvAkfAJWWthWh2VyarJSpcnAamcXEk_34CiVvAyopC879oMW2mGE8CvaqeNsICNgP2E0FU4fT-a550IN2x"
+    ]
+  },
+  {
     "name": "bit",
     "packageName": "com.bnhp.payments.paymentsapp",
     "versionCode": 528,
@@ -292,23 +312,23 @@
     ]
   },
   {
-    "name": "Authenticator",
-    "packageName": "com.google.android.apps.authenticator2",
-    "versionCode": 7002011,
-    "versionName": "7.2",
-    "size": "7.5 MB",
-    "checksum": "1fcd234cb283aaf62a7f4dcf81307791",
+    "name": "Google Wallet",
+    "packageName": "com.google.android.apps.walletnfcrel",
+    "versionCode": 933714853,
+    "versionName": "26.28.944947626",
+    "size": "39.7 MB",
+    "checksum": "adf3f6fc8a0296630f69bfad7fc676c0",
     "checksumType": "MD5",
-    "category": "אפליקציות גוגל",
-    "description": "עם מאמת החשבונות של Google מקבלים שכבת אבטחה נוספת לחשבונות באינטרנט, בזכות הוספת שלב שני לאימות בכניסה לחשבון. כלומר, בנוסף לסיסמה צריך להזין גם קוד שנוצר על ידי אפליקציית מאמת החשבונות של Google שמותקנת בטלפון.  לאפליקציית מאמת החשבונות של Google יש אפשרות ליצור את קוד האימות בטלפון גם אם אין חיבור לרשת סלולרית או לאינטרנט.  \r\n* סנכרון הקודים ממאמת החשבונות בחשבון Google ובכל המכשירים. כך תמיד תהיה גישה אליהם, גם אם הטלפון יאבד. \r\n* הגדרת החשבונות במאמת החשבונות באופן אוטומטי באמצעות קוד QR. זו דרך קלה ומהירה לוודא שהקודים יוגדרו בצורה מדויקת. \r\n* תמיכה במספר חשבונות. אפליקציית מאמת החשבונות מאפשרת לנהל כמה חשבונות, לכן אין צורך לעבור בין אפליקציות בכל כניסה לחשבון. \r\n* תמיכה ביצירת קודים חד-פעמיים או מוגבלים בזמן. יש לך אפשרות לבחור את שיטת יצירת הקודים שהכי מתאימה לצרכים שלך. \r\n* העברת חשבונות בין מכשירים באמצעות קוד QR. זו דרך נוחה להעביר את החשבונות למכשיר חדש. \r\n* כדי להיכנס לחשבון Google באמצעות מאמת החשבונות של Google, צריך להפעיל אימות דו-שלבי בחשבון. אפשר להתחיל את ההגדרה בכתובת http://www.google.com/2step  מידע על הרשאות: גישה למצלמה: נדרשת להוספת חשבונות באמצעות קודי QR",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1aHwKTNYWM4RmlbLruRro4KhcZuIwUIOU&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.authenticator2.png",
+    "category": "כללי",
+    "description": "עם Google Wallet, נהנים מגישה מהירה ומאובטחת לכל מה שצריך באופן יומיומי. לא משנה לאן תלכו – הכול נשמר במקום אחד בטלפון הנייד.\r\n\r\nכרטיסים, שוברים ועוד – תמיד איתכם\r\n+ משלמים ללא מגע עם Google Pay, עולים למטוס/רכבת, הולכים לסרט/הופעה או צוברים נקודות בכרטיסי מועדון עם ארנק דיגיטלי שיש בו יותר מקום.\r\n\r\nגש Wallet Google משעון Wear OS שלך\r\n+ קבל גישה מיידית לארנק בלוח השעון הראשי של Wear OS עם סיבוכים.\r\n\r\nמוצאים מהר את מה שצריכים\r\n+ שלוש דרכים מהירות לגשת לכל מה שצריך באופן יומיומי: שימוש בהגדרות של הטלפון לגישה מהירה, פתיחה של אפליקציית Wallet ממסך הבית או שימוש ב-Google Assistant כשהידיים תפוסות.\r\n\r\nכל מה שצריך, בדיוק בזמן הנכון\r\n+ אפליקציית Wallet יכולה להציע לכם דברים שאתם צריכים, בדיוק ברגע הנכון. למשל, הודעה עם עותק של כרטיס העלייה למטוס ביום הנסיעה, כך שלא תצטרכו עותק מודפס.\r\n\r\nמעקב אחרי קבלות\r\n+ קל למצוא את פרטי העסקאות ב-Wallet, כולל פרטים חכמים כמו המיקום שהתקבל ממפות Google.\r\n\r\nשילוב השירותים השונים של Google\r\n+ מסנכרנים את Wallet כדי לעדכן את היומן ואת Assistant בכל המידע, כמו עדכוני טיסות והתראות לגבי אירועים.\r\n+ קונים בצורה חכמה יותר – יתרת הנקודות וההטבות של מועדוני הלקוחות שלכם מוצגות במפות, בשופינג ובאפליקציות נוספות.\r\n\r\nהכול מוכן לשימוש ברגע\r\n+ תהליך ההגדרה פשוט – אפשר לייבא כרטיסים לתחבורה הציבורית, כרטיסי מועדון לקוחות וכרטיסים נוספים ששמרתם ב-Gmail.\r\n\r\nמתעדכנים תוך כדי תנועה\r\n+ עולים למטוס בלי להסתבך – כל המידע העדכני מתקבל מחיפוש Google ומקבלים עדכונים ב-Google Wallet לגבי שינויים בשערים או עיכובים לא צפויים בטיסות.\r\n\r\nדרך מאובטחת לשמור את כל מה שצריך בהישג יד\r\n+ האבטחה והפרטיות הן חלק בלתי נפרד מ-Google Wallet, כך שכל הנתונים החשובים שלכם מוגנים.\r\n\r\nאבטחה של Android שאפשר לסמוך עליה\r\n+ כל המידע והנתונים שלכם מוגנים באמצעות פיצ'רים מתקדמים של אבטחה ב-Android, כמו אימות דו-שלבי, 'איפה הטלפון שלי' ומחיקת נתונים מרחוק.\r\n\r\nהכרטיס שלכם מאובטח כשאתם משלמים ללא מגע\r\nALT: + כשמשלמים ללא מגע עם טלפון Android, מערכת Google Pay לא משתפת את מספר כרטיס האשראי האמיתי עם העסק, כך שפרטי התשלום שלכם בטוחים.\r\n\r\nשליטה בנתונים האישיים\r\n+ אמצעי הבקרה על הפרטיות קלים לשימוש, ומאפשרים לכם לבחור לשתף פרטים בין מוצרים שונים של Google ולקבל חוויית שימוש מותאמת אישית.\r\n\r\nשירות Google Wallet זמין בכל הטלפונים עם Android ובכל מכשירי Wear OS‏ (Lollipop 5.0+‎).\r\nשאלות? support.google.com/wallet",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=16ttW0GFjx3_MJs-qwHeRvDmCweUPtBse&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.walletnfcrel.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/K0v7YVrTI4T1rHkjrYzuPbRyB6VG2SuuNHyKoAIKbUnpi2n_G7HOtPFR__vT9Gnk229Pr0Kj17yO6-hRQj2Lgq0",
-      "https://play-lh.googleusercontent.com/d8SmgK0c50lqQlBY4YB3cSmqCTg5-UnvL424zh1m_s8lEzqQW4Uzbnl-LAy0TibpSjKXbrdcX9lVMudDX994rg",
-      "https://play-lh.googleusercontent.com/L1rjVN3V0Hu9o-6zY5Rp_FWCtWd2XmIXcvNJy2P1x0rhWcdzCBSfqkZZNk6fXotvP9KS8Kd9I9iKyjVwImgvUg",
-      "https://play-lh.googleusercontent.com/CLA_X-VOeSLHlm1QY3_daAGCn3kL2hsGBPZOVcVQdKuepE6SBj41-uCE3bbXuswkxSD2H7TI--Ewi3-Vr3zucw",
-      "https://play-lh.googleusercontent.com/pXzvAkfAJWWthWh2VyarJSpcnAamcXEk_34CiVvAyopC879oMW2mGE8CvaqeNsICNgP2E0FU4fT-a550IN2x"
+      "https://play-lh.googleusercontent.com/2GPJZZCSHcCFtUxsSxHQvuAaRVhF_mjL2F5WkZm-wUn4H5vj8wgPSICKullXaVKgxSz2JmC4iDSAvzm5hZzKqac",
+      "https://play-lh.googleusercontent.com/mjyZ3yjFrKARf1UeVg2FUWLf3CDR-foBjNXthKEQf2XsHg8Y_Ex_RHi626Nwwtnawscru2iMkmBKDWy30rC70g",
+      "https://play-lh.googleusercontent.com/o0U0Rxkl12n9ocnMu-Xo3sJCGDNe9B0pz05dIenbblft5aKj0Q-w2267ysQdwu-7Ho3GF2fNO_NzU_tSyZadwQ",
+      "https://play-lh.googleusercontent.com/PtmXi5g2gl0tu2WqjgyNNGh4RAQ4jk774nTPzU_c4jPoDsUJ-yv2ZacG-s3It0KEpVywcVEXdCyYI3UBVaaPQQ",
+      "https://play-lh.googleusercontent.com/QvFzvmXG-WQ5dOc9S47mOyEdBcRj8Kk1-ATldhMlNJ1YIHCY88OKYyJMnGL1UF5Pj1gFYIhG2nmzgOqP6Nm1km0"
     ]
   }
 ]
