@@ -372,6 +372,26 @@
     ]
   },
   {
+    "name": "בנק דיסקונט",
+    "packageName": "com.ideomobile.discount",
+    "versionCode": 717,
+    "versionName": "17.0.1",
+    "size": "51.3 MB",
+    "checksum": "d3b62e1632f4ffd68d7df74dff0d614b",
+    "checksumType": "MD5",
+    "category": "פיננסים",
+    "description": "האפליקציה של בנק דיסקונט, הרבה יותר ממה שהיית מצפה מאפליקציה בנקאית!\n\nיש בה את כל מה שיש לאחרים - ההזדהות קלה ונוחה, העברת מזומן למי ואיך שבוחרים (גם לאנשי קשר, גם באופן קבוע וגם במועד עתידי), המרות והעברות מט\"ח, הפקדת שיקים, הלוואה מיידית, הפקדה לפיקדון, פעולות בכרטיס אשראי, מידע על המשכנתא, פעילות בניירות ערך ועוד\n\nאבל גם עוד הרבה יותר....\n·         דידי - נציגה דיגיטלית שזמינה 24/7 כדי לעזור לנווט באפליקציה, לקבל מידע ולבצע פעולות\n·         תובנות מעניינות על מה קורה בחשבון, כמו חיוב כפול לבית עסק, ניתוח הוצאות והכנסות חודשי, סיכום ההוצאות בחו\"ל והתראות על שינוי בהרגלי ההוצאה\n·         ביצוע מגוון פעולות באמצעות Siri\n·         קביעת פגישה והתכתבות עם בנקאי\n·         ועוד ועוד\n\nרגע רגע... עדיין אין לך חשבון?\nזה הזמן לפתוח חשבון בקלות דרך האפליקציה!\nפשוט מורידים את האפליקציה, לוחצים על \"לפתיחת חשבון בנק בדיסקונט\" ופותחים חשבון בכמה דקות בצורה מאובטחת.",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1sQQcrAbPLa_XSWOXmqbgP_7z07S3QWPe&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.ideomobile.discount.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/_T1nzbw8mqDGt90f6jMNC4KADJ2o_4nPkPD7cxX3rJP0PQhRaDm0HsE0T26syne4ppB7shDwFRUro5T-O87hxA",
+      "https://play-lh.googleusercontent.com/4zhmwQVNTeVTPB1c-PwDULcxVZjTCRGng8yBeZrVbtpYACEyAHQ6LPpZN4yxX705FPVmmszyTbY2cku_XG5vOA",
+      "https://play-lh.googleusercontent.com/OcX_S6BNd5kP8Md7Yi03SzB2OCI8wZw5LeY3sQesexF2rxUTmht1I203x2ZiC2QP0zUHGWDTv_IQBOKZoFmrEg",
+      "https://play-lh.googleusercontent.com/R8Lubr7JSC-2WVN9xtbbvw1O031gVjtVWYFs3wj-m5UzE3H4ngwxAJEj3pgQLEByPT5iKQS9WtSOfAyaTYod",
+      "https://play-lh.googleusercontent.com/qM06lWJ29xUKhMdGiGAqT-T3500dyEderI32lMlDzWeLzBh5sALHIT0B6aCeTfBZnkElOoo-uNXKqy0M_cNhFg"
+    ]
+  },
+  {
     "name": "בנק יהב",
     "packageName": "il.co.yahav.mobbanking",
     "versionCode": 10180,
@@ -412,23 +432,23 @@
     ]
   },
   {
-    "name": "בנק דיסקונט",
-    "packageName": "com.ideomobile.discount",
-    "versionCode": 717,
-    "versionName": "17.0.1",
-    "size": "51.3 MB",
-    "checksum": "d3b62e1632f4ffd68d7df74dff0d614b",
+    "name": "הבינלאומי",
+    "packageName": "com.fibi.nativeapp",
+    "versionCode": 23,
+    "versionName": "1.6.3",
+    "size": "64.3 MB",
+    "checksum": "8f6807f47d5a31e0de2b6c1c423678c4",
     "checksumType": "MD5",
     "category": "פיננסים",
-    "description": "האפליקציה של בנק דיסקונט, הרבה יותר ממה שהיית מצפה מאפליקציה בנקאית!\n\nיש בה את כל מה שיש לאחרים - ההזדהות קלה ונוחה, העברת מזומן למי ואיך שבוחרים (גם לאנשי קשר, גם באופן קבוע וגם במועד עתידי), המרות והעברות מט\"ח, הפקדת שיקים, הלוואה מיידית, הפקדה לפיקדון, פעולות בכרטיס אשראי, מידע על המשכנתא, פעילות בניירות ערך ועוד\n\nאבל גם עוד הרבה יותר....\n·         דידי - נציגה דיגיטלית שזמינה 24/7 כדי לעזור לנווט באפליקציה, לקבל מידע ולבצע פעולות\n·         תובנות מעניינות על מה קורה בחשבון, כמו חיוב כפול לבית עסק, ניתוח הוצאות והכנסות חודשי, סיכום ההוצאות בחו\"ל והתראות על שינוי בהרגלי ההוצאה\n·         ביצוע מגוון פעולות באמצעות Siri\n·         קביעת פגישה והתכתבות עם בנקאי\n·         ועוד ועוד\n\nרגע רגע... עדיין אין לך חשבון?\nזה הזמן לפתוח חשבון בקלות דרך האפליקציה!\nפשוט מורידים את האפליקציה, לוחצים על \"לפתיחת חשבון בנק בדיסקונט\" ופותחים חשבון בכמה דקות בצורה מאובטחת.",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1sQQcrAbPLa_XSWOXmqbgP_7z07S3QWPe&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.ideomobile.discount.png",
+    "description": "האפליקציה כוללת מגוון רחב של פעולות, מידע ושירותים וכלים מתקדמים לניהול החשבון:\n \n- הזמנת כרטיס אשראי וניהול הפעולות בכרטיס\n- העברת כסף לאיש קשר\n- הזדהות חכמה בטביעת אצבע, זיהוי פנים ועוד\n- הפקדת שיקים בסלולר\n- תיאום פגישה בסניף\n- התכתבות עם בנקאי\n- פיבי הבנקאית הוירטאלית – מאתרת ומציגה עבורך את מה שחשוב שתדע\n- שוק ההון – כלים ייחודיים להשקעה חכמה בשוק ההון\n- עדכון פרטים אישיים\n- משיכת כספים בסכום מוגדל\n-FIBIGUARD – אימות דו שלבי בכניסה לחשבון\nועוד......\n \nהרשאות נדרשות להתקנת האפליקציה: \n-מיקום – לאיתור סניף\n-מצלמה ופנס – לצילום שיקים\n-התקשרות למספר טלפון – לחיוג מהיר לתמיכה טכנית/מוקד\n-גישה לאנשי קשר – עבור \"העברת כספים לאנשי קשר\"\n-שמירה באחסון מקומי וחיצוני- לצילומי שיקים שביקשת לשמור",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1MTYgihaX9DogvH6VG7cvV81z4WYEFI14&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.fibi.nativeapp.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/_T1nzbw8mqDGt90f6jMNC4KADJ2o_4nPkPD7cxX3rJP0PQhRaDm0HsE0T26syne4ppB7shDwFRUro5T-O87hxA",
-      "https://play-lh.googleusercontent.com/4zhmwQVNTeVTPB1c-PwDULcxVZjTCRGng8yBeZrVbtpYACEyAHQ6LPpZN4yxX705FPVmmszyTbY2cku_XG5vOA",
-      "https://play-lh.googleusercontent.com/OcX_S6BNd5kP8Md7Yi03SzB2OCI8wZw5LeY3sQesexF2rxUTmht1I203x2ZiC2QP0zUHGWDTv_IQBOKZoFmrEg",
-      "https://play-lh.googleusercontent.com/R8Lubr7JSC-2WVN9xtbbvw1O031gVjtVWYFs3wj-m5UzE3H4ngwxAJEj3pgQLEByPT5iKQS9WtSOfAyaTYod",
-      "https://play-lh.googleusercontent.com/qM06lWJ29xUKhMdGiGAqT-T3500dyEderI32lMlDzWeLzBh5sALHIT0B6aCeTfBZnkElOoo-uNXKqy0M_cNhFg"
+      "https://play-lh.googleusercontent.com/8J0I6JLWJ1gcgvt_2u0QVaPxkB-Uz-GMeX1nBfel4TrsxHuacLXngYl_Mimjfp8W1-EQb-IrkOHKDW5Y6glqow",
+      "https://play-lh.googleusercontent.com/GEL2_Dz_A_-UrRhsi_-gSRdHdbWB-5JSMPz_WYnz_YwigFKrHaz0PyCiMXTpV1GUXBRDU6i570wuQiitcGiatGY",
+      "https://play-lh.googleusercontent.com/0If_vZoZKp7cjAcpsg9EBB8xYhWQ1-28PMPWqVXpI6GbAnFQUUK1jKFNdReDp08BKUQ-Ae6iaBrI-jF7pzNv",
+      "https://play-lh.googleusercontent.com/dZx5MIzsDTijWyEwiowS2oBoeSYglcPPPOpjOpgpWgFnYvR5bIvpmUwKyRqSvY6OJ4CYzq1LlIKf11W2SsZfqQ",
+      "https://play-lh.googleusercontent.com/MdSBkDSPoMOFM8KUPSc4CLlulujCMRwsw4ETj1fN2ssSUJtZyMTJ8IYRQnHzhjW-zvC-vhIaFm16ppLtRhZi"
     ]
   }
 ]
