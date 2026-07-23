@@ -13,6 +13,7 @@ import time
 import urllib.parse
 import zipfile
 import hashlib
+import html
 from pathlib import Path
 import re
 
@@ -56,6 +57,17 @@ def md5_checksum(path: Path) -> str:
         for chunk in iter(lambda: file.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+def clean_description(text: str) -> str:
+    if not text:
+        return ""
+    text = html.unescape(text)
+    text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
+    text = re.sub(r'</?p\s*/?>', '\n', text, flags=re.IGNORECASE)
+    text = re.sub(r'<[^>]+>', '', text)
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
 
 def normalize_drive_url(value: str) -> str:
     value = value.strip()
@@ -426,7 +438,7 @@ class ModernStoreManager(ctk.CTk):
 
                 # 4. Handle Description
                 if play_data and play_data.get("description"):
-                    app_data["description"] = play_data["description"]
+                    app_data["description"] = clean_description(play_data["description"])
                 if play_data and play_data.get("screenshots"):
                     app_data["screenshots"] = play_data["screenshots"][:5]
                 
@@ -539,7 +551,7 @@ class ModernStoreManager(ctk.CTk):
                 self.current_app_data["name"] = name
                 self.current_app_data["apkUrl"] = url
                 self.current_app_data["category"] = self.combo_category.get()
-                self.current_app_data["description"] = self.text_desc.get("1.0", "end").strip()
+                self.current_app_data["description"] = clean_description(self.text_desc.get("1.0", "end"))
                 
                 pkg = self.current_app_data["packageName"]
                 

@@ -102,7 +102,10 @@ class AppDetailFragment : Fragment() {
         textPackageName.text = app.packageName
         textSize.text = app.size
         chipCategory.text = CategoryNormalizer.normalize(app.category)
-        textDescription.text = app.description
+        textDescription.text = androidx.core.text.HtmlCompat.fromHtml(
+            app.description,
+            androidx.core.text.HtmlCompat.FROM_HTML_MODE_COMPACT
+        )
         textStatus.text = AppPresentationUtils.statusText(requireContext(), app)
         
         val showProgress = AppPresentationUtils.shouldShowProgress(app)
