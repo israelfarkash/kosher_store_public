@@ -113,6 +113,26 @@
     ]
   },
   {
+    "name": "Maps",
+    "packageName": "com.google.android.apps.maps",
+    "versionCode": 1068694875,
+    "versionName": "26.30.02.950492155",
+    "size": "284.4 MB",
+    "checksum": "47bab8bcd2a9ed7b940b2371de6169f5",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "עם אפליקציית מפות Google אפשר לנווט בעולם בכיף ולהכיר בקלות מקומות חדשים. הניווט באפליקציה מבוסס על GPS ונתוני תנועה בזמן אמת, כך שאתם יכולים למצוא את המסלולים הטובים ביותר לנהיגה, להליכה, לרכיבה על אופניים ולנסיעה בתחבורה ציבורית. במפות Google יש תמונות, ביקורות ומידע שימושי על למעלה מ-250 מיליון עסקים ומקומות – ממסעדות וחנויות ועד מקומות שמציעים מוצרים ושירותים חיוניים לחיי היומיום.\r\n\r\nלנווט בעולם, בדרך שלכם:\r\n• מגיעים לאן שרוצים עם אפשרויות למסלולים חסכוניים בדלק\r\n• מוצאים את המסלול הטוב ביותר בעזרת נתוני תנועה בזמן אמת, הנחיות קוליות מפורטות ופקדי ניווט במסך\r\n• חוסכים זמן בעזרת שינויי מסלול אוטומטיים לפי עדכונים בזמן אמת על מצב התנועה, אירועי תנועה וסגירת כבישים\r\n• מגיעים בזמן לאוטובוס, לרכבת ולנסיעה המשותפת בזכות עדכוני תנועה בזמן אמת\r\n• מוצאים עמדות להשכרת אופניים או קורקינטים כדי להתנייד בקלות רבה יותר\r\n\r\nמתכננים נסיעות וחוויות בלי מאמץ:\r\n• רואים תצוגה מקדימה של האזור לפני שיוצאים לדרך (למשל: חנייה, כניסות) באמצעות Street View\r\n• תכונת Immersive View מספקת תצוגה סוחפת של ציוני הדרך, הפארקים והדרכים באזור, ואפילו מאפשרת לבדוק מראש את מזג האוויר\r\n• יוצרים רשימות מותאמות אישית של המקומות המועדפים ומשתפים אותן עם עוד אנשים\r\n• מזמינים מקומות, חדרים במלונות ואוכל ממסעדות (במשלוח או באיסוף עצמי)\r\n• מורידים מפות לשימוש במצב אופליין כדי לא ללכת לאיבוד באזורים שאין בהם קליטה\r\n• מחפשים מקומות מעניינים ודברים שאפשר לעשות בסביבה, ומקבלים החלטה על סמך תמונות וביקורות שהוסיפו משתמשים\r\n\r\nמטיילים ומבלים במקומות שהמומחים המקומיים ממליצים עליהם:\r\n• יוצאים לסייר באזורים חדשים בלי לחשוש, בידיעה שבכל שנה 500 מיליון משתמשים מוסיפים תוכן ומעדכנים את המפה\r\n• לא אוהבים מקומות צפופים? אפשר לבדוק את רמת העומס במקום לפני שיוצאים לדרך\r\n• משתמשים ב-Lens במפות Google כדי לראות את מסלול ההליכה כשכבה על גבי העולם האמיתי\r\n• מסננים מסעדות לפי סוג המטבח, שעות הפעילות, מחירים, דירוגים ועוד\r\n• שואלים שאלות על מקומות, למשל המנות שמוגשות או החנייה שמסביב, ומקבלים תשובות מהירות\r\n\r\nהוסף Tiles ו-Complications למכשיר ה-Wear OS שלך כדי לחפש ולנווט במהירות.\r\n\r\nחלק מהתכונות לא זמינות בכל המדינות או הערים\r\nהניווט לא מיועד לשימוש בכלי רכב גדולים או ברכבי חירום",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1Id-4M2nvFl9-TGSkuvwe3kWxGiryArgY&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.maps.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/ySeICLMpNc_hmQOJJHz7mgMlxhTfbMQdf7bVrvfI88X2s9aggGXLG4ZETv2WyceJ0Z2GWWx4OCnudgeMGaIZ",
+      "https://play-lh.googleusercontent.com/LvTiA8JehexJpiyg8GyyGYccORBw4zZgcs6suAb_acLmkMWi53YvmFL8HhLoPAH6Wlt6ruNJ7Sd802FMkftUtg",
+      "https://play-lh.googleusercontent.com/_qPq9OOKXpVSmIKoWkzkmtD6ENSHpQHwBQ4rY-S4fDZGqexpEBskK40a2xuxL7_U4Jh8f9shDWo4blP1P_GJAw",
+      "https://play-lh.googleusercontent.com/tM6BZ9oVH-sHqFx8Dii312-BYhRPAXDwpN-ZOli5icpjpJxwrsirdsrB-5sKQQIDaxa8tsCqYUYpBkQGUXLAceU",
+      "https://play-lh.googleusercontent.com/tutv2vpmvmvQj98T3tZgQMhlYjRRZUsU-ahPyCYGm2OGT0gwAehOE54Q3mCKkDX6HDO_1hnRU6BUtq8-6qB2Pg"
+    ]
+  },
+  {
     "name": "Messages",
     "packageName": "com.google.android.apps.messaging",
     "versionCode": 316337063,
@@ -272,23 +292,23 @@
     ]
   },
   {
-    "name": "Maps",
-    "packageName": "com.google.android.apps.maps",
-    "versionCode": 1068694875,
-    "versionName": "26.30.02.950492155",
-    "size": "284.4 MB",
-    "checksum": "47bab8bcd2a9ed7b940b2371de6169f5",
+    "name": "Authenticator",
+    "packageName": "com.google.android.apps.authenticator2",
+    "versionCode": 7002011,
+    "versionName": "7.2",
+    "size": "7.5 MB",
+    "checksum": "1fcd234cb283aaf62a7f4dcf81307791",
     "checksumType": "MD5",
     "category": "אפליקציות גוגל",
-    "description": "עם אפליקציית מפות Google אפשר לנווט בעולם בכיף ולהכיר בקלות מקומות חדשים. הניווט באפליקציה מבוסס על GPS ונתוני תנועה בזמן אמת, כך שאתם יכולים למצוא את המסלולים הטובים ביותר לנהיגה, להליכה, לרכיבה על אופניים ולנסיעה בתחבורה ציבורית. במפות Google יש תמונות, ביקורות ומידע שימושי על למעלה מ-250 מיליון עסקים ומקומות – ממסעדות וחנויות ועד מקומות שמציעים מוצרים ושירותים חיוניים לחיי היומיום.\r\n\r\nלנווט בעולם, בדרך שלכם:\r\n• מגיעים לאן שרוצים עם אפשרויות למסלולים חסכוניים בדלק\r\n• מוצאים את המסלול הטוב ביותר בעזרת נתוני תנועה בזמן אמת, הנחיות קוליות מפורטות ופקדי ניווט במסך\r\n• חוסכים זמן בעזרת שינויי מסלול אוטומטיים לפי עדכונים בזמן אמת על מצב התנועה, אירועי תנועה וסגירת כבישים\r\n• מגיעים בזמן לאוטובוס, לרכבת ולנסיעה המשותפת בזכות עדכוני תנועה בזמן אמת\r\n• מוצאים עמדות להשכרת אופניים או קורקינטים כדי להתנייד בקלות רבה יותר\r\n\r\nמתכננים נסיעות וחוויות בלי מאמץ:\r\n• רואים תצוגה מקדימה של האזור לפני שיוצאים לדרך (למשל: חנייה, כניסות) באמצעות Street View\r\n• תכונת Immersive View מספקת תצוגה סוחפת של ציוני הדרך, הפארקים והדרכים באזור, ואפילו מאפשרת לבדוק מראש את מזג האוויר\r\n• יוצרים רשימות מותאמות אישית של המקומות המועדפים ומשתפים אותן עם עוד אנשים\r\n• מזמינים מקומות, חדרים במלונות ואוכל ממסעדות (במשלוח או באיסוף עצמי)\r\n• מורידים מפות לשימוש במצב אופליין כדי לא ללכת לאיבוד באזורים שאין בהם קליטה\r\n• מחפשים מקומות מעניינים ודברים שאפשר לעשות בסביבה, ומקבלים החלטה על סמך תמונות וביקורות שהוסיפו משתמשים\r\n\r\nמטיילים ומבלים במקומות שהמומחים המקומיים ממליצים עליהם:\r\n• יוצאים לסייר באזורים חדשים בלי לחשוש, בידיעה שבכל שנה 500 מיליון משתמשים מוסיפים תוכן ומעדכנים את המפה\r\n• לא אוהבים מקומות צפופים? אפשר לבדוק את רמת העומס במקום לפני שיוצאים לדרך\r\n• משתמשים ב-Lens במפות Google כדי לראות את מסלול ההליכה כשכבה על גבי העולם האמיתי\r\n• מסננים מסעדות לפי סוג המטבח, שעות הפעילות, מחירים, דירוגים ועוד\r\n• שואלים שאלות על מקומות, למשל המנות שמוגשות או החנייה שמסביב, ומקבלים תשובות מהירות\r\n\r\nהוסף Tiles ו-Complications למכשיר ה-Wear OS שלך כדי לחפש ולנווט במהירות.\r\n\r\nחלק מהתכונות לא זמינות בכל המדינות או הערים\r\nהניווט לא מיועד לשימוש בכלי רכב גדולים או ברכבי חירום",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1Id-4M2nvFl9-TGSkuvwe3kWxGiryArgY&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.maps.png",
+    "description": "עם מאמת החשבונות של Google מקבלים שכבת אבטחה נוספת לחשבונות באינטרנט, בזכות הוספת שלב שני לאימות בכניסה לחשבון. כלומר, בנוסף לסיסמה צריך להזין גם קוד שנוצר על ידי אפליקציית מאמת החשבונות של Google שמותקנת בטלפון.  לאפליקציית מאמת החשבונות של Google יש אפשרות ליצור את קוד האימות בטלפון גם אם אין חיבור לרשת סלולרית או לאינטרנט.  \r\n* סנכרון הקודים ממאמת החשבונות בחשבון Google ובכל המכשירים. כך תמיד תהיה גישה אליהם, גם אם הטלפון יאבד. \r\n* הגדרת החשבונות במאמת החשבונות באופן אוטומטי באמצעות קוד QR. זו דרך קלה ומהירה לוודא שהקודים יוגדרו בצורה מדויקת. \r\n* תמיכה במספר חשבונות. אפליקציית מאמת החשבונות מאפשרת לנהל כמה חשבונות, לכן אין צורך לעבור בין אפליקציות בכל כניסה לחשבון. \r\n* תמיכה ביצירת קודים חד-פעמיים או מוגבלים בזמן. יש לך אפשרות לבחור את שיטת יצירת הקודים שהכי מתאימה לצרכים שלך. \r\n* העברת חשבונות בין מכשירים באמצעות קוד QR. זו דרך נוחה להעביר את החשבונות למכשיר חדש. \r\n* כדי להיכנס לחשבון Google באמצעות מאמת החשבונות של Google, צריך להפעיל אימות דו-שלבי בחשבון. אפשר להתחיל את ההגדרה בכתובת http://www.google.com/2step  מידע על הרשאות: גישה למצלמה: נדרשת להוספת חשבונות באמצעות קודי QR",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1aHwKTNYWM4RmlbLruRro4KhcZuIwUIOU&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.authenticator2.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/ySeICLMpNc_hmQOJJHz7mgMlxhTfbMQdf7bVrvfI88X2s9aggGXLG4ZETv2WyceJ0Z2GWWx4OCnudgeMGaIZ",
-      "https://play-lh.googleusercontent.com/LvTiA8JehexJpiyg8GyyGYccORBw4zZgcs6suAb_acLmkMWi53YvmFL8HhLoPAH6Wlt6ruNJ7Sd802FMkftUtg",
-      "https://play-lh.googleusercontent.com/_qPq9OOKXpVSmIKoWkzkmtD6ENSHpQHwBQ4rY-S4fDZGqexpEBskK40a2xuxL7_U4Jh8f9shDWo4blP1P_GJAw",
-      "https://play-lh.googleusercontent.com/tM6BZ9oVH-sHqFx8Dii312-BYhRPAXDwpN-ZOli5icpjpJxwrsirdsrB-5sKQQIDaxa8tsCqYUYpBkQGUXLAceU",
-      "https://play-lh.googleusercontent.com/tutv2vpmvmvQj98T3tZgQMhlYjRRZUsU-ahPyCYGm2OGT0gwAehOE54Q3mCKkDX6HDO_1hnRU6BUtq8-6qB2Pg"
+      "https://play-lh.googleusercontent.com/K0v7YVrTI4T1rHkjrYzuPbRyB6VG2SuuNHyKoAIKbUnpi2n_G7HOtPFR__vT9Gnk229Pr0Kj17yO6-hRQj2Lgq0",
+      "https://play-lh.googleusercontent.com/d8SmgK0c50lqQlBY4YB3cSmqCTg5-UnvL424zh1m_s8lEzqQW4Uzbnl-LAy0TibpSjKXbrdcX9lVMudDX994rg",
+      "https://play-lh.googleusercontent.com/L1rjVN3V0Hu9o-6zY5Rp_FWCtWd2XmIXcvNJy2P1x0rhWcdzCBSfqkZZNk6fXotvP9KS8Kd9I9iKyjVwImgvUg",
+      "https://play-lh.googleusercontent.com/CLA_X-VOeSLHlm1QY3_daAGCn3kL2hsGBPZOVcVQdKuepE6SBj41-uCE3bbXuswkxSD2H7TI--Ewi3-Vr3zucw",
+      "https://play-lh.googleusercontent.com/pXzvAkfAJWWthWh2VyarJSpcnAamcXEk_34CiVvAyopC879oMW2mGE8CvaqeNsICNgP2E0FU4fT-a550IN2x"
     ]
   }
 ]
