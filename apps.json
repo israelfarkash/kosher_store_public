@@ -53,6 +53,26 @@
     ]
   },
   {
+    "name": "Chat",
+    "packageName": "com.google.android.apps.dynamite",
+    "versionCode": 6753107,
+    "versionName": "2026.07.13.946858027.Release",
+    "size": "35.0 MB",
+    "checksum": "5206662761a00325a4d417ecb7be32d7",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "‫Google Chat: הדרך הכי טובה לשתף פעולה ולבצע משימות לצוותים שעובדים ב-Workspace.‏\r\n\r\n  Gemini: הדור הבא של עבודה משותפת מבוססת AI‏\r\n  • סיכומי שיחות: מתעדכנים בכל מה שחשוב\r\n  • תרגום הודעות אוטומטי: ביותר מ-120 שפות\r\n  • חיפוש מבוסס AI: מוצאים את מה שצריך מהר ובקלות\r\n  • סיכום פעולות לביצוע: כדי שכל הצוות יהיה באותו ראש\r\n\r\n   כל מה שצריך כדי לתקשר ולעבוד בצוות\r\n  • צ'אטים: אישיים, קבוצתיים, או אפילו עם כל הצוות\r\n  • עדכוני סטטוס בהתאמה אישית: כדי שכל הצוות אם אתם פנויים או לא\r\n  • הודעות קוליות והודעות וידאו: כשיש לכם עדכון מורכב להעביר\r\n  • שיחות מהירות: לתקשורת זריזה בזמן אמת\r\n\r\n   כל היכולות של Workspace משתלבות כדי לשדרג את עבודת הצוות שלכם\r\n  • שילוב עם אפליקציות Workspace: כמו Gmail,‏ Calendar,‏ Drive,‏ Tasks ו-Meet‏\r\n  • צ'יפים חכמים עם קישורים לקבצים, אנשים ומרחבים: כדי לייעל את העבודה המשותפת\r\n  • אפליקציית Google Drive ל-Chat: כדי להתעדכן בקלות בבקשות ותגובות, ולאשר מה שצריך\r\n  • אפליקציות פופולריות ושימושיות ל-Chat: כמו PagerDuty,‏ Jira,‏ GitHub,‏ Workday ועוד\r\n  • ממשקי API של Chat: כדי לפתח אפליקציות בשפות תכנות מקצועיות, עם תכנות מינימלי ואפילו בלי צורך בתכנות בכלל\r\n\r\n   ממשק מאובטח\r\n  • הגנה מובנית של הארכיטקטורה מבוססת הענן של Google, ומודל אבטחה של אפס אמון\r\n  • לא צריך להתקין אף אפליקציה על המחשב או לשמור נתונים במכשירים של המשתמשים\r\n  • כל הנתונים נשארים בטוחים בזכות תהליך מבוסס-AI (DLP) וזיהוי של פישינג ותוכנות זדוניות\r\n  • מעבר מפלטפורמות מדור קודם ברמת אבטחה נמוכה\r\n\r\n   ‫Chat כלול ב-Google Workspace ללקוחות פרטיים, ללקוחות בתחום החינוך וללקוחות עסקיים.\r\nכדי להשתמש בחלק מתכונות הפרימיום צריך מינוי בתשלום. למידע נוסף או התחלת תקופת ניסיון ל-14 יום: https://workspace.google.com/pricing.html.\r\n\r\n  עקבו אחרינו ברשתות החברתיות:\r\n  X‏: https://x.com/googleworkspace\r\n  לינקדאין: https://www.linkedin.com/showcase/googleworkspace\r\n  פייסבוק: https://www.facebook.com/googleworkspace\r\n  אינסטגרם: https://www.instagram.com/googleworkspace\r\n  טיקטוק: https://www.tiktok.com/@googleworkspace\r\n  YouTube: ‏https://www.youtube.com/@googleworkspace",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1EbCn2oadyQFVfG3cw-WDc9rgu9rfaHDv&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.dynamite.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/hQwwjbTDuyWD2OoTl_qmBW669Oj4HXjI-GwOky5rlEPcnAQiEEZ0cYAQgmpDEEujKDgiLuK7bEDQtrYJHANF-w",
+      "https://play-lh.googleusercontent.com/t67Ha7DxCvIlfFN2WSTs-9hsg0JKTNn1JNmeXQwqHOQLi33H7cwqzl1WbtpCqCCBP9keZ-YzwIjQswkJUH6M_A",
+      "https://play-lh.googleusercontent.com/Fy1TbrMOiAmB1T1akQ1BJqGBSdTUpslkZtKjWhyGjNxEbum7bbhEwqgJuqw--1qBZojDxP2KcTp1G_I-2J9jTA",
+      "https://play-lh.googleusercontent.com/7SS3J2bU9Wxtpz5fnOEmTrGoO2yTdwZ9jAGWeiZ1VnpiB-ZNyYwopKkHzUXxVLfKFxlkeNksLFhhiF7FT30zkDE",
+      "https://play-lh.googleusercontent.com/yJwrGdY-map__ABiea9V1JbOSW98ASUUKx50AQ5NbqUsY6aEWldZybYgs_jfAOFhLfW70P-z-gHfWYRa0rx3eg"
+    ]
+  },
+  {
     "name": "ChatGPT",
     "packageName": "com.openai.chatgpt",
     "versionCode": 2619512,
@@ -100,7 +120,7 @@
     "size": "19.1 MB",
     "checksum": "c5d3b09a5726ef0db409d68c28b6d91a",
     "checksumType": "MD5",
-    "category": "כללי",
+    "category": "אפליקציות גוגל",
     "description": "✨ <b>פנה מקום</b> במכשיר שלך עם המלצות ניקוי\r\n🔍 <b>מצא קבצים מהר יותר</b> עם חיפוש וגלישה פשוטה\r\n↔️ <b>שתף במהירות קבצים במצב לא מקוון</b> עם שיתוף מהיר\r\n☁️ <b>גבה קבצים לענן</b> כדי לחסוך מקום במכשיר שלך\r\n🔒 <b>אבטח את הקבצים שלך</b> עם מנעול שאינו מכשיר\r\n\r\n<b>פנה מקום</b>\r\nראה בקלות כמה מקום נשאר במכשיר, בכרטיס ה-SD ובכונן ה-USB שלך. פנה מקום על ידי מציאת תמונות ישנות מאפליקציות צ'אט, קבצים כפולים, ניקוי מטמון ועוד.\r\n\r\n<b>מצא קבצים מהר יותר</b>\r\nחסוך זמן בחיפוש תמונות, סרטונים ומסמכים בטלפון שלך. חפש במהירות או עיין בקובצי ה-GIF שלך או שתף את הסרטון שהורדת לאחרונה. מיין קבצים לפי גודל כדי להבין מה תופס מקום.\r\n\r\n<b>שיתוף קבצים מהיר ומאובטח</b>\r\nשתף תמונות, סרטונים, אפליקציות ועוד למכשירי Android ו-Chromebook סביבך עם שיתוף מהיר. העברת קבצים במהירות, עם מהירויות של עד 480 Mbps, אפילו ללא חיבור לאינטרנט. ההעברות הן פרטיות ומאובטחות עם הצפנה מקצה לקצה.\r\n\r\n<b>אבטח את הקבצים שלך</b>\r\nשמור על בטיחות הקבצים הרגישים שלך באמצעות PIN או דפוס שיכול להיות שונה מנעילת המכשיר שלך.\r\n\r\n<b>הפעל מדיה לא מקוונת</b>\r\nהאזן למוזיקה שלך או צפה בסרטונים שלך עם פקדים מתקדמים כמו מהירות השמעה, ערבוב ועוד.\r\n\r\n<b>גיבוי קבצים</b>\r\nהעבר את הקבצים שלך ל-Google Drive או לכרטיס SD כדי לחסוך מקום במכשיר שלך. אתה יכול גם לשתף עם אפליקציות אחסון ענן אחרות במכשיר שלך.\r\n\r\n<b>קבל המלצות חכמות</b>\r\nקבל הצעות מועילות לחיסכון במקום, להגן על המכשיר שלך ועוד. ההמלצות שלך נעשות חכמות יותר ככל שאתה משתמש יותר באפליקציה.\r\n\r\n<b>זה יעיל ואפקטיבי</b>\r\nאפליקציית Files by Google משתמשת בפחות מ-20 MB של אחסון במכשיר שלך, היא קלה לשימוש ואין לה מודעות.",
     "apkUrl": "https://drive.usercontent.google.com/download?id=1uw0WFTci1fkYm3Dom4jVTkjHst3vrAWO&confirm=t&export=download",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.nbu.files.png",
@@ -389,26 +409,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "Chat",
-    "packageName": "com.google.android.apps.dynamite",
-    "versionCode": 6753107,
-    "versionName": "2026.07.13.946858027.Release",
-    "size": "35.0 MB",
-    "checksum": "5206662761a00325a4d417ecb7be32d7",
-    "checksumType": "MD5",
-    "category": "אפליקציות גוגל",
-    "description": "‫Google Chat: הדרך הכי טובה לשתף פעולה ולבצע משימות לצוותים שעובדים ב-Workspace.‏\r\n\r\n  Gemini: הדור הבא של עבודה משותפת מבוססת AI‏\r\n  • סיכומי שיחות: מתעדכנים בכל מה שחשוב\r\n  • תרגום הודעות אוטומטי: ביותר מ-120 שפות\r\n  • חיפוש מבוסס AI: מוצאים את מה שצריך מהר ובקלות\r\n  • סיכום פעולות לביצוע: כדי שכל הצוות יהיה באותו ראש\r\n\r\n   כל מה שצריך כדי לתקשר ולעבוד בצוות\r\n  • צ'אטים: אישיים, קבוצתיים, או אפילו עם כל הצוות\r\n  • עדכוני סטטוס בהתאמה אישית: כדי שכל הצוות אם אתם פנויים או לא\r\n  • הודעות קוליות והודעות וידאו: כשיש לכם עדכון מורכב להעביר\r\n  • שיחות מהירות: לתקשורת זריזה בזמן אמת\r\n\r\n   כל היכולות של Workspace משתלבות כדי לשדרג את עבודת הצוות שלכם\r\n  • שילוב עם אפליקציות Workspace: כמו Gmail,‏ Calendar,‏ Drive,‏ Tasks ו-Meet‏\r\n  • צ'יפים חכמים עם קישורים לקבצים, אנשים ומרחבים: כדי לייעל את העבודה המשותפת\r\n  • אפליקציית Google Drive ל-Chat: כדי להתעדכן בקלות בבקשות ותגובות, ולאשר מה שצריך\r\n  • אפליקציות פופולריות ושימושיות ל-Chat: כמו PagerDuty,‏ Jira,‏ GitHub,‏ Workday ועוד\r\n  • ממשקי API של Chat: כדי לפתח אפליקציות בשפות תכנות מקצועיות, עם תכנות מינימלי ואפילו בלי צורך בתכנות בכלל\r\n\r\n   ממשק מאובטח\r\n  • הגנה מובנית של הארכיטקטורה מבוססת הענן של Google, ומודל אבטחה של אפס אמון\r\n  • לא צריך להתקין אף אפליקציה על המחשב או לשמור נתונים במכשירים של המשתמשים\r\n  • כל הנתונים נשארים בטוחים בזכות תהליך מבוסס-AI (DLP) וזיהוי של פישינג ותוכנות זדוניות\r\n  • מעבר מפלטפורמות מדור קודם ברמת אבטחה נמוכה\r\n\r\n   ‫Chat כלול ב-Google Workspace ללקוחות פרטיים, ללקוחות בתחום החינוך וללקוחות עסקיים.\r\nכדי להשתמש בחלק מתכונות הפרימיום צריך מינוי בתשלום. למידע נוסף או התחלת תקופת ניסיון ל-14 יום: https://workspace.google.com/pricing.html.\r\n\r\n  עקבו אחרינו ברשתות החברתיות:\r\n  X‏: https://x.com/googleworkspace\r\n  לינקדאין: https://www.linkedin.com/showcase/googleworkspace\r\n  פייסבוק: https://www.facebook.com/googleworkspace\r\n  אינסטגרם: https://www.instagram.com/googleworkspace\r\n  טיקטוק: https://www.tiktok.com/@googleworkspace\r\n  YouTube: ‏https://www.youtube.com/@googleworkspace",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1EbCn2oadyQFVfG3cw-WDc9rgu9rfaHDv&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.dynamite.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/hQwwjbTDuyWD2OoTl_qmBW669Oj4HXjI-GwOky5rlEPcnAQiEEZ0cYAQgmpDEEujKDgiLuK7bEDQtrYJHANF-w",
-      "https://play-lh.googleusercontent.com/t67Ha7DxCvIlfFN2WSTs-9hsg0JKTNn1JNmeXQwqHOQLi33H7cwqzl1WbtpCqCCBP9keZ-YzwIjQswkJUH6M_A",
-      "https://play-lh.googleusercontent.com/Fy1TbrMOiAmB1T1akQ1BJqGBSdTUpslkZtKjWhyGjNxEbum7bbhEwqgJuqw--1qBZojDxP2KcTp1G_I-2J9jTA",
-      "https://play-lh.googleusercontent.com/7SS3J2bU9Wxtpz5fnOEmTrGoO2yTdwZ9jAGWeiZ1VnpiB-ZNyYwopKkHzUXxVLfKFxlkeNksLFhhiF7FT30zkDE",
-      "https://play-lh.googleusercontent.com/yJwrGdY-map__ABiea9V1JbOSW98ASUUKx50AQ5NbqUsY6aEWldZybYgs_jfAOFhLfW70P-z-gHfWYRa0rx3eg"
     ]
   }
 ]
