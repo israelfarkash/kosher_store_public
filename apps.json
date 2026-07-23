@@ -319,19 +319,6 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   },
   {
-    "name": "Viber Installer",
-    "packageName": "com.viber.installer",
-    "versionCode": 100,
-    "versionName": "5.5.0.2472",
-    "size": "3.7 MB",
-    "checksum": "4e38a32f8e6a69dfa8518c07b165461d",
-    "checksumType": "MD5",
-    "category": "מסרים",
-    "description": "",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1txjFJec6WuWC8o86dk90El56ooqPzsKY&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.viber.installer.png"
-  },
-  {
     "name": "Waze",
     "packageName": "com.waze",
     "versionCode": 1030440,
