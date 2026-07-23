@@ -84,5 +84,25 @@
       "https://play-lh.googleusercontent.com/5G8uBjACWWzWB8-CrM6qvH_TBfIBYDPcCcJA95wNyeOLO7AmdZ8bYr96SsIkunYrkz6LEpYD-qpKIMscpIskWtw",
       "https://play-lh.googleusercontent.com/nj9QXHDLOie97-1RoJSNsz_qKgSQVXA7AfVIxVGjIAkT9AbRnCvNn6fO9hckCIrXrj4SyjdBUONPgBmweapbs30"
     ]
+  },
+  {
+    "name": "Waze",
+    "packageName": "com.waze",
+    "versionCode": 1030440,
+    "versionName": "4.100.1.0",
+    "size": "84.8 MB",
+    "checksum": "75ddcca64e0b64e3c87fae51e541a321",
+    "checksumType": "MD5",
+    "category": "תחבורה",
+    "description": "Waze היא אפליקציית ניווט מבוססת-קהילה, שעוזרת למיליוני משתמשים להגיע ליעדם בעזרת התראות מהדרך בזמן אמת ומפה עדכנית לאותו רגע. בזכות רשת הנהגים שלנו, אפליקציית Waze חוסכת לכם זמן באמצעות התראות מיידיות על עומסי תנועה, עבודות בדרך, תאונות, משטרה ועוד. משינויי מסלול ועדכוני בטיחות בזמן אמת ועד התראות על מחיר דלק נמוך, Waze היא קהילה של נהגים שעוזרים לנהגים אחרים. \r\n\r\nעם Waze אתם יכולים…\r\nלהגיע מהר יותר ליעד: המלולים הטובים ביותר עם הכי פחות תנועה \r\nלהימנע מדוחות: האפליקציה מתריעה על המיקום של ניידות משטרה, מצלמות מהירות ומצלמות רמזור\r\nלקבל זמני הגעה משוערים מדויקים יותר: על סמך נתונים בזמן אמת על עומסי תנועה, עבודות בדרך, תנאי מזג אוויר ועוד\r\nלקבל ניווט מבוסס-קהילה: עדכונים בזמן אמת מנהגים אחרים\r\nלחסוך כסף: מאתרים את תחנת הדלק הזולה ביותר לאורך המסלול\r\nלהימנע מאגרות: אפשר לראות את מחירי האגרות כשבוחרים מסלול\r\nלהשתמש ב-Android Auto: מסנכרנים את Waze עם המסך המובנה ברכב\r\nלהיעזר במד מהירות בזמן אמת: מקבלים התראות כשעוברים את המהירות המותרת ונמענים מדוחות יקרים\r\nלהתאים אישית את הנסיעה: מקבלים הנחיות נסיעה מהדמויות והידוענים האהובים עליכם\r\nלהימנע ממעברים בין אפליקציות: משתמשים באפליקציות האודיו המועדפות עליכם ישירות מ-Waze\r\n\r\nכשנוהגים עם Waze, אין הפתעות בדרך!\r\nאפשר לנהל את הגדרות הפרטיות באפליקציית Waze בכל שלב. מידע נוסף על מדיניות הפרטיות של Waze זמין כאן: www.waze.com/legal/privacy.\r\nהמסלולים ב-Waze לא מיועדים לכלי רכב גדולים או לרכבי חירום.",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=15-kuYVZMx9dNQvkmBQ-mEoHwtaoUvQnx&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.waze.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/qQjn0SCwqfRpEtzHTKeXXQJbBlISbpAXnuKUTfUw4MHZdwheOyaDx35CdTN7HGC--Sd4IIfBviCG3YGY4-Z7Pw",
+      "https://play-lh.googleusercontent.com/3wZ9EDRzQ9saRemGO-gmpZrRDA1g6V14o5Q6-UaoJf1liDNvQkCkssHAMHaxko0s4spY_pKd2Uiysv4a0M1_0zU",
+      "https://play-lh.googleusercontent.com/-WxjHlOQBCh3-8N8ikgbEW64wStrQrmDzWkoE2p76ptuyUw1xb-QA-dgn0hJ1jAEmq2IBnunP6Lbf3Da-uXTSA",
+      "https://play-lh.googleusercontent.com/nFczrEX3-7ARiMvJJAE2_MYQRUfzNLn18Ng_SFY1i6yHN4MibPjJbriUKwEwELsGj2tq9lMxu_dEAS0HJ-fsHg",
+      "https://play-lh.googleusercontent.com/EHb_OoKJIXcTw59gZWHo3k44-zN4NK4a2tfUsz_O0o-lmJQQXXr-bqyv6etxPsFKxSYlyC2RxpUxudlVi9Gncg"
+    ]
   }
 ]
