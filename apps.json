@@ -319,6 +319,19 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   },
   {
+    "name": "Viber Installer",
+    "packageName": "com.viber.installer",
+    "versionCode": 100,
+    "versionName": "5.5.0.2472",
+    "size": "3.7 MB",
+    "checksum": "4e38a32f8e6a69dfa8518c07b165461d",
+    "checksumType": "MD5",
+    "category": "מסרים",
+    "description": "",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1txjFJec6WuWC8o86dk90El56ooqPzsKY&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.viber.installer.png"
+  },
+  {
     "name": "Waze",
     "packageName": "com.waze",
     "versionCode": 1030440,
@@ -410,18 +423,5 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
-  },
-  {
-    "name": "Viber Installer",
-    "packageName": "com.viber.installer",
-    "versionCode": 100,
-    "versionName": "5.5.0.2472",
-    "size": "3.7 MB",
-    "checksum": "4e38a32f8e6a69dfa8518c07b165461d",
-    "checksumType": "MD5",
-    "category": "מסרים",
-    "description": "",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1txjFJec6WuWC8o86dk90El56ooqPzsKY&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.viber.installer.png"
   }
 ]
