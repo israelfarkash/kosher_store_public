@@ -412,6 +412,26 @@
     ]
   },
   {
+    "name": "הבינלאומי",
+    "packageName": "com.fibi.nativeapp",
+    "versionCode": 23,
+    "versionName": "1.6.3",
+    "size": "64.3 MB",
+    "checksum": "8f6807f47d5a31e0de2b6c1c423678c4",
+    "checksumType": "MD5",
+    "category": "פיננסים",
+    "description": "האפליקציה כוללת מגוון רחב של פעולות, מידע ושירותים וכלים מתקדמים לניהול החשבון:\n \n- הזמנת כרטיס אשראי וניהול הפעולות בכרטיס\n- העברת כסף לאיש קשר\n- הזדהות חכמה בטביעת אצבע, זיהוי פנים ועוד\n- הפקדת שיקים בסלולר\n- תיאום פגישה בסניף\n- התכתבות עם בנקאי\n- פיבי הבנקאית הוירטאלית – מאתרת ומציגה עבורך את מה שחשוב שתדע\n- שוק ההון – כלים ייחודיים להשקעה חכמה בשוק ההון\n- עדכון פרטים אישיים\n- משיכת כספים בסכום מוגדל\n-FIBIGUARD – אימות דו שלבי בכניסה לחשבון\nועוד......\n \nהרשאות נדרשות להתקנת האפליקציה: \n-מיקום – לאיתור סניף\n-מצלמה ופנס – לצילום שיקים\n-התקשרות למספר טלפון – לחיוג מהיר לתמיכה טכנית/מוקד\n-גישה לאנשי קשר – עבור \"העברת כספים לאנשי קשר\"\n-שמירה באחסון מקומי וחיצוני- לצילומי שיקים שביקשת לשמור",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1MTYgihaX9DogvH6VG7cvV81z4WYEFI14&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.fibi.nativeapp.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/8J0I6JLWJ1gcgvt_2u0QVaPxkB-Uz-GMeX1nBfel4TrsxHuacLXngYl_Mimjfp8W1-EQb-IrkOHKDW5Y6glqow",
+      "https://play-lh.googleusercontent.com/GEL2_Dz_A_-UrRhsi_-gSRdHdbWB-5JSMPz_WYnz_YwigFKrHaz0PyCiMXTpV1GUXBRDU6i570wuQiitcGiatGY",
+      "https://play-lh.googleusercontent.com/0If_vZoZKp7cjAcpsg9EBB8xYhWQ1-28PMPWqVXpI6GbAnFQUUK1jKFNdReDp08BKUQ-Ae6iaBrI-jF7pzNv",
+      "https://play-lh.googleusercontent.com/dZx5MIzsDTijWyEwiowS2oBoeSYglcPPPOpjOpgpWgFnYvR5bIvpmUwKyRqSvY6OJ4CYzq1LlIKf11W2SsZfqQ",
+      "https://play-lh.googleusercontent.com/MdSBkDSPoMOFM8KUPSc4CLlulujCMRwsw4ETj1fN2ssSUJtZyMTJ8IYRQnHzhjW-zvC-vhIaFm16ppLtRhZi"
+    ]
+  },
+  {
     "name": "מזרחי טפחות",
     "packageName": "com.MizrahiTefahot.nh",
     "versionCode": 3000076,
@@ -432,23 +452,22 @@
     ]
   },
   {
-    "name": "הבינלאומי",
-    "packageName": "com.fibi.nativeapp",
-    "versionCode": 23,
-    "versionName": "1.6.3",
-    "size": "64.3 MB",
-    "checksum": "8f6807f47d5a31e0de2b6c1c423678c4",
+    "name": "לאומי",
+    "packageName": "com.leumi.leumiwallet",
+    "versionCode": 22246,
+    "versionName": "125.2.0",
+    "size": "238.8 MB",
+    "checksum": "87c896ffe0914568bcb8e3936fd0ae18",
     "checksumType": "MD5",
-    "category": "פיננסים",
-    "description": "האפליקציה כוללת מגוון רחב של פעולות, מידע ושירותים וכלים מתקדמים לניהול החשבון:\n \n- הזמנת כרטיס אשראי וניהול הפעולות בכרטיס\n- העברת כסף לאיש קשר\n- הזדהות חכמה בטביעת אצבע, זיהוי פנים ועוד\n- הפקדת שיקים בסלולר\n- תיאום פגישה בסניף\n- התכתבות עם בנקאי\n- פיבי הבנקאית הוירטאלית – מאתרת ומציגה עבורך את מה שחשוב שתדע\n- שוק ההון – כלים ייחודיים להשקעה חכמה בשוק ההון\n- עדכון פרטים אישיים\n- משיכת כספים בסכום מוגדל\n-FIBIGUARD – אימות דו שלבי בכניסה לחשבון\nועוד......\n \nהרשאות נדרשות להתקנת האפליקציה: \n-מיקום – לאיתור סניף\n-מצלמה ופנס – לצילום שיקים\n-התקשרות למספר טלפון – לחיוג מהיר לתמיכה טכנית/מוקד\n-גישה לאנשי קשר – עבור \"העברת כספים לאנשי קשר\"\n-שמירה באחסון מקומי וחיצוני- לצילומי שיקים שביקשת לשמור",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1MTYgihaX9DogvH6VG7cvV81z4WYEFI14&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.fibi.nativeapp.png",
+    "category": "כללי",
+    "description": "פתיחת חשבון בנוחות ובמהירות מבלי להגיע לסניף!\n\nביצוע פעולות באופן עצמאי מבלי לצאת מהבית ומבלי לחכות לבנקאי: העברות כספיות, הפקדות, הזמנת כרטיסי אשראי, המרת מט\"ח ועוד..\n\nהכי קל לדבר איתנו! בשירות \"כתוב לבנקאי\" 24/7, בפגישה בזום או בסניף בתיאום מראש, ובמידת הצורך אפשר גם לכתוב למנהל הסניף ישירות בווטאסאפ האישי שלו\n\nנוח לך יותר באנגלית? מחליפים שפה בלחיצת כפתור\n\nרוצה להשקיע בשוק ההון? מורידים את אפליקציית לאומי טרייד החדשה לחוויית מסחר מתקדמת וחדשנית",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1nFBwESNOddBmqskjZNrNaXZvbN1rE7Hp&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.leumi.leumiwallet.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/8J0I6JLWJ1gcgvt_2u0QVaPxkB-Uz-GMeX1nBfel4TrsxHuacLXngYl_Mimjfp8W1-EQb-IrkOHKDW5Y6glqow",
-      "https://play-lh.googleusercontent.com/GEL2_Dz_A_-UrRhsi_-gSRdHdbWB-5JSMPz_WYnz_YwigFKrHaz0PyCiMXTpV1GUXBRDU6i570wuQiitcGiatGY",
-      "https://play-lh.googleusercontent.com/0If_vZoZKp7cjAcpsg9EBB8xYhWQ1-28PMPWqVXpI6GbAnFQUUK1jKFNdReDp08BKUQ-Ae6iaBrI-jF7pzNv",
-      "https://play-lh.googleusercontent.com/dZx5MIzsDTijWyEwiowS2oBoeSYglcPPPOpjOpgpWgFnYvR5bIvpmUwKyRqSvY6OJ4CYzq1LlIKf11W2SsZfqQ",
-      "https://play-lh.googleusercontent.com/MdSBkDSPoMOFM8KUPSc4CLlulujCMRwsw4ETj1fN2ssSUJtZyMTJ8IYRQnHzhjW-zvC-vhIaFm16ppLtRhZi"
+      "https://play-lh.googleusercontent.com/qgMrVp1K472viTU4kaTFwYL2YtALcBwzyHhv-n58BMDW63O1d3cWkCqTBuWEbvuIkxI5BlWZ4YR5bsiv-8v38X8",
+      "https://play-lh.googleusercontent.com/Zo753bSFT-GHMrUOvoSuYzyeWT4yXGB3Wm_aNIvoPYhpRGQ2qbkBVN-jhTYmWxugDT0S9dX7UGupA_fsqOwzjQY",
+      "https://play-lh.googleusercontent.com/uiKVm0dTPzpPSwvc_yephtUq17bz0K5k1FEjj08aOmD1jYbVqPxSGXA1pqrpEyyUsDXbl5egT3UHbqcO4vdQJA",
+      "https://play-lh.googleusercontent.com/Fl8ys-JNyC_Xu2-rsL_GVG87xr6NYABFonM3cNxTS8QBhn2tKfJDxnsgR1iPb_YnGo0yvUCsWYajtOnFyt8_"
     ]
   }
 ]
