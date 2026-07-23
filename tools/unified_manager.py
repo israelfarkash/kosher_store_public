@@ -240,13 +240,42 @@ class ModernStoreManager(ctk.CTk):
         self.entry_name = create_field(self.form_frame, "שם האפליקציה")
         self.entry_drive = create_field(self.form_frame, "🔗 קישור להורדה (Google Drive)", has_paste=True)
         
-        # Category Dropdown
+        # Category Selector (Editable Entry + Quick Chips)
         cat_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
         cat_frame.pack(fill="x", pady=8)
         cat_frame.grid_columnconfigure(0, weight=1)
-        ctk.CTkLabel(cat_frame, text="קטגוריה", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w")
-        self.combo_category = ctk.CTkOptionMenu(cat_frame, values=CATEGORIES, height=38, font=ctk.CTkFont(size=13, weight="bold"))
-        self.combo_category.grid(row=1, column=0, sticky="ew")
+        ctk.CTkLabel(cat_frame, text="קטגוריה (לחץ על כפתור או הקלד קטגוריה חדשה)", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w", pady=(0, 2))
+        
+        self.entry_category = ctk.CTkEntry(cat_frame, placeholder_text="כללי", height=38)
+        self.entry_category.grid(row=1, column=0, sticky="ew")
+        
+        # Chips container
+        chips_frame = ctk.CTkFrame(cat_frame, fg_color="transparent")
+        chips_frame.grid(row=2, column=0, sticky="ew", pady=(6, 0))
+        
+        def select_chip(c_name):
+            self.entry_category.delete(0, 'end')
+            self.entry_category.insert(0, c_name)
+
+        for i, cat_name in enumerate(CATEGORIES):
+            btn = ctk.CTkButton(
+                chips_frame, text=cat_name, height=30,
+                font=ctk.CTkFont(size=11, weight="bold"),
+                fg_color="#333344", hover_color="#1F6AA5",
+                command=lambda c=cat_name: select_chip(c)
+            )
+            btn.grid(row=i // 5, column=i % 5, padx=2, pady=2, sticky="ew")
+            chips_frame.grid_columnconfigure(i % 5, weight=1)
+
+        # Compatibility wrapper for existing .get() and .set() calls
+        class CategoryAdapter:
+            def __init__(self, entry): self.entry = entry
+            def set(self, val):
+                self.entry.delete(0, 'end')
+                self.entry.insert(0, val or "כללי")
+            def get(self): return self.entry.get().strip() or "כללי"
+            
+        self.combo_category = CategoryAdapter(self.entry_category)
         
         # Description
         desc_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
