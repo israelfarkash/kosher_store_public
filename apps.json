@@ -33,6 +33,26 @@
     ]
   },
   {
+    "name": "ChatGPT",
+    "packageName": "com.openai.chatgpt",
+    "versionCode": 2619512,
+    "versionName": "1.2026.195",
+    "size": "82.3 MB",
+    "checksum": "2605155a7c2a9c0cda1297911a5166db",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "הכירו את ChatGPT לאנדרואיד: ההתקדמות האחרונה של OpenAI בהישג ידכם.\r\n\r\nאפליקציה רשמית זו היא בחינם, מסנכרנת את ההיסטוריה שלכם בין מכשירים, ומביאה לכם את העדכונים האחרונים מ-OpenAI, כולל מחולל התמונות החדש.\r\n\r\nעם ChatGPT בכיס שלכם, תמצאו:\r\n\r\n· יצירת תמונות - צרו תמונות מקוריות מתיאור, או הפכו תמונות קיימות עם כמה מילים פשוטות.\r\n· מצב קולי מתקדם - הקישו על סמל גלי הקול כדי לנהל שיחה בזמן אמת תוך כדי תנועה. פתחו ויכוח על שולחן האוכל, או תרגלו שפה חדשה.\r\n· העלאת תמונות - צלמו או העלו תמונה כדי לתמלל מתכון בכתב יד או לקבל מידע על אתר ציון.\r\n· השראה יצירתית - מצאו רעיונות למתנות יום הולדת בהתאמה אישית או צרו כרטיס ברכה אישי.\r\n· ייעוץ מותאם אישית - דברו על מצב קשה, בקשו מסלול טיול מפורט או קבלו עזרה בבניית התגובה המושלמת.\r\n· למידה מותאמת אישית - הסברו על חשמל לילד שאוהב דינוזאורים או רעננו בקלות את עצמכם באירוע היסטורי.\r\n· קלט מקצועי - חשבו על תוכן שיווקי או תכננו תוכנית עסקית.\r\n· תשובות מיידיות - קבלו הצעות למתכונים כשיש לכם רק כמה מצרכים.\r\n· שיתוף מסך עם שירותי נגישות - בזמינות מוגבלת, משתמשים יכולים לבחור לאפשר ל-ChatGPT לעזור לענות על שאלות לגבי פרטי המסך מבלי להעלות צילומי מסך.\r\n\r\nהצטרפו למאות מיליוני משתמשים ונסו את האפליקציה שמרתקת את העולם. הורידו את ChatGPT עוד היום.\r\n\r\nתנאי שירות ומדיניות פרטיות:\r\nhttps://openai.com/policies/terms-of-use\r\nhttps://openai.com/policies/privacy-policy",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1nIKJ1suBndmtY0p9AswoPo10QaQvsDtj&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.openai.chatgpt.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/dPc3vh4x7L3gJ3_vFLT_dw9BY9ZNXEjcu3eBlXOkkn3klpNfUo3perqmeFqrmFUNB11IcU94wmbgkL9uQ4KReoA",
+      "https://play-lh.googleusercontent.com/Y8cTilHEYBG1MhRLyOSH4SwGqxaPqgi2GvwIRivZ0FldpQcI95fYBrLAAK9ynaK_1k4-2qtioJUV9r71QMooSg",
+      "https://play-lh.googleusercontent.com/i4qnGrfl0D5Qn-fZxIeFuj1aaKlQ7xefy7r5vNBWgErI7kJqnycTOIJE8kqkBTNxnKfK_aplCf2q_MMXppKdXw",
+      "https://play-lh.googleusercontent.com/B6YgwZySHXWLkpQeZ2Q32FKViVg2SpiAkD3o_Rb1NGGUKJ7Q1X2WTEoFh8Tck8wfUFYC3fxdsh7bPsiJpRYINg",
+      "https://play-lh.googleusercontent.com/nd6ISynNTTT1ynLU8qPFfUpK7IR_dqKeswukI1iMDP8iYgebfMGRH5EZwvReYOGq2yPXPal_DW05dKwK3Ipt6sw"
+    ]
+  },
+  {
     "name": "egg",
     "packageName": "com.egged.egg",
     "versionCode": 400001069,
@@ -249,26 +269,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "ChatGPT",
-    "packageName": "com.openai.chatgpt",
-    "versionCode": 2619512,
-    "versionName": "1.2026.195",
-    "size": "82.3 MB",
-    "checksum": "2605155a7c2a9c0cda1297911a5166db",
-    "checksumType": "MD5",
-    "category": "כללי",
-    "description": "הכירו את ChatGPT לאנדרואיד: ההתקדמות האחרונה של OpenAI בהישג ידכם.\r\n\r\nאפליקציה רשמית זו היא בחינם, מסנכרנת את ההיסטוריה שלכם בין מכשירים, ומביאה לכם את העדכונים האחרונים מ-OpenAI, כולל מחולל התמונות החדש.\r\n\r\nעם ChatGPT בכיס שלכם, תמצאו:\r\n\r\n· יצירת תמונות - צרו תמונות מקוריות מתיאור, או הפכו תמונות קיימות עם כמה מילים פשוטות.\r\n· מצב קולי מתקדם - הקישו על סמל גלי הקול כדי לנהל שיחה בזמן אמת תוך כדי תנועה. פתחו ויכוח על שולחן האוכל, או תרגלו שפה חדשה.\r\n· העלאת תמונות - צלמו או העלו תמונה כדי לתמלל מתכון בכתב יד או לקבל מידע על אתר ציון.\r\n· השראה יצירתית - מצאו רעיונות למתנות יום הולדת בהתאמה אישית או צרו כרטיס ברכה אישי.\r\n· ייעוץ מותאם אישית - דברו על מצב קשה, בקשו מסלול טיול מפורט או קבלו עזרה בבניית התגובה המושלמת.\r\n· למידה מותאמת אישית - הסברו על חשמל לילד שאוהב דינוזאורים או רעננו בקלות את עצמכם באירוע היסטורי.\r\n· קלט מקצועי - חשבו על תוכן שיווקי או תכננו תוכנית עסקית.\r\n· תשובות מיידיות - קבלו הצעות למתכונים כשיש לכם רק כמה מצרכים.\r\n· שיתוף מסך עם שירותי נגישות - בזמינות מוגבלת, משתמשים יכולים לבחור לאפשר ל-ChatGPT לעזור לענות על שאלות לגבי פרטי המסך מבלי להעלות צילומי מסך.\r\n\r\nהצטרפו למאות מיליוני משתמשים ונסו את האפליקציה שמרתקת את העולם. הורידו את ChatGPT עוד היום.\r\n\r\nתנאי שירות ומדיניות פרטיות:\r\nhttps://openai.com/policies/terms-of-use\r\nhttps://openai.com/policies/privacy-policy",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1nIKJ1suBndmtY0p9AswoPo10QaQvsDtj&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.openai.chatgpt.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/dPc3vh4x7L3gJ3_vFLT_dw9BY9ZNXEjcu3eBlXOkkn3klpNfUo3perqmeFqrmFUNB11IcU94wmbgkL9uQ4KReoA",
-      "https://play-lh.googleusercontent.com/Y8cTilHEYBG1MhRLyOSH4SwGqxaPqgi2GvwIRivZ0FldpQcI95fYBrLAAK9ynaK_1k4-2qtioJUV9r71QMooSg",
-      "https://play-lh.googleusercontent.com/i4qnGrfl0D5Qn-fZxIeFuj1aaKlQ7xefy7r5vNBWgErI7kJqnycTOIJE8kqkBTNxnKfK_aplCf2q_MMXppKdXw",
-      "https://play-lh.googleusercontent.com/B6YgwZySHXWLkpQeZ2Q32FKViVg2SpiAkD3o_Rb1NGGUKJ7Q1X2WTEoFh8Tck8wfUFYC3fxdsh7bPsiJpRYINg",
-      "https://play-lh.googleusercontent.com/nd6ISynNTTT1ynLU8qPFfUpK7IR_dqKeswukI1iMDP8iYgebfMGRH5EZwvReYOGq2yPXPal_DW05dKwK3Ipt6sw"
     ]
   }
 ]
