@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.kosherstore.privateappstore.debug",
+  "applicationId": "com.kosherstore.privateappstore",
   "variantName": "debug",
   "elements": []
 }

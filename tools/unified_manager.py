@@ -73,7 +73,7 @@ def normalize_drive_url(value: str) -> str:
         file_id = urllib.parse.parse_qs(parsed.query).get("id", [None])[0]
     if not file_id:
         return value
-    return f"https://drive.google.com/uc?export=download&id={file_id}"
+    return f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
 
 def load_apps_json() -> list[dict]:
     if not APPS_JSON_PATH.exists():

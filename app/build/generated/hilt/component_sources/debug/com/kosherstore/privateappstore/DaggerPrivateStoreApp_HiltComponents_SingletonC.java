@@ -479,18 +479,18 @@ public final class DaggerPrivateStoreApp_HiltComponents_SingletonC {
     private static final class LazyClassKeyProvider {
       static String com_kosherstore_privateappstore_ui_management_ManagementViewModel = "com.kosherstore.privateappstore.ui.management.ManagementViewModel";
 
-      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
-
       static String com_kosherstore_privateappstore_ui_detail_AppDetailViewModel = "com.kosherstore.privateappstore.ui.detail.AppDetailViewModel";
+
+      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
 
       @KeepFieldType
       ManagementViewModel com_kosherstore_privateappstore_ui_management_ManagementViewModel2;
 
       @KeepFieldType
-      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
+      AppDetailViewModel com_kosherstore_privateappstore_ui_detail_AppDetailViewModel2;
 
       @KeepFieldType
-      AppDetailViewModel com_kosherstore_privateappstore_ui_detail_AppDetailViewModel2;
+      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
     }
   }
 
@@ -539,20 +539,20 @@ public final class DaggerPrivateStoreApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_kosherstore_privateappstore_ui_management_ManagementViewModel = "com.kosherstore.privateappstore.ui.management.ManagementViewModel";
+      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
 
       static String com_kosherstore_privateappstore_ui_detail_AppDetailViewModel = "com.kosherstore.privateappstore.ui.detail.AppDetailViewModel";
 
-      static String com_kosherstore_privateappstore_ui_main_MainViewModel = "com.kosherstore.privateappstore.ui.main.MainViewModel";
+      static String com_kosherstore_privateappstore_ui_management_ManagementViewModel = "com.kosherstore.privateappstore.ui.management.ManagementViewModel";
 
       @KeepFieldType
-      ManagementViewModel com_kosherstore_privateappstore_ui_management_ManagementViewModel2;
+      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
 
       @KeepFieldType
       AppDetailViewModel com_kosherstore_privateappstore_ui_detail_AppDetailViewModel2;
 
       @KeepFieldType
-      MainViewModel com_kosherstore_privateappstore_ui_main_MainViewModel2;
+      ManagementViewModel com_kosherstore_privateappstore_ui_management_ManagementViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {

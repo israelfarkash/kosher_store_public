@@ -759,7 +759,7 @@ ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-m
 		ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
-permission#com.kosherstore.privateappstore.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.kosherstore.privateappstore.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
@@ -769,7 +769,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
-uses-permission#com.kosherstore.privateappstore.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.kosherstore.privateappstore.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.15.0] /Users/israelfarkash/.gradle/caches/9.0-milestone-1/transforms/90595551707553f51b8d74d1b720c8f9/transformed/core-1.15.0/AndroidManifest.xml:26:22-94

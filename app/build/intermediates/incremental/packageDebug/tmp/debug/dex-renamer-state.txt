@@ -1,4 +1,4 @@
-#Thu Jul 23 17:50:46 IDT 2026
+#Thu Jul 23 17:59:56 IDT 2026
 base.0=/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/Users/israelfarkash/Downloads/חנות אפליקציות אונליין כשרה - מבוססת על דרייב/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex

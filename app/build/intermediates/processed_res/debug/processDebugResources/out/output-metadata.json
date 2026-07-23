@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.kosherstore.privateappstore.debug",
+  "applicationId": "com.kosherstore.privateappstore",
   "variantName": "debug",
   "elements": [
     {

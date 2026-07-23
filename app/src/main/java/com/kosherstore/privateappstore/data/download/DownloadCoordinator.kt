@@ -54,7 +54,8 @@ class DownloadCoordinator @Inject constructor(
                 file.delete()
             }
             
-            val request = DownloadManager.Request(Uri.parse(app.apkUrl))
+            val downloadUrl = normalizeDriveUrl(app.apkUrl)
+            val request = DownloadManager.Request(Uri.parse(downloadUrl))
                 .setTitle(app.name)
                 .setDescription(context.getString(com.kosherstore.privateappstore.R.string.downloading_description))
                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
@@ -339,4 +340,18 @@ class DownloadCoordinator @Inject constructor(
         var progress: Int,
         var isVerifying: Boolean = false
     )
+
+    private fun normalizeDriveUrl(rawUrl: String): String {
+        if (!rawUrl.contains("drive.google.com") && !rawUrl.contains("drive.usercontent.google.com") && !rawUrl.contains("googleapis.com")) {
+            return rawUrl
+        }
+        val fileId = when {
+            rawUrl.contains("/file/d/") -> rawUrl.substringAfter("/file/d/").substringBefore("/")
+            rawUrl.contains("/files/") -> rawUrl.substringAfter("/files/").substringBefore("?")
+            rawUrl.contains("id=") -> rawUrl.substringAfter("id=").substringBefore("&")
+            else -> null
+        } ?: return rawUrl
+
+        return "https://drive.usercontent.google.com/download?id=$fileId&confirm=t&export=download"
+    }
 }
