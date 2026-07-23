@@ -51,5 +51,18 @@
     "description": "",
     "apkUrl": "https://drive.usercontent.google.com/download?id=17vxMy2E45Te84EfFMDE1UIHI-QACfyGu&confirm=t&export=download",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/org.telegram.messenger.web.png"
+  },
+  {
+    "name": "WhatsApp",
+    "packageName": "com.whatsapp.kosher",
+    "versionCode": 262807830,
+    "versionName": "2.26.28.78",
+    "size": "139.1 MB",
+    "checksum": "54b24365fcf5e5be4df10175af04a128",
+    "checksumType": "MD5",
+    "category": "מסרים",
+    "description": "",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1Uot0ZAX_OawF6STnPbShPr0NoufMGQQM&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.whatsapp.kosher.png"
   }
 ]
