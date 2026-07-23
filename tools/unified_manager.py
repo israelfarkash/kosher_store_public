@@ -245,7 +245,7 @@ class ModernStoreManager(ctk.CTk):
         cat_frame.pack(fill="x", pady=8)
         cat_frame.grid_columnconfigure(0, weight=1)
         ctk.CTkLabel(cat_frame, text="קטגוריה", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w")
-        self.combo_category = ctk.CTkComboBox(cat_frame, values=CATEGORIES, height=38)
+        self.combo_category = ctk.CTkOptionMenu(cat_frame, values=CATEGORIES, height=38, font=ctk.CTkFont(size=13, weight="bold"))
         self.combo_category.grid(row=1, column=0, sticky="ew")
         
         # Description
@@ -449,18 +449,41 @@ class ModernStoreManager(ctk.CTk):
         btn_frame.pack(fill="x", padx=20)
         
         def confirm():
+            name = self.current_app_data.get("name", pkg)
             self.apps_data = [a for a in self.apps_data if a.get("packageName") != pkg]
             save_apps_json(self.apps_data)
             icon_file = ICONS_DIR / f"{pkg}.png"
             if icon_file.exists(): icon_file.unlink()
             
+            # Clear form & UI state
+            self.current_app_data = {}
+            self.entry_name.delete(0, 'end')
+            self.entry_drive.delete(0, 'end')
+            self.combo_category.set("כללי")
+            self.text_desc.delete("1.0", "end")
+            self.lbl_app_name.configure(text="בחר או הוסף אפליקציה")
+            self.lbl_app_pkg.configure(text="")
+            self.lbl_app_meta.configure(text="")
+            self.set_icon_image(None)
+            
             self.refresh_app_list()
-            self.show_status("🗑️ האפליקציה נמחקה.", is_error=True)
             self.btn_save_publish.configure(state="disabled")
             self.btn_delete.configure(state="disabled")
-            self.lbl_app_name.configure(text="בחר או הוסף אפליקציה")
-            self.set_icon_image(None)
+            self.show_status(f"🗑️ '{name}' נמחקה ומפורסמת לענן...", is_error=True)
             dialog.destroy()
+            
+            # Auto push deletion to GitHub
+            def push_deletion():
+                try:
+                    subprocess.run(["git", "add", "apps.json", "icons/"], cwd=ROOT_DIR, check=True)
+                    res = subprocess.run(["git", "commit", "-m", f"Delete {name}"], cwd=ROOT_DIR, capture_output=True, text=True)
+                    if "nothing to commit" not in res.stdout + res.stderr:
+                        subprocess.run(["git", "push", "origin", "main"], cwd=ROOT_DIR, check=True)
+                    self.after(0, lambda: self.show_status(f"🗑️ '{name}' נמחקה ופורסמה בהצלחה!", is_error=True))
+                except Exception as e:
+                    self.after(0, lambda: self.show_status(f"⚠️ נמחקה מקומית אך הפרסום נכשל: {e}", is_error=True))
+                    
+            threading.Thread(target=push_deletion, daemon=True).start()
             
         def cancel(): dialog.destroy()
         
