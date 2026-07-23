@@ -432,6 +432,25 @@
     ]
   },
   {
+    "name": "לאומי",
+    "packageName": "com.leumi.leumiwallet",
+    "versionCode": 22246,
+    "versionName": "125.2.0",
+    "size": "238.8 MB",
+    "checksum": "87c896ffe0914568bcb8e3936fd0ae18",
+    "checksumType": "MD5",
+    "category": "פיננסים",
+    "description": "פתיחת חשבון בנוחות ובמהירות מבלי להגיע לסניף!\n\nביצוע פעולות באופן עצמאי מבלי לצאת מהבית ומבלי לחכות לבנקאי: העברות כספיות, הפקדות, הזמנת כרטיסי אשראי, המרת מט\"ח ועוד..\n\nהכי קל לדבר איתנו! בשירות \"כתוב לבנקאי\" 24/7, בפגישה בזום או בסניף בתיאום מראש, ובמידת הצורך אפשר גם לכתוב למנהל הסניף ישירות בווטאסאפ האישי שלו\n\nנוח לך יותר באנגלית? מחליפים שפה בלחיצת כפתור\n\nרוצה להשקיע בשוק ההון? מורידים את אפליקציית לאומי טרייד החדשה לחוויית מסחר מתקדמת וחדשנית",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1nFBwESNOddBmqskjZNrNaXZvbN1rE7Hp&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.leumi.leumiwallet.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/qgMrVp1K472viTU4kaTFwYL2YtALcBwzyHhv-n58BMDW63O1d3cWkCqTBuWEbvuIkxI5BlWZ4YR5bsiv-8v38X8",
+      "https://play-lh.googleusercontent.com/Zo753bSFT-GHMrUOvoSuYzyeWT4yXGB3Wm_aNIvoPYhpRGQ2qbkBVN-jhTYmWxugDT0S9dX7UGupA_fsqOwzjQY",
+      "https://play-lh.googleusercontent.com/uiKVm0dTPzpPSwvc_yephtUq17bz0K5k1FEjj08aOmD1jYbVqPxSGXA1pqrpEyyUsDXbl5egT3UHbqcO4vdQJA",
+      "https://play-lh.googleusercontent.com/Fl8ys-JNyC_Xu2-rsL_GVG87xr6NYABFonM3cNxTS8QBhn2tKfJDxnsgR1iPb_YnGo0yvUCsWYajtOnFyt8_"
+    ]
+  },
+  {
     "name": "מזרחי טפחות",
     "packageName": "com.MizrahiTefahot.nh",
     "versionCode": 3000076,
@@ -449,25 +468,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "לאומי",
-    "packageName": "com.leumi.leumiwallet",
-    "versionCode": 22246,
-    "versionName": "125.2.0",
-    "size": "238.8 MB",
-    "checksum": "87c896ffe0914568bcb8e3936fd0ae18",
-    "checksumType": "MD5",
-    "category": "כללי",
-    "description": "פתיחת חשבון בנוחות ובמהירות מבלי להגיע לסניף!\n\nביצוע פעולות באופן עצמאי מבלי לצאת מהבית ומבלי לחכות לבנקאי: העברות כספיות, הפקדות, הזמנת כרטיסי אשראי, המרת מט\"ח ועוד..\n\nהכי קל לדבר איתנו! בשירות \"כתוב לבנקאי\" 24/7, בפגישה בזום או בסניף בתיאום מראש, ובמידת הצורך אפשר גם לכתוב למנהל הסניף ישירות בווטאסאפ האישי שלו\n\nנוח לך יותר באנגלית? מחליפים שפה בלחיצת כפתור\n\nרוצה להשקיע בשוק ההון? מורידים את אפליקציית לאומי טרייד החדשה לחוויית מסחר מתקדמת וחדשנית",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1nFBwESNOddBmqskjZNrNaXZvbN1rE7Hp&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.leumi.leumiwallet.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/qgMrVp1K472viTU4kaTFwYL2YtALcBwzyHhv-n58BMDW63O1d3cWkCqTBuWEbvuIkxI5BlWZ4YR5bsiv-8v38X8",
-      "https://play-lh.googleusercontent.com/Zo753bSFT-GHMrUOvoSuYzyeWT4yXGB3Wm_aNIvoPYhpRGQ2qbkBVN-jhTYmWxugDT0S9dX7UGupA_fsqOwzjQY",
-      "https://play-lh.googleusercontent.com/uiKVm0dTPzpPSwvc_yephtUq17bz0K5k1FEjj08aOmD1jYbVqPxSGXA1pqrpEyyUsDXbl5egT3UHbqcO4vdQJA",
-      "https://play-lh.googleusercontent.com/Fl8ys-JNyC_Xu2-rsL_GVG87xr6NYABFonM3cNxTS8QBhn2tKfJDxnsgR1iPb_YnGo0yvUCsWYajtOnFyt8_"
     ]
   }
 ]
