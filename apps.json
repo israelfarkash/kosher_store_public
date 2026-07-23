@@ -137,5 +137,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "Gemini",
+    "packageName": "com.google.android.apps.bard",
+    "versionCode": 314,
+    "versionName": "1.0.939743211",
+    "size": "5.0 MB",
+    "checksum": "38d11850323f881a93537417fbbb136b",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "‫Google Gemini הוא עוזר אישי ויעיל מבוסס-AI, שעוזר לכם בכל מה שצריך – מהנסיעה לעבודה בבוקר ועד למחקר מעמיק בשעות הלילה המאוחרות, ויכול לבצע פעולות גם באופן יזום.\r\n\r\nלמה המשתמשים אוהבים את Gemini\r\n• המודלים הכי עדכניים שלנו, Gemini 3.6 ו-Gemini Omni, משפרים אפילו יותר את היצירתיות והפרודקטיביות.\r\n• אפשר לדבר על הכול עם Gemini Live: אתם יכולים לעשות איתו סיעור מוחות, או לשתף איתו את המסך או המצלמה כדי לדבר על מה שאתם שרואים.\r\n• במקום טקסטים ארוכים וצפופים, הוא מספק תשובות שנוסחו בקפידה – עם תמונות, צירי זמן ואלמנטים חזותיים אינטראקטיביים.\r\n• כדי לקבל עזרה אישית יותר, אתם יכולים לקשר את אפליקציות Google המועדפות עליכם כמו Gmail, יומן Google,‏ Google Photos,‏ YouTube וחיפוש Google.\r\n• אפשר להעלות מסמכים, גיליונות אלקטרוניים, תמונות, סרטונים ועוד כל מיני קבצים, ולקבל תשובות, סיכומים ותובנות לגבי התוכן.\r\n\r\nרעיונות יצירתיים הופכים למציאות\r\n• ‫Nano Banana 2 – כלי ליצירת ועריכת תמונות: אתם יכולים לשלוט במצלמה ובתאורה, ליצור הדמיות באמצעות שילוב של כמה תמונות ביחד, לעצב פוסטרים עם טקסט באיכות גרפית גבוהה, ולבנות דיאגרמות בקלות. ואם צריך, אפשר לשנות את הגודל לפי הצורך.\r\n• תהפכו את הרעיונות שלכם לסרטונים באיכות קולנועית עם Gemini Omni, שזמין למשתמשי Workspace ולמנויי Google AI ברמת Plus,‏ Pro ו-Ultra.\r\n• צרו פסקולים מותאמים אישית לכל רגע עם Lyria 3.\r\n\r\nפרודוקטיביות זה שם המשחק\r\n• מחקר עם NotebookLM: קבלו תשובות מעמיקות ורלוונטיות יותר, שמבוססות על המקורות בנוטבוק שלכם\r\n• עזרה בלימודים והכנה למבחנים: רוצים ליצור בחנים מותאמים אישית ואלמנטים אינטראקטיביים? פשוט תעלו את הסיכומים מהשיעורים, ו-Gemini כבר ידאג לזה.\r\n• מהנחיה פשוטה לאב-טיפוס: אתם יכולים לבנות דפי אינטרנט, משחקים או לוחות בקרה. אפשר אפילו להמיר קבצים לסקירה בסגנון פודקאסט ולהאזין להם תוך כדי תנועה.\r\n\r\nשדרגו ותיהנו מעוד אפשרויות\r\nמנויי Google AI ברמת Plus,‏ Pro ו-Ultra נהנים מיכולות ופיצ'רים נוספים באפליקציית Gemini, שמאפשרים להתמודד עם משימות ופרויקטים מורכבים יותר.\r\n\r\nלעיון בהודעת הפרטיות של ממשקי Gemini: ‏g.co/gemini/privacynotice\r\n\r\nאם תבחרו להשתמש באפליקציית Gemini,‏ Gemini יחליף את Google Assistant בתור העוזר האישי הראשי בטלפון. חלק מהתכונות הקוליות שקיימות ב-Google Assistant עדיין לא זמינות באפליקציית Gemini. אפשר לעבור בחזרה ל-Google Assistant דרך ההגדרות.",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1jV1KysZyoPh9MNz2Bk99Frb8McZSUWL3&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.apps.bard.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/wmpCEDyH2tVWWmc4f1TboEqJ1rEAZoc6O6RTNUpb7wqd9KpVHrCOfXQ0TpwHFv_pK1IaUBxf8bdTExuIn-fl4w",
+      "https://play-lh.googleusercontent.com/hR7lmoP2w-LmqB4Qon9KK9Zs0FRv6tCmAyxV_do3Rm8wDTfmhsSUnMVkB8l-zykqTCe7q6fl3uAfe2n1Gy-e-w",
+      "https://play-lh.googleusercontent.com/1C-z01zFuQmwGxznEIU2QgPTB_h7RnI4594DojFmqGUprzCw7hH7QZH8RIsIEsFvRlOhxsvEDE6qwwdEX32rhQ",
+      "https://play-lh.googleusercontent.com/6d_7s76AMzxctUCxEqx5bbXibu6xqMz_z3P5uUY3vDCXyjuVWZLcAM5vgTIQ8s1ShDb9vnINmlxTLq7C3Pqbmw",
+      "https://play-lh.googleusercontent.com/8Ztb2A8XyqkdkB5BXYssa2QZq_AiTxUyaNsn7pknt1_lpUO7mBe2j6BLKCe_-50WgKVEmL4RqBVas92bfQMI"
+    ]
   }
 ]
