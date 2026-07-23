@@ -182,7 +182,7 @@ class ModernStoreManager(ctk.CTk):
         self.main_content = ctk.CTkFrame(self, fg_color="transparent")
         self.main_content.grid(row=0, column=1, sticky="nsew", padx=20, pady=20)
         self.main_content.grid_columnconfigure(0, weight=1)
-        self.main_content.grid_rowconfigure(2, weight=1)
+        self.main_content.grid_rowconfigure(1, weight=1)
         
         # Header Info Card
         self.info_card = ctk.CTkFrame(self.main_content, corner_radius=15)
