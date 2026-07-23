@@ -11,5 +11,18 @@
     "description": "",
     "apkUrl": "https://drive.google.com/uc?export=download&id=17vxMy2E45Te84EfFMDE1UIHI-QACfyGu",
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/org.telegram.messenger.web.png"
+  },
+  {
+    "name": "Smart Gallery",
+    "packageName": "com.hpower.koshergallery",
+    "versionCode": 2,
+    "versionName": "2.1",
+    "size": "2.0 MB",
+    "checksum": "b3151744dabb71c342c198ef31755cb8",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1BPB9eEsGEiyaAkht74Ee7XH9P2BvbBuc",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   }
 ]
