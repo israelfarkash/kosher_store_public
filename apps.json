@@ -53,6 +53,19 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/org.telegram.messenger.web.png"
   },
   {
+    "name": "Smart Gallery",
+    "packageName": "com.hpower.koshergallery",
+    "versionCode": 2,
+    "versionName": "2.1",
+    "size": "2.0 MB",
+    "checksum": "b3151744dabb71c342c198ef31755cb8",
+    "checksumType": "MD5",
+    "category": "כלים",
+    "description": "",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1BPB9eEsGEiyaAkht74Ee7XH9P2BvbBuc&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
+  },
+  {
     "name": "Waze",
     "packageName": "com.waze",
     "versionCode": 1030440,
@@ -106,7 +119,7 @@
     ]
   },
   {
-    "name": "ניהול חשבון",
+    "name": "מזרחי טפחות",
     "packageName": "com.MizrahiTefahot.nh",
     "versionCode": 3000076,
     "versionName": "43.0",
@@ -124,18 +137,5 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
-  },
-  {
-    "name": "Smart Gallery",
-    "packageName": "com.hpower.koshergallery",
-    "versionCode": 2,
-    "versionName": "2.1",
-    "size": "2.0 MB",
-    "checksum": "b3151744dabb71c342c198ef31755cb8",
-    "checksumType": "MD5",
-    "category": "כלים",
-    "description": "",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1BPB9eEsGEiyaAkht74Ee7XH9P2BvbBuc&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   }
 ]
