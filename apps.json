@@ -350,5 +350,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "Gboard",
+    "packageName": "com.google.android.inputmethod.latin",
+    "versionCode": 175894494,
+    "versionName": "17.8.3.939743344-beta-arm64-v8a",
+    "size": "77.0 MB",
+    "checksum": "eb0e8925c1fefb7f8a465292fd8aeac4",
+    "checksumType": "MD5",
+    "category": "אפליקציות גוגל",
+    "description": "‏ל-Gboard יש את כל התכונות האהובות של מקלדת Google: מהירות ואמינות, הקלדה בהחלקה, הקלדה קולית, כתב יד ועוד\r\n\r\n<b>הקלדה בהחלקה</b> — מקלידים מהר יותר בהחלקת האצבעות מאות לאות\r\n\r\n<b>הקלדה קולית</b> — מכתיבים טקסט בקלות בדרכים\r\n\r\n<b>כתב יד*</b> — כותבים באותיות כתב ודפוס\r\n\r\n<b>חיפוש סמלי אמוג'י*</b> — מוצאים את האמוג'י הרצוי מהר יותר\r\n\r\n<b>קובצי GIF*</b> — מחפשים ומשתפים קובצי GIF לתגובה מושלמת.\r\n\r\n<b>הקלדה במספר שפות</b> — כבר לא צריך לעבור בין שפות באופן ידני. Gboard תתקן באופן אוטומטי ותציע טקסט מהשפות המופעלות.\r\n\r\n<b>Google Translate</b> — מתרגמים תוך כדי הקלדה במקלדת\r\n\r\n<b>* אין תמיכה במכשירי Android Go</b>\r\n<b>מגוון של מאות שפות, כולל:</b>\r\nאפריקנס, אמהרית, ערבית, אסאמית, אזרית, בווארית, בנגאלית, בוג'פורית, בורמזית, סבואנו, צ'אטיסגארי, סינית (מנדרינית, קנטונזית ואחרות), צ'יטגונית, צ'כית, דקאן, הולנדית, אנגלית, פיליפינית, צרפתית, גרמנית, יוונית, גוג'ראטית, האוסה, הינדית, איגבו, אינדונזית, איטלקית, יפנית, יאוונית, קנאדה, חמר, קוריאנית, כורדית, מגאהי, מאיתילי, מלאית, מליאלאם, מראטהית, נפאלית, סוטו צפונית, אודיה, פשטו, פרסית, פולנית, פורטוגזית, פונג'בית, רומנית, רוסית, סאראיקי, סינדהי, סינהאלה, סומלית, סוטו דרומית, ספרדית, סנדאנית, סוואהילית, טמילית, טלוגו, תאית, טסוואנה, טורקית, אוקראינית, אורדו, אוזבקית, וייטנאמית, קוסה, יורובה, זולו ו<b>עוד הרבה</b>! ניתן להיכנס אל https://goo.gl/fMQ85U כדי לראות את הרשימה המלאה של השפות הנתמכות\r\n\r\n<b>טיפים למתקדמים:</b>\r\n• הפעלת תנועת 'בקרת סמן': מסיטים את האצבע על מקש הרווח כדי להזיז את הסמן\r\n• תנועת מחיקה: מסיטים שמאלה ממקש המחיקה כדי למחוק במהירות מספר מילים\r\n• שורת המספרים תמיד זמינה (הפעלה בהגדרות ← העדפות ← שורת המספרים)\r\n• הינטים לסמלים: הצגת הינטים מהירים למקשים לגישה לסמלים בעזרת לחיצה ארוכה (ניתן להפעיל בהגדרות ← העדפות ← לחיצה ארוכה לסמלים)\r\n• מצב שימוש ביד אחת: בטלפונים עם מסכים גדולים, אפשר להצמיד את המקלדת לצד שמאל או ימין במסך\r\n• עיצובים: ניתן לבחור עיצוב אישי, עם או בלי גבולות מקשים",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1Hfsp8h_nR_xVeZc9upREB0h6WkyIdWxJ&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.inputmethod.latin.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/6z0Rxet6qvCFj5Z7HBqAIU2rYMEIR29qt_WHzK-m0Z0QIow_ngha6HS9QXxdqQ9KtIfe4fkzihfyq54rDf0PlQ",
+      "https://play-lh.googleusercontent.com/Jy0wQ8gNmyzyV_Vgh4Uq7TRJbhNiqOuJooXjtGdTsaMHSsp-JiY8LPlByv0aad5iTlV5FAaCSrCeP-ffeHkmsw",
+      "https://play-lh.googleusercontent.com/8-yxNazA0638UissJyeeiILj-X3bme__6CmOjb44eMrp6YnRgKB0hLPtgmT5nAP7ZjlnBMtxAUr8nuOq4a6jUw",
+      "https://play-lh.googleusercontent.com/jopIHVXKnEdvy00A4Wj_vqdcq-DW-SAsrV1JtPhBR_ISewXOO67zObXWwcvaeyIuyEF6Mpoj2JKEwsVRs8Qs",
+      "https://play-lh.googleusercontent.com/qqc7cMShNHfxPr-hAgnN0a-XIegPfnt9F86C1_hLCTXQSiYM9YRhDrdYic-XrPzo9K8nF4xlkOwSACMcu1TA"
+    ]
   }
 ]
