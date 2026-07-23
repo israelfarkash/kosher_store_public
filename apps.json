@@ -1,5 +1,25 @@
 [
   {
+    "name": "egg",
+    "packageName": "com.egged.egg",
+    "versionCode": 400001069,
+    "versionName": "10.1.62.1",
+    "size": "30.5 MB",
+    "checksum": "4d9321fb7a272ec4322023be4bf8ce6b",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "🚌 <b>Egg - אוטובוס קרוב ותחבורה ציבורית בזמן אמת!</b>\r\nמחפשים אוטובוס קרוב? רוצים תכנון מסלול נסיעה מהיר? Egg היא האפליקציה לנסיעות בתחבורה ציבורית בישראל - חכמה, נוחה וללא פרסומות!\r\n\r\n🗺️ <b>תכנון מסלול נסיעה וניווט בזמן אמת</b>\r\nמצאו אוטובוס קרוב ואת הדרך המהירה ביותר באוטובוס וברכבת עם עדכונים בזמן אמת וזמני הגעה מדויקים. תחבורה ציבורית זמנים ישראל - תמיד מעודכנים!\r\n\r\n💳 <b>תשלום באוטובוס בנייד - דיגיטלי, קל ונוח</b>\r\nתשלום באוטובוס ותשלום ברכבת ישירות מהנייד - בלי רב-קו! תשלום תחבורה ציבורית מהיר ומאובטח, חיסכון בזמן ובמאמץ - ללא התחייבות ובלי לשלם מראש. פשוט סורקים את קוד ה-QR ומקבלים כרטיס דיגיטלי זמין בנייד.\r\n\r\n🚫 <b>ללא פרסומות - תמיד!</b>\r\nחוויית שימוש שקטה, נעימה וממוקדת בכם ובנסיעה. נסיעות בתחבורה ציבורית ללא הסחות דעת - רק אתם והדרך.\r\n\r\n🎫 <b>הנחות מותאמות לזכאים</b>\r\nהנחות לתלמידים, חיילים, אזרחים ותיקים ועוד - לפי פרופיל אישי.\r\n\r\n💳 <b>הטענת רב-קו</b>\r\nהטענת רב-קו בתהליך קצר ופשוט - סריקה והטענת ערך צבור/מנוי.\r\n*נדרשת תמיכת המכשיר ב-NFC.\r\n\r\n🎟️ <b>הזמנת כרטיסים לנסיעות ארוכות באגד (כולל אילת)</b>\r\nבחרו תאריך, שמרו את הכרטיס באפליקציה והגיעו מוכנים.\r\n\r\n📁 <b>כרטיסים שמורים ונגישים עד לנסיעה</b>\r\nכל הכרטיסים שלכם זמינים בכל עת באפליקציה - מוכנים ליום הנסיעה.\r\n\r\n🧏‍♂️ <b>שירות ותמיכה מלאה</b>\r\nצרו קשר עם שירות הלקוחות, ותיהנו מתמיכה מקצועית ומהירה.\r\n\r\nהורידו עכשיו את Egg - אוטובוס קרוב, תכנון נסיעה ותשלום תחבורה ציבורית בזמן אמת. הכל ללא פרסומות!",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1ZkOq3JLwrF0b6I68OIQWQpk5m4v0jmkW",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.egged.egg.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/63WiX8gc3ImRIEmQ5b_9AmqLI2eudAwL-XbZ2kPpLiqD6wgEMhkvbVHC0RFlYW9uFOWpzuhYHiceUY-P0dUT200",
+      "https://play-lh.googleusercontent.com/UaXp0LKUgM-AVmDK6GZ2hmxpqZuOEp_aL4qj5X5moqPsVYVeR7dzXXdOdjrAcn7Oud0QG8BHWs25MbgcW8bV",
+      "https://play-lh.googleusercontent.com/UI5s0EVeruV2IKiAPQ6stahw9CExdN-v0VpABOKPMi0ZnPa9s7t7AitnTurfRmZ_IFUG3kTFEwcCdaFSDj5GKw",
+      "https://play-lh.googleusercontent.com/abgBTdq3ReBvNx_m9_2QVwq25KuAHMBbEvSelMlE9IOcHcu54Qs4lnBh7gpc8xt4Ap26RfKJv1mlzqR6cKqcMA",
+      "https://play-lh.googleusercontent.com/sw71MD1G_8Jt7uzcefIQuRHf8T8ZTbvQMoVi0-4sz-uf4ePg8aC81tXBHcxPWmbBAzaUt1LgcSAfXjRagO0pOA"
+    ]
+  },
+  {
     "name": "Safegram",
     "packageName": "org.telegram.messenger.web",
     "versionCode": 609,
@@ -26,23 +46,23 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   },
   {
-    "name": "egg",
-    "packageName": "com.egged.egg",
-    "versionCode": 400001069,
-    "versionName": "10.1.62.1",
-    "size": "30.5 MB",
-    "checksum": "4d9321fb7a272ec4322023be4bf8ce6b",
+    "name": "bit",
+    "packageName": "com.bnhp.payments.paymentsapp",
+    "versionCode": 528,
+    "versionName": "6.14",
+    "size": "151.2 MB",
+    "checksum": "d24bb4edce7486210e9f276c0b8ddc97",
     "checksumType": "MD5",
     "category": "כללי",
-    "description": "🚌 <b>Egg - אוטובוס קרוב ותחבורה ציבורית בזמן אמת!</b>\r\nמחפשים אוטובוס קרוב? רוצים תכנון מסלול נסיעה מהיר? Egg היא האפליקציה לנסיעות בתחבורה ציבורית בישראל - חכמה, נוחה וללא פרסומות!\r\n\r\n🗺️ <b>תכנון מסלול נסיעה וניווט בזמן אמת</b>\r\nמצאו אוטובוס קרוב ואת הדרך המהירה ביותר באוטובוס וברכבת עם עדכונים בזמן אמת וזמני הגעה מדויקים. תחבורה ציבורית זמנים ישראל - תמיד מעודכנים!\r\n\r\n💳 <b>תשלום באוטובוס בנייד - דיגיטלי, קל ונוח</b>\r\nתשלום באוטובוס ותשלום ברכבת ישירות מהנייד - בלי רב-קו! תשלום תחבורה ציבורית מהיר ומאובטח, חיסכון בזמן ובמאמץ - ללא התחייבות ובלי לשלם מראש. פשוט סורקים את קוד ה-QR ומקבלים כרטיס דיגיטלי זמין בנייד.\r\n\r\n🚫 <b>ללא פרסומות - תמיד!</b>\r\nחוויית שימוש שקטה, נעימה וממוקדת בכם ובנסיעה. נסיעות בתחבורה ציבורית ללא הסחות דעת - רק אתם והדרך.\r\n\r\n🎫 <b>הנחות מותאמות לזכאים</b>\r\nהנחות לתלמידים, חיילים, אזרחים ותיקים ועוד - לפי פרופיל אישי.\r\n\r\n💳 <b>הטענת רב-קו</b>\r\nהטענת רב-קו בתהליך קצר ופשוט - סריקה והטענת ערך צבור/מנוי.\r\n*נדרשת תמיכת המכשיר ב-NFC.\r\n\r\n🎟️ <b>הזמנת כרטיסים לנסיעות ארוכות באגד (כולל אילת)</b>\r\nבחרו תאריך, שמרו את הכרטיס באפליקציה והגיעו מוכנים.\r\n\r\n📁 <b>כרטיסים שמורים ונגישים עד לנסיעה</b>\r\nכל הכרטיסים שלכם זמינים בכל עת באפליקציה - מוכנים ליום הנסיעה.\r\n\r\n🧏‍♂️ <b>שירות ותמיכה מלאה</b>\r\nצרו קשר עם שירות הלקוחות, ותיהנו מתמיכה מקצועית ומהירה.\r\n\r\nהורידו עכשיו את Egg - אוטובוס קרוב, תכנון נסיעה ותשלום תחבורה ציבורית בזמן אמת. הכל ללא פרסומות!",
-    "apkUrl": "https://drive.google.com/uc?export=download&id=1ZkOq3JLwrF0b6I68OIQWQpk5m4v0jmkW",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.egged.egg.png",
+    "description": "bit אפליקציית התשלומים המובילה בישראל, המאפשרת להעביר ולקבל כסף בקלות ובצורה בטוחה.\r\n\r\nניהול יתרה כספית- מקבלים כסף מחברים? הכסף מצטבר באפליקציה ואתם יכולים להחליט אם לשמור אותו או לעשות בו שימוש להעברות\r\nתשלום באתרי קניות ובאפליקציות – עושים שופינג אונליין ומשלמים ב-bit ללא צורך להקליד פרטי כרטיס אשראי.\r\nהזמנת מט\"ח מהטרמינל – מזמינים מראש את המט״ח ב-bit ואוספים בשדה תעופה.\r\nאיסוף כסף מקבוצות – מתארגנים לעל האש? קונים מתנה ביחד? כל מה שצריך זה לפתוח קבוצה ולהזמין חברים להצטרף. אנחנו כבר נזכיר להם להעביר את הסכום שצריך.\r\nשליחת בקשה לתשלום – מגיע לכם כסף ומישהו שכח מזה? תרגישו חופשי להזכיר לו על ידי שליחת בקשה לתשלום. \r\nקבלת החזרים מחברות ביטוח ומקרנות פנסיה – כבר לא צריך להתעסק עם ניירת מיותרת, מקבלים את ההחזר ב-bit ישירות לחשבון.\r\nתשלום ארנונה – מקבלים את בקשת התשלום ישירות לאפליקציה ומשלמים בלחיצת כפתור.  \r\nכרטיס אשראי Carrefour Club – מזמינים כרטיס, מקבלים מגוון הטבות ומתחילים לצבור +Carrefour coins למימוש ברשתות המועדון.",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=15COaW0N7qblUU1etGpKZ-3z6PcC9gjZO",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.bnhp.payments.paymentsapp.png",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/63WiX8gc3ImRIEmQ5b_9AmqLI2eudAwL-XbZ2kPpLiqD6wgEMhkvbVHC0RFlYW9uFOWpzuhYHiceUY-P0dUT200",
-      "https://play-lh.googleusercontent.com/UaXp0LKUgM-AVmDK6GZ2hmxpqZuOEp_aL4qj5X5moqPsVYVeR7dzXXdOdjrAcn7Oud0QG8BHWs25MbgcW8bV",
-      "https://play-lh.googleusercontent.com/UI5s0EVeruV2IKiAPQ6stahw9CExdN-v0VpABOKPMi0ZnPa9s7t7AitnTurfRmZ_IFUG3kTFEwcCdaFSDj5GKw",
-      "https://play-lh.googleusercontent.com/abgBTdq3ReBvNx_m9_2QVwq25KuAHMBbEvSelMlE9IOcHcu54Qs4lnBh7gpc8xt4Ap26RfKJv1mlzqR6cKqcMA",
-      "https://play-lh.googleusercontent.com/sw71MD1G_8Jt7uzcefIQuRHf8T8ZTbvQMoVi0-4sz-uf4ePg8aC81tXBHcxPWmbBAzaUt1LgcSAfXjRagO0pOA"
+      "https://play-lh.googleusercontent.com/_aEbN2wUc4iWjr7ZeUpwsS37Utr-tYTgs-WHxSWFIlsibJib7QBtNPMi_TROsFHA0gPRuobTWjAKDw0oyU8FSfw",
+      "https://play-lh.googleusercontent.com/41PRWWEE76fDCeJcxb4F1OjlpsEoOV6x67jmUhFn_IhLzmkIFhwxenK81cUrWgM-VdCpAQzbUwRg0HFQeEEdoA",
+      "https://play-lh.googleusercontent.com/XGiaE-9I1vH254zO5-FQQbmkYSFetTg4JX28fALQAFXUz6-Q8ne4wOFcTr3376SAGpXwnIkMMktmevOy8Y2i",
+      "https://play-lh.googleusercontent.com/DOsdkBcm8_RUc9xEOWLEUfFBHToiE1JniA8eh-stQHU4ei8twyp4He02OYbO6Y5SvCkCGDy0mlXX9GsO9X4T",
+      "https://play-lh.googleusercontent.com/UKt11aO5U5KhK6jvB1rZemVc3SnL7ym46AGxSBivV_1D6yhNEmKLF9f0fdXzB47Bc5i_xVuXomJYSrMuOiRoDL0"
     ]
   }
 ]
