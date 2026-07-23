@@ -4,12 +4,12 @@
     "packageName": "org.telegram.messenger.web",
     "versionCode": 609,
     "versionName": "1.0.6",
-    "apkUrl": "https://drive.google.com/uc?export=download&id=17vxMy2E45Te84EfFMDE1UIHI-QACfyGu",
-    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/org.telegram.messenger.web.png",
-    "description": "אפליקצית טלגרם מסונן הטובה בישראל!",
-    "category": "מסרים",
     "size": "80.4 MB",
     "checksum": "a91aea426d423731b03a801f0e51d9de",
-    "checksumType": "MD5"
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "",
+    "apkUrl": "https://drive.google.com/uc?export=download&id=17vxMy2E45Te84EfFMDE1UIHI-QACfyGu",
+    "iconUrl": "https://raw.githubusercontent.com/ASDFG0537701349/kosher-app-apks-public/refs/heads/main/icons/org.telegram.messenger.web.png"
   }
 ]
