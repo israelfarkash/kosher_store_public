@@ -509,5 +509,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "Phone",
+    "packageName": "com.google.android.dialer",
+    "versionCode": 19915698,
+    "versionName": "230.0.951104969",
+    "size": "83.0 MB",
+    "checksum": "05dc1c70d875acfa537e46f7e06a5759",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "לראשונה אפשר להוריד את אפליקציית השיחות הרשמית של Google – אפליקציית 'טלפון' – כדי לדבר עם המשפחה והחברים, לחסום ספאם ולדעת מי מתקשר לפני שעונים, הכול בעיצוב פשוט ואינטואיטיבי.\n\nהגנה מעולה מפני ספאם\nאזהרות על שיחות חשודות יעזרו לכם להימנע משיחות לא רצויות – טלמרקטינג, הונאות או \"סתם\" ספאם. תוכלו גם לחסום מספרים כדי לא לקבל מהם יותר שיחות.\n\nלדעת מי מתקשר\nבזכות מאגר המספרים הרחב בשירות השיחה המזוהה של Google תוכלו לדעת מאיזה עסק מתקשרים אליכם ולענות בראש שקט.\n\nסינון שיחות ממי שלא מכירים 1,2\nלא מכירים את מי שמתקשר? הפיצ'ר Call Screen יענה לשיחה, יסנן שיחות ספאם ממקורות מוכרים בלי להפריע לכם ויעזור לכם לקבל מידע נוסף על מי שמתקשר לפני שתענו.\n\nדואר קולי ויזואלי 1,3\nרוצים לבדוק את ההודעות בלי להתקשר לתא הקולי? תוכלו לראות ולשמוע אותן בכל סדר שתרצו, לקרוא תמלילים ולמחוק או לשמור אותן ישירות מהאפליקציה.\n\nעיצוב אינטואיטיבי\nהודות לעיצוב הפשוט והנקי שלנו תוכלו למצוא בקלות את כל האנשים המועדפים ולהתקשר אליהם. בנוסף, תוכלו לעבור למצב כהה כדי לחסוך בצריכת הסוללה ולאמץ פחות את העיניים בלילה.\n\nתמיכה בשעת חירום 1,4\nמתקשרים למוקד חירום? תוכלו לראות איפה אתם נמצאים כרגע ולשתף את המיקום שלכם עם הנציג במוקד, יחד עם מידע על העזרה שאתם צריכים, בלי לומר מילה.\n\nאפשר להוריד את אפליקציית 'טלפון' לרוב מכשירי ה-Android עם Android™ 9.0 ואילך.\n\n1 זמין רק בחלק מהמכשירים שבהם אפליקציית 'טלפון' מותקנת מראש.\n2 הסינון האוטומטי זמין רק בארה\"ב ובאנגלית. הסינון הידני זמין רק בארה\"ב ובקנדה, ורק באנגלית. ייתכן שהפיצ'ר Call Screen לא יזהה את כל השיחות האוטומטיות או שיחות הספאם.\n3 התמלול זמין רק בארה\"ב ובאנגלית.\n4 זמין רק באוסטרליה, בריטניה וארה\"ב, ורק באנגלית.",
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1VeQVqj3W-X0xyDa76LgF8KJZqvqH9USL?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.google.android.dialer.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/ZkAkPEsfoHHiYG7jQq5CreYqHLrcZsK6vaP1vMGU1rqrncSnhEpZBfLt31PKzPiXUqGPtEuzbhFQUi0l2oVd",
+      "https://play-lh.googleusercontent.com/UvOM9DgDi61SUnzonITcB8W8vJ5eT8I4Dj7QVYTyhIZqNYC-CDxXb3xocAzAs5LRab2LrzLO_gihkI9RPm7B",
+      "https://play-lh.googleusercontent.com/HaqYEGGXwatJHOKB6vWeOQ9iisC59ht-CH71BlBmPQMfj1dreCDWUs004JydeyrbQTz3lsm1x_bxF8rXWVqCxQ",
+      "https://play-lh.googleusercontent.com/R_LrJdot-m4BY-KfDv6UxWQ-34vjE0cAubdnT87b2Q45LRaHag2dH_fOYCD5UJCUOEt6hbepo4L6UOcEG3oN",
+      "https://play-lh.googleusercontent.com/am77v4UKR4K9S25_6y4BQHn2pLAGjAXl1bfQIjWeeXDfkVs8e7W5jn6jMD5UOCM31K4eKveHyfBNizwQ-yNZqxc"
+    ]
   }
 ]
