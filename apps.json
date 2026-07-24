@@ -273,6 +273,26 @@
     ]
   },
   {
+    "name": "Musicolet",
+    "packageName": "in.krosbits.musicolet",
+    "versionCode": 53000,
+    "versionName": "6.14 build530",
+    "size": "30.2 MB",
+    "checksum": "ad78fd45164c03bf3490037128fb425e",
+    "checksumType": "MD5",
+    "category": "כלים",
+    "description": "------------------------------------\nנא לקרוא זאת לפני ההתקנה\n1. אפליקציה זו יכולה לארגן ולהפעיל רק את קובצי האודיו המקומיים המאוחסנים באחסון הפנימי או בכרטיס ה-SD.\n2. אפליקציה זו לא יכולה להזרים/להוריד/לחפש מוזיקה חדשה באינטרנט.\n------------------------------------\n\nפורמטי קבצים נתמכים:\nmp3, m4a, wma, flac, opus, aac, alac, ape, dsf ועוד רבים...\n\nמאפיינים:\n\n✅ תורים מרובים\nתור נפרד לכל תיקיה, אלבום, אמן, רשימת השמעה. המשך את התורים הקודמים מהמיקום האחרון שלהם בכל עת.\n\n✅ ממשק משתמש יעיל, ניווט קל\nלניווט מהיר וקל, מיקמנו את כל הרכיבים החשובים של האפליקציה (כמו נגן ראשי, תורים, תיקיות, אלבומים, אמנים, רשימות השמעה) בשורה אחת בלבד. אז אתה יכול לגשת אליהם באמצעות הקשה אחת בלבד!\n\n✅ עורך תגים+: יכול לערוך תגים ואמנות אלבומים של מספר שירים בו-זמנית.\n\n✅ הזז/העתק שירים, שנה שמות של תיקיות ישירות באפליקציה.\n\n✅ צור מילים מסונכרנות.\n\n✅ שמור סימניות והערות.\n\n✅ הוסף/הסר שיר ל>פלייליסט אחד, מתראות, ווידג'טים ואפילו ממסך הנעילה\n\n✅ גלישה בתיקיות 📁\n2 סוגים של מבני תיקיות: 1) ליניארי (כל התיקיות בבת אחת) ו-2) היררכי (תיקיות בתוך תיקיות)\n\n✅ אקולייזר חזק🎚🎚🎚: הפרד הגדרות והגדרות מראש עבור רמקולים🔊, אוזניות🎧, Bluetooth וכו'.\n\n✅ השמעה ללא פערים\n\n✅ 🎧פקדי אוזניות🎧\nלחיצה אחת להשהיה/הפעלה. לחץ פעמיים להמשך ולחיצה משולשת לשיר הקודם. בכל לחיצה >=4 תוכל להריץ את השיר קדימה.\n\n✅ מילים משובצות + תמיכה ב-LRC\nתומך במילים לא מקוונות המוטמעות בקובץ שמע כתג ID3. אתה יכול לערוך מילים מוטבעות מעורך התגים. Musicolet תומך גם בקבצי lrc עבור מילים מסונכרנות.\n(הערה: Musicolet לא שואב מילים אוטומטית מהאינטרנט. אתה צריך לכתוב או להדביק מילים באופן ידני בעורך התגים, אם אין מילים מוטבעות. זה לא מביא קובץ lrc באופן אוטומטי. עבור קבצי lrc, יש לך כדי למצוא קובץ lrc מהאינטרנט, שים אותו באותה תיקיה ושנה את שמו כך שיתאים בדיוק לשם קובץ השמע באופן ידני.)\n\n✅ טיימרים לשינה\n2 סוגים: 1) סגור את האפליקציה לאחר זמן שעת: מ\"מ או 2) סגור את האפליקציה לאחר N שירים.\n\n✅ הוסף קיצורי דרך של כל אלבום/אמן/תיקיה/רשימת השמעה לאפליקציית מסך הבית (משגר) שלך.\n\n✅ ווידג'טים מדהימים\n\n✅ מסך נעילה (עם פקדים, תור ומילים)\n\n✅ 🚘 תמיכה ב-Android Auto 🚘\nממכונית התומכת 'Android Auto' שלך, תוכל לשלוט במוזיקה ולגשת לרשימות ההשמעה, התורים, התיקיות וכל ספריית המוזיקה שלך.\n\n✅🎉שנה את מראה ההתראות🎉\n✅ אתה יכול גם להפעיל את לחצני הרצה קדימה והרצה אחורה בהודעות מההגדרות.\n\n✅ ערכות נושא בהירות ואפלות\n\n✅ גיבוי ושחזור\nגיבוי אוטומטי וידני. שחזר הגדרות, רשימות השמעה, ספירות השמעה מכל גיבוי בכל עת בכל מכשיר.\n\nועוד הרבה...\n\n🚫ללא מודעות🚫\nללא פרסומות לנצח, לכל המשתמשים. 🤩\n\nאין הרשאת אינטרנט, במצב לא מקוון לחלוטין\nMusicolet אפילו לא משתמש בהרשאת אינטרנט (המכונה גם הרשאת גישה לרשת). (תוכל לבדוק זאת ב'הרשאות אפליקציה' בתחתית תיאור זה בחנות Play.)\n\nמוקדש לאוהבי מוזיקה 🎶 בכל רחבי העולם. 🌎\nנוצר באהבה ❤, הרבה קוד ולילות ללא שינה. מקווה שתאהבו את העבודה שלנו.\n\n------------------\nהאתר הרשמי שלנו: https://krosbits.in/musicolet\nhttps://krosbits.in/musicolet/download\n------------------\nכדי לשלוח משוב/הצעות, לדווח על באגים או לשאילתות אחרות...\nצרו קשר: musicolet@krosbits.in",
+    "apkUrl": "https://drive.usercontent.google.com/download?id=1D51iRtaqCzkXrhFzpMBg_8agJCICwC7b&confirm=t&export=download",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/in.krosbits.musicolet.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/E5P7VIdMKpRAVLWQz8Ybepm3Vnr0ctTvJBG7ITVavnsvg5azUppOyef8Lj1Lx6fCNWlT_eVkKEbFfvVOTIsU",
+      "https://play-lh.googleusercontent.com/V1fpd9g1_vTaByDjm4WmUep335KZVnrfrp5Q3vOay5DJ1Bm_JJ5yIFq_tDnwOog0BNhcSZJ-d3ng_RNmExpgLQ",
+      "https://play-lh.googleusercontent.com/E8E_zjpZDvXjM7AW63E_gYGhRYoiFTRf0kXUn_Sxurb6kcEsTPn0oR_T8smJEPBWduOtcF020J_Ztxb3NVve",
+      "https://play-lh.googleusercontent.com/uP_FFWnPgu1CT5Pj3mawgXkxbDMj0JlO0F0oIkETTbqwnZme1Q0fnXTbg33ymqh32cMIBBvdF_O1TjVuwhwYX6Q",
+      "https://play-lh.googleusercontent.com/Q1Lf0vCQJLkHFhatZAZEwd9_WpG6iNGsJmvGctBAPLyzhlzw6XgITyb35f5DsjpaOSAxV_0GzYF8PxVfQpCf39k"
+    ]
+  },
+  {
     "name": "PayBox",
     "packageName": "com.payboxapp",
     "versionCode": 1692,
@@ -488,26 +508,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "Musicolet",
-    "packageName": "in.krosbits.musicolet",
-    "versionCode": 53000,
-    "versionName": "6.14 build530",
-    "size": "30.2 MB",
-    "checksum": "ad78fd45164c03bf3490037128fb425e",
-    "checksumType": "MD5",
-    "category": "כלים",
-    "description": "------------------------------------\nנא לקרוא זאת לפני ההתקנה\n1. אפליקציה זו יכולה לארגן ולהפעיל רק את קובצי האודיו המקומיים המאוחסנים באחסון הפנימי או בכרטיס ה-SD.\n2. אפליקציה זו לא יכולה להזרים/להוריד/לחפש מוזיקה חדשה באינטרנט.\n------------------------------------\n\nפורמטי קבצים נתמכים:\nmp3, m4a, wma, flac, opus, aac, alac, ape, dsf ועוד רבים...\n\nמאפיינים:\n\n✅ תורים מרובים\nתור נפרד לכל תיקיה, אלבום, אמן, רשימת השמעה. המשך את התורים הקודמים מהמיקום האחרון שלהם בכל עת.\n\n✅ ממשק משתמש יעיל, ניווט קל\nלניווט מהיר וקל, מיקמנו את כל הרכיבים החשובים של האפליקציה (כמו נגן ראשי, תורים, תיקיות, אלבומים, אמנים, רשימות השמעה) בשורה אחת בלבד. אז אתה יכול לגשת אליהם באמצעות הקשה אחת בלבד!\n\n✅ עורך תגים+: יכול לערוך תגים ואמנות אלבומים של מספר שירים בו-זמנית.\n\n✅ הזז/העתק שירים, שנה שמות של תיקיות ישירות באפליקציה.\n\n✅ צור מילים מסונכרנות.\n\n✅ שמור סימניות והערות.\n\n✅ הוסף/הסר שיר ל>פלייליסט אחד, מתראות, ווידג'טים ואפילו ממסך הנעילה\n\n✅ גלישה בתיקיות 📁\n2 סוגים של מבני תיקיות: 1) ליניארי (כל התיקיות בבת אחת) ו-2) היררכי (תיקיות בתוך תיקיות)\n\n✅ אקולייזר חזק🎚🎚🎚: הפרד הגדרות והגדרות מראש עבור רמקולים🔊, אוזניות🎧, Bluetooth וכו'.\n\n✅ השמעה ללא פערים\n\n✅ 🎧פקדי אוזניות🎧\nלחיצה אחת להשהיה/הפעלה. לחץ פעמיים להמשך ולחיצה משולשת לשיר הקודם. בכל לחיצה >=4 תוכל להריץ את השיר קדימה.\n\n✅ מילים משובצות + תמיכה ב-LRC\nתומך במילים לא מקוונות המוטמעות בקובץ שמע כתג ID3. אתה יכול לערוך מילים מוטבעות מעורך התגים. Musicolet תומך גם בקבצי lrc עבור מילים מסונכרנות.\n(הערה: Musicolet לא שואב מילים אוטומטית מהאינטרנט. אתה צריך לכתוב או להדביק מילים באופן ידני בעורך התגים, אם אין מילים מוטבעות. זה לא מביא קובץ lrc באופן אוטומטי. עבור קבצי lrc, יש לך כדי למצוא קובץ lrc מהאינטרנט, שים אותו באותה תיקיה ושנה את שמו כך שיתאים בדיוק לשם קובץ השמע באופן ידני.)\n\n✅ טיימרים לשינה\n2 סוגים: 1) סגור את האפליקציה לאחר זמן שעת: מ\"מ או 2) סגור את האפליקציה לאחר N שירים.\n\n✅ הוסף קיצורי דרך של כל אלבום/אמן/תיקיה/רשימת השמעה לאפליקציית מסך הבית (משגר) שלך.\n\n✅ ווידג'טים מדהימים\n\n✅ מסך נעילה (עם פקדים, תור ומילים)\n\n✅ 🚘 תמיכה ב-Android Auto 🚘\nממכונית התומכת 'Android Auto' שלך, תוכל לשלוט במוזיקה ולגשת לרשימות ההשמעה, התורים, התיקיות וכל ספריית המוזיקה שלך.\n\n✅🎉שנה את מראה ההתראות🎉\n✅ אתה יכול גם להפעיל את לחצני הרצה קדימה והרצה אחורה בהודעות מההגדרות.\n\n✅ ערכות נושא בהירות ואפלות\n\n✅ גיבוי ושחזור\nגיבוי אוטומטי וידני. שחזר הגדרות, רשימות השמעה, ספירות השמעה מכל גיבוי בכל עת בכל מכשיר.\n\nועוד הרבה...\n\n🚫ללא מודעות🚫\nללא פרסומות לנצח, לכל המשתמשים. 🤩\n\nאין הרשאת אינטרנט, במצב לא מקוון לחלוטין\nMusicolet אפילו לא משתמש בהרשאת אינטרנט (המכונה גם הרשאת גישה לרשת). (תוכל לבדוק זאת ב'הרשאות אפליקציה' בתחתית תיאור זה בחנות Play.)\n\nמוקדש לאוהבי מוזיקה 🎶 בכל רחבי העולם. 🌎\nנוצר באהבה ❤, הרבה קוד ולילות ללא שינה. מקווה שתאהבו את העבודה שלנו.\n\n------------------\nהאתר הרשמי שלנו: https://krosbits.in/musicolet\nhttps://krosbits.in/musicolet/download\n------------------\nכדי לשלוח משוב/הצעות, לדווח על באגים או לשאילתות אחרות...\nצרו קשר: musicolet@krosbits.in",
-    "apkUrl": "https://drive.usercontent.google.com/download?id=1D51iRtaqCzkXrhFzpMBg_8agJCICwC7b&confirm=t&export=download",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/in.krosbits.musicolet.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/E5P7VIdMKpRAVLWQz8Ybepm3Vnr0ctTvJBG7ITVavnsvg5azUppOyef8Lj1Lx6fCNWlT_eVkKEbFfvVOTIsU",
-      "https://play-lh.googleusercontent.com/V1fpd9g1_vTaByDjm4WmUep335KZVnrfrp5Q3vOay5DJ1Bm_JJ5yIFq_tDnwOog0BNhcSZJ-d3ng_RNmExpgLQ",
-      "https://play-lh.googleusercontent.com/E8E_zjpZDvXjM7AW63E_gYGhRYoiFTRf0kXUn_Sxurb6kcEsTPn0oR_T8smJEPBWduOtcF020J_Ztxb3NVve",
-      "https://play-lh.googleusercontent.com/uP_FFWnPgu1CT5Pj3mawgXkxbDMj0JlO0F0oIkETTbqwnZme1Q0fnXTbg33ymqh32cMIBBvdF_O1TjVuwhwYX6Q",
-      "https://play-lh.googleusercontent.com/Q1Lf0vCQJLkHFhatZAZEwd9_WpG6iNGsJmvGctBAPLyzhlzw6XgITyb35f5DsjpaOSAxV_0GzYF8PxVfQpCf39k"
     ]
   }
 ]
