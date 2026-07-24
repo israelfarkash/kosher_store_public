@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 מנהל החנות הפרטית - גרסת פרימיום (CustomTkinter)
-אוטומציה מלאה ועיצוב מודרני.
+אוטומציה מלאה, ממיר קישורי Google Drive ועיצוב מודרני.
 """
 
 import json
@@ -16,6 +16,7 @@ import hashlib
 import html
 from pathlib import Path
 import re
+import webbrowser
 
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
@@ -69,23 +70,116 @@ def clean_description(text: str) -> str:
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 
+# --- Google Drive Link Extractor & Converter Logic ---
+
+def extract_drive_id(url: str) -> tuple[str | None, str]:
+    """
+    Extracts Google Drive ID safely using regular expressions and determines the item type ('file', 'folder', 'invalid', or 'empty').
+    
+    Supported formats:
+    - https://drive.google.com/file/d/FILE_ID/view
+    - https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+    - https://drive.google.com/open?id=FILE_ID
+    - https://drive.google.com/uc?id=FILE_ID
+    - https://docs.google.com/uc?id=FILE_ID
+    - https://drive.google.com/drive/folders/FOLDER_ID
+    """
+    url = (url or "").strip()
+    if not url:
+        return None, "empty"
+    
+    # 1. Match Folder URL pattern: /folders/FOLDER_ID
+    folder_match = re.search(r'/folders/([a-zA-Z0-9_-]+)', url)
+    if folder_match:
+        return folder_match.group(1), "folder"
+        
+    # 2. Match File URL patterns: /file/d/FILE_ID, id=FILE_ID, /files/FILE_ID, /uc?id=FILE_ID
+    file_match = re.search(r'/file/d/([a-zA-Z0-9_-]+)', url) or \
+                 re.search(r'[?&]id=([a-zA-Z0-9_-]+)', url) or \
+                 re.search(r'/files/([a-zA-Z0-9_-]+)', url) or \
+                 re.search(r'/uc\?id=([a-zA-Z0-9_-]+)', url)
+                 
+    if file_match:
+        return file_match.group(1), "file"
+        
+    return None, "invalid"
+
 def normalize_drive_url(value: str) -> str:
-    value = value.strip()
-    if not value:
-        return value
-    if "drive.google.com" not in value and "googleapis.com" not in value:
-        return value
-    parsed = urllib.parse.urlparse(value)
-    file_id = None
-    if "/file/d/" in parsed.path:
-        file_id = parsed.path.split("/file/d/", 1)[1].split("/", 1)[0]
-    elif "/files/" in parsed.path:
-        file_id = parsed.path.split("/files/", 1)[1].split("?", 1)[0]
-    else:
-        file_id = urllib.parse.parse_qs(parsed.query).get("id", [None])[0]
-    if not file_id:
-        return value
-    return f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
+    """
+    Converts any Google Drive link to the fast direct download URL bypassing virus scan warnings.
+    """
+    file_id, item_type = extract_drive_id(value)
+    if item_type == "file" and file_id:
+        return f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
+    return value.strip()
+
+def generate_drive_links(url: str) -> dict:
+    """
+    Generates all available direct download, preview, view, and open links for a Google Drive URL.
+    Returns a status dict containing formatted link options or friendly error messages.
+    """
+    file_id, item_type = extract_drive_id(url)
+    
+    if item_type == "empty":
+        return {"status": "error", "message": "⚠️ אנא הזן קישור של Google Drive."}
+    if item_type == "invalid" or not file_id:
+        return {"status": "error", "message": "❌ קישור Google Drive אינו תקין או שלא ניתן היה לחלץ ממנו מזהה ID."}
+        
+    if item_type == "folder":
+        folder_url = f"https://drive.google.com/drive/folders/{file_id}"
+        return {
+            "status": "success",
+            "type": "folder",
+            "id": file_id,
+            "notice": "📁 הורדה ישירה אינה נתמכת בתיקיות ב-Google Drive. ניתן לגשת לצפייה בתיקייה בדפדפן.",
+            "links": [
+                {
+                    "title": "📁 פתיחת תיקייה (Folder View)",
+                    "desc": "פתיחת התיקייה ב-Google Drive בדפדפן.",
+                    "url": folder_url
+                }
+            ]
+        }
+    
+    # File link generation
+    fast_direct = f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
+    standard_direct = f"https://drive.google.com/uc?export=download&id={file_id}"
+    preview_url = f"https://drive.google.com/file/d/{file_id}/preview"
+    view_url = f"https://drive.google.com/file/d/{file_id}/view"
+    open_url = f"https://drive.google.com/open?id={file_id}"
+    
+    return {
+        "status": "success",
+        "type": "file",
+        "id": file_id,
+        "links": [
+            {
+                "title": "⚡ הורדה ישירה מהירה (Fast Direct Download)",
+                "desc": "קישור הורדה ישיר ועוקף דף אזהרת וירוסים ב-Google Drive.",
+                "url": fast_direct
+            },
+            {
+                "title": "📥 הורדה ישירה רגילה (Direct Download)",
+                "desc": "קישור הורדה ישיר תקני מ-Google Drive.",
+                "url": standard_direct
+            },
+            {
+                "title": "👁️ תצוגה מקדימה (Preview)",
+                "desc": "צפייה מוקדמת בקובץ בתוך מציג מובנה בדפדפן.",
+                "url": preview_url
+            },
+            {
+                "title": "📄 צפייה בקובץ (View)",
+                "desc": "פתיחת עמוד הקובץ הרגיל ב-Google Drive.",
+                "url": view_url
+            },
+            {
+                "title": "🔗 פתיחת מזהה (Open ID)",
+                "desc": "פתיחת הקובץ באמצעות מזהה ה-ID.",
+                "url": open_url
+            }
+        ]
+    }
 
 def load_apps_json() -> list[dict]:
     if not APPS_JSON_PATH.exists():
@@ -145,9 +239,9 @@ def extract_apk_info(apk_path: Path) -> dict:
 class ModernStoreManager(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("מנהל החנות - פרימיום")
-        self.geometry("1050x700")
-        self.minsize(900, 600)
+        self.title("מנהל החנות הפרטית & ממיר קישורים")
+        self.geometry("1100x730")
+        self.minsize(920, 620)
         
         # Data state
         self.apps_data = load_apps_json()
@@ -168,37 +262,60 @@ class ModernStoreManager(ctk.CTk):
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
         
-        # --- Left Sidebar (App List) ---
+        # --- Left Sidebar ---
         self.sidebar = ctk.CTkFrame(self, width=280, corner_radius=0)
         self.sidebar.grid(row=0, column=0, sticky="nsew")
-        self.sidebar.grid_rowconfigure(3, weight=1)
+        self.sidebar.grid_rowconfigure(4, weight=1)
         
-        self.title_label = ctk.CTkLabel(self.sidebar, text="📱 החנות שלי", font=ctk.CTkFont(size=24, weight="bold"))
-        self.title_label.grid(row=0, column=0, padx=20, pady=(30, 20))
+        self.title_label = ctk.CTkLabel(self.sidebar, text="📱 החנות שלי", font=ctk.CTkFont(size=22, weight="bold"))
+        self.title_label.grid(row=0, column=0, padx=20, pady=(20, 10))
+        
+        # View Switching Navigation Buttons
+        nav_frame = ctk.CTkFrame(self.sidebar, fg_color="transparent")
+        nav_frame.grid(row=1, column=0, padx=15, pady=5, sticky="ew")
+        nav_frame.grid_columnconfigure((0, 1), weight=1)
+        
+        self.btn_nav_store = ctk.CTkButton(nav_frame, text="🏪 ניהול חנות", height=35,
+                                            font=ctk.CTkFont(size=12, weight="bold"),
+                                            fg_color="#1F6AA5", hover_color="#144870",
+                                            command=self.show_store_view)
+        self.btn_nav_store.grid(row=0, column=0, padx=2, sticky="ew")
+        
+        self.btn_nav_converter = ctk.CTkButton(nav_frame, text="🔗 ממיר דרייב", height=35,
+                                                font=ctk.CTkFont(size=12, weight="bold"),
+                                                fg_color="#333344", hover_color="#444455",
+                                                command=self.show_converter_view)
+        self.btn_nav_converter.grid(row=0, column=1, padx=2, sticky="ew")
         
         self.btn_load_apk = ctk.CTkButton(self.sidebar, text="הוסף אפליקציה חדשה (APK)", 
                                           command=self.load_new_apk,
-                                          font=ctk.CTkFont(size=14, weight="bold"),
-                                          height=40, fg_color="#2FA572", hover_color="#107C41")
-        self.btn_load_apk.grid(row=1, column=0, padx=20, pady=10, sticky="ew")
+                                          font=ctk.CTkFont(size=13, weight="bold"),
+                                          height=38, fg_color="#2FA572", hover_color="#107C41")
+        self.btn_load_apk.grid(row=2, column=0, padx=15, pady=10, sticky="ew")
         
         self.search_entry = ctk.CTkEntry(self.sidebar, placeholder_text="חיפוש...", height=35)
-        self.search_entry.grid(row=2, column=0, padx=20, pady=10, sticky="ew")
+        self.search_entry.grid(row=3, column=0, padx=15, pady=5, sticky="ew")
         self.search_entry.bind("<KeyRelease>", self.filter_app_list)
         
         self.app_list_frame = ctk.CTkScrollableFrame(self.sidebar, fg_color="transparent")
-        self.app_list_frame.grid(row=3, column=0, padx=10, pady=10, sticky="nsew")
+        self.app_list_frame.grid(row=4, column=0, padx=10, pady=10, sticky="nsew")
         self.app_buttons = []
         
-        # --- Right Main Content (Editor) ---
+        # --- Right Main Content Area ---
         self.main_content = ctk.CTkFrame(self, fg_color="transparent")
         self.main_content.grid(row=0, column=1, sticky="nsew", padx=20, pady=20)
         self.main_content.grid_columnconfigure(0, weight=1)
-        self.main_content.grid_rowconfigure(1, weight=1)
+        self.main_content.grid_rowconfigure(0, weight=1)
+        
+        # --- View 1: App Store Manager Editor ---
+        self.store_view_frame = ctk.CTkFrame(self.main_content, fg_color="transparent")
+        self.store_view_frame.grid(row=0, column=0, sticky="nsew")
+        self.store_view_frame.grid_columnconfigure(0, weight=1)
+        self.store_view_frame.grid_rowconfigure(1, weight=1)
         
         # Header Info Card
-        self.info_card = ctk.CTkFrame(self.main_content, corner_radius=15)
-        self.info_card.grid(row=0, column=0, sticky="ew", pady=(0, 20))
+        self.info_card = ctk.CTkFrame(self.store_view_frame, corner_radius=15)
+        self.info_card.grid(row=0, column=0, sticky="ew", pady=(0, 15))
         self.info_card.grid_columnconfigure(1, weight=1)
         
         self.icon_label = ctk.CTkLabel(self.info_card, text="", width=80, height=80, corner_radius=15, fg_color="#333333")
@@ -218,14 +335,14 @@ class ModernStoreManager(ctk.CTk):
         self.btn_delete.configure(state="disabled")
         
         # Forms Card (Scrollable)
-        self.form_frame = ctk.CTkScrollableFrame(self.main_content, fg_color="transparent")
+        self.form_frame = ctk.CTkScrollableFrame(self.store_view_frame, fg_color="transparent")
         self.form_frame.grid(row=1, column=0, sticky="nsew")
         self.form_frame.grid_columnconfigure(0, weight=1)
         
         # --- Form Fields ---
         def create_field(parent, label_text, placeholder="", has_paste=False):
             frame = ctk.CTkFrame(parent, fg_color="transparent")
-            frame.pack(fill="x", pady=8)
+            frame.pack(fill="x", pady=6)
             frame.grid_columnconfigure(0, weight=1)
             lbl = ctk.CTkLabel(frame, text=label_text, font=ctk.CTkFont(weight="bold"))
             lbl.grid(row=0, column=0, sticky="w", pady=(0, 2))
@@ -240,11 +357,15 @@ class ModernStoreManager(ctk.CTk):
             if has_paste:
                 def paste_cmd():
                     try:
+                        val = self.clipboard_get().strip()
+                        norm = normalize_drive_url(val)
                         entry.delete(0, 'end')
-                        entry.insert(0, self.clipboard_get())
+                        entry.insert(0, norm)
+                        if norm != val and norm:
+                            self.show_status("⚡ הקישור הומק אוטומטית להורדה מהירה!", is_success=True)
                     except Exception:
                         pass
-                btn_paste = ctk.CTkButton(entry_frame, text="הדבק 📥", width=60, height=38, command=paste_cmd, fg_color="#333333", hover_color="#444444")
+                btn_paste = ctk.CTkButton(entry_frame, text="הדבק 📥", width=65, height=38, command=paste_cmd, fg_color="#333333", hover_color="#444444")
                 btn_paste.grid(row=0, column=1, padx=(10, 0))
                 
             return entry
@@ -252,16 +373,27 @@ class ModernStoreManager(ctk.CTk):
         self.entry_name = create_field(self.form_frame, "שם האפליקציה")
         self.entry_drive = create_field(self.form_frame, "🔗 קישור להורדה (Google Drive)", has_paste=True)
         
+        # Auto-convert Drive URL when user pastes or leaves focus
+        def auto_convert_drive_input(event=None):
+            val = self.entry_drive.get().strip()
+            norm = normalize_drive_url(val)
+            if norm != val and norm:
+                self.entry_drive.delete(0, 'end')
+                self.entry_drive.insert(0, norm)
+                self.show_status("⚡ הקישור הומר אוטומטית להורדה מהירה!", is_success=True)
+                
+        self.entry_drive.bind("<FocusOut>", auto_convert_drive_input)
+        self.entry_drive.bind("<KeyRelease>", auto_convert_drive_input)
+        
         # Category Selector (Editable Entry + Quick Chips)
         cat_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
-        cat_frame.pack(fill="x", pady=8)
+        cat_frame.pack(fill="x", pady=6)
         cat_frame.grid_columnconfigure(0, weight=1)
         ctk.CTkLabel(cat_frame, text="קטגוריה (לחץ על כפתור או הקלד קטגוריה חדשה)", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w", pady=(0, 2))
         
         self.entry_category = ctk.CTkEntry(cat_frame, placeholder_text="כללי", height=38)
         self.entry_category.grid(row=1, column=0, sticky="ew")
         
-        # Chips container
         chips_frame = ctk.CTkFrame(cat_frame, fg_color="transparent")
         chips_frame.grid(row=2, column=0, sticky="ew", pady=(6, 0))
         
@@ -279,7 +411,6 @@ class ModernStoreManager(ctk.CTk):
             btn.grid(row=i // 5, column=i % 5, padx=2, pady=2, sticky="ew")
             chips_frame.grid_columnconfigure(i % 5, weight=1)
 
-        # Compatibility wrapper for existing .get() and .set() calls
         class CategoryAdapter:
             def __init__(self, entry): self.entry = entry
             def set(self, val):
@@ -291,15 +422,15 @@ class ModernStoreManager(ctk.CTk):
         
         # Description
         desc_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
-        desc_frame.pack(fill="x", pady=8)
+        desc_frame.pack(fill="x", pady=6)
         desc_frame.grid_columnconfigure(0, weight=1)
         ctk.CTkLabel(desc_frame, text="תיאור (מתמלא אוטומטית)", font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w")
-        self.text_desc = ctk.CTkTextbox(desc_frame, height=120)
+        self.text_desc = ctk.CTkTextbox(desc_frame, height=110)
         self.text_desc.grid(row=1, column=0, sticky="ew")
         
         # Bottom Action Bar
-        self.action_bar = ctk.CTkFrame(self.main_content, fg_color="transparent")
-        self.action_bar.grid(row=3, column=0, sticky="ew", pady=(20, 0))
+        self.action_bar = ctk.CTkFrame(self.store_view_frame, fg_color="transparent")
+        self.action_bar.grid(row=2, column=0, sticky="ew", pady=(15, 0))
         self.action_bar.grid_columnconfigure(0, weight=1)
         self.action_bar.grid_columnconfigure(1, weight=1)
         
@@ -308,10 +439,176 @@ class ModernStoreManager(ctk.CTk):
         
         self.btn_save_publish = ctk.CTkButton(self.action_bar, text="💾 שמור ופרסם", 
                                               command=self.save_and_publish,
-                                              font=ctk.CTkFont(size=16, weight="bold"),
-                                              height=50, fg_color="#1F6AA5", hover_color="#144870")
+                                              font=ctk.CTkFont(size=15, weight="bold"),
+                                              height=45, fg_color="#1F6AA5", hover_color="#144870")
         self.btn_save_publish.grid(row=0, column=1, sticky="e")
         self.btn_save_publish.configure(state="disabled")
+        
+        # --- View 2: Google Drive Link Converter Page ---
+        self.converter_view_frame = ctk.CTkFrame(self.main_content, fg_color="transparent")
+        self.converter_view_frame.grid_columnconfigure(0, weight=1)
+        self.converter_view_frame.grid_rowconfigure(2, weight=1)
+        
+        # Converter Header
+        conv_header = ctk.CTkFrame(self.converter_view_frame, corner_radius=15)
+        conv_header.grid(row=0, column=0, sticky="ew", pady=(0, 15))
+        
+        ctk.CTkLabel(conv_header, text="🔗 ממיר קישורי Google Drive", 
+                     font=ctk.CTkFont(size=22, weight="bold")).pack(anchor="w", padx=20, pady=(15, 5))
+        ctk.CTkLabel(conv_header, text="המר בקלות קישורי Google Drive מכל סוג לקישורי הורדה ישירים, תצוגה מקדימה, פתיחה וצפייה.", 
+                     text_color="gray", font=ctk.CTkFont(size=12)).pack(anchor="w", padx=20, pady=(0, 15))
+                     
+        # Converter Input Card
+        conv_input_card = ctk.CTkFrame(self.converter_view_frame, corner_radius=15)
+        conv_input_card.grid(row=1, column=0, sticky="ew", pady=(0, 15))
+        conv_input_card.grid_columnconfigure(0, weight=1)
+        
+        ctk.CTkLabel(conv_input_card, text="הכנס קישור Google Drive לשיתוף:", 
+                     font=ctk.CTkFont(weight="bold")).grid(row=0, column=0, sticky="w", padx=20, pady=(15, 5))
+                     
+        input_row = ctk.CTkFrame(conv_input_card, fg_color="transparent")
+        input_row.grid(row=1, column=0, sticky="ew", padx=20, pady=(0, 15))
+        input_row.grid_columnconfigure(0, weight=1)
+        
+        self.conv_entry_url = ctk.CTkEntry(input_row, placeholder_text="https://drive.google.com/file/d/.../view?usp=sharing", height=42)
+        self.conv_entry_url.grid(row=0, column=0, sticky="ew", padx=(0, 10))
+        
+        btn_paste_conv = ctk.CTkButton(input_row, text="הדבק 📥", width=70, height=42, fg_color="#333333", hover_color="#444444",
+                                       command=lambda: self.paste_to_converter())
+        btn_paste_conv.grid(row=0, column=1, padx=(0, 8))
+        
+        btn_convert = ctk.CTkButton(input_row, text="המר ⚡", width=90, height=42,
+                                     font=ctk.CTkFont(size=14, weight="bold"),
+                                     fg_color="#1F6AA5", hover_color="#144870",
+                                     command=self.run_converter)
+        btn_convert.grid(row=0, column=2, padx=(0, 8))
+        
+        btn_clear = ctk.CTkButton(input_row, text="נקה 🧹", width=70, height=42,
+                                   fg_color="#D9534F", hover_color="#C9302C",
+                                   command=self.clear_converter)
+        btn_clear.grid(row=0, column=3)
+        
+        # Converter Loading Progress
+        self.conv_progress = ctk.CTkProgressBar(self.converter_view_frame, orientation="horizontal", height=4, mode="indeterminate")
+        
+        # Converter Results Container (Scrollable Cards)
+        self.conv_results_frame = ctk.CTkScrollableFrame(self.converter_view_frame, fg_color="transparent")
+        self.conv_results_frame.grid(row=2, column=0, sticky="nsew")
+        self.conv_results_frame.grid_columnconfigure(0, weight=1)
+        
+        self.conv_status_label = ctk.CTkLabel(self.conv_results_frame, text="הזן קישור לחץ על 'המר ⚡' כדי ליצור קישורי הורדה ישירים.", text_color="gray")
+        self.conv_status_label.pack(pady=40)
+
+    # --- Navigation Between Views ---
+    def show_store_view(self):
+        self.converter_view_frame.grid_forget()
+        self.store_view_frame.grid(row=0, column=0, sticky="nsew")
+        self.btn_nav_store.configure(fg_color="#1F6AA5")
+        self.btn_nav_converter.configure(fg_color="#333344")
+
+    def show_converter_view(self):
+        self.store_view_frame.grid_forget()
+        self.converter_view_frame.grid(row=0, column=0, sticky="nsew")
+        self.btn_nav_converter.configure(fg_color="#1F6AA5")
+        self.btn_nav_store.configure(fg_color="#333344")
+
+    # --- Converter Logic & UX ---
+    def paste_to_converter(self):
+        try:
+            self.conv_entry_url.delete(0, 'end')
+            self.conv_entry_url.insert(0, self.clipboard_get().strip())
+        except Exception:
+            pass
+
+    def clear_converter(self):
+        self.conv_entry_url.delete(0, 'end')
+        for child in self.conv_results_frame.winfo_children():
+            child.destroy()
+        self.conv_status_label = ctk.CTkLabel(self.conv_results_frame, text="הזן קישור לחץ על 'המר ⚡' כדי ליצור קישורי הורדה ישירים.", text_color="gray")
+        self.conv_status_label.pack(pady=40)
+
+    def run_converter(self):
+        url = self.conv_entry_url.get().strip()
+        
+        # Clear previous results
+        for child in self.conv_results_frame.winfo_children():
+            child.destroy()
+            
+        # 1. Validation
+        if not url:
+            err_card = ctk.CTkFrame(self.conv_results_frame, fg_color="#3A1D1D", corner_radius=10)
+            err_card.pack(fill="x", pady=10, padx=5)
+            ctk.CTkLabel(err_card, text="⚠️ שגיאה: אנא הזן קישור של Google Drive.", font=ctk.CTkFont(weight="bold"), text_color="#FF6B6B").pack(pady=15, padx=20)
+            return
+
+        # Show loading animation
+        self.conv_progress.grid(row=3, column=0, sticky="ew", pady=(0, 10))
+        self.conv_progress.start()
+        self.update_idletasks()
+        
+        def process_conversion():
+            time.sleep(0.2) # Brief UX feedback
+            result = generate_drive_links(url)
+            
+            def render_results():
+                self.conv_progress.stop()
+                self.conv_progress.grid_forget()
+                
+                if result["status"] == "error":
+                    err_card = ctk.CTkFrame(self.conv_results_frame, fg_color="#3A1D1D", corner_radius=10)
+                    err_card.pack(fill="x", pady=10, padx=5)
+                    ctk.CTkLabel(err_card, text=result["message"], font=ctk.CTkFont(weight="bold"), text_color="#FF6B6B").pack(pady=15, padx=20)
+                    return
+                    
+                if result.get("notice"):
+                    notice_card = ctk.CTkFrame(self.conv_results_frame, fg_color="#3A331D", corner_radius=10)
+                    notice_card.pack(fill="x", pady=(0, 10), padx=5)
+                    ctk.CTkLabel(notice_card, text=result["notice"], font=ctk.CTkFont(size=12, weight="bold"), text_color="#FFD166").pack(pady=12, padx=15)
+
+                # Render link cards
+                for item in result["links"]:
+                    card = ctk.CTkFrame(self.conv_results_frame, corner_radius=12, fg_color=("#EFEFEF", "#24242A"))
+                    card.pack(fill="x", pady=8, padx=5)
+                    card.grid_columnconfigure(0, weight=1)
+                    
+                    # Card Header Title
+                    title_lbl = ctk.CTkLabel(card, text=item["title"], font=ctk.CTkFont(size=14, weight="bold"))
+                    title_lbl.grid(row=0, column=0, sticky="w", padx=15, pady=(12, 2))
+                    
+                    desc_lbl = ctk.CTkLabel(card, text=item["desc"], text_color="gray", font=ctk.CTkFont(size=11))
+                    desc_lbl.grid(row=1, column=0, sticky="w", padx=15, pady=(0, 8))
+                    
+                    # URL Row with Copy and Open buttons
+                    url_row = ctk.CTkFrame(card, fg_color="transparent")
+                    url_row.grid(row=2, column=0, sticky="ew", padx=15, pady=(0, 12))
+                    url_row.grid_columnconfigure(0, weight=1)
+                    
+                    url_entry = ctk.CTkEntry(url_row, height=36)
+                    url_entry.grid(row=0, column=0, sticky="ew", padx=(0, 8))
+                    url_entry.insert(0, item["url"])
+                    
+                    def copy_url(target_url=item["url"]):
+                        self.clipboard_clear()
+                        self.clipboard_append(target_url)
+                        toast = ctk.CTkLabel(card, text="✓ הועתק ללוח!", text_color="#2FA572", font=ctk.CTkFont(size=11, weight="bold"))
+                        toast.grid(row=0, column=1, sticky="e", padx=15)
+                        self.after(2000, lambda: toast.destroy())
+                        
+                    btn_copy = ctk.CTkButton(url_row, text="העתק 📋", width=75, height=36,
+                                             fg_color="#2FA572", hover_color="#107C41",
+                                             command=copy_url)
+                    btn_copy.grid(row=0, column=1, padx=(0, 5))
+                    
+                    btn_open = ctk.CTkButton(url_row, text="פתח 🌐", width=65, height=36,
+                                             fg_color="#333344", hover_color="#555566",
+                                             command=lambda u=item["url"]: webbrowser.open(u))
+                    btn_open.grid(row=0, column=2)
+
+            self.after(0, render_results)
+            
+        threading.Thread(target=process_conversion, daemon=True).start()
+
+    # --- Store Manager App Functions ---
 
     def show_status(self, msg, is_error=False, is_success=False):
         color = "gray"
@@ -355,6 +652,7 @@ class ModernStoreManager(ctk.CTk):
             self.icon_label.configure(image=None, text="📦")
 
     def load_app_to_form(self, app):
+        self.show_store_view()
         self.is_new_app = False
         self.current_app_data = app.copy()
         
@@ -379,19 +677,22 @@ class ModernStoreManager(ctk.CTk):
         self.show_status("אפליקציה נטענה בהצלחה.")
 
     def load_new_apk(self):
-        apk_path = filedialog.askopenfilename(title="בחר קובץ APK", filetypes=[("APK Files", "*.apk *.xapk")])
-        if not apk_path: return
+        self.show_store_view()
+        file_path = filedialog.askopenfilename(
+            title="בחר קובץ APK / XAPK",
+            filetypes=[("Android Packages", "*.apk *.xapk"), ("All Files", "*.*")]
+        )
+        if not file_path:
+            return
+            
+        apk_path = Path(file_path)
+        self.show_status("⏳ קורא נתוני קובץ...", is_success=True)
         
-        self.show_status("⏳ מעבד APK ושואב נתונים אוטומטית...", is_success=True)
-        self.btn_save_publish.configure(state="disabled")
-        
-        def process():
+        def process_apk():
             try:
-                # 1. Parse APK
-                meta = extract_apk_info(Path(apk_path))
+                meta = extract_apk_info(apk_path)
                 pkg = meta["package_name"]
                 
-                # Setup default data
                 app_data = {
                     "name": meta["name"],
                     "packageName": pkg,
@@ -406,15 +707,14 @@ class ModernStoreManager(ctk.CTk):
                     "iconUrl": f"{DEFAULT_GITHUB_BASE}/icons/{pkg}.png"
                 }
                 
-                # 2. Try to fetch from Play Store automatically
+                # Fetch Play Store Data
                 play_data = None
                 if play_scraper:
                     try:
                         play_data = play_scraper(pkg, lang="iw", country="il")
-                    except Exception:
-                        pass
+                    except Exception: pass
                 
-                # 3. Handle Icon
+                # Handle Icon
                 ICONS_DIR.mkdir(exist_ok=True)
                 icon_out_path = ICONS_DIR / f"{pkg}.png"
                 icon_saved = False
@@ -436,13 +736,11 @@ class ModernStoreManager(ctk.CTk):
                                     shutil.copyfileobj(icon_file, f)
                     except Exception: pass
 
-                # 4. Handle Description
                 if play_data and play_data.get("description"):
                     app_data["description"] = clean_description(play_data["description"])
                 if play_data and play_data.get("screenshots"):
                     app_data["screenshots"] = play_data["screenshots"][:5]
                 
-                # Update UI
                 def update_ui():
                     self.is_new_app = True
                     self.current_app_data = app_data
@@ -456,6 +754,7 @@ class ModernStoreManager(ctk.CTk):
                     self.entry_name.insert(0, app_data["name"])
                     
                     self.entry_drive.delete(0, 'end')
+                    self.entry_drive.insert(0, "")
                     
                     self.combo_category.set("כללי")
                     
@@ -464,20 +763,20 @@ class ModernStoreManager(ctk.CTk):
                     
                     self.btn_delete.configure(state="disabled")
                     self.btn_save_publish.configure(state="normal")
-                    self.show_status("✅ הנתונים נשאבו! הדבק קישור לדרייב ולחץ על 'שמור ופרסם'.", is_success=True)
-                
+                    self.show_status("✅ הקובץ נטען בהצלחה! הדבק קישור לדרייב ולחץ 'שמור ופרסם'.", is_success=True)
+                    
                 self.after(0, update_ui)
                 
             except Exception as e:
-                self.after(0, lambda: self.show_status(f"❌ שגיאה: {e}", is_error=True))
+                self.after(0, lambda: self.show_status(f"❌ שגיאה בקריאת הקובץ: {e}", is_error=True))
                 
-        threading.Thread(target=process, daemon=True).start()
+        threading.Thread(target=process_apk, daemon=True).start()
 
     def delete_current_app(self):
         pkg = self.current_app_data.get("packageName")
-        if not pkg: return
-        
-        # Custom confirmation dialog
+        if not pkg:
+            return
+            
         dialog = ctk.CTkToplevel(self)
         dialog.title("אישור מחיקה")
         dialog.geometry("300x150")
@@ -496,7 +795,6 @@ class ModernStoreManager(ctk.CTk):
             icon_file = ICONS_DIR / f"{pkg}.png"
             if icon_file.exists(): icon_file.unlink()
             
-            # Clear form & UI state
             self.current_app_data = {}
             self.entry_name.delete(0, 'end')
             self.entry_drive.delete(0, 'end')
@@ -513,7 +811,6 @@ class ModernStoreManager(ctk.CTk):
             self.show_status(f"🗑️ '{name}' נמחקה ומפורסמת לענן...", is_error=True)
             dialog.destroy()
             
-            # Auto push deletion to GitHub
             def push_deletion():
                 try:
                     subprocess.run(["git", "add", "apps.json", "icons/"], cwd=ROOT_DIR, check=True)
@@ -547,7 +844,6 @@ class ModernStoreManager(ctk.CTk):
         
         def process():
             try:
-                # 1. Update data
                 self.current_app_data["name"] = name
                 self.current_app_data["apkUrl"] = url
                 self.current_app_data["category"] = self.combo_category.get()
@@ -555,7 +851,6 @@ class ModernStoreManager(ctk.CTk):
                 
                 pkg = self.current_app_data["packageName"]
                 
-                # Upsert to list
                 found = False
                 for i, app in enumerate(self.apps_data):
                     if app.get("packageName") == pkg:
@@ -567,7 +862,6 @@ class ModernStoreManager(ctk.CTk):
                     
                 save_apps_json(self.apps_data)
                 
-                # 2. Git Push
                 subprocess.run(["git", "add", "apps.json", "icons/"], cwd=ROOT_DIR, check=True)
                 res = subprocess.run(["git", "commit", "-m", f"Automated update for {name}"], cwd=ROOT_DIR, capture_output=True, text=True)
                 if "nothing to commit" not in res.stdout + res.stderr:
