@@ -104,13 +104,15 @@ def extract_drive_id(url: str) -> tuple[str | None, str]:
         
     return None, "invalid"
 
+API_KEY = "AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0"
+
 def normalize_drive_url(value: str) -> str:
     """
-    Converts any Google Drive link to the fast direct download URL bypassing virus scan warnings.
+    Converts any Google Drive link to the exact Google Drive API v3 direct media download URL format.
     """
     file_id, item_type = extract_drive_id(value)
     if item_type == "file" and file_id:
-        return f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
+        return f"https://www.googleapis.com/drive/v3/files/{file_id}?alt=media&key={API_KEY}"
     return value.strip()
 
 def generate_drive_links(url: str) -> dict:
@@ -142,8 +144,8 @@ def generate_drive_links(url: str) -> dict:
         }
     
     # File link generation
+    api_direct = f"https://www.googleapis.com/drive/v3/files/{file_id}?alt=media&key={API_KEY}"
     fast_direct = f"https://drive.usercontent.google.com/download?id={file_id}&confirm=t&export=download"
-    standard_direct = f"https://drive.google.com/uc?export=download&id={file_id}"
     preview_url = f"https://drive.google.com/file/d/{file_id}/preview"
     view_url = f"https://drive.google.com/file/d/{file_id}/view"
     open_url = f"https://drive.google.com/open?id={file_id}"
@@ -154,14 +156,14 @@ def generate_drive_links(url: str) -> dict:
         "id": file_id,
         "links": [
             {
-                "title": "⚡ הורדה ישירה מהירה (Fast Direct Download)",
-                "desc": "קישור הורדה ישיר ועוקף דף אזהרת וירוסים ב-Google Drive.",
-                "url": fast_direct
+                "title": "⚡ הורדה ישירה Google API v3 (Direct Media Link)",
+                "desc": "קישור הורדה ישיר ומהיר בפורמט Google Drive API v3 הרשמי.",
+                "url": api_direct
             },
             {
-                "title": "📥 הורדה ישירה רגילה (Direct Download)",
-                "desc": "קישור הורדה ישיר תקני מ-Google Drive.",
-                "url": standard_direct
+                "title": "📥 הורדה ישירה עוקפת אזהרות (Fast Direct Download)",
+                "desc": "קישור הורדה ישיר ועוקף דף אזהרת וירוסים ב-Google Drive.",
+                "url": fast_direct
             },
             {
                 "title": "👁️ תצוגה מקדימה (Preview)",

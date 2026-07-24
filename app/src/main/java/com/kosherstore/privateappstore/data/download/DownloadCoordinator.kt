@@ -352,6 +352,6 @@ class DownloadCoordinator @Inject constructor(
             else -> null
         } ?: return rawUrl
 
-        return "https://drive.usercontent.google.com/download?id=$fileId&confirm=t&export=download"
+        return "https://www.googleapis.com/drive/v3/files/$fileId?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0"
     }
 }
