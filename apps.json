@@ -379,6 +379,26 @@
     "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.hpower.koshergallery.png"
   },
   {
+    "name": "soundcore",
+    "packageName": "com.oceanwing.soundcore",
+    "versionCode": 382,
+    "versionName": "4.0.30",
+    "size": "354.2 MB",
+    "checksum": "1f0411622b202fdc0665835437eb5958",
+    "checksumType": "MD5",
+    "category": "כלים",
+    "description": "\"שימו לב:\n1. אפליקציית הסאונדקור תומכת כרגע רק במכשירי הסאונד-קור הבאים:\nRave / Rave Mini / Mega / Trance / Wakey / Icon+ / Motion X600 / Motion+ / Infini Pro / Model Zero / Model Zero+ / Liberty 2 Pro / Liberty Air 2 / Liberty 2 / Life NC / PowerConf / Flare 2 / Rave Neo / Rave Partycast / Trance Go / soundcore Mini 3 / Motion Boom / soundcore 3 / Boost(משודרג) / Life Q30 / Life Q20+ / Life Q35 / Life Tune / Life Tune Pro / / Life Tune XR / Life A2 NC / Life Dot 2 NC / Life Dot 2S / Liberty Air 2 Pro / Life P3 / Liberty Neo 2 / Liberty 3 Pro / Rave+ / Select 2 / Life Dot 2 XR / Rave Neo SE / Life Tune Pro / soundcore min 3 Pro / Life P3 / Life Note 3 / Life Note 3S / Life 2 Neo / Life Q10i / Life Dot 3i / soundcore Dot 3i / Life Note 3i / soundcore Note 3i / Sport X10 / Life A3i / soundcore A3i / Life P3i / soundcore P3i / Space A40 / Space Q45 / VR P10 / שינה A10 / Liberty 4 / A20i / A25i / P20i / P25i / R50i וכו'.\n2. לא כל מכשירי הקול תומכים בכל התכונות המוצגות בצילומי המסך.\n\nתיאור האפליקציה:\nאפליקציית הסאונדקור מציעה תכונות ייחודיות עבור כל אחד ממכשירי הקול הנתמכים ומאפשרת לך להתאים אישית ולמטב את חווית ההאזנה שלך. \"",
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1n8i0bXWJAdcgEEQOzlyOCq_h6GNiV0-V?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.oceanwing.soundcore.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/DggU6AGLj4DmJvPuMgbsxAi_vyAkmbkIKq4k6qMBqIIfJMSF0kP5clOR63aMEe9EkiY7a4FTLPqeZsXcNbGrrUo",
+      "https://play-lh.googleusercontent.com/JhH9IGxI3pp9Y3RXaCb7_VYhMlvRQnEyPdnIhJPRuilz_QioTcdIZl1_2GJ_m5XkuibhqnLLIYfFwHEJpd_Q1w",
+      "https://play-lh.googleusercontent.com/yIMDp30NG2VZy0hSlWvY4T8L-MyikfZ6EZ0rnEbCC0AhdumW_hXZ7brYTwSkqaHMtOZ6CA7ycvFFUF3YKpEy",
+      "https://play-lh.googleusercontent.com/kT6MuEzxcz61MjDls4lcqDTntBN0Qyy2VC5sq_6agrg70fTOGJsS0pBdsyfRPuA8QOeyFbAK279Nrzb_2bzBiQ",
+      "https://play-lh.googleusercontent.com/7Opt7kPWq2PfOycNlcq7D0ETh4MJKlE12x3nmsWa30gYQ0-rjTEfiJ8xpVF9It1XMwHVP1x-KnmV1XunJolz5VQ"
+    ]
+  },
+  {
     "name": "Waze",
     "packageName": "com.waze",
     "versionCode": 1030440,
@@ -528,26 +548,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "soundcore",
-    "packageName": "com.oceanwing.soundcore",
-    "versionCode": 382,
-    "versionName": "4.0.30",
-    "size": "354.2 MB",
-    "checksum": "1f0411622b202fdc0665835437eb5958",
-    "checksumType": "MD5",
-    "category": "כללי",
-    "description": "\"שימו לב:\n1. אפליקציית הסאונדקור תומכת כרגע רק במכשירי הסאונד-קור הבאים:\nRave / Rave Mini / Mega / Trance / Wakey / Icon+ / Motion X600 / Motion+ / Infini Pro / Model Zero / Model Zero+ / Liberty 2 Pro / Liberty Air 2 / Liberty 2 / Life NC / PowerConf / Flare 2 / Rave Neo / Rave Partycast / Trance Go / soundcore Mini 3 / Motion Boom / soundcore 3 / Boost(משודרג) / Life Q30 / Life Q20+ / Life Q35 / Life Tune / Life Tune Pro / / Life Tune XR / Life A2 NC / Life Dot 2 NC / Life Dot 2S / Liberty Air 2 Pro / Life P3 / Liberty Neo 2 / Liberty 3 Pro / Rave+ / Select 2 / Life Dot 2 XR / Rave Neo SE / Life Tune Pro / soundcore min 3 Pro / Life P3 / Life Note 3 / Life Note 3S / Life 2 Neo / Life Q10i / Life Dot 3i / soundcore Dot 3i / Life Note 3i / soundcore Note 3i / Sport X10 / Life A3i / soundcore A3i / Life P3i / soundcore P3i / Space A40 / Space Q45 / VR P10 / שינה A10 / Liberty 4 / A20i / A25i / P20i / P25i / R50i וכו'.\n2. לא כל מכשירי הקול תומכים בכל התכונות המוצגות בצילומי המסך.\n\nתיאור האפליקציה:\nאפליקציית הסאונדקור מציעה תכונות ייחודיות עבור כל אחד ממכשירי הקול הנתמכים ומאפשרת לך להתאים אישית ולמטב את חווית ההאזנה שלך. \"",
-    "apkUrl": "https://www.googleapis.com/drive/v3/files/1n8i0bXWJAdcgEEQOzlyOCq_h6GNiV0-V?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.oceanwing.soundcore.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/DggU6AGLj4DmJvPuMgbsxAi_vyAkmbkIKq4k6qMBqIIfJMSF0kP5clOR63aMEe9EkiY7a4FTLPqeZsXcNbGrrUo",
-      "https://play-lh.googleusercontent.com/JhH9IGxI3pp9Y3RXaCb7_VYhMlvRQnEyPdnIhJPRuilz_QioTcdIZl1_2GJ_m5XkuibhqnLLIYfFwHEJpd_Q1w",
-      "https://play-lh.googleusercontent.com/yIMDp30NG2VZy0hSlWvY4T8L-MyikfZ6EZ0rnEbCC0AhdumW_hXZ7brYTwSkqaHMtOZ6CA7ycvFFUF3YKpEy",
-      "https://play-lh.googleusercontent.com/kT6MuEzxcz61MjDls4lcqDTntBN0Qyy2VC5sq_6agrg70fTOGJsS0pBdsyfRPuA8QOeyFbAK279Nrzb_2bzBiQ",
-      "https://play-lh.googleusercontent.com/7Opt7kPWq2PfOycNlcq7D0ETh4MJKlE12x3nmsWa30gYQ0-rjTEfiJ8xpVF9It1XMwHVP1x-KnmV1XunJolz5VQ"
     ]
   }
 ]
