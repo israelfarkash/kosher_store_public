@@ -549,5 +549,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "File Converter",
+    "packageName": "com.icecoldapps.fileconverter",
+    "versionCode": 2092,
+    "versionName": "20.1.12 קרדיט לצוות תרגום אפליקציות ",
+    "size": "32.6 MB",
+    "checksum": "4d2d8658ff2128b84c0618f6001cc6cc",
+    "checksumType": "MD5",
+    "category": "כללי",
+    "description": "ממיר קבצים יומר כמעט מכל פורמט קובץ ובכך יחסוך לך זמן וסוללה. \nהשתמש באפליקציית המרת הקבצים שלנו כדי להמיר אודיו, ספר אלקטרוני, וידאו, מודלים תלת-ממדיים, מסמכים, מצגות, ציורי CAD, תמונה, LaTeX, גופנים, גיליונות אלקטרוניים, PCB גרבר ואפילו מטא-נתונים מיותר מ  2000  פורמטי מקור. ! 👀\n\nאפליקציית ממיר הקבצים ממירה קבצים בענן כך שהסוללה שלך לא תבוזבז, תוכל להמשיך להשתמש במכשיר שלך והמרותיך יהיו הרבה יותר מהירות.\n\nפורמטי פלט אפשריים:\n\n• עבור  ספרים אלקטרוניים  אנו תומכים ב- Amazon Kindle (AZW), ספר אלקטרוני פתוח (ePub), DOCX, ספרות בדיונית (FB2), קורא נייד של Sony (LRF), Mobipocket (MOBI), Palm Desktop (PDB), Psion (TCR) וכמובן HTML, TXT, PDF ו- LIT. וכתוספת, אנו תומכים ב- DJVU, OEB, PML, RB, RTF ו- SNB\n\n•  וידאו  נתמך ב- MPEG-4 (MP4), בפורמט WebM VP8, ב- Windows Media Video (WMV), ב- Matroska Video (MKV) ובפורמטים AVI, FLV, OGV, MOV, 3DS ו- 3GP\n\n• ניתן להמיר  תמונות  ל- PNG, JPG, Bitmap (BMP) ו- GIF המפורסמים או ל- WebP ו- EXR החדשים יותר. גם גרפיקה וקטורית כמו SVG, EPS, Tiff, ICO, TGA ו- WBMP\n\n•  המרה לאודיו  נתמכת עבור MP3 ידוע, Wave (WAV), Lossless Flac וידוע פחות OGG, AAC, WMA, OPUS, AIFF, MMF ו- M4A\n\n•  המרת מסמכים  ל- Microsoft Word (DOC ו- DOCX), Open-Office ODT, מצגות PowerPoint (PPT ו- PPTX) וכמובן פלאש (SWF), HTML, PDF, RTF וטקסט\n\n•  המרת מצגות  ל- ODP, PDF, PPSX, PowerPoint PPT, PPTX, SWF ו- UOP\n\n•  ממיר הסימון  תומך ב- TEX, Markdown (MD), ReStructuredText (TEXT), Textile, AsciiDoc, Word Docx, ePub e-book וכמובן HTML, INFO, PDF, TEXI, WIKI, PPTX ו- RTF\n\n•  המרת דגמי תלת מימד  ל- STL, Collada DAE, FBX, Iges IGS, Step STP, VRML WRL / X3D ו- StepZ STPZ. תמיכה גם בתלת מימד, 3D, BRP, CTM, OBJ ותמונות\n\n•  דחוס  את הקבצים שלך ל- zip 7Z, ל- Unix TAR BZ2 או TAR GZ, לחילוץ אוטומטי של EXE, RUN, ZIP ועוד\n\n•  ממיר גיליון אלקטרוני  עבור CSV, ODS, OTS, PDF, UOS, XLS ו- Excel XLSX\n\n•  הנדסת CAD  רישומים ל- DWG, DXF, SVG ו- PDF או תמונות\n\n•  המרת מסלולי GPS  ל- CSV, GDB, GPX, HTML, KML ו- KMZ. אנו תומכים גם ב- LOC, NMEA, SDF, TCX, TRK, TXT, USR, WPT ורק XLS / XLSX\n\n• ניתן ליצור  hash  עבור אפאצ'י Htpasswd או DES, MD5, RIPE, SHA, Adler ועוד.\n\n• ממיר  LaTeX / ConTeXt  תומך ב- PDF, TEX ו- DOCX\n\n•  המרת גופנים  ל- BIN, CFF, DFONT, EOT ו- FON. אנו תומכים גם ב- OTF, PFA, PFB, PS, PT3, SVG, T11, T42, TTF, TTF. BIN, WOFF ו- WOFF2\n\n•  המרת גרבר  קבצי PCB ל- CNC, GBR, ISEL או PDF\n\n• ניתן להמיר  כתוביות  ל- LRC, SCC, SRT, SUB וכמובן USF\n\n• אחרון חביב תוכלו לחלץ מידע  מטא-נתונים  ו- EXIF ​​או למחוק את המטא-נתונים!\n\nיש לנו גם  פלטת צבעים ,  מרקם ,  רשת ,  רקמה ,  סטטיסטיקה ,  פלייליסט ,  אינטרנט  ו-  ממיר מוסיקה לגליונות ! אז מה אפשר לעשות עם כל זה?\n\n• חלץ מוסיקה 🎵\n• וידאו ל- GIF מונפש 🎬\n• טקסט לשמע: האזנה לספר אלקטרוני / ספר שמע (טקסט לדיבור, tts) 🎧\n• רסטר תמונה לווקטור 📷\n• PDF ל- Word 📖\n• המרת קבצי RAW 📷\n• חלץ טקסט מתמונות (OCR) 📄\n• צור רינגטונים וגזור אודיו 🎧\n• אופטימיזציה למכשירים ניידים 📱\n• הגנה על סיסמא PDF 🔒\n• .. עוד הרבה 👌\n\n עריכת קבצים \nמלבד כל התכונות הללו האפליקציה המקוונת שלנו להמרת קבצים תומכת:\n\n• המרת וידאו: רכיבי Codec, סובב, גוזם, מייצב וכו '.\n• המרת שמע: קצב סיביות, תדר וכו '.\n• המרת ספר אלקטרוני: כותרת, קורא ספרים אלקטרוניים: קינדל, סוני, Apple iPad, Kobo, Nook, טאבלט ועוד.\n• ציור CAD: צבע, קנה מידה, התאמה וכו '.\n• המרת תמונות: איכות, גודל וכו '.\n• המרת מסמכים: OCR (זיהוי טקסט) וכו '.\n• המרת גיליון אלקטרוני: OCR וכו '.\n\n תכונות אחרות של ממיר קבצים \n• המרה מ- URL / אתר\n• להמיר בין קטגוריות\n• המרות יציבות, מאובטחות ומהירות\n\n הערות \n• איננו יכולים להמיר קבצי PDF / ZIP ו- DRM מאובטחים.",
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1JEI4BAbfN0VCkyPhSGQjM4q-7dmhmjka?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/com.icecoldapps.fileconverter.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/nrxYC2qjkpB727MmdWy4uOb0pFQ2A7P2Zf0nsEr8Gvv4tIK2JOHh0_B7VeV5ZPovQNxZr6Yn45DeaMURiN64",
+      "https://play-lh.googleusercontent.com/Ej3Sd6j_uF9_SWvWPT4OkWeNLf8s2M5KlZZiUnTKOMsSq3BfY-EW6WG42Sk3-5Jrv7lVAFG0b-eO9z9v46wLBg",
+      "https://play-lh.googleusercontent.com/oa0lIFy1J0MYLC6-awJzmCbI3lWRTz53-LxFjNhqyG9ZguFJMGydDRnbIX1vCMM3E4-763EviNCw4wsq83bqqw",
+      "https://play-lh.googleusercontent.com/rES0EeKzeN_ELEgnQA5OvCTFmY1bu4AKMPfjH_cWEuntOmIAjblGLWF6hDIeKTLOpKq-g-maTWOjnej67lPr",
+      "https://play-lh.googleusercontent.com/as0FBtowxYGGTcO9qdT1gQBrKGIi_pkD0NVUFTaV6ZStRwn4YX7MyM5tT5ockPCsEzqEyuXS_VLv-tzNAlSlvQ"
+    ]
   }
 ]
