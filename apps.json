@@ -1,5 +1,25 @@
 [
   {
+    "name": "1DM+",
+    "packageName": "idm.internet.download.manager.plus",
+    "versionCode": 20249,
+    "versionName": "21.8",
+    "size": "58.2 MB",
+    "checksum": "de8f4b34216f11e9f0a3dc34b1727401",
+    "checksumType": "MD5",
+    "category": "כלים",
+    "description": "1DM+: מנהל הורדות אחד פלוס [לשעבר IDM+] הוא מנהל ההורדות המהיר והמתקדם ביותר (עם תמיכה בהורדות Torrent) הזמין באנדרואיד. זה מהיר עד 500% מההורדה הרגילה. והוא לא מפעיל שירותי רקע אם אין מה להוריד ואפשרות ההורדה החכמה מושבתת מה שמגדיל את חיי הסוללה.\n\nתכונות 1DM+ [לשעבר IDM+]:\n\nכללי:\n• נטול פרסומות\n• הורד קבצי טורנט באמצעות קישור מגנט, url טורנט או קובץ טורנט במכשיר שלך\n• ערכות נושא כהות ואור\n• שפות נתמכות: סינית (מסורתית), סינית (פשוטה), צ'כית, ספרדית, ספרדית (אמריקה הלטינית), צרפתית, גרמנית, יוונית, איטלקית, אינדונזית, יפנית, קוריאנית, מגירה, פורטוגזית, פורטוגזית (ברזיל), רוסית, פולנית , סלובקית, סרבית, טורקית, ערבית, אפריקאנס\n• הורדה ישירה לכרטיס SD\n• תומך באתרי HTTP Live Streaming\n• הסתר קבצים שהורדו מכולם\n• אפשרות הורדה חכמה להורדת קבצים בעת העתקת קישורים להורדה ללוח\n• אפשרות לשמור סיסמת שם משתמש לכניסה אוטומטית בזמן גלישה והורדה מאתרים מוגני סיסמה\n• תכונת השהה והמשך עם קישורים נתמכים\n• השהה הכל / התחל הכל / הסר את כל האפשרויות כדי לחסוך זמן\n• תמיכה בלתי מוגבלת בניסיון חוזר עם עיכוב מותאם אישית\n• ההורדות אינן מופסקות אם האפליקציה סגורה\n• תמיכה בהורדות Wifi בלבד\n• טיפול חכם בשגיאות כך שלא תאבד נתונים\n• מתזמן הורדות כדי לתזמן את ההורדות שלך\n• ייבא קישורי הורדה מקובץ טקסט\n• ייצוא קישורי הורדה\n• ייבוא ​​קישור הורדה מהלוח\n• פתח/שתף קבצים שהורדת\n• התראות מורחבות עם התקדמות ההורדה (משולבת וגם בודדת)\n• תומך ברטט וצליל התראה בסיום ההורדה\n• תומך בכל הפורמטים: קבצי ארכיון, מוזיקה, וידאו, מסמכים, תוכניות וכו'\n• תמיכה במספר דפדפני אינטרנט, כולל: דפדפן אנדרואיד ברירת מחדל, Chrome, Firefox וכו'\n• מיין קבצים לפי שם, גודל, תאריך וסווג לפי סוגים ושעה\n\nמתקדם:\n• עד 30 הורדות בו זמנית\n• הורדה מרובה חלקים - עד 32 חלקים בו זמנית להורדה\n• תמיכה בפרוקסי (עם או בלי אימות)\n• מגביל מהירות להגבלת מהירות הורדות (גלובלי וגם בודדים)\n• רענן קישורים שפג תוקפם (ישיר או באמצעות דפדפן מובנה)\n• הורדת קבצים מוגנים באמצעות סיסמה\n• חשב סכום ביקורת MD5\n\nנוסף:\n• דפדפן אינטרנט מובנה עם תמיכה במספר כרטיסיות, היסטוריה וסימניות\n• מצב גלישה בסתר\n• הורד על ידי צילום אוטומטי של קישורים של מוזיקה/ווידאו מאתרי האינטרנט המועדפים עליך\n\nהבהרה להרשאות גישה:\n\n• חיבור רשת (גישה לאינטרנט) מיועד להורדת קובץ\n• אחסון (שנה או מחק תוכן באחסון ה-USB שלך) מיועד לאחסון נתונים שהורדת\n• בקרת רטט: צור אפקט רטט עבור הודעה נחוצה\n• נעילת השכמה כדי למנוע מהמכשיר לעבור למצב שינה בזמן שההורדה מתבצעת\n\nשים לב שהורדה מ-YOUTUBE אינה נתמכת עקב תנאי השירות שלהם\n\nכתב ויתור: הורדה וצפייה בכל קובץ המוגן בזכויות יוצרים אסורה ומוסדרת על ידי חוקי המדינה שבה אתה גר. איננו נושאים באחריות לכל שימוש לרעה באפליקציה שלנו.\n\nאם אתה אוהב את האפליקציה אנא דרג 5 כוכבים :)",
+    "apkUrl": "https://www.googleapis.com/drive/v3/files/1kT9fe14QyT8oa43p0pK7kq2Ja870Qkdz?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/idm.internet.download.manager.plus.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/bkO-6N-RBwLhpDcHo1aY42JOEHQk8CbUXxcdBn85GV6Uuh1eIngL07f7l9YK9KV612c0YhWZTu3xxesPRjTk",
+      "https://play-lh.googleusercontent.com/KoLpnp6IUvOW4DpaFyvZMyspMHUFyiybLjQyM-UDyUiflEtfVx0VOuWAQQ4mW6_12pn2odOzy8Fks1n25Lm1o90",
+      "https://play-lh.googleusercontent.com/D1pnoZndbP91yr9OMCVxeD0F2m0p6PXOJkZtfUM2ijgBNVYQnl3bHZbPsMeDcZLQB9Uzkh3QpcXPsdfvkshdRw",
+      "https://play-lh.googleusercontent.com/wPF0Vk1UHIxccndZB69JukCzJjVZbSQDCDRmW9Mwu5WzJxSXKXFlLH3yRUNt-P8vGfvjZsTZhMRkdi9gbGSG",
+      "https://play-lh.googleusercontent.com/r1aJIJSRAcnx6hOTHQWbvOG8TmwGSRP6tfBmySUySiDnTHuavGLST7BGRQaPLxywV1Q_ZpmJotn7N8RC7IVUXw"
+    ]
+  },
+  {
     "name": "AdGuard",
     "packageName": "com.adguard.android",
     "versionCode": 42218003,
@@ -568,26 +588,6 @@
       "https://play-lh.googleusercontent.com/u0tTgRGElgNm_bA4Cvk2FSd4EWgAoF0RsPZt8FRnbz0DzVlatZRaSbPSIQR4gVCj1jA3V1IxKyOPe2B-uXt3rg",
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
-    ]
-  },
-  {
-    "name": "1DM+",
-    "packageName": "idm.internet.download.manager.plus",
-    "versionCode": 20249,
-    "versionName": "21.8",
-    "size": "58.2 MB",
-    "checksum": "de8f4b34216f11e9f0a3dc34b1727401",
-    "checksumType": "MD5",
-    "category": "כלים",
-    "description": "1DM+: מנהל הורדות אחד פלוס [לשעבר IDM+] הוא מנהל ההורדות המהיר והמתקדם ביותר (עם תמיכה בהורדות Torrent) הזמין באנדרואיד. זה מהיר עד 500% מההורדה הרגילה. והוא לא מפעיל שירותי רקע אם אין מה להוריד ואפשרות ההורדה החכמה מושבתת מה שמגדיל את חיי הסוללה.\n\nתכונות 1DM+ [לשעבר IDM+]:\n\nכללי:\n• נטול פרסומות\n• הורד קבצי טורנט באמצעות קישור מגנט, url טורנט או קובץ טורנט במכשיר שלך\n• ערכות נושא כהות ואור\n• שפות נתמכות: סינית (מסורתית), סינית (פשוטה), צ'כית, ספרדית, ספרדית (אמריקה הלטינית), צרפתית, גרמנית, יוונית, איטלקית, אינדונזית, יפנית, קוריאנית, מגירה, פורטוגזית, פורטוגזית (ברזיל), רוסית, פולנית , סלובקית, סרבית, טורקית, ערבית, אפריקאנס\n• הורדה ישירה לכרטיס SD\n• תומך באתרי HTTP Live Streaming\n• הסתר קבצים שהורדו מכולם\n• אפשרות הורדה חכמה להורדת קבצים בעת העתקת קישורים להורדה ללוח\n• אפשרות לשמור סיסמת שם משתמש לכניסה אוטומטית בזמן גלישה והורדה מאתרים מוגני סיסמה\n• תכונת השהה והמשך עם קישורים נתמכים\n• השהה הכל / התחל הכל / הסר את כל האפשרויות כדי לחסוך זמן\n• תמיכה בלתי מוגבלת בניסיון חוזר עם עיכוב מותאם אישית\n• ההורדות אינן מופסקות אם האפליקציה סגורה\n• תמיכה בהורדות Wifi בלבד\n• טיפול חכם בשגיאות כך שלא תאבד נתונים\n• מתזמן הורדות כדי לתזמן את ההורדות שלך\n• ייבא קישורי הורדה מקובץ טקסט\n• ייצוא קישורי הורדה\n• ייבוא ​​קישור הורדה מהלוח\n• פתח/שתף קבצים שהורדת\n• התראות מורחבות עם התקדמות ההורדה (משולבת וגם בודדת)\n• תומך ברטט וצליל התראה בסיום ההורדה\n• תומך בכל הפורמטים: קבצי ארכיון, מוזיקה, וידאו, מסמכים, תוכניות וכו'\n• תמיכה במספר דפדפני אינטרנט, כולל: דפדפן אנדרואיד ברירת מחדל, Chrome, Firefox וכו'\n• מיין קבצים לפי שם, גודל, תאריך וסווג לפי סוגים ושעה\n\nמתקדם:\n• עד 30 הורדות בו זמנית\n• הורדה מרובה חלקים - עד 32 חלקים בו זמנית להורדה\n• תמיכה בפרוקסי (עם או בלי אימות)\n• מגביל מהירות להגבלת מהירות הורדות (גלובלי וגם בודדים)\n• רענן קישורים שפג תוקפם (ישיר או באמצעות דפדפן מובנה)\n• הורדת קבצים מוגנים באמצעות סיסמה\n• חשב סכום ביקורת MD5\n\nנוסף:\n• דפדפן אינטרנט מובנה עם תמיכה במספר כרטיסיות, היסטוריה וסימניות\n• מצב גלישה בסתר\n• הורד על ידי צילום אוטומטי של קישורים של מוזיקה/ווידאו מאתרי האינטרנט המועדפים עליך\n\nהבהרה להרשאות גישה:\n\n• חיבור רשת (גישה לאינטרנט) מיועד להורדת קובץ\n• אחסון (שנה או מחק תוכן באחסון ה-USB שלך) מיועד לאחסון נתונים שהורדת\n• בקרת רטט: צור אפקט רטט עבור הודעה נחוצה\n• נעילת השכמה כדי למנוע מהמכשיר לעבור למצב שינה בזמן שההורדה מתבצעת\n\nשים לב שהורדה מ-YOUTUBE אינה נתמכת עקב תנאי השירות שלהם\n\nכתב ויתור: הורדה וצפייה בכל קובץ המוגן בזכויות יוצרים אסורה ומוסדרת על ידי חוקי המדינה שבה אתה גר. איננו נושאים באחריות לכל שימוש לרעה באפליקציה שלנו.\n\nאם אתה אוהב את האפליקציה אנא דרג 5 כוכבים :)",
-    "apkUrl": "https://www.googleapis.com/drive/v3/files/1kT9fe14QyT8oa43p0pK7kq2Ja870Qkdz?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0",
-    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/idm.internet.download.manager.plus.png",
-    "screenshots": [
-      "https://play-lh.googleusercontent.com/bkO-6N-RBwLhpDcHo1aY42JOEHQk8CbUXxcdBn85GV6Uuh1eIngL07f7l9YK9KV612c0YhWZTu3xxesPRjTk",
-      "https://play-lh.googleusercontent.com/KoLpnp6IUvOW4DpaFyvZMyspMHUFyiybLjQyM-UDyUiflEtfVx0VOuWAQQ4mW6_12pn2odOzy8Fks1n25Lm1o90",
-      "https://play-lh.googleusercontent.com/D1pnoZndbP91yr9OMCVxeD0F2m0p6PXOJkZtfUM2ijgBNVYQnl3bHZbPsMeDcZLQB9Uzkh3QpcXPsdfvkshdRw",
-      "https://play-lh.googleusercontent.com/wPF0Vk1UHIxccndZB69JukCzJjVZbSQDCDRmW9Mwu5WzJxSXKXFlLH3yRUNt-P8vGfvjZsTZhMRkdi9gbGSG",
-      "https://play-lh.googleusercontent.com/r1aJIJSRAcnx6hOTHQWbvOG8TmwGSRP6tfBmySUySiDnTHuavGLST7BGRQaPLxywV1Q_ZpmJotn7N8RC7IVUXw"
     ]
   }
 ]
