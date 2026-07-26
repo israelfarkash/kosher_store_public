@@ -63,12 +63,14 @@ class StoreAppRepositoryImpl @Inject constructor(
             packageChangeNotifier.changes
         ) { entities, downloads, installing, managed, _ ->
             val managedPackages = managed.associateBy { it.packageName }
+            val installedPackagesMap = PackageUtils.getInstalledPackagesMap(context)
             entities.map { entity ->
                 entity.toDomain(
                     context = context,
                     downloadState = downloads[entity.packageName],
                     isInstalling = entity.packageName in installing,
-                    isManaged = entity.packageName in managedPackages
+                    isManaged = entity.packageName in managedPackages,
+                    installedPackagesMap = installedPackagesMap
                 )
             }
         }
@@ -170,8 +172,15 @@ class StoreAppRepositoryImpl @Inject constructor(
     override suspend fun uninstallApp(packageName: String) = installCoordinator.uninstallApp(packageName)
 
     override suspend fun checkForUpdatesInBackground(): List<StoreApp> = withContext(ioDispatcher) {
-        // No-op for updates since they are managed externally
-        emptyList()
+        val apps = appDao.getAll()
+        apps.mapNotNull { entity ->
+            val installedVersionCode = PackageUtils.getInstalledVersionCode(context, entity.packageName)
+            if (installedVersionCode != null && installedVersionCode < entity.versionCode) {
+                entity.toDomain(context, downloadCoordinator.downloadStates.value[entity.packageName])
+            } else {
+                null
+            }
+        }
     }
 
     private suspend fun findApp(packageName: String): StoreApp? {
@@ -201,18 +210,25 @@ class StoreAppRepositoryImpl @Inject constructor(
         context: Context,
         downloadState: DownloadState? = null,
         isInstalling: Boolean = false,
-        isManaged: Boolean = false
+        isManaged: Boolean = false,
+        installedPackagesMap: Map<String, android.content.pm.PackageInfo>? = null
     ): StoreApp {
-        val installedVersionCode = PackageUtils.getInstalledVersionCode(context, packageName)
+        val installedInfo = installedPackagesMap?.get(packageName)
+        val installedVersionCode = if (installedInfo != null) {
+            androidx.core.content.pm.PackageInfoCompat.getLongVersionCode(installedInfo)
+        } else {
+            PackageUtils.getInstalledVersionCode(context, packageName)
+        }
         val effectiveDownloadState = downloadState ?: DownloadState()
         val installStatus = when {
             isInstalling -> InstallStatus.INSTALLING
-            effectiveDownloadState.status == DownloadStatus.RUNNING || effectiveDownloadState.status == DownloadStatus.PENDING -> InstallStatus.DOWNLOADING
+            effectiveDownloadState.status == DownloadStatus.DOWNLOADING || effectiveDownloadState.status == DownloadStatus.RUNNING || effectiveDownloadState.status == DownloadStatus.PENDING -> InstallStatus.DOWNLOADING
             effectiveDownloadState.status == DownloadStatus.PAUSED -> InstallStatus.PAUSED
             effectiveDownloadState.status == DownloadStatus.VERIFYING -> InstallStatus.VERIFYING
             effectiveDownloadState.status == DownloadStatus.COMPLETED -> InstallStatus.DOWNLOADED
             effectiveDownloadState.status == DownloadStatus.FAILED -> InstallStatus.FAILED
             installedVersionCode == null -> InstallStatus.NOT_INSTALLED
+            installedVersionCode < versionCode -> InstallStatus.UPDATE_AVAILABLE
             else -> InstallStatus.INSTALLED
         }
 

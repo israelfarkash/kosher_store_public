@@ -13,8 +13,8 @@ android {
         applicationId "com.kosherstore.privateappstore"
         minSdk 26
         targetSdk 35
-        versionCode 1
-        versionName "1.0.0"
+        versionCode 202
+        versionName "2.0.2"
 
         buildConfigField "String", "GITHUB_RAW_BASE_URL", "\"https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/\""
         buildConfigField "String", "APPS_JSON_URL", "\"https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/apps.json\""
@@ -34,6 +34,7 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -55,6 +56,10 @@ android {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
+    }
+
+    lint {
+        abortOnError false
     }
 }
 

@@ -13,8 +13,29 @@ import java.io.File
 
 object PackageUtils {
 
+    fun getInstalledPackagesMap(context: Context): Map<String, PackageInfo> {
+        return runCatching {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                context.packageManager.getInstalledPackages(PackageManager.PackageInfoFlags.of(0L)).associateBy { it.packageName }
+            } else {
+                @Suppress("DEPRECATION")
+                context.packageManager.getInstalledPackages(0).associateBy { it.packageName }
+            }
+        }.getOrElse {
+            emptyMap()
+        }
+    }
+
     fun getInstalledVersionCode(context: Context, packageName: String): Long? {
         return runCatching {
+            val info = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                context.packageManager.getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(0L))
+            } else {
+                @Suppress("DEPRECATION")
+                context.packageManager.getPackageInfo(packageName, 0)
+            }
+            PackageInfoCompat.getLongVersionCode(info)
+        }.recoverCatching {
             val info = context.packageManager.getPackageInfoCompat(packageName)
             PackageInfoCompat.getLongVersionCode(info)
         }.getOrNull()
@@ -58,10 +79,7 @@ object PackageUtils {
 
     @Suppress("DEPRECATION")
     private fun PackageManager.getPackageInfoCompat(packageName: String): PackageInfo {
-        // MATCH_ANY_USER is 0x00400000. It's used to find apps installed in other profiles.
-        val matchAnyUser = 0x00400000
         val flags = PackageManager.GET_META_DATA or 
-                   matchAnyUser or 
                    (if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) PackageManager.MATCH_UNINSTALLED_PACKAGES else PackageManager.GET_UNINSTALLED_PACKAGES)
         
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {

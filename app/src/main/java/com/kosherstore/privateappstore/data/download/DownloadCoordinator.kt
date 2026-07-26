@@ -1,16 +1,18 @@
 package com.kosherstore.privateappstore.data.download
 
-import android.app.DownloadManager
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Environment
 import android.os.PowerManager
+import com.kosherstore.privateappstore.data.download.engine.StreamDownloadEngine
+import com.kosherstore.privateappstore.data.install.InstallCoordinator
+import com.kosherstore.privateappstore.data.local.DownloadTaskEntity
+import com.kosherstore.privateappstore.data.local.dao.DownloadTaskDao
+import com.kosherstore.privateappstore.data.mapper.normalizeChecksumType
 import com.kosherstore.privateappstore.di.IoDispatcher
 import com.kosherstore.privateappstore.domain.model.DownloadState
 import com.kosherstore.privateappstore.domain.model.DownloadStatus
 import com.kosherstore.privateappstore.domain.model.StoreApp
-import com.kosherstore.privateappstore.data.install.InstallCoordinator
 import com.kosherstore.privateappstore.util.ChecksumUtils
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
@@ -19,123 +21,116 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Singleton
 class DownloadCoordinator @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val downloadManager: DownloadManager,
+    private val downloadTaskDao: DownloadTaskDao,
+    private val streamDownloadEngine: StreamDownloadEngine,
     private val installCoordinator: InstallCoordinator,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) {
     private val scope = CoroutineScope(SupervisorJob() + ioDispatcher)
-    private val activeDownloads = ConcurrentHashMap<String, ActiveDownload>()
-    private val pausedDownloads = ConcurrentHashMap<String, ActiveDownload>()
+    private val runningJobs = ConcurrentHashMap<String, Job>()
     private val _downloadStates = MutableStateFlow<Map<String, DownloadState>>(emptyMap())
     val downloadStates: StateFlow<Map<String, DownloadState>> = _downloadStates.asStateFlow()
 
+    companion object {
+        const val MAX_CONCURRENT_DOWNLOADS = 2
+    }
+
     init {
-        scope.launch { pollActiveDownloads() }
+        scope.launch {
+            // Observe Room DB for download states
+            downloadTaskDao.observeAllTasks().collect { tasks ->
+                val stateMap = tasks.associate { task ->
+                    val progress = if (task.totalBytes > 0) {
+                        ((task.downloadedBytes * 100) / task.totalBytes).toInt()
+                    } else {
+                        0
+                    }
+                    task.packageName to DownloadState(
+                        progress = progress,
+                        status = task.status,
+                        localFilePath = task.finalPath.takeIf { task.status == DownloadStatus.COMPLETED },
+                        errorMessage = task.errorMessage,
+                        autoInstall = task.autoInstall,
+                        downloadedBytes = task.downloadedBytes,
+                        totalBytes = task.totalBytes,
+                        speedBytesPerSec = task.speedBytesPerSec,
+                        etaSeconds = task.etaSeconds
+                    )
+                }
+                _downloadStates.value = stateMap
+                processQueue()
+            }
+        }
     }
 
     suspend fun startDownload(app: StoreApp, autoInstall: Boolean = false) {
-        if (activeDownloads.containsKey(app.packageName)) return
+        val tempFile = createTempFile(app)
+        val finalFile = createFinalFile(app)
 
-        val file = createTargetFile(app)
-        runCatching {
-            if (file.exists()) {
-                file.delete()
-            }
-            
-            val downloadUrl = normalizeDriveUrl(app.apkUrl)
-            val request = DownloadManager.Request(Uri.parse(downloadUrl))
-                .setTitle(app.name)
-                .setDescription(context.getString(com.kosherstore.privateappstore.R.string.downloading_description))
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                .setAllowedOverMetered(true)
-                .setAllowedOverRoaming(true)
-                // Add common headers to improve compatibility with some servers (like Google Drive)
-                .addRequestHeader("User-Agent", "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Mobile Safari/537.36")
+        val taskEntity = DownloadTaskEntity(
+            packageName = app.packageName,
+            appName = app.name,
+            iconUrl = app.iconUrl,
+            downloadUrl = normalizeDriveUrl(app.apkUrl),
+            tempPath = tempFile.absolutePath,
+            finalPath = finalFile.absolutePath,
+            status = DownloadStatus.PENDING,
+            downloadedBytes = if (tempFile.exists()) tempFile.length() else 0L,
+            totalBytes = parseSizeToBytes(app.size),
+            checksum = app.checksum,
+            checksumType = app.checksumType.name,
+            autoInstall = autoInstall
+        )
 
-            // Ensure destination is set correctly based on the folder availability
-            val folder = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
-            if (folder != null) {
-                request.setDestinationInExternalFilesDir(
-                    context,
-                    Environment.DIRECTORY_DOWNLOADS,
-                    file.name
-                )
-            } else {
-                // Fallback to internal cache if external is not available (less reliable for DownloadManager)
-                request.setDestinationUri(Uri.fromFile(file))
-            }
-
-            val requestId = downloadManager.enqueue(request)
-            pausedDownloads.remove(app.packageName)
-            activeDownloads[app.packageName] = ActiveDownload(
-                app = app,
-                requestId = requestId,
-                targetFile = file,
-                autoInstall = autoInstall,
-                progress = 0
-            )
-            updateState(
-                app.packageName,
-                DownloadState(
-                    requestId = requestId,
-                    progress = 0,
-                    status = DownloadStatus.PENDING,
-                    autoInstall = autoInstall
-                )
-            )
-            startService()
-        }.onFailure {
-            markFailed(app.packageName, "לא ניתן להתחיל הורדה: ${it.message}")
-        }
+        downloadTaskDao.upsertTask(taskEntity)
+        startForegroundService()
+        processQueue()
     }
 
     suspend fun resumeDownload(app: StoreApp) {
-        val paused = pausedDownloads.remove(app.packageName)
-        activeDownloads.remove(app.packageName)
-        startDownload(app, paused?.autoInstall ?: false)
+        val task = downloadTaskDao.getTask(app.packageName)
+        if (task != null) {
+            downloadTaskDao.updateStatus(app.packageName, DownloadStatus.PENDING)
+        } else {
+            startDownload(app, false)
+        }
+        startForegroundService()
+        processQueue()
     }
 
     suspend fun pauseDownload(packageName: String) {
-        val active = activeDownloads.remove(packageName) ?: return
-        downloadManager.remove(active.requestId)
-        pausedDownloads[packageName] = active.copy(progress = active.progress)
-        updateState(
-            packageName,
-            DownloadState(
-                progress = active.progress,
-                status = DownloadStatus.PAUSED,
-                autoInstall = active.autoInstall
-            )
-        )
+        runningJobs.remove(packageName)?.cancel()
+        downloadTaskDao.updateStatus(packageName, DownloadStatus.PAUSED)
     }
 
     suspend fun cancelDownload(packageName: String) {
-        activeDownloads.remove(packageName)?.let {
-            downloadManager.remove(it.requestId)
-            it.targetFile.delete()
+        runningJobs.remove(packageName)?.cancel()
+        val task = downloadTaskDao.getTask(packageName)
+        if (task != null) {
+            File(task.tempPath).delete()
+            File(task.finalPath).delete()
+            downloadTaskDao.deleteTask(packageName)
         }
-        pausedDownloads.remove(packageName)?.let {
-            it.targetFile.delete()
-        }
-        removeState(packageName)
     }
 
     suspend fun clear(packageName: String) {
-        activeDownloads.remove(packageName)
-        pausedDownloads.remove(packageName)
-        removeState(packageName)
+        runningJobs.remove(packageName)?.cancel()
+        downloadTaskDao.deleteTask(packageName)
+    }
+
+    suspend fun handleSystemDownloadBroadcast(downloadId: Long) {
+        // No-op for custom streaming engine
     }
 
     fun getDownloadedFile(packageName: String): File? {
@@ -143,185 +138,169 @@ class DownloadCoordinator @Inject constructor(
         return state.localFilePath?.let(::File)?.takeIf { it.exists() }
     }
 
-    suspend fun handleSystemDownloadBroadcast(downloadId: Long) {
-        val download = activeDownloads.values.firstOrNull { it.requestId == downloadId } ?: return
-        refreshDownloadState(download)
-    }
-
-    private suspend fun pollActiveDownloads() {
-        while (true) {
-            val currentActive = activeDownloads.values.toList()
-            currentActive.forEach { active ->
-                refreshDownloadState(active)
-            }
-            delay(1000)
-        }
-    }
-
-    private suspend fun refreshDownloadState(active: ActiveDownload) {
-        runCatching {
-            val cursor = downloadManager.query(
-                DownloadManager.Query().setFilterById(active.requestId)
-            )
-
-            if (cursor == null || !cursor.moveToFirst()) {
-                // If the download is no longer in DownloadManager, it failed or was removed
-                cursor?.close()
-                if (active.progress < 100 && !active.isVerifying) {
-                    markFailed(active.app.packageName, "ההורדה הופסקה על ידי המערכת")
-                }
-                return@runCatching
-            }
-
-            cursor.use { it ->
-                val statusIndex = it.getColumnIndex(DownloadManager.COLUMN_STATUS)
-                if (statusIndex == -1) return@use
-
-                when (it.getInt(statusIndex)) {
-                    DownloadManager.STATUS_PENDING -> {
-                        updateRunningState(active, DownloadStatus.PENDING, readProgress(it))
-                    }
-
-                    DownloadManager.STATUS_RUNNING -> {
-                        updateRunningState(active, DownloadStatus.RUNNING, readProgress(it))
-                    }
-
-                    DownloadManager.STATUS_SUCCESSFUL -> {
-                        if (!active.isVerifying) {
-                            active.isVerifying = true
-                            updateState(
-                                active.app.packageName,
-                                DownloadState(
-                                    requestId = active.requestId,
-                                    progress = 100,
-                                    status = DownloadStatus.VERIFYING,
-                                    autoInstall = active.autoInstall
-                                )
-                            )
-                            verifyFile(active)
-                        }
-                    }
-
-                    DownloadManager.STATUS_PAUSED -> {
-                        updateRunningState(active, DownloadStatus.PAUSED, readProgress(it))
-                    }
-
-                    DownloadManager.STATUS_FAILED -> {
-                        val reasonIndex = it.getColumnIndex(DownloadManager.COLUMN_REASON)
-                        val reason = if (reasonIndex != -1) it.getInt(reasonIndex) else -1
-                        markFailed(active.app.packageName, "ההורדה נכשלה (קוד: $reason)")
-                    }
-                }
-            }
-        }.onFailure {
-            // Log error but keep polling
-        }
-    }
-
-    private fun updateRunningState(active: ActiveDownload, status: DownloadStatus, progress: Int) {
-        active.progress = progress
-        updateState(
-            active.app.packageName,
-            DownloadState(
-                requestId = active.requestId,
-                progress = progress,
-                status = status,
-                autoInstall = active.autoInstall
-            )
-        )
-    }
-
-    private fun verifyFile(active: ActiveDownload) {
+    private fun processQueue() {
         scope.launch {
-            val powerManager = context.getSystemService(Context.POWER_SERVICE) as PowerManager
-            val wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "PrivateStore:ChecksumWakeLock")
-            
-            try {
-                wakeLock.acquire(5 * 60 * 1000L /*5 minutes*/)
-                val isValid = withContext(ioDispatcher) {
-                    ChecksumUtils.isValid(
-                        active.targetFile,
-                        active.app.checksum,
-                        active.app.checksumType
-                    )
+            val activeCount = runningJobs.size
+            if (activeCount >= MAX_CONCURRENT_DOWNLOADS) return@launch
+
+            val activeTasks = downloadTaskDao.getActiveOrPendingTasks()
+            val pendingTasks = activeTasks.filter { it.status == DownloadStatus.PENDING }
+
+            for (task in pendingTasks) {
+                if (runningJobs.size >= MAX_CONCURRENT_DOWNLOADS) break
+                if (!runningJobs.containsKey(task.packageName)) {
+                    executeDownloadTask(task)
                 }
-                
-                // Final removal from active set
-                activeDownloads.remove(active.app.packageName)
-                
+            }
+        }
+    }
+
+    private fun executeDownloadTask(task: DownloadTaskEntity) {
+        val job = scope.launch {
+            downloadTaskDao.updateStatus(task.packageName, DownloadStatus.DOWNLOADING)
+            val tempFile = File(task.tempPath)
+            val finalFile = File(task.finalPath)
+
+            val callback = object : StreamDownloadEngine.ProgressCallback {
+                override fun onProgress(downloadedBytes: Long, totalBytes: Long, speedBytesPerSec: Long, etaSeconds: Long) {
+                    val progress = if (totalBytes > 0) ((downloadedBytes * 100) / totalBytes).toInt() else 0
+                    val currentMap = _downloadStates.value.toMutableMap()
+                    val existing = currentMap[task.packageName] ?: DownloadState()
+                    currentMap[task.packageName] = existing.copy(
+                        progress = progress,
+                        status = DownloadStatus.DOWNLOADING,
+                        downloadedBytes = downloadedBytes,
+                        totalBytes = totalBytes,
+                        speedBytesPerSec = speedBytesPerSec,
+                        etaSeconds = etaSeconds
+                    )
+                    _downloadStates.value = currentMap
+
+                    scope.launch {
+                        downloadTaskDao.updateProgress(
+                            packageName = task.packageName,
+                            downloadedBytes = downloadedBytes,
+                            totalBytes = totalBytes,
+                            speedBytesPerSec = speedBytesPerSec,
+                            etaSeconds = etaSeconds,
+                            status = DownloadStatus.DOWNLOADING
+                        )
+                    }
+                }
+            }
+
+            val result = streamDownloadEngine.downloadFile(
+                downloadUrl = task.downloadUrl,
+                tempFile = tempFile,
+                expectedTotalBytes = task.totalBytes,
+                callback = callback
+            )
+
+            runningJobs.remove(task.packageName)
+
+            result.onSuccess {
+                verifyAndCompleteDownload(task, tempFile, finalFile)
+            }.onFailure { error ->
+                val errorMsg = when {
+                    error is java.net.UnknownHostException -> "שגיאת רשת: אין חיבור לאינטרנט"
+                    error is java.net.SocketTimeoutException -> "שגיאת רשת: זמן תגובה ארוך מדי"
+                    error is java.net.ConnectException -> "שגיאת רשת: לא ניתן להתחבר לשרת"
+                    error.message?.contains("404") == true -> "שגיאה: הקובץ לא נמצא בשרת"
+                    error.message?.contains("403") == true -> "שגיאה: אין הרשאת גישה לקובץ"
+                    else -> "הורדה נכשלה: ${error.localizedMessage ?: error.message}"
+                }
+                downloadTaskDao.upsertTask(
+                    task.copy(
+                        status = DownloadStatus.FAILED,
+                        errorMessage = errorMsg
+                    )
+                )
+            }
+            processQueue()
+        }
+        runningJobs[task.packageName] = job
+    }
+
+    private fun verifyAndCompleteDownload(task: DownloadTaskEntity, tempFile: File, finalFile: File) {
+        scope.launch {
+            downloadTaskDao.updateStatus(task.packageName, DownloadStatus.VERIFYING)
+            val powerManager = context.getSystemService(Context.POWER_SERVICE) as PowerManager
+            val wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "KosherStore:ChecksumWakeLock")
+
+            try {
+                wakeLock.acquire(5 * 60 * 1000L)
+                val checksumTypeEnum = normalizeChecksumType(task.checksumType)
+                val isValid = withContext(ioDispatcher) {
+                    ChecksumUtils.isValid(tempFile, task.checksum, checksumTypeEnum)
+                }
+
                 if (!isValid) {
-                    active.targetFile.delete()
-                    markFailed(active.app.packageName, context.getString(com.kosherstore.privateappstore.R.string.checksum_failed))
+                    tempFile.delete()
+                    downloadTaskDao.upsertTask(
+                        task.copy(
+                            status = DownloadStatus.FAILED,
+                            errorMessage = context.getString(com.kosherstore.privateappstore.R.string.checksum_failed)
+                        )
+                    )
                     return@launch
                 }
 
-                updateState(
-                    active.app.packageName,
-                    DownloadState(
-                        progress = 100,
+                // Rename tempFile to finalFile
+                if (finalFile.exists()) finalFile.delete()
+                tempFile.renameTo(finalFile)
+
+                downloadTaskDao.upsertTask(
+                    task.copy(
                         status = DownloadStatus.COMPLETED,
-                        localFilePath = active.targetFile.absolutePath,
-                        autoInstall = active.autoInstall
+                        finalPath = finalFile.absolutePath,
+                        downloadedBytes = finalFile.length(),
+                        totalBytes = finalFile.length(),
+                        speedBytesPerSec = 0L,
+                        etaSeconds = 0L
                     )
                 )
 
-                if (active.autoInstall) {
-                    installCoordinator.installDownloadedApk(active.app, active.targetFile)
+                if (task.autoInstall) {
+                    val storeApp = StoreApp(
+                        name = task.appName,
+                        packageName = task.packageName,
+                        versionCode = 0L,
+                        versionName = "",
+                        apkUrl = task.downloadUrl,
+                        iconUrl = task.iconUrl,
+                        description = "",
+                        category = "",
+                        size = "${finalFile.length() / (1024 * 1024)} MB",
+                        checksum = task.checksum,
+                        checksumType = checksumTypeEnum,
+                        screenshots = emptyList()
+                    )
+                    installCoordinator.installDownloadedApk(storeApp, finalFile)
                 }
             } catch (e: Exception) {
-                activeDownloads.remove(active.app.packageName)
-                markFailed(active.app.packageName, "שגיאה באימות הקובץ: ${e.message}")
+                downloadTaskDao.upsertTask(
+                    task.copy(
+                        status = DownloadStatus.FAILED,
+                        errorMessage = "שגיאה באימות קובץ: ${e.message}"
+                    )
+                )
             } finally {
                 if (wakeLock.isHeld) wakeLock.release()
             }
         }
     }
 
-    private fun markFailed(packageName: String, message: String) {
-        activeDownloads.remove(packageName)?.targetFile?.delete()
-        updateState(
-            packageName,
-            DownloadState(
-                status = DownloadStatus.FAILED,
-                errorMessage = message
-            )
-        )
+    private fun createTempFile(app: StoreApp): File {
+        val folder = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) ?: context.cacheDir
+        return File(folder, "${app.packageName}-${app.versionCode}.apk.tmp")
     }
 
-    private fun readProgress(cursor: android.database.Cursor): Int {
-        val downloadedIndex = cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR)
-        val totalIndex = cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES)
-        
-        if (downloadedIndex == -1 || totalIndex == -1) return 0
-        
-        val bytesDownloaded = cursor.getLong(downloadedIndex)
-        val totalBytes = cursor.getLong(totalIndex)
-        return if (totalBytes > 0) ((bytesDownloaded * 100) / totalBytes).toInt() else 0
-    }
-
-    private fun createTargetFile(app: StoreApp): File {
-        val folder = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) 
-            ?: context.cacheDir
+    private fun createFinalFile(app: StoreApp): File {
+        val folder = context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) ?: context.cacheDir
         return File(folder, "${app.packageName}-${app.versionCode}.apk")
     }
 
-    private fun updateState(packageName: String, state: DownloadState) {
-        _downloadStates.update { current ->
-            current.toMutableMap().apply {
-                put(packageName, state)
-            }
-        }
-    }
-
-    private fun removeState(packageName: String) {
-        _downloadStates.update { current ->
-            current.toMutableMap().apply {
-                remove(packageName)
-            }
-        }
-    }
-
-    private fun startService() {
+    private fun startForegroundService() {
         runCatching {
             val intent = Intent(context, DownloadService::class.java)
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -331,15 +310,6 @@ class DownloadCoordinator @Inject constructor(
             }
         }
     }
-
-    private data class ActiveDownload(
-        val app: StoreApp,
-        val requestId: Long,
-        val targetFile: File,
-        val autoInstall: Boolean,
-        var progress: Int,
-        var isVerifying: Boolean = false
-    )
 
     private fun normalizeDriveUrl(rawUrl: String): String {
         if (!rawUrl.contains("drive.google.com") && !rawUrl.contains("drive.usercontent.google.com") && !rawUrl.contains("googleapis.com")) {
@@ -353,5 +323,18 @@ class DownloadCoordinator @Inject constructor(
         } ?: return rawUrl
 
         return "https://www.googleapis.com/drive/v3/files/$fileId?alt=media&key=AIzaSyDduW1Zbi2MIu8aMUMF6op72pJ1f0sPBi0"
+    }
+
+    private fun parseSizeToBytes(sizeStr: String?): Long {
+        if (sizeStr.isNullOrBlank()) return 0L
+        val clean = sizeStr.trim().uppercase()
+        val number = clean.replace(Regex("[^0-9.]"), "").toDoubleOrNull() ?: return 0L
+        return when {
+            clean.contains("GB") -> (number * 1024 * 1024 * 1024).toLong()
+            clean.contains("MB") -> (number * 1024 * 1024).toLong()
+            clean.contains("KB") -> (number * 1024).toLong()
+            clean.contains("B") -> number.toLong()
+            else -> (number * 1024 * 1024).toLong()
+        }
     }
 }
