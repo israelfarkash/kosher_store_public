@@ -589,5 +589,25 @@
       "https://play-lh.googleusercontent.com/v9HOFRpFy0d7AkqwN6S0QdV3GZe3P7PJ4rBfFXgJDqhbO8_sRwprstSrjdzhtohPydHhFfQTwg7vir-_dqoKEA",
       "https://play-lh.googleusercontent.com/7df10ocKBqoIR6tpQnx7PfW1SOl-KVTdrE6GLyrsyPZ4pVHivki3lqyuxVBv8bs5JjE_uUSzeRzBMikd55_p2vw"
     ]
+  },
+  {
+    "name": "Proton VPN",
+    "packageName": "ch.protonvpn.android",
+    "versionCode": 605191600,
+    "versionName": "5.19.16.0 תורגם ע\"י אריאל ",
+    "size": "58.5 MB",
+    "checksum": "b623d07b1ef2e9fa0ec1eb39d4ab9019",
+    "checksumType": "MD5",
+    "category": "vpn",
+    "description": "Proton VPN היא אפליקציית ה-VPN החינמית היחידה בעולם שבטוחה לשימוש ומכבדת את הפרטיות שלך. שירות ה-VPN המהיר שלנו מציע גישה לאינטרנט מאובטחת, פרטית, מוצפנת וללא הגבלה עם תכונות מתקדמות של פרטיות ואבטחה.  Proton VPN נוצר על ידי מדעני CERN מאחורי Proton Mail - שירות הדואר האלקטרוני המוצפן הגדול בעולם. \n\nPCMag: \"\"[Proton VPN] הוא VPN חלקלק עם אוסף מצוין של תכונות מתקדמות, ויש בו את תוכנית המנויים החינמית הטובה ביותר שתמצא.\"\"\n\nבשימוש על ידי מיליונים ברחבי העולם, ה-VPN המאובטח ללא יומנים של Proton מציע גישה בטוחה, פרטית ובלתי מוגבלת לאינטרנט 24/7 ואינו מתעד את היסטוריית הגלישה שלך, מציג מודעות, מוכר את הנתונים שלך לצדדים שלישיים או מגביל הורדות.\n\nתכונות VPN חינמיות זמינות לכל המשתמשים\n\n- גישה בלתי מוגבלת לנתונים ללא הגבלות רוחב פס או מהירות\n- מדיניות קפדנית של אי-שמירת יומנים; הפרטיות שלך היא בראש סדר העדיפויות שלנו\n- טכנולוגיה נגד צנזורה: בחירה חכמה של פרוטוקול מסייעת לשמור על חיבורים יציבים ברשתות מגבילות\n- אפשרות בחירת סמל אפליקציה דיסקרטי מסייעת להסוות את נוכחות ה-VPN בטלפון שלך\n- שרתים מוצפנים באופן מלא מגנים על פרטיות הנתונים שלך\n- סודיות מקדימה מושלמת: לא ניתן לתפוס ולפענח תעבורה מוצפנת מאוחר יותר\n- הגנה מפני זליגת DNS: אנו מבצעים הצפנה של שאילתות DNS כדי להבטיח שפעילות הגלישה שלך לא תיחשף דרך זליגות DNS\n- חסימת חיבורים ללא VPN/VPN פועל תמיד מציע הגנה מפני דליפות הנגרמות על ידי ניתוקים מקריים\n\nתכונות VPN פרימיום\n\n- גישה ל-20,000+ שרתים במהירות גבוהה ב-140+ מדינות ברחבי העולם\n- מהירויות נהדרות: רשת שרתים מהירה עם חיבורים של עד 10 Gbps\n- מאיץ VPN: טכנולוגיה ייחודית מגדילה את המהירויות של Proton VPN בעד 400% לחוויית גלישה מהירה יותר\n- גישה לאינטרנט בחופשיות ובבטחה, גם באזורים מצונזרים\n- אפשרות לחבר עד 10 מכשירים ל-VPN בו-זמנית\n- חוסם מודעות (NetShield): תכונת סינון DNS שמגינה עליך מפני תוכנות זדוניות, חוסמת מודעות ומונעת מעוקבי אתרים לעקוב אחריך ברחבי האינטרנט\n- שרתי VPN מהירים, ממוטבים לשימוש ברוחב פס גבוה\n- תמיכה בשיתוף קבצים ו-P2P\n- שרתי Secure Core מגנים מפני התקפות מבוססות רשת עם VPN מרובה-ניתורים\n- תמיכה במנהור מפוצל מאפשרת לך לבחור אילו אפליקציות עוברות דרך מנהרת ה-VPN\n\nלמה Proton VPN?\n\n- אבטחת אינטרנט לכולם: המטרה שלנו היא להפוך את הפרטיות המקוונת לנגישה לכולם\n- אין צורך במידע אישי כדי להירשם\n- ההצפנה החזקה ביותר עבור החיבור שלך הופכת אותו לטוב יותר מפרוקסי אינטרנט\n- לחיצה אחת על \"\"חיבור מהיר\"\" כדי לאבטח את חיבור האינטרנט שלך בנקודות Wifi ציבוריות\n- אנו משתמשים רק בפרוטוקולי VPN שהוכחו כאמינים: OpenVPN ו-WireGuard\n- נבדק באופן עצמאי על ידי מומחי אבטחה מצד שלישי, כל התוצאות באתר האינטרנט שלנו\n- קוד קוד פתוח מהימן שכל אחד יכול לבדוק כדי לוודא שהוא מאובטח\n- הגנה על נתונים באמצעות הצפנת AES-256 ו-4096 RSA\n- תמיכה מרובת פלטפורמות ב-Android, Linux, Windows, macOS, iOS ועוד\n\nהצטרפו למהפכת הפרטיות\n\n- התמיכה שלכם חשובה, מכיוון שהיא מאפשרת לנו להמשיך במשימה שלנו להביא חופש מקוון לציבור ברחבי העולם. קבלו עוד היום את ה-VPN הפרטי שלנו בחינם ותיהנו מחיבורי VPN מהירים וללא הגבלה ואינטרנט מאובטח בכל רשת.\n- Proton VPN תומך בזכותך לאינטרנט חופשי ופתוח, כולל באזורים שבהם הגישה מוגבלת על ידי צנזורה ממשלתית.\n\nרשת שרתי VPN גלובלית\n\n- ל-Proton VPN יש אלפי שרתי VPN מאובטחים ברחבי העולם, כולל מאות שרתי VPN חינמיים כדי להבטיח שרת בעל רוחב פס גבוה בקרבת מקום.",
+    "apkUrl": "hjh",
+    "iconUrl": "https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/icons/ch.protonvpn.android.png",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/hB_9ZeZn6PK-T9T5GqB2vhMx_QeKcbmcwWd9WvfcwfVwUgH_KZ29-cOTZDS0MDDBwITapJOuB1wi-LIAWb9B",
+      "https://play-lh.googleusercontent.com/CgpXFKy5l4OJw-8m-_pkK7j7Cu8d2sDCQnRpT4YsZ-MnH8aFjlLy6VmiyaV7IZjPcNutPgJxu44CbrtUlL969g",
+      "https://play-lh.googleusercontent.com/nPon00GoyXcA9ImDBAvMD3Qva7-q2jFjBBgUmoWBiwDXpU3UqKBq4Hv_Jcq_TvooOxeJXDG_oGuLv11UhkKOyQ",
+      "https://play-lh.googleusercontent.com/PsBYLExah2vMExS-dreA1qawEWGJhsTFb6QNoqVoDSDNi02DSBfl9Qr_3kr0y9NNKkG2tsfIYBGo7iF2ssM",
+      "https://play-lh.googleusercontent.com/BVnIEs3vmvrxsH75qo3yEloxloOCH-6nFbjrrAHIAvAHmt9cEk-BYYLqTDfbITS9FPsLYWKynt9j1HorNWpj"
+    ]
   }
 ]
