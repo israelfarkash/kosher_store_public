@@ -127,9 +127,18 @@ class InstallCoordinator @Inject constructor(
             PackageInstaller.STATUS_SUCCESS -> onPackageChanged(packageName)
 
             else -> {
-                val message = intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE)
-                    ?: context.getString(com.kosherstore.privateappstore.R.string.install_failed_generic)
-                emitFailure(packageName, message)
+                val rawMessage = intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE) ?: ""
+                val friendlyMessage = when {
+                    rawMessage.contains("OLDER_SDK", ignoreCase = true) -> "גרסת האנדרואיד במכשיר שלך ישנה מדי עבור אפליקציה זו"
+                    rawMessage.contains("NEWER_SDK", ignoreCase = true) -> "האפליקציה דורשת גרסת אנדרואיד חדשה יותר"
+                    rawMessage.contains("INSUFFICIENT_STORAGE", ignoreCase = true) -> "אין מספיק שטח אחסון פנוי במכשיר להתקנה"
+                    rawMessage.contains("UPDATE_INCOMPATIBLE", ignoreCase = true) -> "העדכון אינו תואם לגרסה המותקנת במכשיר (יש להסיר את הגרסה הקודמת קודם)"
+                    rawMessage.contains("VERSION_DOWNGRADE", ignoreCase = true) -> "אי אפשר להתקין גרסה ישנה על גבי גרסה חדשה יותר"
+                    rawMessage.contains("PARSE_FAILED", ignoreCase = true) -> "קובץ ההתקנה פגום או אינו תואם למכשיר"
+                    rawMessage.isNotBlank() -> "התקנה נכשלה: $rawMessage"
+                    else -> context.getString(com.kosherstore.privateappstore.R.string.install_failed_generic)
+                }
+                emitFailure(packageName, friendlyMessage)
             }
         }
     }
