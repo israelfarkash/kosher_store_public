@@ -2,41 +2,52 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardCategory"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/md_theme_light_onPrimary"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="2dp"
-    app:strokeWidth="0dp">
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#E5E7EB"
+    app:strokeWidth="1dp">
 
     <LinearLayout
+        android:id="@+id/layoutContainer"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="125dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/imageCategoryIcon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+        <FrameLayout
+            android:id="@+id/layoutIconBg"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:background="@drawable/bg_status_chip"
-            android:backgroundTint="@color/md_theme_light_primaryContainer"
-            android:padding="10dp"
-            app:tint="@color/md_theme_light_primary"
-            tools:src="@drawable/ic_category_tools" />
+            android:backgroundTint="#D3E3FD">
+
+            <ImageView
+                android:id="@+id/imageCategoryIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                app:tint="#0B57D0"
+                tools:src="@drawable/ic_category_tools" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/textCategoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:textAppearance="?attr/textAppearanceTitleMedium"
-            android:textColor="@color/md_theme_light_onSurface"
+            android:textColor="#202124"
+            android:textSize="15sp"
             android:textStyle="bold"
-            tools:text="כלים" />
+            tools:text="מוזיקה" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
