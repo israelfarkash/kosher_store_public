@@ -74,6 +74,17 @@
 
 
                     <ImageView
+                        android:id="@+id/buttonDownloads"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="הורדות פעילות"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_download"
+                        app:tint="@color/md_theme_light_onSurface" />
+
+                    <ImageView
                         android:id="@+id/buttonSettings"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
@@ -84,6 +95,22 @@
                         app:tint="@color/md_theme_light_onSurface" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Google Play Style TabLayout -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="6dp"
+                app:tabBackground="@android:color/transparent"
+                app:tabIndicatorColor="@color/md_theme_light_primary"
+                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorFullWidth="false"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/md_theme_light_primary"
+                app:tabTextColor="@color/md_theme_light_onSurfaceVariant" />
 
         </LinearLayout>
 

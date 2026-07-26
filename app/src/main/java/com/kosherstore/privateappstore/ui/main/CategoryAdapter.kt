@@ -48,6 +48,8 @@ data class CategoryDisplayData(
         fun mapFromNames(names: List<String>): List<CategoryDisplayData> {
             return names.map { name ->
                 val icon = when {
+                    name.contains("מוזיקה", true) || name.contains("Music", true) -> R.drawable.ic_category_music
+                    name.contains("ניווט", true) || name.contains("Navigation", true) || name.contains("Waze", true) -> R.drawable.ic_category_navigation
                     name.contains("פיננסים", true) || name.contains("Finance", true) -> R.drawable.ic_category_finance
                     name.contains("תחבורה", true) || name.contains("Transport", true) -> R.drawable.ic_category_transport
                     name.contains("גוגל", true) || name.contains("Google", true) -> R.drawable.ic_category_google

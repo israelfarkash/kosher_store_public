@@ -65,9 +65,44 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupTabs()
         setupRecycler()
         setupInteractions()
         observeViewModel()
+    }
+
+    private fun setupTabs() {
+        binding.tabLayout.removeAllTabs()
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("כל האפליקציות"))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("קטגוריות"))
+
+        binding.tabLayout.addOnTabSelectedListener(object : com.google.android.material.tabs.TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: com.google.android.material.tabs.TabLayout.Tab?) {
+                val position = tab?.position ?: 0
+                if (position == 1 && viewModel.uiState.value.selectedCategory != null) {
+                    viewModel.onCategorySelected(null)
+                }
+                updateTabVisibility(position)
+            }
+            override fun onTabUnselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {}
+            override fun onTabReselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {}
+        })
+    }
+
+    private fun updateTabVisibility(tabPosition: Int) = with(binding) {
+        val state = viewModel.uiState.value
+        val isSearching = state.query.isNotBlank()
+        val hasCategory = state.selectedCategory != null
+        
+        if (tabPosition == 0 || isSearching || hasCategory) {
+            recyclerApps.isVisible = true
+            recyclerCategories.isVisible = false
+            adapter.submitList(state.apps)
+        } else {
+            recyclerApps.isVisible = false
+            recyclerCategories.isVisible = true
+            categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
+        }
     }
 
     override fun onDestroyView() {
@@ -87,11 +122,14 @@ class MainFragment : Fragment() {
     private fun setupInteractions() {
         binding.swipeRefresh.setOnRefreshListener { viewModel.sync() }
 
-        
         binding.editSearch.addTextChangedListener(object : android.text.TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.onSearchChanged(s?.toString().orEmpty())
+                val text = s?.toString().orEmpty()
+                viewModel.onSearchChanged(text)
+                if (text.isNotBlank() && binding.tabLayout.selectedTabPosition != 0) {
+                    binding.tabLayout.getTabAt(0)?.select()
+                }
             }
             override fun afterTextChanged(s: android.text.Editable?) {}
         })
@@ -100,9 +138,14 @@ class MainFragment : Fragment() {
             findNavController().navigate(R.id.settingsFragment)
         }
 
+        binding.buttonDownloads.setOnClickListener {
+            findNavController().navigate(R.id.downloadsFragment)
+        }
+
         binding.buttonBack.setOnClickListener {
             viewModel.onCategorySelected(null)
             binding.editSearch.text?.clear()
+            binding.tabLayout.getTabAt(0)?.select()
         }
     }
 
@@ -136,23 +179,24 @@ class MainFragment : Fragment() {
         
         shimmerLayout.isVisible = showShimmer
         
-        // Toggle between Category Grid and App List
-        recyclerCategories.isVisible = !showAppList && !showShimmer
-        recyclerApps.isVisible = showAppList && !showShimmer && !showEmpty
+        val currentTab = tabLayout.selectedTabPosition
+        if (showAppList && currentTab != 0) {
+            tabLayout.getTabAt(0)?.select()
+        }
+
+        recyclerCategories.isVisible = !showAppList && !showShimmer && currentTab == 1
+        recyclerApps.isVisible = (showAppList || currentTab == 0) && !showShimmer && !showEmpty
         
         layoutEmpty.isVisible = showEmpty
         textSyncMessage.isVisible = !state.syncMessage.isNullOrBlank()
         textSyncMessage.text = state.syncMessage
 
-
         // Search bar UI
         buttonBack.isVisible = showAppList
         imageSearchIcon.isVisible = !showAppList
-        if (!showAppList) {
-            categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
-        } else {
-            adapter.submitList(state.apps)
-        }
+        
+        categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
+        adapter.submitList(state.apps)
     }
 
     private fun spanCount(): Int {
