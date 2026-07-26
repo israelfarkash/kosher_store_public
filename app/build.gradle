@@ -13,8 +13,8 @@ android {
         applicationId "com.kosherstore.privateappstore"
         minSdk 26
         targetSdk 35
-        versionCode 203
-        versionName "2.0.3"
+        versionCode 204
+        versionName "2.0.4"
 
         buildConfigField "String", "GITHUB_RAW_BASE_URL", "\"https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/\""
         buildConfigField "String", "APPS_JSON_URL", "\"https://raw.githubusercontent.com/israelfarkash/kosher_store_public/refs/heads/main/apps.json\""
