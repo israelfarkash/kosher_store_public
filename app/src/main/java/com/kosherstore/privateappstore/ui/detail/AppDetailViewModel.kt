@@ -35,7 +35,7 @@ class AppDetailViewModel @Inject constructor(
             when (app.installStatus) {
                 InstallStatus.NOT_INSTALLED,
                 InstallStatus.UPDATE_AVAILABLE,
-                InstallStatus.FAILED -> repository.startDownload(app.packageName)
+                InstallStatus.FAILED -> repository.startDownload(app.packageName, autoInstall = true)
 
                 InstallStatus.DOWNLOADING -> repository.pauseDownload(app.packageName)
                 InstallStatus.PAUSED -> repository.resumeDownload(app.packageName)

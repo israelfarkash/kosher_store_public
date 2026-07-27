@@ -42,7 +42,7 @@ class ManagementViewModel @Inject constructor(
                 InstallStatus.INSTALLED -> openApp(app.packageName)
                 InstallStatus.NOT_INSTALLED,
                 InstallStatus.UPDATE_AVAILABLE,
-                InstallStatus.FAILED -> repository.startDownload(app.packageName)
+                InstallStatus.FAILED -> repository.startDownload(app.packageName, autoInstall = true)
                 InstallStatus.DOWNLOADED -> repository.installDownloadedApp(app.packageName)
                 InstallStatus.DOWNLOADING -> repository.pauseDownload(app.packageName)
                 InstallStatus.PAUSED -> repository.resumeDownload(app.packageName)

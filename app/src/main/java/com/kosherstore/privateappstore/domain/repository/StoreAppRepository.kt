@@ -16,7 +16,7 @@ interface StoreAppRepository {
     suspend fun refreshApps(forceRemote: Boolean = true)
     suspend fun sync()
     suspend fun syncInstalledStatuses()
-    suspend fun startDownload(packageName: String, autoInstall: Boolean = false)
+    suspend fun startDownload(packageName: String, autoInstall: Boolean = true)
     suspend fun resumeDownload(packageName: String)
     suspend fun pauseDownload(packageName: String)
     suspend fun cancelDownload(packageName: String)
