@@ -7,11 +7,11 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:foreground="?attr/selectableItemBackground"
-    app:cardBackgroundColor="#FFFFFF"
+    app:cardBackgroundColor="@color/md_theme_light_onPrimary"
     app:cardCornerRadius="24dp"
-    app:cardElevation="0dp"
-    app:strokeColor="#E5E7EB"
-    app:strokeWidth="1dp">
+    app:cardElevation="2dp"
+    app:strokeColor="@color/md_theme_light_outlineVariant"
+    app:strokeWidth="0.5dp">
 
     <LinearLayout
         android:id="@+id/layoutContainer"
@@ -26,14 +26,14 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:background="@drawable/bg_status_chip"
-            android:backgroundTint="#D3E3FD">
+            android:backgroundTint="@color/md_theme_light_primaryContainer">
 
             <ImageView
                 android:id="@+id/imageCategoryIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_gravity="center"
-                app:tint="#0B57D0"
+                app:tint="@color/md_theme_light_primary"
                 tools:src="@drawable/ic_category_tools" />
         </FrameLayout>
 
@@ -44,7 +44,7 @@
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:textAppearance="?attr/textAppearanceTitleMedium"
-            android:textColor="#202124"
+            android:textColor="@color/md_theme_light_onSurface"
             android:textSize="15sp"
             android:textStyle="bold"
             tools:text="מוזיקה" />

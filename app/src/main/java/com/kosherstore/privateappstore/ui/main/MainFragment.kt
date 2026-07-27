@@ -191,7 +191,8 @@ class MainFragment : Fragment() {
         textSyncMessage.isVisible = !state.syncMessage.isNullOrBlank()
         textSyncMessage.text = state.syncMessage
 
-        // Search bar UI
+        // Search bar UI: Hide search bar when on Categories tab
+        cardSearch.isVisible = (currentTab == 0)
         buttonBack.isVisible = showAppList
         imageSearchIcon.isVisible = !showAppList
         

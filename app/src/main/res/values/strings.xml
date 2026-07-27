@@ -95,7 +95,7 @@
     <string name="settings_install_type_summary">בחר את שיטת ההתקנה המועדפת</string>
     <string name="install_type_normal">רגילה</string>
     <string name="install_type_silent">שקטה (דורש הרשאות root)</string>
-    <string name="install_type_session">Session API</string>
+    <string name="install_type_session">התקנה מהירה</string>
     <string name="settings_about_section">אודות</string>
     <string name="settings_about_app_line">חנות אפליקציות כשרה</string>
     <string name="settings_about_version_fmt">גרסה %1$s</string>
