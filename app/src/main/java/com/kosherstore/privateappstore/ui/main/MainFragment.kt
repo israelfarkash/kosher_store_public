@@ -116,7 +116,15 @@ class MainFragment : Fragment() {
                 binding.cardSearch.isVisible = (position == 0)
                 if (position == 1) {
                     binding.editSearch.text?.clear()
+                    binding.editSearch.clearFocus()
+                    val imm = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? android.view.inputmethod.InputMethodManager
+                    imm?.hideSoftInputFromWindow(binding.editSearch.windowToken, 0)
                 }
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                super.onPageScrollStateChanged(state)
+                binding.swipeRefresh.isEnabled = (state == ViewPager2.SCROLL_STATE_IDLE)
             }
         })
     }
@@ -129,7 +137,7 @@ class MainFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val text = s?.toString().orEmpty()
                 viewModel.onSearchChanged(text)
-                if (text.isNotBlank() && binding.viewPager.currentItem != 0) {
+                if (text.isNotBlank() && binding.editSearch.hasFocus() && binding.viewPager.currentItem != 0) {
                     binding.viewPager.currentItem = 0
                 }
             }
