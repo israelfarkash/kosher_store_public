@@ -1,6 +1,6 @@
 {
-  "versionCode": 208,
-  "versionName": "2.0.8",
+  "versionCode": 209,
+  "versionName": "2.0.9",
   "apkUrl": "http://151.145.81.64/store-update/KosherStore_Fixed.apk",
-  "changelog": "הוספת מנהל הורדות מלא, תרגום שגיאות לעברית, ותיקוני עיצוב (RTL)"
+  "changelog": "עדכון מנגנון הניווט בקטגוריות (ViewPager2), סידור קטגוריות לפי עדיפות, פתרון שגיאות MDM, וזיהוי סטטוס התקנה אמין"
 }

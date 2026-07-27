@@ -64,12 +64,8 @@ class InstallCoordinator @Inject constructor(
         }
 
         val isDeviceOwner = PackageUtils.isDeviceOwner(context)
-        val isXapk = withContext(ioDispatcher) { XapkUtils.isXapk(apkFile) }
-
-        if (isDeviceOwner || isXapk) {
-            val sessionStarted = withContext(ioDispatcher) { trySessionInstall(app, apkFile, isDeviceOwner) }
-            if (sessionStarted) return
-        }
+        val sessionStarted = withContext(ioDispatcher) { trySessionInstall(app, apkFile, isDeviceOwner) }
+        if (sessionStarted) return
 
         launchStandardInstaller(app.packageName, apkFile)
     }
@@ -211,8 +207,11 @@ class InstallCoordinator @Inject constructor(
                 PackageInstaller.SessionParams.MODE_FULL_INSTALL
             ).apply {
                 setAppPackageName(app.packageName)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && isDeviceOwner) {
-                    setRequireUserAction(PackageInstaller.SessionParams.USER_ACTION_NOT_REQUIRED)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    val isUpdate = PackageUtils.getInstalledVersionCode(context, app.packageName) != null
+                    if (isDeviceOwner || isUpdate) {
+                        setRequireUserAction(PackageInstaller.SessionParams.USER_ACTION_NOT_REQUIRED)
+                    }
                 }
             }
             val sessionId = packageInstaller.createSession(sessionParams)

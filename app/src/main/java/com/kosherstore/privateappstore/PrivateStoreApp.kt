@@ -5,6 +5,7 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
 import com.google.android.material.color.DynamicColors
 import com.kosherstore.privateappstore.util.NotificationHelper
+import com.kosherstore.privateappstore.data.worker.UpdateCheckWorker
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
@@ -23,5 +24,6 @@ class PrivateStoreApp : Application(), Configuration.Provider {
         super.onCreate()
         DynamicColors.applyToActivitiesIfAvailable(this)
         NotificationHelper.createNotificationChannels(this)
+        UpdateCheckWorker.enqueuePeriodic(this)
     }
 }

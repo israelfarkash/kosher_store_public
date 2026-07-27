@@ -54,7 +54,7 @@ object PackageUtils {
 
     fun isDeviceOwner(context: Context): Boolean {
         val manager = context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
-        return manager.isDeviceOwnerApp(context.packageName)
+        return manager.isDeviceOwnerApp(context.packageName) || manager.isProfileOwnerApp(context.packageName)
     }
 
     fun canRequestPackageInstalls(context: Context): Boolean {

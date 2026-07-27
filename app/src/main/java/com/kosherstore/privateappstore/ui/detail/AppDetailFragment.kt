@@ -107,6 +107,7 @@ class AppDetailFragment : Fragment() {
             androidx.core.text.HtmlCompat.FROM_HTML_MODE_COMPACT
         )
         textStatus.text = AppPresentationUtils.statusText(requireContext(), app)
+        textStatus.setTextColor(AppPresentationUtils.statusColor(requireContext(), app))
         
         val showProgress = AppPresentationUtils.shouldShowProgress(app)
         progressDownload.isVisible = showProgress

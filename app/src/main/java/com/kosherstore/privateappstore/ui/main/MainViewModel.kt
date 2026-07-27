@@ -24,28 +24,35 @@ class MainViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val query = MutableStateFlow("")
-    private val selectedCategory = MutableStateFlow<String?>(null)
     private val _events = MutableSharedFlow<UiEvent>(extraBufferCapacity = 8)
     val events = _events.asSharedFlow()
+
+    private val categoryPriority = mapOf(
+        "מסרים" to 1,
+        "ניווט" to 2,
+        "פיננסים" to 3,
+        "תחבורה" to 4,
+        "מוזיקה" to 5,
+        "אפליקציות גוגל" to 6,
+        "כלים" to 7,
+        "vpn" to 8,
+        "כללי" to 9
+    )
 
     val uiState: StateFlow<MainUiState> = combine(
         repository.observeApps(),
         repository.observeSyncState(),
-        query,
-        selectedCategory
-    ) { apps, syncState, queryValue, categoryValue ->
+        query
+    ) { apps, syncState, queryValue ->
         val categories = apps
             .map { CategoryNormalizer.normalize(it.category) }
             .distinct()
-            .sorted()
-        val effectiveCategory = categoryValue?.takeIf { it in categories }
+            .sortedWith(compareBy({ categoryPriority[it] ?: 100 }, { it }))
+
         val filteredApps = apps.filter { app ->
-            val queryMatch = queryValue.isBlank() ||
+            queryValue.isBlank() ||
                 app.name.contains(queryValue, ignoreCase = true) ||
                 app.description.contains(queryValue, ignoreCase = true)
-            val categoryMatch = effectiveCategory.isNullOrBlank() ||
-                CategoryNormalizer.normalize(app.category) == effectiveCategory
-            queryMatch && categoryMatch
         }
 
         MainUiState(
@@ -53,7 +60,6 @@ class MainViewModel @Inject constructor(
             isRefreshing = syncState.isRefreshing,
             apps = filteredApps,
             categories = categories,
-            selectedCategory = effectiveCategory,
             query = queryValue,
             syncMessage = syncState.message
         )
@@ -82,10 +88,6 @@ class MainViewModel @Inject constructor(
 
     fun onSearchChanged(value: String) {
         query.value = value
-    }
-
-    fun onCategorySelected(value: String?) {
-        selectedCategory.value = value?.let(CategoryNormalizer::normalize)
     }
 
     fun onPrimaryAction(app: StoreApp) {
@@ -122,7 +124,6 @@ class MainViewModel @Inject constructor(
         val isRefreshing: Boolean = false,
         val apps: List<StoreApp> = emptyList(),
         val categories: List<String> = emptyList(),
-        val selectedCategory: String? = null,
         val query: String = "",
         val syncMessage: String? = null
     )

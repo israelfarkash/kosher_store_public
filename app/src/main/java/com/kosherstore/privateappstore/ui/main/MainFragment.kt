@@ -2,14 +2,10 @@ package com.kosherstore.privateappstore.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
+import android.widget.TextView
 import androidx.core.os.bundleOf
-import androidx.core.view.MenuProvider
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -18,8 +14,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.google.android.material.chip.Chip
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.facebook.shimmer.ShimmerFrameLayout
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayoutMediator
 import com.kosherstore.privateappstore.R
 import com.kosherstore.privateappstore.databinding.FragmentMainBinding
 import com.kosherstore.privateappstore.ui.common.AppCardMode
@@ -36,7 +36,10 @@ class MainFragment : Fragment() {
 
     private val categoryAdapter by lazy {
         CategoryAdapter { category ->
-            viewModel.onCategorySelected(category)
+            findNavController().navigate(
+                R.id.action_main_to_categoryDetail,
+                bundleOf("categoryName" to category)
+            )
         }
     }
 
@@ -54,6 +57,36 @@ class MainFragment : Fragment() {
         )
     }
 
+    private val pagerAdapter by lazy {
+        MainPagerAdapter(
+            onBindApps = { recycler, shimmer, empty, syncCard, syncText ->
+                val spanCount = if (resources.configuration.screenWidthDp >= 600) 2 else 1
+                recycler.layoutManager = GridLayoutManager(requireContext(), spanCount)
+                recycler.adapter = adapter
+                recycler.itemAnimator = null
+
+                val state = viewModel.uiState.value
+                val showShimmer = state.isLoading && state.apps.isEmpty()
+                val showEmpty = !state.isLoading && state.apps.isEmpty() && state.query.isNotBlank()
+
+                shimmer.isVisible = showShimmer
+                empty.isVisible = showEmpty
+                
+                syncCard.isVisible = !state.syncMessage.isNullOrBlank()
+                syncText.text = state.syncMessage ?: ""
+                
+                adapter.submitList(state.apps)
+            },
+            onBindCategories = { recycler ->
+                recycler.layoutManager = GridLayoutManager(requireContext(), 2)
+                recycler.adapter = categoryAdapter
+                
+                val state = viewModel.uiState.value
+                categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
+            }
+        )
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -65,58 +98,27 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupTabs()
-        setupRecycler()
+        setupViewPager()
         setupInteractions()
         observeViewModel()
     }
 
-    private fun setupTabs() {
-        binding.tabLayout.removeAllTabs()
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("כל האפליקציות"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("קטגוריות"))
-
-        binding.tabLayout.addOnTabSelectedListener(object : com.google.android.material.tabs.TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: com.google.android.material.tabs.TabLayout.Tab?) {
-                val position = tab?.position ?: 0
-                if (position == 1 && viewModel.uiState.value.selectedCategory != null) {
-                    viewModel.onCategorySelected(null)
-                }
-                updateTabVisibility(position)
-            }
-            override fun onTabUnselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {}
-            override fun onTabReselected(tab: com.google.android.material.tabs.TabLayout.Tab?) {}
-        })
-    }
-
-    private fun updateTabVisibility(tabPosition: Int) = with(binding) {
-        val state = viewModel.uiState.value
-        val isSearching = state.query.isNotBlank()
-        val hasCategory = state.selectedCategory != null
+    private fun setupViewPager() {
+        binding.viewPager.adapter = pagerAdapter
         
-        if (tabPosition == 0 || isSearching || hasCategory) {
-            recyclerApps.isVisible = true
-            recyclerCategories.isVisible = false
-            adapter.submitList(state.apps)
-        } else {
-            recyclerApps.isVisible = false
-            recyclerCategories.isVisible = true
-            categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
-        }
-    }
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+            tab.text = if (position == 0) "כל האפליקציות" else "קטגוריות"
+        }.attach()
 
-    override fun onDestroyView() {
-        _binding = null
-        super.onDestroyView()
-    }
-
-    private fun setupRecycler() {
-        binding.recyclerApps.layoutManager = GridLayoutManager(requireContext(), spanCount())
-        binding.recyclerApps.adapter = adapter
-        binding.recyclerApps.itemAnimator = null
-
-        binding.recyclerCategories.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.recyclerCategories.adapter = categoryAdapter
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                binding.cardSearch.isVisible = (position == 0)
+                if (position == 1) {
+                    binding.editSearch.text?.clear()
+                }
+            }
+        })
     }
 
     private fun setupInteractions() {
@@ -127,8 +129,8 @@ class MainFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val text = s?.toString().orEmpty()
                 viewModel.onSearchChanged(text)
-                if (text.isNotBlank() && binding.tabLayout.selectedTabPosition != 0) {
-                    binding.tabLayout.getTabAt(0)?.select()
+                if (text.isNotBlank() && binding.viewPager.currentItem != 0) {
+                    binding.viewPager.currentItem = 0
                 }
             }
             override fun afterTextChanged(s: android.text.Editable?) {}
@@ -140,12 +142,6 @@ class MainFragment : Fragment() {
 
         binding.buttonDownloads.setOnClickListener {
             findNavController().navigate(R.id.downloadsFragment)
-        }
-
-        binding.buttonBack.setOnClickListener {
-            viewModel.onCategorySelected(null)
-            binding.editSearch.text?.clear()
-            binding.tabLayout.getTabAt(0)?.select()
         }
     }
 
@@ -169,39 +165,32 @@ class MainFragment : Fragment() {
 
     private fun render(state: MainViewModel.MainUiState) = with(binding) {
         swipeRefresh.isRefreshing = state.isRefreshing
-        
-        val isSearching = state.query.isNotBlank()
-        val hasCategory = state.selectedCategory != null
-        val showAppList = hasCategory || isSearching
-        
-        val showShimmer = state.isLoading && state.apps.isEmpty()
-        val showEmpty = !state.isLoading && state.apps.isEmpty() && showAppList
-        
-        shimmerLayout.isVisible = showShimmer
-        
-        val currentTab = tabLayout.selectedTabPosition
-        if (showAppList && currentTab != 0) {
-            tabLayout.getTabAt(0)?.select()
-        }
 
-        recyclerCategories.isVisible = !showAppList && !showShimmer && currentTab == 1
-        recyclerApps.isVisible = (showAppList || currentTab == 0) && !showShimmer && !showEmpty
-        
-        layoutEmpty.isVisible = showEmpty
-        textSyncMessage.isVisible = !state.syncMessage.isNullOrBlank()
-        textSyncMessage.text = state.syncMessage
-
-        // Search bar UI: Hide search bar when on Categories tab
-        cardSearch.isVisible = (currentTab == 0)
-        buttonBack.isVisible = showAppList
-        imageSearchIcon.isVisible = !showAppList
-        
-        categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
         adapter.submitList(state.apps)
+        categoryAdapter.submitList(CategoryDisplayData.mapFromNames(state.categories))
+
+        val recyclerApps = viewPager.findViewById<RecyclerView>(R.id.recyclerApps)
+        val shimmer = viewPager.findViewById<ShimmerFrameLayout>(R.id.shimmerLayout)
+        val empty = viewPager.findViewById<View>(R.id.layoutEmpty)
+        val syncCard = viewPager.findViewById<MaterialCardView>(R.id.cardSyncMessage)
+        val syncText = viewPager.findViewById<TextView>(R.id.textSyncMessage)
+
+        if (recyclerApps != null) {
+            val showShimmer = state.isLoading && state.apps.isEmpty()
+            val showEmpty = !state.isLoading && state.apps.isEmpty() && state.query.isNotBlank()
+            
+            shimmer?.isVisible = showShimmer
+            empty?.isVisible = showEmpty
+            
+            if (syncCard != null && syncText != null) {
+                syncCard.isVisible = !state.syncMessage.isNullOrBlank()
+                syncText.text = state.syncMessage ?: ""
+            }
+        }
     }
 
-    private fun spanCount(): Int {
-        return if (resources.configuration.screenWidthDp >= 600) 2 else 1
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
     }
 }
-

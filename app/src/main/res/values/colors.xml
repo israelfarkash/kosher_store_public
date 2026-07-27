@@ -32,5 +32,14 @@
     <color name="bg_store_gradient_start">#F8F9FA</color>
     <color name="bg_store_gradient_end">#FFFFFF</color>
     
+    <!-- Dark theme colors declared in default folder for compatibility -->
+    <color name="md_theme_dark_error">#F2B8B5</color>
+    <color name="md_theme_dark_onError">#601410</color>
+    <color name="md_theme_dark_surface">#1A1C1E</color>
+    <color name="md_theme_dark_onSurface">#E2E2E6</color>
+    <color name="md_theme_dark_surfaceVariant">#44474E</color>
+    <color name="brand_dark_surface">#1A1C1E</color>
+    <color name="brand_dark_surface_variant">#44474E</color>
+    
     <color name="rating_star">#FABB05</color> <!-- Google Yellow -->
 </resources>

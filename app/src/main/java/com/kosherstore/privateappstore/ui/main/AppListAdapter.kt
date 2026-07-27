@@ -39,6 +39,7 @@ class AppListAdapter(
             textMeta.text = app.size
             textCategory.text = CategoryNormalizer.normalize(app.category)
             textStatus.text = AppPresentationUtils.statusText(root.context, app)
+            textStatus.setTextColor(AppPresentationUtils.statusColor(root.context, app))
 
             progressDownload.isVisible = AppPresentationUtils.shouldShowProgress(app)
             progressDownload.progress = app.downloadState.progress
